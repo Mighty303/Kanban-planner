@@ -1,0 +1,9 @@
+html {
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
