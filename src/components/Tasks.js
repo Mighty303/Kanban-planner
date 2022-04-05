@@ -9,7 +9,9 @@ const Tasks = props => {
 
             <div className="columns">
                 {
-                    columns.map((column, index) => <div key={index}>{column}</div>)
+                    columns.map((column, index) => <div key={index}>
+                        {column}
+                    </div>)
                     
                 }
                 <div>

@@ -1,9 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     text-align: center;
+    color: white;
+    font-family: Roboto, sans-serif, Helvetica;
 }
 
 .columns {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header {
+    background-color: #060606;
+    height: 8vh;
+    padding: 10px;
+    border-bottom: 1px solid #454751;
+}
+
+header h1 {
+    color: #F03737;
+    text-transform: uppercase;
+}
+
+header p {
+    color: white;
+}
+
+/* section {
+    padding: 2em 0;
+} */
+
+.form-section {
+    margin-top: 0;
+    padding: 2em 2em;
+    background-color: #272727;
+}
+
+.tasks-section {
+    margin-top: 0;
+    height: 50vh;
+    padding: 2em 2em;
+    background-color: #060606;
 }
