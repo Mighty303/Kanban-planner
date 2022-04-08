@@ -46,7 +46,7 @@ const Tasks = props => {
         let target = event.target.id;
         let targetColumn = event.target.value;
         console.log(target);
-        axios.patch(`api/v1/${targetColumn}`, {_id: target})
+        axios.patch(`/api/v1/${targetColumn}`, {_id: target})
         .then(patchedResult => {
             axios.get('/api/v1/tasks')
             .then(result => {
