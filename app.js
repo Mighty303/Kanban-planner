@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const connection = require('./db/connection');
 
+const server = app.listen(process.env.PORT || 8080, ()=>console.log("Listening on 8080"));
 connection.once('open', ()=> {
-    const server = app.listen(process.env.PORT || 8080, ()=>console.log("Listening on 8080"));
 });
 
 app.use(express.static("public"));
@@ -16,3 +16,7 @@ app.get('/api/v1/tasks', (req, res)=> {
 app.post('/api/v1/tasks', (req, res)=> {
     res.send('success');
 });
+
+app.get('*', (req, res) =>{
+    
+})
