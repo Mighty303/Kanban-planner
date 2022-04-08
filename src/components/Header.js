@@ -1,9 +1,13 @@
 import React from 'react';
+import kanban from '../../public/images/kanban.png';
 
 const Header = props => {
     return (
         <header>
-            <h1>Kanban Planner</h1>
+            <div>
+                <img src={kanban} height="50px" width="50px" alt="kanban logo" />
+                <h1>Kanban Planner</h1>
+            </div>
             <p>Plan ahead, stay ahead</p>        
         </header>
     );

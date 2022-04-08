@@ -5,18 +5,30 @@ import Tasks from './components/Tasks';
 import { useState } from 'react';
 
 const App = props => {
-    const [tasks, setTasks] = useState([]);
+    const [columns, setColumns] = useState([{column:'To Do', tasks:[]}, {column:'In progress', tasks:[]}, {column:'Completed', tasks:[]}]);
+    const [newTask, setNewTask] = useState(false);
 
     return (
         <main>
-            <Header />
-            <section className="form-section">
-                <TaskForm />
-            </section>
+            <div id="wrapper">
+                <Header />
+                <section className="form-section">
+                    <TaskForm 
+                        columns={columns} 
+                        setColumns={setColumns} 
+                        newTask={newTask} 
+                        setNewTask={setNewTask} 
+                    />
+                </section>
 
-            <section className="tasks-section">
-                <Tasks />
-            </section>
+                <section className="tasks-section">
+                    <Tasks 
+                        columns={columns} 
+                        setColumns={setColumns} 
+                        newTask={newTask} 
+                        setNewTask={setNewTask} />
+                </section>
+            </div>
         </main>
     );
 };
