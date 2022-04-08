@@ -12,9 +12,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const router = require('./routes/index');
+app.use('/api', router);
 
 app.get('*', (req, res) =>{
     
 });
-
-app.use('/api', router);
