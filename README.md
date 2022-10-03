@@ -13,7 +13,7 @@
     <li>Moving the tasks horizontally also took a lot of time and effort and mastery of React to understand my errors and eventually getting it working</li>
 </ul>
 
-<h2>How to run the application</h2>
+<h2>Features</h2>
 <ol>
     <li>Separate important tasks depending on its urgency</li>
     <li>Move tasks around freely as you complete them</li>
