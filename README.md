@@ -18,7 +18,7 @@
     <li>Separate important tasks depending on its urgency</li>
     <li>Move tasks around freely as you complete them</li>
     <li>Delete tasks after you have completed them</li>
-<ol>
+</ol>
 
 <h2>API Documentation</h2>
 <p>
