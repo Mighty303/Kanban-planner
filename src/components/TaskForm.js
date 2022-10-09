@@ -1,10 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const TaskForm = props => {
     const [errors, setErrors] = useState('');
+
+    useEffect(()=> {
+        document.getElementById('dateRequired').valueAsDate = new Date();
+    });
 
     const sanitizeForm = () => {
         const validPriority = ['low', 'medium', 'high', 'urgent'];
@@ -36,12 +39,15 @@ const TaskForm = props => {
         let taskName = document.getElementById('name').value;
         let taskPriority = document.getElementById('priority').value;
         let taskDescription = document.getElementById('description').value;
+        let taskDate = document.getElementById('dateRequired').value;
+        console.log(typeof taskDate);
 
         let task = {
             column: 'To Do',
             name: taskName,
             priority: taskPriority,
-            description: taskDescription
+            description: taskDescription,
+            date: taskDate
         }
 
         axios.post(`/api/v1/tasks`, task)
@@ -49,6 +55,12 @@ const TaskForm = props => {
             props.setNewTask(!props.newTask);
         })
         .catch(err=> console.log(err));
+
+        // Reset form values
+        taskName = document.getElementById('name').defaultValue;
+        taskPriority = document.getElementById('priority').defaultValue;
+        taskDescription = document.getElementById('description').defaultValue;
+        taskDate = document.getElementById('dateRequired').defaultValue;
     }
 
     return (
@@ -68,6 +80,8 @@ const TaskForm = props => {
                     </select>
                     <label>Description:</label>
                     <textarea type="text" name="description" id="description" placeholder="Description here ..." required />
+                    <label>Date:</label>
+                    <input type="date" id="dateRequired" />
                     <button>Submit</button>
                 </div>
             </fieldset>

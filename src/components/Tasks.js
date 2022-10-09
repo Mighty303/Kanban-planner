@@ -81,7 +81,7 @@ const Tasks = props => {
                         {<h2 className="column-headers">{column.column}</h2>}
                         <div>
                                 {column.tasks && column.tasks.map((task, index) => <div key={index} className="task">
-                                <h2>
+                                <h2 className="task-title">
                                     {task.name}
                                     <button id={task._id} onClick={handleDelete} className="delete-btn">Delete</button>                                    
                                 </h2>
@@ -93,6 +93,7 @@ const Tasks = props => {
                                 </select>
 
                                 <div className={task.priority}> Priority: {task.priority.toUpperCase()}</div>
+                                <p className="task-date">Date: {task.date}</p>
                             </div>)}
                         </div>
                     </div>)

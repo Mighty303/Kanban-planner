@@ -5,6 +5,7 @@ const connection = require('./db/connection');
 
 app.listen(process.env.PORT || 8080, ()=>console.log("Listening on 8080"));
 connection.once('open', ()=> {
+    console.log('connected to db');
 });
 
 app.use(express.static("public"));
