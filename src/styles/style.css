@@ -111,12 +111,13 @@ fieldset {
 .form-items button:hover {
     border: 3px solid #5F6870;
     background-color: #5F6870;
+    cursor: pointer;
 }
 
 .form-section {
     margin-top: 0;
     padding: 4em 4em;
-    background-color: #ca6702;
+    background-color: #003049;
     border-top: 5px solid #6c757d;
     border-bottom: 5px solid #6c757d;
 }
@@ -163,6 +164,20 @@ header p {
 }
 
 .task-item {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.task-date {
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 20px;
+    color: #e63946;
+}
+
+.task-title {
+    font-size: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
 }

@@ -7,6 +7,7 @@ const TaskSchema = new Schema({
     name: {type:String, required:true},
     priority: {type:String, required:true},
     description: {type:String, required:true},
+    date: {type:String}
 });
 
 const Task = mongoose.model("Task", TaskSchema);
