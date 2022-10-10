@@ -1,6 +1,6 @@
 {
   "name": "environment",
-  "homepage":"https://cpsc2600--mwong179.herokuapp.com/",
+  "homepage":"https://kanban-planner2022.herokuapp.com/",
   "version": "1.0.0",
     "engines": {
     "node": "16.13.0",
