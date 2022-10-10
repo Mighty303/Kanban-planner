@@ -1,4 +1,4 @@
-# Kanban-planner - <a href="https://cpsc2600--mwong179.herokuapp.com/">https://cpsc2600--mwong179.herokuapp.com/</a>
+# Kanban-planner - <a href="https://kanban-planner2022.herokuapp.com/">https://https://kanban-planner2022.herokuapp.com/</a>
 
 
 <h2>Introduction</h2>
