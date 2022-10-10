@@ -1,4 +1,5 @@
-# Kanban-planner - <a href="https://kanban-planner2022.herokuapp.com/">https://https://kanban-planner2022.herokuapp.com/</a>
+# Kanban Planner App
+Deployed at: <a href="https://kanban-planner2022.herokuapp.com/">https://https://kanban-planner2022.herokuapp.com/</a>
 
 
 <h2>Introduction</h2>
