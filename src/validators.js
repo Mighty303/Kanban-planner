@@ -18,18 +18,12 @@ const schema = {
         name: {
             type: 'string',
             minLength: 1,
-            maxLength: 20,
+            maxLength: 30,
             transform: ['trim'],
             errorMessage: {
                 minLength: "Name should have at least 1 character",
                 maxLength: "Name is too long"
             }
-        },
-
-        priority: {
-            type: 'string',
-            enum: ['low', 'medium', 'high', 'urgent'],
-            errorMessage: 'Please do not change the priority'
         },
 
         description: {
@@ -40,13 +34,12 @@ const schema = {
             errorMessage: "Please enter a description"
         }
     },
-    required: ['column', 'name', 'priority', 'description'],
+    required: ['column', 'name', 'description'],
     additionalProperties: true,
     errorMessage: {
         required: {
             'column': 'Please do not change the column type',
             'name': 'Please name your task',
-            'priority': 'Please choose a priority',
             'description': 'Please enter a description'
         }
     }

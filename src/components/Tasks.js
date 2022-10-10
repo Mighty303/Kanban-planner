@@ -45,7 +45,6 @@ const Tasks = props => {
     const handleSelect = event => {
         let target = event.target.id;
         let targetColumn = event.target.value;
-        console.log(target);
         axios.patch(`/api/v1/${targetColumn}`, {_id: target})
         .then(patchedResult => {
             axios.get('/api/v1/tasks')
@@ -83,16 +82,14 @@ const Tasks = props => {
                                 {column.tasks && column.tasks.map((task, index) => <div key={index} className="task">
                                 <h2 className="task-title">
                                     {task.name}
-                                    <button id={task._id} onClick={handleDelete} className="delete-btn">Delete</button>                                    
                                 </h2>
+                                    <button id={task._id} onClick={handleDelete} className="delete-btn">Delete</button>                                    
                                 <p className="task-item">{task.description}</p>
 
                                 <select name="options" className="task-item" id={task._id} onChange={handleSelect}>
                                     <option value="-- Choose a Column --">-- Choose a Column --</option>
                                     {columnNames.map((columnName, index) => <option key={index} value={columnName}>{columnName}</option>)}
                                 </select>
-
-                                <div className={task.priority}> Priority: {task.priority.toUpperCase()}</div>
                                 <p className="task-date">Date: {task.date}</p>
                             </div>)}
                         </div>

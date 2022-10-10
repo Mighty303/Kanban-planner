@@ -10,9 +10,7 @@ const TaskForm = props => {
     });
 
     const sanitizeForm = () => {
-        const validPriority = ['low', 'medium', 'high', 'urgent'];
         let name = document.getElementById('name').value;
-        let priority = document.getElementById('priority').value;
         let description = document.getElementById('description').value;
 
         if (name.length > 40) {
@@ -23,10 +21,7 @@ const TaskForm = props => {
             setErrors('Description is too long. Max 200 characters');
             return false;
         }
-        if (!validPriority.includes(priority)) {
-            setErrors('Error, please try again.');
-            return false
-        }
+
         return true;
     }
 
@@ -37,15 +32,12 @@ const TaskForm = props => {
             return;
 
         let taskName = document.getElementById('name').value;
-        let taskPriority = document.getElementById('priority').value;
         let taskDescription = document.getElementById('description').value;
         let taskDate = document.getElementById('dateRequired').value;
-        console.log(typeof taskDate);
 
         let task = {
             column: 'To Do',
             name: taskName,
-            priority: taskPriority,
             description: taskDescription,
             date: taskDate
         }
@@ -57,10 +49,9 @@ const TaskForm = props => {
         .catch(err=> console.log(err));
 
         // Reset form values
-        taskName = document.getElementById('name').defaultValue;
-        taskPriority = document.getElementById('priority').defaultValue;
-        taskDescription = document.getElementById('description').defaultValue;
-        taskDate = document.getElementById('dateRequired').defaultValue;
+        document.getElementById('name').value = document.getElementById('name').defaultValue;
+        document.getElementById('description').value = document.getElementById('description').defaultValue;
+        document.getElementById('dateRequired').value = document.getElementById('dateRequired').defaultValue;
     }
 
     return (
@@ -71,13 +62,6 @@ const TaskForm = props => {
                     <div id="errors" className="error">{errors}</div>
                     <label>Task Name:</label>
                     <input type="text" id="name" name="task" placeholder="Task Name" required />
-                    <label>Priority:</label>
-                    <select name="priority" id="priority" required>
-                        <option id="low" value="low">Low</option>
-                        <option id="medium" value="medium">Medium</option>
-                        <option id="high" value="high">High</option>
-                        <option id="urgent" value="urgent">Urgent</option>
-                    </select>
                     <label>Description:</label>
                     <textarea type="text" name="description" id="description" placeholder="Description here ..." required />
                     <label>Date:</label>

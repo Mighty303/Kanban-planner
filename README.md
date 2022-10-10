@@ -1,4 +1,4 @@
-## Kanban-planner - <a href="https://cpsc2600--mwong179.herokuapp.com/">https://cpsc2600--mwong179.herokuapp.com/</a>
+# Kanban-planner - <a href="https://cpsc2600--mwong179.herokuapp.com/">https://cpsc2600--mwong179.herokuapp.com/</a>
 
 
 <h2>Introduction</h2>
@@ -6,6 +6,12 @@
     My project simulates a Kanban planner application that can move tasks horizontally depending on their progress.
     I used APIs to pass the data from the data base to the front-end state logic in React.
 </p>
+
+<h2>List of features I am proud of:<h2>
+<ul>
+    <li>Using other HTTP responses such as patch and delete. I had to google on my own and I learned that delete does not take an object.</li>
+    <li>Moving the tasks horizontally also took a lot of time and effort and mastery of React to understand my errors and eventually getting it working</li>
+</ul>
 
 <h2>Features</h2>
 <ol>

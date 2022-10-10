@@ -8,7 +8,6 @@ const Header = props => {
                 <img src={kanban} height="50px" width="50px" alt="kanban logo" />
                 <h1>Kanban Planner</h1>
             </div>
-            <p>Plan ahead, stay ahead</p>        
         </header>
     );
 };
