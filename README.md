@@ -8,12 +8,6 @@ Deployed at: <a href="https://kanban-planner2022.herokuapp.com">https://kanban-p
     I used APIs to pass the data from the data base to the front-end state logic in React.
 </p>
 
-<h2>List of features I am proud of:<h2>
-<ul>
-    <li>Using other HTTP responses such as patch and delete. I had to google on my own and I learned that delete does not take an object.</li>
-    <li>Moving the tasks horizontally also took a lot of time and effort and mastery of React to understand my errors and eventually getting it working</li>
-</ul>
-
 <h2>Features</h2>
 <ol>
     <li>Separate important tasks depending on its urgency</li>
