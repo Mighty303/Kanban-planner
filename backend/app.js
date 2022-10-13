@@ -8,7 +8,7 @@ connection.once('open', ()=> {
     console.log('connected to db');
 });
 
-app.use(express.static("public"));
+app.use(express.static("frontend/public"));
 app.use(express.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
