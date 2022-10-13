@@ -1,3 +1,4 @@
 .c9
 .env
 node_modules
+.vscode
