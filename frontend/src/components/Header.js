@@ -5,6 +5,7 @@ const Header = props => {
     return (
         <header>
             <div>
+                <button class="add-task-btn">+ Add Task</button>
                 <img src={kanban} height="50px" width="50px" alt="kanban logo" />
                 <h1>Kanban Planner</h1>
             </div>
