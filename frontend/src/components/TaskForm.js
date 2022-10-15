@@ -56,8 +56,8 @@ const TaskForm = props => {
 
     return (
         <form className="form-container" onSubmit={e=>handleFormSubmit(e)}>
-            <fieldset>
-            <legend>Add a task</legend>
+            <div class="add-task">
+                <h2>Add a task</h2>
                 <div className="form-items">
                     <div id="errors" className="error">{errors}</div>
                     <label>Task Name:</label>
@@ -68,7 +68,7 @@ const TaskForm = props => {
                     <input type="date" id="dateRequired" />
                     <button>Submit</button>
                 </div>
-            </fieldset>
+            </div>
         </form>
     );
 };

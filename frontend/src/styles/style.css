@@ -51,11 +51,6 @@ main p {
     flex-wrap: wrap;
 }
 
-fieldset {
-    background-color: #293241;
-    width: 25%;
-}
-
 .form-container {
     display: flex;
     flex-direction: row;
@@ -123,8 +118,6 @@ fieldset {
 }
 
 header, footer{
-    display: flex;
-    flex-direction: column;
     background-color: #000814;
     height: 8vh;
     padding: 30px;
@@ -132,9 +125,16 @@ header, footer{
 
 
 header div, footer div {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+header div button {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 header div img{
@@ -150,6 +150,28 @@ header p {
     color: white;
 }
 
+.add-task {
+    background-color: #293241;
+    width: 25%;
+}
+
+.add-task-btn {
+    background-color: #BB86FC;
+    box-shadow: 0 0 20px #BB86FC;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 1.25em;
+}
+
+.add-task-btn:hover {
+    background-color: #A26DE3;
+    color: white;
+    box-shadow: 0 0 20px #A26DE3;
+    cursor: pointer;
+}
+
 .tasks-section {
     margin-top: 0;
     padding: 2em 2em;
@@ -161,6 +183,7 @@ header p {
     border-radius: 5px;
     padding: 20px;
     background-color: #8899A6;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .task-item {
@@ -174,7 +197,7 @@ header p {
     margin-bottom: 5px;
     font-size: 20px;
     padding: 20px;
-    color: #e63946;
+    color: #3700B3;
 }
 
 .task-title {
