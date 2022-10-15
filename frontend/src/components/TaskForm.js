@@ -53,7 +53,8 @@ const TaskForm = props => {
         document.getElementById('description').value = document.getElementById('description').defaultValue;
         document.getElementById('dateRequired').value = document.getElementById('dateRequired').defaultValue;
 
-        props.onClose();
+        props.onClose(); // close the modal once we're done
+        window.location.reaload(); // refresh page upon refresh
     }
 
     return (
