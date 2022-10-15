@@ -1,6 +1,10 @@
 import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EventIcon from '@mui/icons-material/Event';
+
 
 const columnNames = ['To Do', 'In Progress', 'Completed'];
 
@@ -63,7 +67,8 @@ const Tasks = props => {
     };
 
     const handleDelete = event => {
-        const selected = event.target.id;
+        const selected = event.currentTarget.id;
+        console.log(selected);
         axios.delete(`/api/v1/${selected}`)
         .then(result=> {
             loadTasks();
@@ -73,7 +78,6 @@ const Tasks = props => {
 
     return (
         <>
-            <h1 id="column-header">Tasks</h1>
             <div className="columns">
                 {
                     props.columns.map((column, index) => <div key={index} className="column">
@@ -82,15 +86,18 @@ const Tasks = props => {
                                 {column.tasks && column.tasks.map((task, index) => <div key={index} className="task">
                                 <h2 className="task-title">
                                     {task.name}
+                                    <IconButton aria-label="delete" color="error" id={task._id} onClick={handleDelete}>
+                                        <DeleteIcon />
+                                    </IconButton>
                                 </h2>
-                                    <button id={task._id} onClick={handleDelete} className="delete-btn">Delete</button>                                    
+
                                 <p className="task-item">{task.description}</p>
 
                                 <select name="options" className="task-item" id={task._id} onChange={handleSelect}>
                                     <option value="-- Choose a Column --">-- Choose a Column --</option>
                                     {columnNames.map((columnName, index) => <option key={index} value={columnName}>{columnName}</option>)}
                                 </select>
-                                <p className="task-date">Deadline: {task.date}</p>
+                                <p className="task-date"><EventIcon /><span>{task.date}</span></p>
                             </div>)}
                         </div>
                     </div>)

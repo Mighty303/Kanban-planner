@@ -15,14 +15,14 @@ const App = props => {
                         newTask={newTask} 
                         setNewTask={setNewTask} 
                 />
-                <section className="form-section">
+                {/* <section className="form-section"> */}
                     {/* <TaskForm 
                         columns={columns} 
                         setColumns={setColumns} 
                         newTask={newTask} 
                         setNewTask={setNewTask} 
                     /> */}
-                </section>
+                {/* </section> */}
 
                 <section className="tasks-section">
                     <Tasks 

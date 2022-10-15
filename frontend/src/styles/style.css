@@ -24,6 +24,7 @@ main p {
 #wrapper {
     margin-left: auto;
     margin-right: auto;
+    background-color: #000814;
 }
 
 .columns {
@@ -41,10 +42,6 @@ main p {
     padding: 15px;
 }
 
-#column-header {
-    font-size: 2.75em;
-    color: #BB86FC;
-}
 
 .column-headers {
     font-size: 2em;
@@ -128,7 +125,7 @@ main p {
 
 header, footer{
     background-color: #000814;
-    height: 8vh;
+    height: 5vh;
     padding: 30px;
 }
 
@@ -183,7 +180,7 @@ header p {
 
 .tasks-section {
     margin-top: 0;
-    padding: 2em 2em;
+    /* padding: 2em 2em; */
     background-color: #000814;
 }
 
@@ -203,6 +200,11 @@ header p {
 }
 
 .task-date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 5px;
     font-size: 20px;
     padding: 20px;
