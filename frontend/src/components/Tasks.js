@@ -90,7 +90,7 @@ const Tasks = props => {
                                     <option value="-- Choose a Column --">-- Choose a Column --</option>
                                     {columnNames.map((columnName, index) => <option key={index} value={columnName}>{columnName}</option>)}
                                 </select>
-                                <p className="task-date">Date: {task.date}</p>
+                                <p className="task-date">Deadline: {task.date}</p>
                             </div>)}
                         </div>
                     </div>)

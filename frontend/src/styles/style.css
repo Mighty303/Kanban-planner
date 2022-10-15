@@ -64,6 +64,10 @@ main p {
     padding: 40px;
 }
 
+.form-items button{
+    position: relative;
+}
+
 .form-items label {
     margin-top: 10px;
     font-size: 1.5em;
@@ -111,10 +115,15 @@ main p {
 
 .form-section {
     margin-top: 0;
-    padding: 4em 4em;
+    /* padding: 4em 4em; */
     background-color: #192734;
-    border-top: 5px solid #6c757d;
+    /* border-top: 5px solid #6c757d; */
     border-bottom: 5px solid #6c757d;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: row;
 }
 
 header, footer{
