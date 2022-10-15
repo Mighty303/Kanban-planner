@@ -10,7 +10,6 @@ Deployed at: <a href="https://kanban-planner2022.herokuapp.com">https://kanban-p
 
 <h2>Features</h2>
 <ol>
-    <li>Separate important tasks depending on its urgency</li>
     <li>Move tasks around freely as you complete them</li>
     <li>Delete tasks after you have completed them</li>
 </ol>
@@ -20,6 +19,6 @@ Deployed at: <a href="https://kanban-planner2022.herokuapp.com">https://kanban-p
     GET 'api/v1/tasks' queries the database for tasks and sends it back <br>
     POST 'api/v1/tasks' creates a new task on the database and saves it <br>
     PATCH 'api/v1/:column' Filters through the database and finds the document by its id and updates it <br>
-    DELETE 'api/v1/:id' Finds target document by its id and deletesd it. <br>
+    DELETE 'api/v1/:id' Finds target document by its id and deletes it. <br>
 
 </p>
