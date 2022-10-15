@@ -61,9 +61,9 @@ const TaskForm = props => {
                 <div className="form-items">
                     <div id="errors" className="error">{errors}</div>
                     <label>Task Name:</label>
-                    <input type="text" id="name" name="task" placeholder="Task Name" required />
+                    <input type="text" id="name" name="task" placeholder="Task Name" spellCheck="true" required />
                     <label>Description:</label>
-                    <textarea type="text" name="description" id="description" placeholder="Description here ..." required />
+                    <textarea type="text" name="description" id="description" placeholder="Description here ..." spellCheck="true" required />
                     <label>Date:</label>
                     <input type="date" id="dateRequired" />
                     <button>Submit</button>

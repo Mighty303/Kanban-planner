@@ -11,14 +11,19 @@ const App = props => {
     return (
         <main>
             <div id="wrapper">
-                <Header />
-                <section className="form-section">
-                    <TaskForm 
+                <Header 
                         columns={columns} 
                         setColumns={setColumns} 
                         newTask={newTask} 
                         setNewTask={setNewTask} 
-                    />
+                />
+                <section className="form-section">
+                    {/* <TaskForm 
+                        columns={columns} 
+                        setColumns={setColumns} 
+                        newTask={newTask} 
+                        setNewTask={setNewTask} 
+                    /> */}
                 </section>
 
                 <section className="tasks-section">
