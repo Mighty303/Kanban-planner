@@ -126,7 +126,6 @@ header, footer{
     padding: 30px;
 }
 
-
 header div, footer div {
     position: relative;
     display: flex;
