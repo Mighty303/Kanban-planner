@@ -26,7 +26,12 @@ const Header = props => {
                 <img src={kanban} height="50px" width="50px" alt="kanban logo" />
                 <h1>Kanban Planner</h1>
             </div>
-            <Modal open={modalIsOpen} />
+            <Modal 
+                open={modalIsOpen} 
+                onClose={()=> setIsOpen(false)}
+                newTask={props.newTask} 
+                setNewTask={props.setNewTask} 
+            />
         </header>
     );
 };

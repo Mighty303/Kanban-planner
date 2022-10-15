@@ -12,8 +12,6 @@ const App = props => {
         <main>
             <div id="wrapper">
                 <Header 
-                        columns={columns} 
-                        setColumns={setColumns} 
                         newTask={newTask} 
                         setNewTask={setNewTask} 
                 />

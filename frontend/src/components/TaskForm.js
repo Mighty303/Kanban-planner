@@ -52,13 +52,15 @@ const TaskForm = props => {
         document.getElementById('name').value = document.getElementById('name').defaultValue;
         document.getElementById('description').value = document.getElementById('description').defaultValue;
         document.getElementById('dateRequired').value = document.getElementById('dateRequired').defaultValue;
+
+        props.onClose();
     }
 
     return (
         <form className="form-container" onSubmit={e=>handleFormSubmit(e)}>
             <div class="add-task">
-                <h2>Add a task</h2>
                 <div className="form-items">
+                    <h2>Add a task</h2>
                     <div id="errors" className="error">{errors}</div>
                     <label>Task Name:</label>
                     <input type="text" id="name" name="task" placeholder="Task Name" spellCheck="true" required />
