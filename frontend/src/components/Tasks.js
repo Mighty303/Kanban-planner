@@ -68,7 +68,6 @@ const Tasks = props => {
 
     const handleDelete = event => {
         const selected = event.currentTarget.id;
-        console.log(selected);
         axios.delete(`/api/v1/${selected}`)
         .then(result=> {
             loadTasks();
