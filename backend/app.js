@@ -16,6 +16,6 @@ app.use(bodyParser.json());
 const router = require('./routes/index');
 app.use('/api', router);
 
-app.get('*', (req, res) =>{
-    res.sendFile(path.join(__dirname, '../frontend', 'public', 'index.html')); // redirect back
-});
+// app.get('*', (req, res) =>{
+//     res.sendFile(path.join(__dirname, '../frontend', 'public', 'index.html')); // redirect back
+// });
