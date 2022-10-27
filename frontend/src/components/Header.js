@@ -1,23 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Modal from './Modal';
 import kanban from '../../public/images/kanban.png';
-import TaskForm from '../components/TaskForm';
 import { useState } from 'react';
 
 const Header = props => {
     const [modalIsOpen, setIsOpen] = useState(false);
-
-    const openModal = () => {
-        setisOpen(true);
-    }
-
-    const afterOpenModal = () => {
-
-    }
-
-    const closeModal = () => {
-        setIsOpen(false);
-    }
 
     return (
         <header>

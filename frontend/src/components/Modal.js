@@ -24,7 +24,7 @@ const OVERLAY_STYLES = {
 
 const BUTTON_STYLES = {
     position: 'fixed', 
-    padding: '10px',
+    margin: '10px',
     float: 'right', 
     top: 0,
     right: 0

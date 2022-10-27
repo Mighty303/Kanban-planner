@@ -58,7 +58,7 @@ main p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px;
+    margin: 40px;
 }
 
 .form-items button{
