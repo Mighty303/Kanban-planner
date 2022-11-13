@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: './frontend/src/index.js',
     output: {
         filename: 'bundle.js',
@@ -10,6 +10,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
                 use: ['style-loader', 'css-loader']
             },
             {

@@ -58,7 +58,7 @@ const TaskForm = props => {
 
     return (
         <form className="form-container" onSubmit={e=>handleFormSubmit(e)}>
-            <div class="add-task">
+            <div className="add-task">
                 <div className="form-items">
                     <h2>Add a task</h2>
                     <div id="errors" className="error">{errors}</div>
