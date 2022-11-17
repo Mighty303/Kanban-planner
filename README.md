@@ -1,5 +1,5 @@
 # Kanban Planner App
-Deployed at: <a href="https://kanban-planner2022.herokuapp.com">https://kanban-planner2022.herokuapp.com</a>
+Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-production-bed5.up.railway.app/</a>
 
 
 <h2>Introduction</h2>
