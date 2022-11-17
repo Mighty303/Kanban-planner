@@ -1,6 +1,6 @@
 {
   "name": "environment",
-  "homepage": "https://kanban-planner2022.herokuapp.com/",
+  "homepage": "https://web-production-bed5.up.railway.app/",
   "version": "1.0.0",
   "engines": {
     "node": "16.13.0",
@@ -10,9 +10,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon backend/server.js",
+    "dev": "nodemon backend/app.js",
     "watch": "webpack --watch",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
