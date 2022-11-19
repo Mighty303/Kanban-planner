@@ -21,6 +21,14 @@ main p {
     font-size: 1.55em;
 }
 
+#kanban-logo {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 #wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -186,6 +194,10 @@ header p {
     padding: 20px;
     background-color: #8899A6;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.task:hover {
+    cursor: grab;
 }
 
 .task-item {
