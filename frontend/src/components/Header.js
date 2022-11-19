@@ -10,7 +10,7 @@ const Header = props => {
         <header>
             <div>
                 <button className="add-task-btn" onClick={()=> setIsOpen(true)}>+ Add Task</button>
-                <img src={kanban} height="50px" width="50px" alt="kanban logo" />
+                <img src={kanban} height="50px" width="50px" alt="kanban logo" id="kanban-logo" />
                 <h1>Kanban Planner</h1>
             </div>
             <Modal 

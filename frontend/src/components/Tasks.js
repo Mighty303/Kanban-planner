@@ -5,7 +5,6 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EventIcon from '@mui/icons-material/Event';
 
-
 const columnNames = ['To Do', 'In Progress', 'Completed'];
 
 const Tasks = props => {
@@ -80,25 +79,27 @@ const Tasks = props => {
             <div className="columns">
                 {
                     props.columns.map((column, index) => <div key={index} className="column">
-                        {<h2 className="column-headers">{column.column}</h2>}
-                        <div>
-                                {column.tasks && column.tasks.map((task, index) => <div key={index} className="task">
-                                <h2 className="task-title">
-                                    {task.name}
-                                    <IconButton aria-label="delete" color="error" id={task._id} onClick={handleDelete}>
-                                        <DeleteIcon />
-                                    </IconButton>
-                                </h2>
+                        {<h2 className="column-headers">{column.column}</h2>} {/*Column Title*/}
+                            {
+                                column.tasks && column.tasks.map((task, index) =>
+                                    <div key={index} className="task">
+                                        <h2 className="task-title">
+                                            {task.name}
+                                            <IconButton aria-label="delete" color="error" id={task._id} onClick={handleDelete}>
+                                                <DeleteIcon />
+                                            </IconButton>
+                                        </h2>
 
-                                <p className="task-item">{task.description}</p>
+                                        <p className="task-item">{task.description}</p>
 
-                                <select name="options" className="task-item" id={task._id} onChange={handleSelect}>
-                                    <option value="-- Choose a Column --">-- Choose a Column --</option>
-                                    {columnNames.map((columnName, index) => <option key={index} value={columnName}>{columnName}</option>)}
-                                </select>
-                                <p className="task-date"><EventIcon /><span>{task.date}</span></p>
-                            </div>)}
-                        </div>
+                                        <select name="options" className="task-item" id={task._id} onChange={handleSelect}> {/*Select Column*/}
+                                            <option value="-- Choose a Column --">-- Choose a Column --</option>
+                                            {columnNames.map((columnName, index) => <option key={index} value={columnName}>{columnName}</option>)}
+                                        </select>
+                                        
+                                        <p className="task-date"><EventIcon /><span>{task.date}</span></p>
+                                    </div>)
+                            }
                     </div>)
                 }
             </div>
