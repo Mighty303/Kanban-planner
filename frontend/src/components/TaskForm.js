@@ -54,6 +54,7 @@ const TaskForm = props => {
         document.getElementById('dateRequired').value = document.getElementById('dateRequired').defaultValue;
 
         props.onClose(); // close the modal once we're done
+        
     }
 
     return (

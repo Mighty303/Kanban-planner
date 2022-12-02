@@ -10,7 +10,7 @@ html {
 }
 
 main {
-    background-color: #457b9d;
+    background-color: #000814;
 }
 
 main h1 {
@@ -167,18 +167,18 @@ header p {
 
 .add-task-btn {
     background-color: #BB86FC;
-    box-shadow: 0 0 20px #BB86FC;
+    box-shadow: 0 0 10px #BB86FC;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     text-align: center;
-    padding: 1.25em;
+    padding: 1.25em 2em 1.25em 2em;
 }
 
 .add-task-btn:hover {
     background-color: #A26DE3;
     color: white;
-    box-shadow: 0 0 20px #A26DE3;
+    box-shadow: 0 0 10px #A26DE3;
     cursor: pointer;
 }
 
@@ -245,4 +245,13 @@ header p {
     color: red;
     padding-bottom: 10px;
     font-size: 1.5em;
+}
+
+#alert {
+    position: fixed;
+    right: 0px; 
+    bottom: 0px;
+    width: 200px;
+    height:40px;
+    padding: 5px;
 }
