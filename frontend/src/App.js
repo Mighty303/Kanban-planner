@@ -1,11 +1,17 @@
 import React from 'react';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
-import { useState } from 'react';
+import SuccessAlert from './success.js';
+import Alert from '@mui/material/Alert';
+import { useState, useEffect } from 'react';
+import Fade from "@mui/material/Fade";
 
 const App = props => {
     const [columns, setColumns] = useState([{column:'To Do', tasks:[]}, {column:'In progress', tasks:[]}, {column:'Completed', tasks:[]}]);
     const [newTask, setNewTask] = useState(false);
+
+    
+
 
     return (
         <main>
@@ -23,6 +29,18 @@ const App = props => {
                         setNewTask={setNewTask} />
                 </section>
             </div>
+            <Fade
+                    in={newTask} //Write the needed condition here to make it appear
+                    timeout={{ enter: 1000, exit: 1000 }} //Edit these two values to change the duration of transition when the element is getting appeared and disappeard
+                    addEndListener={() => {
+                        setTimeout(() => {
+                        setNewTask(false)
+                        }, 2000);
+                    }}
+                    id="alert"
+                >
+                    {SuccessAlert()}
+                </Fade>
         </main>
     );
 };

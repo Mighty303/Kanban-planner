@@ -1,6 +1,6 @@
 import React from 'react';
 import TaskForm from './TaskForm';
-import closeButton from '../../public/images/closeButton.svg';
+import closeButton from '../../public/images/closeButton.png';
 
 const MODAL_STYLES = { 
     position: 'fixed',
