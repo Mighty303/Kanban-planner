@@ -14,6 +14,24 @@ Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-p
     <li>Delete tasks after you have completed them</li>
 </ol>
 
+<h2>Technologies Used</h2>
+<p>Client</p>
+<ol>
+    <li>React JS </li>
+    <li>Redux (for managing application state)</li>
+    <li>Axios (for making api calls)</li>
+    <li>Material UI(for alerts and icons)</li>
+</ol>
+<p>Server</p>
+<ol>
+    <li>Express</li>
+    <li>Mongoose</li>
+</ol>
+<p>Databse</p>
+<ol>
+    <li>MongoDB (MongoDB Atlas)</li>
+</ol>
+
 <h2>API Documentation</h2>
 <p>
     GET 'api/v1/tasks' queries the database for tasks and sends it back <br>
