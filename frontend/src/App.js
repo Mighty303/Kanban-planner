@@ -10,9 +10,6 @@ const App = props => {
     const [columns, setColumns] = useState([{column:'To Do', tasks:[]}, {column:'In progress', tasks:[]}, {column:'Completed', tasks:[]}]);
     const [newTask, setNewTask] = useState(false);
 
-    
-
-
     return (
         <main>
             <div id="wrapper">
