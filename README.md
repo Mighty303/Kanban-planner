@@ -23,7 +23,7 @@ Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-p
     <li>Material UI(for alerts and icons)</li>
 </ul>
 <p>Server</p>
-<ol>
+<ul>
     <li>Express</li>
     <li>Mongoose</li>
 </ul>
