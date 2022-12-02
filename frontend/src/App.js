@@ -16,7 +16,6 @@ const App = props => {
                         newTask={newTask} 
                         setNewTask={setNewTask} 
                 />
-
                 <section className="tasks-section">
                     <Tasks 
                         columns={columns} 
