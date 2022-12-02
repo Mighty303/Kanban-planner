@@ -9,28 +9,28 @@ Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-p
 </p>
 
 <h2>Features</h2>
-<ol>
+<ul>
     <li>Move tasks around freely as you complete them</li>
     <li>Delete tasks after you have completed them</li>
-</ol>
+</ul>
 
 <h2>Technologies Used</h2>
 <p>Client</p>
-<ol>
+<ul>
     <li>React JS </li>
     <li>Redux (for managing application state)</li>
     <li>Axios (for making api calls)</li>
     <li>Material UI(for alerts and icons)</li>
-</ol>
+</ul>
 <p>Server</p>
 <ol>
     <li>Express</li>
     <li>Mongoose</li>
-</ol>
+</ul>
 <p>Databse</p>
-<ol>
+<ul>
     <li>MongoDB (MongoDB Atlas)</li>
-</ol>
+</ul>
 
 <h2>API Documentation</h2>
 <p>
