@@ -20,7 +20,7 @@ Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-p
     <li>React JS </li>
     <li>Redux (for managing application state)</li>
     <li>Axios (for making api calls)</li>
-    <li>Material UI(for alerts and icons)</li>
+    <li>Material UI (for alerts and icons)</li>
 </ul>
 <p>Server</p>
 <ul>
