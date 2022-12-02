@@ -2,8 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import SuccessAlert from './success.js';
-import Alert from '@mui/material/Alert';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Fade from "@mui/material/Fade";
 
 const App = props => {
