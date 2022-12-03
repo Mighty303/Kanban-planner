@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
-import SuccessAlert from './success.js';
+import { SuccessAlert } from './Alerts.js';
 import { useState } from 'react';
 import Fade from "@mui/material/Fade";
 
@@ -34,10 +34,11 @@ const App = props => {
                     }}
                     id="alert"
                 >
-                    {SuccessAlert()}
+                    {SuccessAlert('Task added!')}
                 </Fade>
         </main>
     );
 };
+
 
 export default App;
