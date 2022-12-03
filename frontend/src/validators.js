@@ -1,5 +1,4 @@
 const Ajv = require("ajv");
-const req = require("express/lib/request");
 const ajv = new Ajv.default({ allErrors: true });
 
 require("ajv-formats")(ajv);
