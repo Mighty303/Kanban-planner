@@ -2,6 +2,7 @@ import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EventIcon from '@mui/icons-material/Event';
+import styles from '../styles/tasks.css'
 
 const columnNames = ['To Do', 'In Progress', 'Completed'];
 
