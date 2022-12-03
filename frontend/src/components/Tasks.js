@@ -85,9 +85,11 @@ const Tasks = props => {
                                     <div key={index} className="task">
                                         <h2 className="task-title">
                                             {task.name}
-                                            <IconButton aria-label="delete" color="error" id={task._id} onClick={handleDelete}>
-                                                <DeleteIcon />
-                                            </IconButton>
+                                            <span id="del">
+                                                <IconButton aria-label="delete" color="error" id={task._id} onClick={handleDelete}>
+                                                    <DeleteIcon />
+                                                </IconButton>
+                                            </span>
                                         </h2>
 
                                         <p className="task-item">{task.description}</p>
