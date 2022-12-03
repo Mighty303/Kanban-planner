@@ -1,12 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EventIcon from '@mui/icons-material/Event';
 import Task from './Task.js';
-
-const columnNames = ['To Do', 'In Progress', 'Completed'];
 
 const Tasks = props => {
     useEffect(function loadNewTask() {
@@ -61,7 +56,7 @@ const Tasks = props => {
                 })
             })
             .catch(err => console.log(err));
-            props.setNewTask(!props.newTask);
+            props.setMovedTask(!props.movedTask);
         })
         .catch(err => console.log(err));
     };
@@ -71,6 +66,7 @@ const Tasks = props => {
         axios.delete(`/api/v1/${selected}`)
         .then(result=> {
             loadTasks();
+            props.setDeletedTask(!props.deletedTask);
         })
         .catch(err => console.log(err));
     };
