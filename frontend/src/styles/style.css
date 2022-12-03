@@ -21,13 +21,6 @@ main p {
     font-size: 1.55em;
 }
 
-#kanban-logo {
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
 
 #wrapper {
     margin-left: auto;
@@ -56,176 +49,6 @@ main p {
     flex-wrap: wrap;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.form-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 40px;
-}
-
-.form-items button{
-    position: relative;
-}
-
-.form-items h2 {
-    color: #A26DE3;
-}
-
-.form-items label {
-    margin-top: 10px;
-    padding-top: 10px;
-    font-size: 1.15em;
-}
-
-.form-items textarea{
-    padding-top: 2px;
-    padding-left: 4px;
-    padding-bottom: 40px;
-    border: 3px solid #6c757d;
-}
-
-.form-items input[type="text"], select {
-    padding: 2px;
-    border: 3px solid #6c757d;
-}
-
-.form-container fieldset{
-    padding-left: 40px;
-    padding-right: 40px;
-    border-radius: 15px;
-    border: 3px solid white;
-}
-
-.form-container legend{
-    font-size: 2em;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.form-items button{
-    margin-top: 10px;
-    padding: 2px;
-    border: 3px solid #A26DE3;
-    background-color: #A26DE3;
-    color: white;
-}
-
-.form-items button:hover {
-    border: 3px solid #8954CA;
-    background-color: #8954CA;
-    cursor: pointer;
-}
-
-.header-section {
-    display: flex;
-    flex-direction: row;
-}
-
-header, footer{
-    background-color: #000814;
-    height: 5vh;
-    padding: 30px;
-}
-
-header div, footer div {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-header div button {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-header div img{
-    padding-right: 10px;
-}
-
-header h1 {
-    color: #BB86FC;
-    text-transform: uppercase;
-}
-
-header p {
-    color: white;
-}
-
-.add-task {
-    background-color: #293241;
-    width: 25%;
-}
-
-.add-task-btn {
-    background-color: #BB86FC;
-    box-shadow: 0 0 10px #BB86FC;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-    padding: 1.25em 2em 1.25em 2em;
-}
-
-.add-task-btn:hover {
-    background-color: #A26DE3;
-    color: white;
-    box-shadow: 0 0 10px #A26DE3;
-    cursor: pointer;
-}
-
-.tasks-section {
-    margin-top: 0;
-    /* padding: 2em 2em; */
-    background-color: #000814;
-}
-
-.task {
-    margin-top: 30px;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #8899A6;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-}
-
-.task:hover {
-    cursor: grab;
-}
-
-.task-item {
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: black;
-}
-
-.task-date {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 5px;
-    font-size: 20px;
-    padding: 20px;
-    color: #3700B3;
-}
-
-.task-title {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: black;
-}
-
 .delete-btn {
     margin-left: 10px;
     padding: 8px;
@@ -241,11 +64,7 @@ header p {
     cursor: pointer;
 }
 
-.error {
-    color: red;
-    padding-bottom: 10px;
-    font-size: 1.5em;
-}
+
 
 #alert {
     position: fixed;

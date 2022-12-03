@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from './Modal';
 import kanban from '../../public/images/kanban.png';
 import { useState } from 'react';
+import styles from '../styles/header.css';
 
 const Header = props => {
     const [modalIsOpen, setIsOpen] = useState(false);

@@ -1,0 +1,72 @@
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.form-items button{
+    position: relative;
+}
+
+.form-items h2 {
+    color: #A26DE3;
+}
+
+.form-items label {
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 1.15em;
+}
+
+.form-items textarea{
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-bottom: 40px;
+    border: 3px solid #6c757d;
+}
+
+.form-items input[type="text"], select {
+    padding: 2px;
+    border: 3px solid #6c757d;
+}
+
+.form-container fieldset{
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+.form-container legend{
+    font-size: 2em;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form-items button{
+    margin-top: 10px;
+    padding: 2px;
+    border: 3px solid #A26DE3;
+    background-color: #A26DE3;
+    color: white;
+}
+
+.form-items button:hover {
+    border: 3px solid #8954CA;
+    background-color: #8954CA;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
