@@ -1,11 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EventIcon from '@mui/icons-material/Event';
-
-const columnNames = ['To Do', 'In Progress', 'Completed'];
+import Task from './Task.js';
 
 const Tasks = props => {
     useEffect(function loadNewTask() {
@@ -60,7 +56,7 @@ const Tasks = props => {
                 })
             })
             .catch(err => console.log(err));
-            props.setNewTask(!props.newTask);
+            props.setMovedTask(!props.movedTask);
         })
         .catch(err => console.log(err));
     };
@@ -70,6 +66,7 @@ const Tasks = props => {
         axios.delete(`/api/v1/${selected}`)
         .then(result=> {
             loadTasks();
+            props.setDeletedTask(!props.deletedTask);
         })
         .catch(err => console.log(err));
     };
@@ -82,23 +79,16 @@ const Tasks = props => {
                         {<h2 className="column-headers">{column.column}</h2>} {/*Column Title*/}
                             {
                                 column.tasks && column.tasks.map((task, index) =>
-                                    <div key={index} className="task">
-                                        <h2 className="task-title">
-                                            {task.name}
-                                            <IconButton aria-label="delete" color="error" id={task._id} onClick={handleDelete}>
-                                                <DeleteIcon />
-                                            </IconButton>
-                                        </h2>
-
-                                        <p className="task-item">{task.description}</p>
-
-                                        <select name="options" className="task-item" id={task._id} onChange={handleSelect}> {/*Select Column*/}
-                                            <option value="-- Choose a Column --">-- Choose a Column --</option>
-                                            {columnNames.map((columnName, index) => <option key={index} value={columnName}>{columnName}</option>)}
-                                        </select>
-                                        
-                                        <p className="task-date"><EventIcon /><span>{task.date}</span></p>
-                                    </div>)
+                                    <Task 
+                                        key={index}
+                                        name={task.name} 
+                                        index={index} 
+                                        id={task._id} 
+                                        description={task.description} 
+                                        date={task.date}
+                                        handleDelete={handleDelete} 
+                                        handleSelect={handleSelect} 
+                                    />)
                             }
                     </div>)
                 }

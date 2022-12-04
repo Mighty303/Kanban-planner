@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import styles from '../styles/taskForm.css';
 
 const TaskForm = props => {
     const [errors, setErrors] = useState('');
@@ -44,7 +45,7 @@ const TaskForm = props => {
 
         axios.post(`/api/v1/tasks`, task)
         .then(result=> { 
-            props.setNewTask(!props.newTask);
+            props.setNewTask(!props.newTask); // rerender our page with the new task
         })
         .catch(err=> console.log(err));
 
