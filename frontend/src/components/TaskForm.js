@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import styles from '../styles/taskForm.css';
+import '../styles/taskForm.css';
 
 const TaskForm = props => {
     const [errors, setErrors] = useState('');
