@@ -2,8 +2,10 @@ import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Task from './Task.js';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 const Tasks = props => {
+
     useEffect(function loadNewTask() {
         loadTasks();
     },[props.newTask]);
@@ -28,12 +30,13 @@ const Tasks = props => {
         .then(result => {
             let columnsCopy = [{column:'To Do', tasks:[]}, {column:'In Progress', tasks:[]}, {column:'Completed', tasks:[]}];
             columnsCopy.forEach((column, index) => {
-                result.data.forEach((task) => {
+                result.data.forEach((task, index) => {
                     if (column.column === task.column && task._id !== target._id)
+                        // columnsCopy[index].tasks.splice(index, 1, task);
                         columnsCopy[index].tasks.push(task);
                 })
                 if (column.column == target.column)
-                    columnsCopy[index].tasks.push(target);
+                    columnsCopy[index].tasks.splice(index, 1, target);
             });
             props.setColumns(columnsCopy);
             props.setNewTask(!props.newTask);
@@ -44,6 +47,8 @@ const Tasks = props => {
     const handleSelect = event => {
         let target = event.target.id;
         let targetColumn = event.target.value;
+        // console.log(`TARGET: ${target}`);
+        // console.log(`TARGET: ${targetColumn}`);
         axios.patch(`/api/v1/${targetColumn}`, {_id: target})
         .then(patchedResult => {
             axios.get('/api/v1/tasks')
@@ -61,6 +66,29 @@ const Tasks = props => {
         .catch(err => console.log(err));
     };
 
+    const handleOnDragEnd = result => {
+        let target = result.draggableId;
+        let targetColumn = result.destination.droppableId;
+        console.log(`TARGET: ${target}`);
+        console.log(`TARGET: ${targetColumn}`);
+        axios.patch(`/api/v1/${targetColumn}`, {_id: target})
+        .then(patchedResult => {
+            axios.get('/api/v1/tasks')
+            .then(result => {
+                result.data.forEach((column, index) => {
+                    if (column._id === patchedResult.data._id) {
+                        result.data.splice(index, 1);
+                        console.log(patchedResult.data);
+                        insertData(patchedResult.data);
+                    }
+                })
+            })
+            .catch(err => console.log(err));
+            props.setMovedTask(!props.movedTask);
+        })
+        .catch(err => console.log(err));
+    }
+
     const handleDelete = event => {
         const selected = event.currentTarget.id;
         axios.delete(`/api/v1/${selected}`)
@@ -72,28 +100,53 @@ const Tasks = props => {
     };
 
     return (
-        <>
+        <DragDropContext onDragEnd={handleOnDragEnd}>
             <div className="columns">
                 {
-                    props.columns.map((column, index) => <div key={index} className="column">
-                        {<h2 className="column-headers">{column.column}</h2>} {/*Column Title*/}
-                            {
-                                column.tasks && column.tasks.map((task, index) =>
-                                    <Task 
-                                        key={index}
-                                        name={task.name} 
-                                        index={index} 
-                                        id={task._id} 
-                                        description={task.description} 
-                                        date={task.date}
-                                        handleDelete={handleDelete} 
-                                        handleSelect={handleSelect} 
-                                    />)
+                    props.columns.map((column, index) => // Loop thru the columns
+                        <Droppable droppableId={column.column} key={index}>
+                            {(provided) => 
+                                <div 
+                                    className="column"
+                                    {...provided.droppableProps} 
+                                    ref={provided.innerRef}
+                                >
+                                    {<h2 className="column-headers">{column.column}</h2>} {/*Column Title*/}
+                                        {
+                                            column.tasks && column.tasks.map((task, index) => // Loop thru the tasks
+                                                <Draggable 
+                                                    key={index}
+                                                    draggableId={task._id} 
+                                                    index={index}
+                                                >
+                                                    {(provided) => 
+                                                        <div 
+                                                            ref={provided.innerRef}
+                                                            {...provided.draggableProps}
+                                                            {...provided.dragHandleProps}
+                                                        >
+                                                            <Task 
+                                                                name={task.name} 
+                                                                index={index} 
+                                                                id={task._id} 
+                                                                description={task.description} 
+                                                                date={task.date}
+                                                                handleDelete={handleDelete} 
+                                                                handleSelect={handleSelect} 
+    
+
+                                                            />
+                                                        </div>
+                                                    }
+                                                </Draggable>)
+                                        }
+                                        {provided.placeholder}
+                                </div>
                             }
-                    </div>)
+                        </Droppable>)
                 }
             </div>
-        </>
+        </DragDropContext>
     );
 };
 
