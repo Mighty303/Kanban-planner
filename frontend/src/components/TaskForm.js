@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import styles from '../styles/taskForm.css';
+import '../styles/taskForm.css';
+
 
 const TaskForm = props => {
     const [errors, setErrors] = useState('');
@@ -62,7 +63,7 @@ const TaskForm = props => {
         <form className="form-container" onSubmit={e=>handleFormSubmit(e)}>
             <div className="add-task">
                 <div className="form-items">
-                    <h2>Add a task</h2>
+                    <h2>Add a Task</h2>
                     <div id="errors" className="error">{errors}</div>
                     <label>Task Name:</label>
                     <input type="text" id="name" name="task" placeholder="Task Name" spellCheck="true" required />

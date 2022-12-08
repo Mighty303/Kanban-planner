@@ -17,6 +17,7 @@
 
 .form-items h2 {
     color: #A26DE3;
+    font-size: 1.75em;
 }
 
 .form-items label {
@@ -28,13 +29,29 @@
 .form-items textarea{
     padding-top: 2px;
     padding-left: 4px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     border: 3px solid #6c757d;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
 }
 
-.form-items input[type="text"], select {
-    padding: 2px;
+.form-items textarea:focus {
+    border: 3px solid #A26DE3;
+    
+}
+
+.form-items input[type="text"], input[type="date"], select {
+    padding: 12px;
     border: 3px solid #6c757d;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-items input[type="text"]:focus, input[type="date"]:focus {
+    border: 3px solid #A26DE3;
 }
 
 .form-container fieldset{
@@ -52,7 +69,7 @@
 }
 
 .form-items button{
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 2px;
     border: 3px solid #A26DE3;
     background-color: #A26DE3;
