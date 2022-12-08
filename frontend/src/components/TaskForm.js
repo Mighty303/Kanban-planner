@@ -62,7 +62,7 @@ const TaskForm = props => {
         <form className="form-container" onSubmit={e=>handleFormSubmit(e)}>
             <div className="add-task">
                 <div className="form-items">
-                    <h2>Add a task</h2>
+                    <h2>Add a Task</h2>
                     <div id="errors" className="error">{errors}</div>
                     <label>Task Name:</label>
                     <input type="text" id="name" name="task" placeholder="Task Name" spellCheck="true" required />
