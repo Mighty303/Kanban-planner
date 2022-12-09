@@ -19,12 +19,6 @@ const Task = props => {
             </h2>
 
             <p className="task-item">{props.description}</p>
-
-            <select name="options" className="task-item" id={props.id} onChange={props.handleSelect}> {/*Select Column*/}
-                <option value="-- Choose a Column --">-- Choose a Column --</option>
-                {columnNames.map((columnName, index) => <option key={index} value={columnName}>{columnName}</option>)}
-            </select>
-            
             <p className="task-date"><EventIcon /><span>{props.date}</span></p>
         </div>
     );

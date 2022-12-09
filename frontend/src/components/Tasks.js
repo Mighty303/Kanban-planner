@@ -8,15 +8,15 @@ const Tasks = props => {
 
     useEffect(function loadNewTask() {
         loadTasks();
-    },[props.newTask]);
+    },[props.newTask, props.movedTask]);
 
     const loadTasks = () => {
         axios.get('/api/v1/tasks')
         .then(result => {
             let columnsCopy = [{column:'To Do', tasks:[]}, {column:'In Progress', tasks:[]}, {column:'Completed', tasks:[]}];
             columnsCopy.forEach((column, index) => {
-                result.data.forEach((task) => {
-                    if (column.column === task.column)
+                result.data.forEach(task => {
+                    if (column.column === task.column) 
                         columnsCopy[index].tasks.push(task);
                     })
             });
@@ -25,65 +25,15 @@ const Tasks = props => {
         .catch(err => console.log(err));
     }
 
-    const insertData = target => {
-        axios.get('/api/v1/tasks')
-        .then(result => {
-            let columnsCopy = [{column:'To Do', tasks:[]}, {column:'In Progress', tasks:[]}, {column:'Completed', tasks:[]}];
-            columnsCopy.forEach((column, index) => {
-                result.data.forEach((task, index) => {
-                    if (column.column === task.column && task._id !== target._id)
-                        // columnsCopy[index].tasks.splice(index, 1, task);
-                        columnsCopy[index].tasks.push(task);
-                })
-                if (column.column == target.column)
-                    columnsCopy[index].tasks.splice(index, 1, target);
-            });
-            props.setColumns(columnsCopy);
-            props.setNewTask(!props.newTask);
-        })
-        .catch(err => console.log(err));
-    };
-
-    const handleSelect = event => {
-        let target = event.target.id;
-        let targetColumn = event.target.value;
-        // console.log(`TARGET: ${target}`);
-        // console.log(`TARGET: ${targetColumn}`);
-        axios.patch(`/api/v1/${targetColumn}`, {_id: target})
-        .then(patchedResult => {
-            axios.get('/api/v1/tasks')
-            .then(result => {
-                result.data.forEach((column, index) => {
-                    if (column._id === patchedResult.data._id) {
-                        result.data.splice(index, 1);
-                        insertData(patchedResult.data);
-                    }
-                })
-            })
-            .catch(err => console.log(err));
-            props.setMovedTask(!props.movedTask);
-        })
-        .catch(err => console.log(err));
-    };
 
     const handleOnDragEnd = result => {
         let target = result.draggableId;
         let targetColumn = result.destination.droppableId;
-        console.log(`TARGET: ${target}`);
-        console.log(`TARGET: ${targetColumn}`);
-        axios.patch(`/api/v1/${targetColumn}`, {_id: target})
+        let targetIndex = result.destination.index;
+
+        axios.patch(`/api/v1/${targetColumn}`, {_id: target, index: targetIndex })
         .then(patchedResult => {
-            axios.get('/api/v1/tasks')
-            .then(result => {
-                result.data.forEach((column, index) => {
-                    if (column._id === patchedResult.data._id) {
-                        result.data.splice(index, 1);
-                        console.log(patchedResult.data);
-                        insertData(patchedResult.data);
-                    }
-                })
-            })
-            .catch(err => console.log(err));
+            console.log(patchedResult.data);
             props.setMovedTask(!props.movedTask);
         })
         .catch(err => console.log(err));
@@ -115,7 +65,7 @@ const Tasks = props => {
                                         {
                                             column.tasks && column.tasks.map((task, index) => // Loop thru the tasks
                                                 <Draggable 
-                                                    key={index}
+                                                    key={task._id}
                                                     draggableId={task._id} 
                                                     index={index}
                                                 >
@@ -132,9 +82,6 @@ const Tasks = props => {
                                                                 description={task.description} 
                                                                 date={task.date}
                                                                 handleDelete={handleDelete} 
-                                                                handleSelect={handleSelect} 
-    
-
                                                             />
                                                         </div>
                                                     }
