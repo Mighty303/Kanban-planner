@@ -26,8 +26,9 @@ Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-p
 <ul>
     <li>Express</li>
     <li>Mongoose</li>
+    <li>Ajv (server-sided form validation)</li>
 </ul>
-<p>Databse</p>
+<p>Database</p>
 <ul>
     <li>MongoDB (MongoDB Atlas)</li>
 </ul>
