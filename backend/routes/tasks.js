@@ -1,5 +1,5 @@
 const router = require('express').Router({mergeParams:true});
-const validators = require('../../frontend/src/validators');
+const validators = require('../../backend/validators');
 
 const {getTasks, postTasks, patchColumn, deleteTask} = require('../controllers/tasksController');
 

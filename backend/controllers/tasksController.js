@@ -19,10 +19,11 @@ const postTasks = (req, res)=> {
 };
 
 const patchColumn = (req, res) => {
-    const filter = { _id: req.body._id };
-    const doc = {$set: {column: req.params.column}};
+    const filter = { _id: req.body._id};
+    const doc = {$set: {column: req.params.column, index: req.body.index}};
     Task.findOneAndUpdate(filter, doc, {new: true}).exec()
     .then(result => {
+        result.index = req.body.index;
         result.column = req.params.column;
         res.status(200).send(result);
     })
