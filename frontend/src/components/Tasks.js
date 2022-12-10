@@ -31,9 +31,29 @@ const Tasks = props => {
         let targetColumn = result.destination.droppableId;
         let targetIndex = result.destination.index;
 
+        let targetTask;
+
+        // Remove the task synchronously to avoid flickering UI
+        props.columns.forEach(column => {
+            column.tasks.forEach((task, index) => {
+                if (task._id === target) {
+                    targetTask = task;
+                    column.tasks.splice(index, 1);
+                }
+            })
+        });
+
+        // Add the task to the right column to avoid flickering UI on that column
+        props.columns.forEach(column => {
+            if (column.column === targetColumn) {
+                column.tasks.push(targetTask);
+                props.setColumns(props.columns);
+            }
+        });
+
         axios.patch(`/api/v1/${targetColumn}`, {_id: target, index: targetIndex })
         .then(patchedResult => {
-            console.log(patchedResult.data);
+            // console.log(patchedResult.data);
             props.setMovedTask(!props.movedTask);
         })
         .catch(err => console.log(err));

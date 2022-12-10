@@ -4,7 +4,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EventIcon from '@mui/icons-material/Event';
 import '../styles/tasks.css'
 
-const columnNames = ['To Do', 'In Progress', 'Completed'];
 
 const Task = props => {
     return (
