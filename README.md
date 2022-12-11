@@ -1,33 +1,35 @@
 # Kanban Planner App
 Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-production-bed5.up.railway.app/</a>
+Built with the MERN stack (MongoDB, Express, React and NodeJS)
 
 
 <h2>Introduction</h2>
 <p>
-    My project simulates a Kanban planner application that can move tasks horizontally depending on their progress.
-    I used APIs to pass the data from the data base to the front-end state logic in React.
+    This is a side project I have been working on alongside school for a couple months mainly for fun. I got inspured by github's kanban planner in "Projects" so I wanted to recreate it myself and customize it. 
 </p>
 
 <h2>Features</h2>
 <ul>
-    <li>Move tasks around freely as you complete them</li>
-    <li>Delete tasks after you have completed them</li>
+    <li>Drag tasks to different columns</li>
+    <li>Delete tasks</li>
 </ul>
 
 <h2>Technologies Used</h2>
 <p>Client</p>
 <ul>
-    <li>React JS </li>
+    <li>React</li>
     <li>Redux (for managing application state)</li>
     <li>Axios (for making api calls)</li>
     <li>Material UI (for alerts and icons)</li>
+    <li>react-beautiful-dnd (for draggable tasks)</li>
 </ul>
 <p>Server</p>
 <ul>
     <li>Express</li>
     <li>Mongoose</li>
+    <li>AJV (Server-sided form validation)</li>
 </ul>
-<p>Databse</p>
+<p>Database</p>
 <ul>
     <li>MongoDB (MongoDB Atlas)</li>
 </ul>
@@ -35,8 +37,8 @@ Deployed at: <a href="https://web-production-bed5.up.railway.app/">https://web-p
 <h2>API Documentation</h2>
 <p>
     GET 'api/v1/tasks' queries the database for tasks and sends it back <br>
-    POST 'api/v1/tasks' creates a new task on the database and saves it <br>
-    PATCH 'api/v1/:column' Filters through the database and finds the document by its id and updates it <br>
-    DELETE 'api/v1/:id' Finds target document by its id and deletes it. <br>
+    POST 'api/v1/tasks' saves a new task on the database.<br>
+    PATCH 'api/v1/:column' Updates a task by it's ID.<br>
+    DELETE 'api/v1/:id' Finds target by its id and deletes it. <br>
 
 </p>
