@@ -5,7 +5,7 @@ Built with the MERN stack (MongoDB, Express, React and NodeJS)
 
 <h2>Introduction</h2>
 <p>
-    This is a side project I have been working on alongside school for a couple months mainly for fun. I got inspured by github's kanban planner in "Projects" so I wanted to recreate it myself and customize it. 
+    This is a side project I have been working on alongside school for a couple months mainly for fun. I got inspired by github's kanban planner in "Projects" so I wanted to recreate it myself and customize it. 
 </p>
 
 <h2>Features</h2>
