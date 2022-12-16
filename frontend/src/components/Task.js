@@ -7,7 +7,7 @@ import '../styles/tasks.css'
 
 const Task = props => {
     return (
-        <div key={props.index} className="task">
+        <div key={props.index} className="task noselect">
             <h2 className="task-title">
                 {props.name}
                 <span id="del">

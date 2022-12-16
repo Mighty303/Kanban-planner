@@ -11,7 +11,6 @@ const App = props => {
     const [deletedTask, setDeletedTask] = useState(false);
     const [movedTask, setMovedTask] = useState(false);
 
-    var time_out;
 
     return (
         <main>
@@ -40,29 +39,29 @@ const App = props => {
                     in={newTask && !movedTask} //Write the needed condition here to make it appear
                     timeout={{ enter: 1000, exit: 1000 }} //Edit these two values to change the duration of transition when the element is getting appeared and disappeard
                     addEndListener={() => {
-                        clearTimeout(time_out);
-                        time_out = setTimeout(() => {
+                        const time_out = setTimeout(() => {
                             setNewTask(false)
                         }, 2000);
+                        // clearTimeout(time_out);
                         
                     }}
                     id="alert"
                 >
-                    {SuccessAlert('Task added!')}
+                    { SuccessAlert('Task added!') }
             </Fade>
 
             <Fade
                     in={deletedTask} //Write the needed condition here to make it appear
                     timeout={{ enter: 1000, exit: 1000 }} //Edit these two values to change the duration of transition when the element is getting appeared and disappeard
                     addEndListener={() => {
-                        clearTimeout(time_out);
-                        time_out = setTimeout(() => {
+                        const time_out = setTimeout(() => {
                             setDeletedTask(false)
                         }, 2000);
+                        // clearTimeout(time_out);
                     }}
                     id="alert"
                 >
-                    {SuccessAlert('Task deleted!')}
+                    { SuccessAlert('Task deleted!') }
             </Fade>
         </main>
     );
