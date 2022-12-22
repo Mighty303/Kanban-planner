@@ -27,6 +27,9 @@ const Tasks = props => {
 
 
     const handleOnDragEnd = result => {
+        if (result.destination === null) // prevents a bug where task is dragged else where
+            return;
+
         let target = result.draggableId;
         let targetColumn = result.destination.droppableId;
         let targetIndex = result.destination.index;
@@ -53,7 +56,7 @@ const Tasks = props => {
 
         axios.patch(`/api/v1/${targetColumn}`, {_id: target, index: targetIndex })
         .then(patchedResult => {
-            // console.log(patchedResult.data);
+            console.log(patchedResult.data);
             props.setMovedTask(!props.movedTask);
         })
         .catch(err => console.log(err));
