@@ -56,7 +56,7 @@ const Tasks = props => {
 
         axios.patch(`/api/v1/${targetColumn}`, {_id: target, index: targetIndex })
         .then(patchedResult => {
-            console.log(patchedResult.data);
+            // console.log(patchedResult.data);
             props.setMovedTask(!props.movedTask);
         })
         .catch(err => console.log(err));

@@ -471,7 +471,7 @@ var Tasks = function Tasks(props) {
       _id: target,
       index: targetIndex
     }).then(function (patchedResult) {
-      console.log(patchedResult.data);
+      // console.log(patchedResult.data);
       props.setMovedTask(!props.movedTask);
     }).catch(function (err) {
       return console.log(err);
