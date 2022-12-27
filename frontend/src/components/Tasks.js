@@ -85,32 +85,35 @@ const Tasks = props => {
                                     ref={provided.innerRef}
                                 >
                                     {<h2 className="column-headers">{column.column}</h2>} {/*Column Title*/}
-                                        {
-                                            column.tasks && column.tasks.map((task, index) => // Loop thru the tasks
-                                                <Draggable 
-                                                    key={task._id}
-                                                    draggableId={task._id} 
-                                                    index={index}
-                                                >
-                                                    {(provided) => 
-                                                        <div 
-                                                            ref={provided.innerRef}
-                                                            {...provided.draggableProps}
-                                                            {...provided.dragHandleProps}
-                                                        >
-                                                            <Task 
-                                                                name={task.name} 
-                                                                index={index} 
-                                                                id={task._id} 
-                                                                description={task.description} 
-                                                                date={task.date}
-                                                                handleDelete={handleDelete} 
-                                                            />
-                                                        </div>
-                                                    }
-                                                </Draggable>)
-                                        }
-                                        {provided.placeholder}
+                                        <div className="task-container">
+
+                                            {
+                                                column.tasks && column.tasks.map((task, index) => // Loop thru the tasks
+                                                    <Draggable 
+                                                        key={task._id}
+                                                        draggableId={task._id} 
+                                                        index={index}
+                                                    >
+                                                        {(provided) => 
+                                                            <div 
+                                                                ref={provided.innerRef}
+                                                                {...provided.draggableProps}
+                                                                {...provided.dragHandleProps}
+                                                            >
+                                                                <Task 
+                                                                    name={task.name} 
+                                                                    index={index} 
+                                                                    id={task._id} 
+                                                                    description={task.description} 
+                                                                    date={task.date}
+                                                                    handleDelete={handleDelete} 
+                                                                />
+                                                            </div>
+                                                        }
+                                                    </Draggable>)
+                                            }
+                                            {provided.placeholder}
+                                        </div>
                                 </div>
                             }
                         </Droppable>)

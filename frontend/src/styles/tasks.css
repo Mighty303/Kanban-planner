@@ -2,6 +2,7 @@
     margin-top: 0;
     /* padding: 2em 2em; */
     background-color: #000814;
+    
 }
 
 .task {
@@ -40,4 +41,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
     color: black;
+}
+
+.task-container {
+    min-height: 60vh;
+    overflow-y: auto;
+    max-height: 77vh;
 }
