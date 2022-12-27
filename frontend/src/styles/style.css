@@ -38,11 +38,12 @@ main p {
 }
 
 .column {
-    min-height: 80vh;
+    min-height: 77vh;
     width: 22%;;
     background-color: #22303C;
     border-radius: 15px;
     padding: 15px;
+    
 }
 
 
