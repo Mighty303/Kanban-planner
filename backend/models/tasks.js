@@ -7,7 +7,7 @@ const TaskSchema = new Schema({
     name: {type:String, required:true},
     description: {type:String, required:true},
     date: {type:String},
-    index: {type: Number, default: -1}
+    index: {type: Number, default: 0}
 });
 
 const Task = mongoose.model("Task", TaskSchema);

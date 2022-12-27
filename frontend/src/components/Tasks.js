@@ -27,6 +27,9 @@ const Tasks = props => {
 
 
     const handleOnDragEnd = result => {
+        if (result.destination === null) // prevents a bug where task is dragged else where
+            return;
+
         let target = result.draggableId;
         let targetColumn = result.destination.droppableId;
         let targetIndex = result.destination.index;
