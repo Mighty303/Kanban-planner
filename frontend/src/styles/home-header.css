@@ -1,0 +1,63 @@
+#kanban-logo {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+.header-section {
+    display: flex;
+    flex-direction: row;
+}
+
+header, footer{
+    background-color: #000814;
+    height: 5vh;
+    padding: 30px;
+}
+
+div.home-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+header div button {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header div img{
+    padding-right: 10px;
+}
+
+header h1 {
+    color: #BB86FC;
+    text-transform: uppercase;
+}
+
+header p {
+    color: white;
+}
+
+.add-task-btn {
+    background-color: #BB86FC;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.add-task-btn:hover {
+    background-color: #A26DE3;
+    color: white;
+    cursor: pointer;
+}
