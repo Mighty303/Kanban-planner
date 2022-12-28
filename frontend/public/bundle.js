@@ -1,10 +1,52 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./frontend/src/Alerts.js":
-/*!********************************!*\
-  !*** ./frontend/src/Alerts.js ***!
-  \********************************/
+/***/ "./frontend/src/App.js":
+/*!*****************************!*\
+  !*** ./frontend/src/App.js ***!
+  \*****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ App; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _pages_Dashboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/Dashboard */ "./frontend/src/pages/Dashboard.js");
+/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Home */ "./frontend/src/pages/Home.js");
+/* harmony import */ var _pages_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Login */ "./frontend/src/pages/Login.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+
+
+
+
+
+function App() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+    index: true,
+    path: "/",
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Dashboard__WEBPACK_IMPORTED_MODULE_1__["default"], null)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+    exact: true,
+    path: "/home",
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Home__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+    exact: true,
+    path: "/login",
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Login__WEBPACK_IMPORTED_MODULE_3__["default"], null)
+  })));
+}
+;
+
+/***/ }),
+
+/***/ "./frontend/src/components/Alerts.js":
+/*!*******************************************!*\
+  !*** ./frontend/src/components/Alerts.js ***!
+  \*******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30,108 +72,6 @@ function ErrorAlert() {
     severity: "error"
   }, "This is an error alert \u2014 check it out!");
 }
-
-/***/ }),
-
-/***/ "./frontend/src/App.js":
-/*!*****************************!*\
-  !*** ./frontend/src/App.js ***!
-  \*****************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Header */ "./frontend/src/components/Header.js");
-/* harmony import */ var _components_Tasks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Tasks */ "./frontend/src/components/Tasks.js");
-/* harmony import */ var _Alerts_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Alerts.js */ "./frontend/src/Alerts.js");
-/* harmony import */ var _mui_material_Fade__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/Fade */ "./node_modules/@mui/material/esm/Fade/Fade.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-var App = function App(props) {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
-      column: 'To Do',
-      tasks: []
-    }, {
-      column: 'In progress',
-      tasks: []
-    }, {
-      column: 'Completed',
-      tasks: []
-    }]),
-    _useState2 = _slicedToArray(_useState, 2),
-    columns = _useState2[0],
-    setColumns = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState4 = _slicedToArray(_useState3, 2),
-    newTask = _useState4[0],
-    setNewTask = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState6 = _slicedToArray(_useState5, 2),
-    deletedTask = _useState6[0],
-    setDeletedTask = _useState6[1];
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState8 = _slicedToArray(_useState7, 2),
-    movedTask = _useState8[0],
-    setMovedTask = _useState8[1];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    newTask: newTask,
-    setNewTask: setNewTask
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
-    className: "tasks-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Tasks__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    columns: columns,
-    setColumns: setColumns,
-    newTask: newTask,
-    setNewTask: setNewTask,
-    deletedTask: deletedTask,
-    setDeletedTask: setDeletedTask,
-    movedTask: movedTask,
-    setMovedTask: setMovedTask
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Fade__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    in: newTask && !movedTask //Write the needed condition here to make it appear
-    ,
-    timeout: {
-      enter: 1000,
-      exit: 1000
-    } //Edit these two values to change the duration of transition when the element is getting appeared and disappeard
-    ,
-    addEndListener: function addEndListener() {
-      var time_out = setTimeout(function () {
-        setNewTask(false);
-      }, 2000);
-    },
-    id: "alert"
-  }, (0,_Alerts_js__WEBPACK_IMPORTED_MODULE_3__.SuccessAlert)('Task added!')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Fade__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    in: deletedTask //Write the needed condition here to make it appear
-    ,
-    timeout: {
-      enter: 1000,
-      exit: 1000
-    } //Edit these two values to change the duration of transition when the element is getting appeared and disappeard
-    ,
-    addEndListener: function addEndListener() {
-      var time_out = setTimeout(function () {
-        setDeletedTask(false);
-      }, 2000);
-    },
-    id: "alert"
-  }, (0,_Alerts_js__WEBPACK_IMPORTED_MODULE_3__.SuccessAlert)('Task deleted!')));
-};
-/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
@@ -533,6 +473,175 @@ var Tasks = function Tasks(props) {
   })));
 };
 /* harmony default export */ __webpack_exports__["default"] = (Tasks);
+
+/***/ }),
+
+/***/ "./frontend/src/pages/Dashboard.js":
+/*!*****************************************!*\
+  !*** ./frontend/src/pages/Dashboard.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ "./frontend/src/components/Header.js");
+/* harmony import */ var _components_Tasks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Tasks */ "./frontend/src/components/Tasks.js");
+/* harmony import */ var _components_Alerts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Alerts */ "./frontend/src/components/Alerts.js");
+/* harmony import */ var _mui_material_Fade__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/Fade */ "./node_modules/@mui/material/esm/Fade/Fade.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var Dashboard = function Dashboard(props) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+      column: 'To Do',
+      tasks: []
+    }, {
+      column: 'In progress',
+      tasks: []
+    }, {
+      column: 'Completed',
+      tasks: []
+    }]),
+    _useState2 = _slicedToArray(_useState, 2),
+    columns = _useState2[0],
+    setColumns = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    newTask = _useState4[0],
+    setNewTask = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState6 = _slicedToArray(_useState5, 2),
+    deletedTask = _useState6[0],
+    setDeletedTask = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    movedTask = _useState8[0],
+    setMovedTask = _useState8[1];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    newTask: newTask,
+    setNewTask: setNewTask
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    className: "tasks-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Tasks__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    columns: columns,
+    setColumns: setColumns,
+    newTask: newTask,
+    setNewTask: setNewTask,
+    deletedTask: deletedTask,
+    setDeletedTask: setDeletedTask,
+    movedTask: movedTask,
+    setMovedTask: setMovedTask
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Fade__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    in: newTask && !movedTask //Write the needed condition here to make it appear
+    ,
+    timeout: {
+      enter: 1000,
+      exit: 1000
+    } //Edit these two values to change the duration of transition when the element is getting appeared and disappeard
+    ,
+    addEndListener: function addEndListener() {
+      var time_out = setTimeout(function () {
+        setNewTask(false);
+      }, 2000);
+    },
+    id: "alert"
+  }, (0,_components_Alerts__WEBPACK_IMPORTED_MODULE_3__.SuccessAlert)('Task added!')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Fade__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    in: deletedTask //Write the needed condition here to make it appear
+    ,
+    timeout: {
+      enter: 1000,
+      exit: 1000
+    } //Edit these two values to change the duration of transition when the element is getting appeared and disappeard
+    ,
+    addEndListener: function addEndListener() {
+      var time_out = setTimeout(function () {
+        setDeletedTask(false);
+      }, 2000);
+    },
+    id: "alert"
+  }, (0,_components_Alerts__WEBPACK_IMPORTED_MODULE_3__.SuccessAlert)('Task deleted!')));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Dashboard);
+
+/***/ }),
+
+/***/ "./frontend/src/pages/Home.js":
+/*!************************************!*\
+  !*** ./frontend/src/pages/Home.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var Home = function Home(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
+};
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./frontend/src/pages/Login.js":
+/*!*************************************!*\
+  !*** ./frontend/src/pages/Login.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_google_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-google-login */ "./node_modules/react-google-login/dist/google-login.js");
+/* harmony import */ var react_google_login__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_google_login__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gapi_script__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gapi-script */ "./node_modules/gapi-script/index.js");
+
+
+
+var clientId = '1050649615554-rnjdj5a2koosat8o074rtnt5gi3doht2.apps.googleusercontent.com';
+var Login = function Login(props) {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var initClient = function initClient() {
+      // initialize client on every render
+      gapi_script__WEBPACK_IMPORTED_MODULE_2__.gapi.client.init({
+        clientId: clientId,
+        scope: ''
+      });
+    };
+    gapi_script__WEBPACK_IMPORTED_MODULE_2__.gapi.load('client:auth2', initClient);
+  });
+  var onSuccess = function onSuccess(res) {
+    console.log('success:', res);
+  };
+  var onFailure = function onFailure(err) {
+    console.log('failed:', err);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Please login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_google_login__WEBPACK_IMPORTED_MODULE_1__.GoogleLogin, {
+    clientId: clientId,
+    buttonText: "Sign in with Google",
+    onSuccess: onSuccess,
+    onFailure: onFailure,
+    cookiePolicy: 'single_host_origin',
+    isSignedIn: true
+  })));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Login);
 
 /***/ }),
 
@@ -10130,6 +10239,4003 @@ function useIsFocusVisible() {
 
 /***/ }),
 
+/***/ "./node_modules/@remix-run/router/dist/router.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@remix-run/router/dist/router.js ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AbortedDeferredError": function() { return /* binding */ AbortedDeferredError; },
+/* harmony export */   "Action": function() { return /* binding */ Action; },
+/* harmony export */   "ErrorResponse": function() { return /* binding */ ErrorResponse; },
+/* harmony export */   "IDLE_FETCHER": function() { return /* binding */ IDLE_FETCHER; },
+/* harmony export */   "IDLE_NAVIGATION": function() { return /* binding */ IDLE_NAVIGATION; },
+/* harmony export */   "UNSAFE_convertRoutesToDataRoutes": function() { return /* binding */ convertRoutesToDataRoutes; },
+/* harmony export */   "UNSAFE_getPathContributingMatches": function() { return /* binding */ getPathContributingMatches; },
+/* harmony export */   "createBrowserHistory": function() { return /* binding */ createBrowserHistory; },
+/* harmony export */   "createHashHistory": function() { return /* binding */ createHashHistory; },
+/* harmony export */   "createMemoryHistory": function() { return /* binding */ createMemoryHistory; },
+/* harmony export */   "createPath": function() { return /* binding */ createPath; },
+/* harmony export */   "createRouter": function() { return /* binding */ createRouter; },
+/* harmony export */   "createStaticHandler": function() { return /* binding */ createStaticHandler; },
+/* harmony export */   "defer": function() { return /* binding */ defer; },
+/* harmony export */   "generatePath": function() { return /* binding */ generatePath; },
+/* harmony export */   "getStaticContextFromError": function() { return /* binding */ getStaticContextFromError; },
+/* harmony export */   "getToPathname": function() { return /* binding */ getToPathname; },
+/* harmony export */   "invariant": function() { return /* binding */ invariant; },
+/* harmony export */   "isRouteErrorResponse": function() { return /* binding */ isRouteErrorResponse; },
+/* harmony export */   "joinPaths": function() { return /* binding */ joinPaths; },
+/* harmony export */   "json": function() { return /* binding */ json; },
+/* harmony export */   "matchPath": function() { return /* binding */ matchPath; },
+/* harmony export */   "matchRoutes": function() { return /* binding */ matchRoutes; },
+/* harmony export */   "normalizePathname": function() { return /* binding */ normalizePathname; },
+/* harmony export */   "parsePath": function() { return /* binding */ parsePath; },
+/* harmony export */   "redirect": function() { return /* binding */ redirect; },
+/* harmony export */   "resolvePath": function() { return /* binding */ resolvePath; },
+/* harmony export */   "resolveTo": function() { return /* binding */ resolveTo; },
+/* harmony export */   "stripBasename": function() { return /* binding */ stripBasename; },
+/* harmony export */   "warning": function() { return /* binding */ warning; }
+/* harmony export */ });
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+/**
+ * @remix-run/router v1.2.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//#region Types and Constants
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Actions represent the type of change to a location value.
+ */
+var Action;
+(function (Action) {
+  /**
+   * A POP indicates a change to an arbitrary index in the history stack, such
+   * as a back or forward navigation. It does not describe the direction of the
+   * navigation, only that the current index changed.
+   *
+   * Note: This is the default action for newly created history objects.
+   */
+  Action["Pop"] = "POP";
+  /**
+   * A PUSH indicates a new entry being added to the history stack, such as when
+   * a link is clicked and a new page loads. When this happens, all subsequent
+   * entries in the stack are lost.
+   */
+
+  Action["Push"] = "PUSH";
+  /**
+   * A REPLACE indicates the entry at the current index in the history stack
+   * being replaced by a new one.
+   */
+
+  Action["Replace"] = "REPLACE";
+})(Action || (Action = {}));
+var PopStateEventType = "popstate";
+/**
+ * Memory history stores the current location in memory. It is designed for use
+ * in stateful non-browser environments like tests and React Native.
+ */
+
+function createMemoryHistory(options) {
+  if (options === void 0) {
+    options = {};
+  }
+  var _options = options,
+    _options$initialEntri = _options.initialEntries,
+    initialEntries = _options$initialEntri === void 0 ? ["/"] : _options$initialEntri,
+    initialIndex = _options.initialIndex,
+    _options$v5Compat = _options.v5Compat,
+    v5Compat = _options$v5Compat === void 0 ? false : _options$v5Compat;
+  var entries; // Declare so we can access from createMemoryLocation
+
+  entries = initialEntries.map(function (entry, index) {
+    return createMemoryLocation(entry, typeof entry === "string" ? null : entry.state, index === 0 ? "default" : undefined);
+  });
+  var index = clampIndex(initialIndex == null ? entries.length - 1 : initialIndex);
+  var action = Action.Pop;
+  var listener = null;
+  function clampIndex(n) {
+    return Math.min(Math.max(n, 0), entries.length - 1);
+  }
+  function getCurrentLocation() {
+    return entries[index];
+  }
+  function createMemoryLocation(to, state, key) {
+    if (state === void 0) {
+      state = null;
+    }
+    var location = createLocation(entries ? getCurrentLocation().pathname : "/", to, state, key);
+    warning$1(location.pathname.charAt(0) === "/", "relative pathnames are not supported in memory history: " + JSON.stringify(to));
+    return location;
+  }
+  var history = {
+    get index() {
+      return index;
+    },
+    get action() {
+      return action;
+    },
+    get location() {
+      return getCurrentLocation();
+    },
+    createHref: function createHref(to) {
+      return typeof to === "string" ? to : createPath(to);
+    },
+    encodeLocation: function encodeLocation(to) {
+      var path = typeof to === "string" ? parsePath(to) : to;
+      return {
+        pathname: path.pathname || "",
+        search: path.search || "",
+        hash: path.hash || ""
+      };
+    },
+    push: function push(to, state) {
+      action = Action.Push;
+      var nextLocation = createMemoryLocation(to, state);
+      index += 1;
+      entries.splice(index, entries.length, nextLocation);
+      if (v5Compat && listener) {
+        listener({
+          action: action,
+          location: nextLocation
+        });
+      }
+    },
+    replace: function replace(to, state) {
+      action = Action.Replace;
+      var nextLocation = createMemoryLocation(to, state);
+      entries[index] = nextLocation;
+      if (v5Compat && listener) {
+        listener({
+          action: action,
+          location: nextLocation
+        });
+      }
+    },
+    go: function go(delta) {
+      action = Action.Pop;
+      index = clampIndex(index + delta);
+      if (listener) {
+        listener({
+          action: action,
+          location: getCurrentLocation()
+        });
+      }
+    },
+    listen: function listen(fn) {
+      listener = fn;
+      return function () {
+        listener = null;
+      };
+    }
+  };
+  return history;
+}
+/**
+ * Browser history stores the location in regular URLs. This is the standard for
+ * most web apps, but it requires some configuration on the server to ensure you
+ * serve the same app at multiple URLs.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#createbrowserhistory
+ */
+
+function createBrowserHistory(options) {
+  if (options === void 0) {
+    options = {};
+  }
+  function createBrowserLocation(window, globalHistory) {
+    var _window$location = window.location,
+      pathname = _window$location.pathname,
+      search = _window$location.search,
+      hash = _window$location.hash;
+    return createLocation("", {
+      pathname: pathname,
+      search: search,
+      hash: hash
+    },
+    // state defaults to `null` because `window.history.state` does
+    globalHistory.state && globalHistory.state.usr || null, globalHistory.state && globalHistory.state.key || "default");
+  }
+  function createBrowserHref(window, to) {
+    return typeof to === "string" ? to : createPath(to);
+  }
+  return getUrlBasedHistory(createBrowserLocation, createBrowserHref, null, options);
+}
+/**
+ * Hash history stores the location in window.location.hash. This makes it ideal
+ * for situations where you don't want to send the location to the server for
+ * some reason, either because you do cannot configure it or the URL space is
+ * reserved for something else.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#createhashhistory
+ */
+
+function createHashHistory(options) {
+  if (options === void 0) {
+    options = {};
+  }
+  function createHashLocation(window, globalHistory) {
+    var _parsePath = parsePath(window.location.hash.substr(1)),
+      _parsePath$pathname = _parsePath.pathname,
+      pathname = _parsePath$pathname === void 0 ? "/" : _parsePath$pathname,
+      _parsePath$search = _parsePath.search,
+      search = _parsePath$search === void 0 ? "" : _parsePath$search,
+      _parsePath$hash = _parsePath.hash,
+      hash = _parsePath$hash === void 0 ? "" : _parsePath$hash;
+    return createLocation("", {
+      pathname: pathname,
+      search: search,
+      hash: hash
+    },
+    // state defaults to `null` because `window.history.state` does
+    globalHistory.state && globalHistory.state.usr || null, globalHistory.state && globalHistory.state.key || "default");
+  }
+  function createHashHref(window, to) {
+    var base = window.document.querySelector("base");
+    var href = "";
+    if (base && base.getAttribute("href")) {
+      var url = window.location.href;
+      var hashIndex = url.indexOf("#");
+      href = hashIndex === -1 ? url : url.slice(0, hashIndex);
+    }
+    return href + "#" + (typeof to === "string" ? to : createPath(to));
+  }
+  function validateHashLocation(location, to) {
+    warning$1(location.pathname.charAt(0) === "/", "relative pathnames are not supported in hash history.push(" + JSON.stringify(to) + ")");
+  }
+  return getUrlBasedHistory(createHashLocation, createHashHref, validateHashLocation, options);
+}
+function invariant(value, message) {
+  if (value === false || value === null || typeof value === "undefined") {
+    throw new Error(message);
+  }
+}
+function warning$1(cond, message) {
+  if (!cond) {
+    // eslint-disable-next-line no-console
+    if (typeof console !== "undefined") console.warn(message);
+    try {
+      // Welcome to debugging history!
+      //
+      // This error is thrown as a convenience so you can more easily
+      // find the source for a warning that appears in the console by
+      // enabling "pause on exceptions" in your JavaScript debugger.
+      throw new Error(message); // eslint-disable-next-line no-empty
+    } catch (e) {}
+  }
+}
+function createKey() {
+  return Math.random().toString(36).substr(2, 8);
+}
+/**
+ * For browser-based histories, we combine the state and key into an object
+ */
+
+function getHistoryState(location) {
+  return {
+    usr: location.state,
+    key: location.key
+  };
+}
+/**
+ * Creates a Location object with a unique key from the given Path
+ */
+
+function createLocation(current, to, state, key) {
+  if (state === void 0) {
+    state = null;
+  }
+  var location = _extends({
+    pathname: typeof current === "string" ? current : current.pathname,
+    search: "",
+    hash: ""
+  }, typeof to === "string" ? parsePath(to) : to, {
+    state: state,
+    // TODO: This could be cleaned up.  push/replace should probably just take
+    // full Locations now and avoid the need to run through this flow at all
+    // But that's a pretty big refactor to the current test suite so going to
+    // keep as is for the time being and just let any incoming keys take precedence
+    key: to && to.key || key || createKey()
+  });
+  return location;
+}
+/**
+ * Creates a string URL path from the given pathname, search, and hash components.
+ */
+
+function createPath(_ref) {
+  var _ref$pathname = _ref.pathname,
+    pathname = _ref$pathname === void 0 ? "/" : _ref$pathname,
+    _ref$search = _ref.search,
+    search = _ref$search === void 0 ? "" : _ref$search,
+    _ref$hash = _ref.hash,
+    hash = _ref$hash === void 0 ? "" : _ref$hash;
+  if (search && search !== "?") pathname += search.charAt(0) === "?" ? search : "?" + search;
+  if (hash && hash !== "#") pathname += hash.charAt(0) === "#" ? hash : "#" + hash;
+  return pathname;
+}
+/**
+ * Parses a string URL path into its separate pathname, search, and hash components.
+ */
+
+function parsePath(path) {
+  var parsedPath = {};
+  if (path) {
+    var hashIndex = path.indexOf("#");
+    if (hashIndex >= 0) {
+      parsedPath.hash = path.substr(hashIndex);
+      path = path.substr(0, hashIndex);
+    }
+    var searchIndex = path.indexOf("?");
+    if (searchIndex >= 0) {
+      parsedPath.search = path.substr(searchIndex);
+      path = path.substr(0, searchIndex);
+    }
+    if (path) {
+      parsedPath.pathname = path;
+    }
+  }
+  return parsedPath;
+}
+function createClientSideURL(location) {
+  // window.location.origin is "null" (the literal string value) in Firefox
+  // under certain conditions, notably when serving from a local HTML file
+  // See https://bugzilla.mozilla.org/show_bug.cgi?id=878297
+  var base = typeof window !== "undefined" && typeof window.location !== "undefined" && window.location.origin !== "null" ? window.location.origin : window.location.href;
+  var href = typeof location === "string" ? location : createPath(location);
+  invariant(base, "No window.location.(origin|href) available to create URL for href: " + href);
+  return new URL(href, base);
+}
+function getUrlBasedHistory(getLocation, _createHref, validateLocation, options) {
+  if (options === void 0) {
+    options = {};
+  }
+  var _options2 = options,
+    _options2$window = _options2.window,
+    window = _options2$window === void 0 ? document.defaultView : _options2$window,
+    _options2$v5Compat = _options2.v5Compat,
+    v5Compat = _options2$v5Compat === void 0 ? false : _options2$v5Compat;
+  var globalHistory = window.history;
+  var action = Action.Pop;
+  var listener = null;
+  function handlePop() {
+    action = Action.Pop;
+    if (listener) {
+      listener({
+        action: action,
+        location: history.location
+      });
+    }
+  }
+  function push(to, state) {
+    action = Action.Push;
+    var location = createLocation(history.location, to, state);
+    if (validateLocation) validateLocation(location, to);
+    var historyState = getHistoryState(location);
+    var url = history.createHref(location); // try...catch because iOS limits us to 100 pushState calls :/
+
+    try {
+      globalHistory.pushState(historyState, "", url);
+    } catch (error) {
+      // They are going to lose state here, but there is no real
+      // way to warn them about it since the page will refresh...
+      window.location.assign(url);
+    }
+    if (v5Compat && listener) {
+      listener({
+        action: action,
+        location: history.location
+      });
+    }
+  }
+  function replace(to, state) {
+    action = Action.Replace;
+    var location = createLocation(history.location, to, state);
+    if (validateLocation) validateLocation(location, to);
+    var historyState = getHistoryState(location);
+    var url = history.createHref(location);
+    globalHistory.replaceState(historyState, "", url);
+    if (v5Compat && listener) {
+      listener({
+        action: action,
+        location: history.location
+      });
+    }
+  }
+  var history = {
+    get action() {
+      return action;
+    },
+    get location() {
+      return getLocation(window, globalHistory);
+    },
+    listen: function listen(fn) {
+      if (listener) {
+        throw new Error("A history only accepts one active listener");
+      }
+      window.addEventListener(PopStateEventType, handlePop);
+      listener = fn;
+      return function () {
+        window.removeEventListener(PopStateEventType, handlePop);
+        listener = null;
+      };
+    },
+    createHref: function createHref(to) {
+      return _createHref(window, to);
+    },
+    encodeLocation: function encodeLocation(to) {
+      // Encode a Location the same way window.location would
+      var url = createClientSideURL(typeof to === "string" ? to : createPath(to));
+      return {
+        pathname: url.pathname,
+        search: url.search,
+        hash: url.hash
+      };
+    },
+    push: push,
+    replace: replace,
+    go: function go(n) {
+      return globalHistory.go(n);
+    }
+  };
+  return history;
+} //#endregion
+
+var ResultType;
+(function (ResultType) {
+  ResultType["data"] = "data";
+  ResultType["deferred"] = "deferred";
+  ResultType["redirect"] = "redirect";
+  ResultType["error"] = "error";
+})(ResultType || (ResultType = {}));
+function isIndexRoute(route) {
+  return route.index === true;
+} // Walk the route tree generating unique IDs where necessary so we are working
+// solely with AgnosticDataRouteObject's within the Router
+
+function convertRoutesToDataRoutes(routes, parentPath, allIds) {
+  if (parentPath === void 0) {
+    parentPath = [];
+  }
+  if (allIds === void 0) {
+    allIds = new Set();
+  }
+  return routes.map(function (route, index) {
+    var treePath = [].concat(_toConsumableArray(parentPath), [index]);
+    var id = typeof route.id === "string" ? route.id : treePath.join("-");
+    invariant(route.index !== true || !route.children, "Cannot specify children on an index route");
+    invariant(!allIds.has(id), "Found a route id collision on id \"" + id + "\".  Route " + "id's must be globally unique within Data Router usages");
+    allIds.add(id);
+    if (isIndexRoute(route)) {
+      var indexRoute = _extends({}, route, {
+        id: id
+      });
+      return indexRoute;
+    } else {
+      var pathOrLayoutRoute = _extends({}, route, {
+        id: id,
+        children: route.children ? convertRoutesToDataRoutes(route.children, treePath, allIds) : undefined
+      });
+      return pathOrLayoutRoute;
+    }
+  });
+}
+/**
+ * Matches the given routes to a location and returns the match data.
+ *
+ * @see https://reactrouter.com/utils/match-routes
+ */
+
+function matchRoutes(routes, locationArg, basename) {
+  if (basename === void 0) {
+    basename = "/";
+  }
+  var location = typeof locationArg === "string" ? parsePath(locationArg) : locationArg;
+  var pathname = stripBasename(location.pathname || "/", basename);
+  if (pathname == null) {
+    return null;
+  }
+  var branches = flattenRoutes(routes);
+  rankRouteBranches(branches);
+  var matches = null;
+  for (var i = 0; matches == null && i < branches.length; ++i) {
+    matches = matchRouteBranch(branches[i],
+    // Incoming pathnames are generally encoded from either window.location
+    // or from router.navigate, but we want to match against the unencoded
+    // paths in the route definitions.  Memory router locations won't be
+    // encoded here but there also shouldn't be anything to decode so this
+    // should be a safe operation.  This avoids needing matchRoutes to be
+    // history-aware.
+    safelyDecodeURI(pathname));
+  }
+  return matches;
+}
+function flattenRoutes(routes, branches, parentsMeta, parentPath) {
+  if (branches === void 0) {
+    branches = [];
+  }
+  if (parentsMeta === void 0) {
+    parentsMeta = [];
+  }
+  if (parentPath === void 0) {
+    parentPath = "";
+  }
+  var flattenRoute = function flattenRoute(route, index, relativePath) {
+    var meta = {
+      relativePath: relativePath === undefined ? route.path || "" : relativePath,
+      caseSensitive: route.caseSensitive === true,
+      childrenIndex: index,
+      route: route
+    };
+    if (meta.relativePath.startsWith("/")) {
+      invariant(meta.relativePath.startsWith(parentPath), "Absolute route path \"" + meta.relativePath + "\" nested under path " + ("\"" + parentPath + "\" is not valid. An absolute child route path ") + "must start with the combined path of all its parent routes.");
+      meta.relativePath = meta.relativePath.slice(parentPath.length);
+    }
+    var path = joinPaths([parentPath, meta.relativePath]);
+    var routesMeta = parentsMeta.concat(meta); // Add the children before adding this route to the array so we traverse the
+    // route tree depth-first and child routes appear before their parents in
+    // the "flattened" version.
+
+    if (route.children && route.children.length > 0) {
+      invariant(
+      // Our types know better, but runtime JS may not!
+      // @ts-expect-error
+      route.index !== true, "Index routes must not have child routes. Please remove " + ("all child routes from route path \"" + path + "\"."));
+      flattenRoutes(route.children, branches, routesMeta, path);
+    } // Routes without a path shouldn't ever match by themselves unless they are
+    // index routes, so don't add them to the list of possible branches.
+
+    if (route.path == null && !route.index) {
+      return;
+    }
+    branches.push({
+      path: path,
+      score: computeScore(path, route.index),
+      routesMeta: routesMeta
+    });
+  };
+  routes.forEach(function (route, index) {
+    var _route$path;
+
+    // coarse-grain check for optional params
+    if (route.path === "" || !((_route$path = route.path) != null && _route$path.includes("?"))) {
+      flattenRoute(route, index);
+    } else {
+      var _iterator = _createForOfIteratorHelper(explodeOptionalSegments(route.path)),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var exploded = _step.value;
+          flattenRoute(route, index, exploded);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    }
+  });
+  return branches;
+}
+/**
+ * Computes all combinations of optional path segments for a given path,
+ * excluding combinations that are ambiguous and of lower priority.
+ *
+ * For example, `/one/:two?/three/:four?/:five?` explodes to:
+ * - `/one/three`
+ * - `/one/:two/three`
+ * - `/one/three/:four`
+ * - `/one/three/:five`
+ * - `/one/:two/three/:four`
+ * - `/one/:two/three/:five`
+ * - `/one/three/:four/:five`
+ * - `/one/:two/three/:four/:five`
+ */
+
+function explodeOptionalSegments(path) {
+  var segments = path.split("/");
+  if (segments.length === 0) return [];
+  var _segments = _toArray(segments),
+    first = _segments[0],
+    rest = _segments.slice(1); // Optional path segments are denoted by a trailing `?`
+
+  var isOptional = first.endsWith("?"); // Compute the corresponding required segment: `foo?` -> `foo`
+
+  var required = first.replace(/\?$/, "");
+  if (rest.length === 0) {
+    // Intepret empty string as omitting an optional segment
+    // `["one", "", "three"]` corresponds to omitting `:two` from `/one/:two?/three` -> `/one/three`
+    return isOptional ? [required, ""] : [required];
+  }
+  var restExploded = explodeOptionalSegments(rest.join("/"));
+  var result = []; // All child paths with the prefix.  Do this for all children before the
+  // optional version for all children so we get consistent ordering where the
+  // parent optional aspect is preferred as required.  Otherwise, we can get
+  // child sections interspersed where deeper optional segments are higher than
+  // parent optional segments, where for example, /:two would explodes _earlier_
+  // then /:one.  By always including the parent as required _for all children_
+  // first, we avoid this issue
+
+  result.push.apply(result, _toConsumableArray(restExploded.map(function (subpath) {
+    return subpath === "" ? required : [required, subpath].join("/");
+  }))); // Then if this is an optional value, add all child versions without
+
+  if (isOptional) {
+    result.push.apply(result, _toConsumableArray(restExploded));
+  } // for absolute paths, ensure `/` instead of empty segment
+
+  return result.map(function (exploded) {
+    return path.startsWith("/") && exploded === "" ? "/" : exploded;
+  });
+}
+function rankRouteBranches(branches) {
+  branches.sort(function (a, b) {
+    return a.score !== b.score ? b.score - a.score // Higher score first
+    : compareIndexes(a.routesMeta.map(function (meta) {
+      return meta.childrenIndex;
+    }), b.routesMeta.map(function (meta) {
+      return meta.childrenIndex;
+    }));
+  });
+}
+var paramRe = /^:\w+$/;
+var dynamicSegmentValue = 3;
+var indexRouteValue = 2;
+var emptySegmentValue = 1;
+var staticSegmentValue = 10;
+var splatPenalty = -2;
+var isSplat = function isSplat(s) {
+  return s === "*";
+};
+function computeScore(path, index) {
+  var segments = path.split("/");
+  var initialScore = segments.length;
+  if (segments.some(isSplat)) {
+    initialScore += splatPenalty;
+  }
+  if (index) {
+    initialScore += indexRouteValue;
+  }
+  return segments.filter(function (s) {
+    return !isSplat(s);
+  }).reduce(function (score, segment) {
+    return score + (paramRe.test(segment) ? dynamicSegmentValue : segment === "" ? emptySegmentValue : staticSegmentValue);
+  }, initialScore);
+}
+function compareIndexes(a, b) {
+  var siblings = a.length === b.length && a.slice(0, -1).every(function (n, i) {
+    return n === b[i];
+  });
+  return siblings ?
+  // If two routes are siblings, we should try to match the earlier sibling
+  // first. This allows people to have fine-grained control over the matching
+  // behavior by simply putting routes with identical paths in the order they
+  // want them tried.
+  a[a.length - 1] - b[b.length - 1] :
+  // Otherwise, it doesn't really make sense to rank non-siblings by index,
+  // so they sort equally.
+  0;
+}
+function matchRouteBranch(branch, pathname) {
+  var routesMeta = branch.routesMeta;
+  var matchedParams = {};
+  var matchedPathname = "/";
+  var matches = [];
+  for (var i = 0; i < routesMeta.length; ++i) {
+    var meta = routesMeta[i];
+    var end = i === routesMeta.length - 1;
+    var remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/";
+    var match = matchPath({
+      path: meta.relativePath,
+      caseSensitive: meta.caseSensitive,
+      end: end
+    }, remainingPathname);
+    if (!match) return null;
+    Object.assign(matchedParams, match.params);
+    var route = meta.route;
+    matches.push({
+      // TODO: Can this as be avoided?
+      params: matchedParams,
+      pathname: joinPaths([matchedPathname, match.pathname]),
+      pathnameBase: normalizePathname(joinPaths([matchedPathname, match.pathnameBase])),
+      route: route
+    });
+    if (match.pathnameBase !== "/") {
+      matchedPathname = joinPaths([matchedPathname, match.pathnameBase]);
+    }
+  }
+  return matches;
+}
+/**
+ * Returns a path with params interpolated.
+ *
+ * @see https://reactrouter.com/utils/generate-path
+ */
+
+function generatePath(originalPath, params) {
+  if (params === void 0) {
+    params = {};
+  }
+  var path = originalPath;
+  if (path.endsWith("*") && path !== "*" && !path.endsWith("/*")) {
+    warning(false, "Route path \"" + path + "\" will be treated as if it were " + ("\"" + path.replace(/\*$/, "/*") + "\" because the `*` character must ") + "always follow a `/` in the pattern. To get rid of this warning, " + ("please change the route path to \"" + path.replace(/\*$/, "/*") + "\"."));
+    path = path.replace(/\*$/, "/*");
+  }
+  return path.replace(/^:(\w+)/g, function (_, key) {
+    invariant(params[key] != null, "Missing \":" + key + "\" param");
+    return params[key];
+  }).replace(/\/:(\w+)/g, function (_, key) {
+    invariant(params[key] != null, "Missing \":" + key + "\" param");
+    return "/" + params[key];
+  }).replace(/(\/?)\*/, function (_, prefix, __, str) {
+    var star = "*";
+    if (params[star] == null) {
+      // If no splat was provided, trim the trailing slash _unless_ it's
+      // the entire path
+      return str === "/*" ? "/" : "";
+    } // Apply the splat
+
+    return "" + prefix + params[star];
+  });
+}
+/**
+ * Performs pattern matching on a URL pathname and returns information about
+ * the match.
+ *
+ * @see https://reactrouter.com/utils/match-path
+ */
+
+function matchPath(pattern, pathname) {
+  if (typeof pattern === "string") {
+    pattern = {
+      path: pattern,
+      caseSensitive: false,
+      end: true
+    };
+  }
+  var _compilePath = compilePath(pattern.path, pattern.caseSensitive, pattern.end),
+    _compilePath2 = _slicedToArray(_compilePath, 2),
+    matcher = _compilePath2[0],
+    paramNames = _compilePath2[1];
+  var match = pathname.match(matcher);
+  if (!match) return null;
+  var matchedPathname = match[0];
+  var pathnameBase = matchedPathname.replace(/(.)\/+$/, "$1");
+  var captureGroups = match.slice(1);
+  var params = paramNames.reduce(function (memo, paramName, index) {
+    // We need to compute the pathnameBase here using the raw splat value
+    // instead of using params["*"] later because it will be decoded then
+    if (paramName === "*") {
+      var splatValue = captureGroups[index] || "";
+      pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, "$1");
+    }
+    memo[paramName] = safelyDecodeURIComponent(captureGroups[index] || "", paramName);
+    return memo;
+  }, {});
+  return {
+    params: params,
+    pathname: matchedPathname,
+    pathnameBase: pathnameBase,
+    pattern: pattern
+  };
+}
+function compilePath(path, caseSensitive, end) {
+  if (caseSensitive === void 0) {
+    caseSensitive = false;
+  }
+  if (end === void 0) {
+    end = true;
+  }
+  warning(path === "*" || !path.endsWith("*") || path.endsWith("/*"), "Route path \"" + path + "\" will be treated as if it were " + ("\"" + path.replace(/\*$/, "/*") + "\" because the `*` character must ") + "always follow a `/` in the pattern. To get rid of this warning, " + ("please change the route path to \"" + path.replace(/\*$/, "/*") + "\"."));
+  var paramNames = [];
+  var regexpSource = "^" + path.replace(/\/*\*?$/, "") // Ignore trailing / and /*, we'll handle it below
+  .replace(/^\/*/, "/") // Make sure it has a leading /
+  .replace(/[\\.*+^$?{}|()[\]]/g, "\\$&") // Escape special regex chars
+  .replace(/\/:(\w+)/g, function (_, paramName) {
+    paramNames.push(paramName);
+    return "/([^\\/]+)";
+  });
+  if (path.endsWith("*")) {
+    paramNames.push("*");
+    regexpSource += path === "*" || path === "/*" ? "(.*)$" // Already matched the initial /, just match the rest
+    : "(?:\\/(.+)|\\/*)$"; // Don't include the / in params["*"]
+  } else if (end) {
+    // When matching to the end, ignore trailing slashes
+    regexpSource += "\\/*$";
+  } else if (path !== "" && path !== "/") {
+    // If our path is non-empty and contains anything beyond an initial slash,
+    // then we have _some_ form of path in our regex so we should expect to
+    // match only if we find the end of this path segment.  Look for an optional
+    // non-captured trailing slash (to match a portion of the URL) or the end
+    // of the path (if we've matched to the end).  We used to do this with a
+    // word boundary but that gives false positives on routes like
+    // /user-preferences since `-` counts as a word boundary.
+    regexpSource += "(?:(?=\\/|$))";
+  } else ;
+  var matcher = new RegExp(regexpSource, caseSensitive ? undefined : "i");
+  return [matcher, paramNames];
+}
+function safelyDecodeURI(value) {
+  try {
+    return decodeURI(value);
+  } catch (error) {
+    warning(false, "The URL path \"" + value + "\" could not be decoded because it is is a " + "malformed URL segment. This is probably due to a bad percent " + ("encoding (" + error + ")."));
+    return value;
+  }
+}
+function safelyDecodeURIComponent(value, paramName) {
+  try {
+    return decodeURIComponent(value);
+  } catch (error) {
+    warning(false, "The value for the URL param \"" + paramName + "\" will not be decoded because" + (" the string \"" + value + "\" is a malformed URL segment. This is probably") + (" due to a bad percent encoding (" + error + ")."));
+    return value;
+  }
+}
+/**
+ * @private
+ */
+
+function stripBasename(pathname, basename) {
+  if (basename === "/") return pathname;
+  if (!pathname.toLowerCase().startsWith(basename.toLowerCase())) {
+    return null;
+  } // We want to leave trailing slash behavior in the user's control, so if they
+  // specify a basename with a trailing slash, we should support it
+
+  var startIndex = basename.endsWith("/") ? basename.length - 1 : basename.length;
+  var nextChar = pathname.charAt(startIndex);
+  if (nextChar && nextChar !== "/") {
+    // pathname does not start with basename/
+    return null;
+  }
+  return pathname.slice(startIndex) || "/";
+}
+/**
+ * @private
+ */
+
+function warning(cond, message) {
+  if (!cond) {
+    // eslint-disable-next-line no-console
+    if (typeof console !== "undefined") console.warn(message);
+    try {
+      // Welcome to debugging React Router!
+      //
+      // This error is thrown as a convenience so you can more easily
+      // find the source for a warning that appears in the console by
+      // enabling "pause on exceptions" in your JavaScript debugger.
+      throw new Error(message); // eslint-disable-next-line no-empty
+    } catch (e) {}
+  }
+}
+/**
+ * Returns a resolved path object relative to the given pathname.
+ *
+ * @see https://reactrouter.com/utils/resolve-path
+ */
+
+function resolvePath(to, fromPathname) {
+  if (fromPathname === void 0) {
+    fromPathname = "/";
+  }
+  var _ref11 = typeof to === "string" ? parsePath(to) : to,
+    toPathname = _ref11.pathname,
+    _ref11$search = _ref11.search,
+    search = _ref11$search === void 0 ? "" : _ref11$search,
+    _ref11$hash = _ref11.hash,
+    hash = _ref11$hash === void 0 ? "" : _ref11$hash;
+  var pathname = toPathname ? toPathname.startsWith("/") ? toPathname : resolvePathname(toPathname, fromPathname) : fromPathname;
+  return {
+    pathname: pathname,
+    search: normalizeSearch(search),
+    hash: normalizeHash(hash)
+  };
+}
+function resolvePathname(relativePath, fromPathname) {
+  var segments = fromPathname.replace(/\/+$/, "").split("/");
+  var relativeSegments = relativePath.split("/");
+  relativeSegments.forEach(function (segment) {
+    if (segment === "..") {
+      // Keep the root "" segment so the pathname starts at /
+      if (segments.length > 1) segments.pop();
+    } else if (segment !== ".") {
+      segments.push(segment);
+    }
+  });
+  return segments.length > 1 ? segments.join("/") : "/";
+}
+function getInvalidPathError(char, field, dest, path) {
+  return "Cannot include a '" + char + "' character in a manually specified " + ("`to." + field + "` field [" + JSON.stringify(path) + "].  Please separate it out to the ") + ("`to." + dest + "` field. Alternatively you may provide the full path as ") + "a string in <Link to=\"...\"> and the router will parse it for you.";
+}
+/**
+ * @private
+ *
+ * When processing relative navigation we want to ignore ancestor routes that
+ * do not contribute to the path, such that index/pathless layout routes don't
+ * interfere.
+ *
+ * For example, when moving a route element into an index route and/or a
+ * pathless layout route, relative link behavior contained within should stay
+ * the same.  Both of the following examples should link back to the root:
+ *
+ *   <Route path="/">
+ *     <Route path="accounts" element={<Link to=".."}>
+ *   </Route>
+ *
+ *   <Route path="/">
+ *     <Route path="accounts">
+ *       <Route element={<AccountsLayout />}>       // <-- Does not contribute
+ *         <Route index element={<Link to=".."} />  // <-- Does not contribute
+ *       </Route
+ *     </Route>
+ *   </Route>
+ */
+
+function getPathContributingMatches(matches) {
+  return matches.filter(function (match, index) {
+    return index === 0 || match.route.path && match.route.path.length > 0;
+  });
+}
+/**
+ * @private
+ */
+
+function resolveTo(toArg, routePathnames, locationPathname, isPathRelative) {
+  if (isPathRelative === void 0) {
+    isPathRelative = false;
+  }
+  var to;
+  if (typeof toArg === "string") {
+    to = parsePath(toArg);
+  } else {
+    to = _extends({}, toArg);
+    invariant(!to.pathname || !to.pathname.includes("?"), getInvalidPathError("?", "pathname", "search", to));
+    invariant(!to.pathname || !to.pathname.includes("#"), getInvalidPathError("#", "pathname", "hash", to));
+    invariant(!to.search || !to.search.includes("#"), getInvalidPathError("#", "search", "hash", to));
+  }
+  var isEmptyPath = toArg === "" || to.pathname === "";
+  var toPathname = isEmptyPath ? "/" : to.pathname;
+  var from; // Routing is relative to the current pathname if explicitly requested.
+  //
+  // If a pathname is explicitly provided in `to`, it should be relative to the
+  // route context. This is explained in `Note on `<Link to>` values` in our
+  // migration guide from v5 as a means of disambiguation between `to` values
+  // that begin with `/` and those that do not. However, this is problematic for
+  // `to` values that do not provide a pathname. `to` can simply be a search or
+  // hash string, in which case we should assume that the navigation is relative
+  // to the current location's pathname and *not* the route pathname.
+
+  if (isPathRelative || toPathname == null) {
+    from = locationPathname;
+  } else {
+    var routePathnameIndex = routePathnames.length - 1;
+    if (toPathname.startsWith("..")) {
+      var toSegments = toPathname.split("/"); // Each leading .. segment means "go up one route" instead of "go up one
+      // URL segment".  This is a key difference from how <a href> works and a
+      // major reason we call this a "to" value instead of a "href".
+
+      while (toSegments[0] === "..") {
+        toSegments.shift();
+        routePathnameIndex -= 1;
+      }
+      to.pathname = toSegments.join("/");
+    } // If there are more ".." segments than parent routes, resolve relative to
+    // the root / URL.
+
+    from = routePathnameIndex >= 0 ? routePathnames[routePathnameIndex] : "/";
+  }
+  var path = resolvePath(to, from); // Ensure the pathname has a trailing slash if the original "to" had one
+
+  var hasExplicitTrailingSlash = toPathname && toPathname !== "/" && toPathname.endsWith("/"); // Or if this was a link to the current path which has a trailing slash
+
+  var hasCurrentTrailingSlash = (isEmptyPath || toPathname === ".") && locationPathname.endsWith("/");
+  if (!path.pathname.endsWith("/") && (hasExplicitTrailingSlash || hasCurrentTrailingSlash)) {
+    path.pathname += "/";
+  }
+  return path;
+}
+/**
+ * @private
+ */
+
+function getToPathname(to) {
+  // Empty strings should be treated the same as / paths
+  return to === "" || to.pathname === "" ? "/" : typeof to === "string" ? parsePath(to).pathname : to.pathname;
+}
+/**
+ * @private
+ */
+
+var joinPaths = function joinPaths(paths) {
+  return paths.join("/").replace(/\/\/+/g, "/");
+};
+/**
+ * @private
+ */
+
+var normalizePathname = function normalizePathname(pathname) {
+  return pathname.replace(/\/+$/, "").replace(/^\/*/, "/");
+};
+/**
+ * @private
+ */
+
+var normalizeSearch = function normalizeSearch(search) {
+  return !search || search === "?" ? "" : search.startsWith("?") ? search : "?" + search;
+};
+/**
+ * @private
+ */
+
+var normalizeHash = function normalizeHash(hash) {
+  return !hash || hash === "#" ? "" : hash.startsWith("#") ? hash : "#" + hash;
+};
+/**
+ * This is a shortcut for creating `application/json` responses. Converts `data`
+ * to JSON and sets the `Content-Type` header.
+ */
+
+var json = function json(data, init) {
+  if (init === void 0) {
+    init = {};
+  }
+  var responseInit = typeof init === "number" ? {
+    status: init
+  } : init;
+  var headers = new Headers(responseInit.headers);
+  if (!headers.has("Content-Type")) {
+    headers.set("Content-Type", "application/json; charset=utf-8");
+  }
+  return new Response(JSON.stringify(data), _extends({}, responseInit, {
+    headers: headers
+  }));
+};
+var AbortedDeferredError = /*#__PURE__*/function (_Error) {
+  _inherits(AbortedDeferredError, _Error);
+  var _super = _createSuper(AbortedDeferredError);
+  function AbortedDeferredError() {
+    _classCallCheck(this, AbortedDeferredError);
+    return _super.apply(this, arguments);
+  }
+  return _createClass(AbortedDeferredError);
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+var DeferredData = /*#__PURE__*/function () {
+  function DeferredData(data) {
+    var _this = this;
+    _classCallCheck(this, DeferredData);
+    this.pendingKeys = new Set();
+    this.subscriber = undefined;
+    invariant(data && _typeof(data) === "object" && !Array.isArray(data), "defer() only accepts plain objects"); // Set up an AbortController + Promise we can race against to exit early
+    // cancellation
+
+    var reject;
+    this.abortPromise = new Promise(function (_, r) {
+      return reject = r;
+    });
+    this.controller = new AbortController();
+    var onAbort = function onAbort() {
+      return reject(new AbortedDeferredError("Deferred data aborted"));
+    };
+    this.unlistenAbortSignal = function () {
+      return _this.controller.signal.removeEventListener("abort", onAbort);
+    };
+    this.controller.signal.addEventListener("abort", onAbort);
+    this.data = Object.entries(data).reduce(function (acc, _ref) {
+      var _ref12 = _slicedToArray(_ref, 2),
+        key = _ref12[0],
+        value = _ref12[1];
+      return Object.assign(acc, _defineProperty({}, key, _this.trackPromise(key, value)));
+    }, {});
+  }
+  _createClass(DeferredData, [{
+    key: "trackPromise",
+    value: function trackPromise(key, value) {
+      var _this2 = this;
+      if (!(value instanceof Promise)) {
+        return value;
+      }
+      this.pendingKeys.add(key); // We store a little wrapper promise that will be extended with
+      // _data/_error props upon resolve/reject
+
+      var promise = Promise.race([value, this.abortPromise]).then(function (data) {
+        return _this2.onSettle(promise, key, null, data);
+      }, function (error) {
+        return _this2.onSettle(promise, key, error);
+      }); // Register rejection listeners to avoid uncaught promise rejections on
+      // errors or aborted deferred values
+
+      promise.catch(function () {});
+      Object.defineProperty(promise, "_tracked", {
+        get: function get() {
+          return true;
+        }
+      });
+      return promise;
+    }
+  }, {
+    key: "onSettle",
+    value: function onSettle(promise, key, error, data) {
+      if (this.controller.signal.aborted && error instanceof AbortedDeferredError) {
+        this.unlistenAbortSignal();
+        Object.defineProperty(promise, "_error", {
+          get: function get() {
+            return error;
+          }
+        });
+        return Promise.reject(error);
+      }
+      this.pendingKeys.delete(key);
+      if (this.done) {
+        // Nothing left to abort!
+        this.unlistenAbortSignal();
+      }
+      var subscriber = this.subscriber;
+      if (error) {
+        Object.defineProperty(promise, "_error", {
+          get: function get() {
+            return error;
+          }
+        });
+        subscriber && subscriber(false);
+        return Promise.reject(error);
+      }
+      Object.defineProperty(promise, "_data", {
+        get: function get() {
+          return data;
+        }
+      });
+      subscriber && subscriber(false);
+      return data;
+    }
+  }, {
+    key: "subscribe",
+    value: function subscribe(fn) {
+      this.subscriber = fn;
+    }
+  }, {
+    key: "cancel",
+    value: function cancel() {
+      var _this3 = this;
+      this.controller.abort();
+      this.pendingKeys.forEach(function (v, k) {
+        return _this3.pendingKeys.delete(k);
+      });
+      var subscriber = this.subscriber;
+      subscriber && subscriber(true);
+    }
+  }, {
+    key: "resolveData",
+    value: function () {
+      var _resolveData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(signal) {
+        var _this4 = this;
+        var aborted, onAbort;
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                aborted = false;
+                if (this.done) {
+                  _context.next = 7;
+                  break;
+                }
+                onAbort = function onAbort() {
+                  return _this4.cancel();
+                };
+                signal.addEventListener("abort", onAbort);
+                _context.next = 6;
+                return new Promise(function (resolve) {
+                  _this4.subscribe(function (aborted) {
+                    signal.removeEventListener("abort", onAbort);
+                    if (aborted || _this4.done) {
+                      resolve(aborted);
+                    }
+                  });
+                });
+              case 6:
+                aborted = _context.sent;
+              case 7:
+                return _context.abrupt("return", aborted);
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+      function resolveData(_x2) {
+        return _resolveData.apply(this, arguments);
+      }
+      return resolveData;
+    }()
+  }, {
+    key: "done",
+    get: function get() {
+      return this.pendingKeys.size === 0;
+    }
+  }, {
+    key: "unwrappedData",
+    get: function get() {
+      invariant(this.data !== null && this.done, "Can only unwrap data on initialized and settled deferreds");
+      return Object.entries(this.data).reduce(function (acc, _ref2) {
+        var _ref13 = _slicedToArray(_ref2, 2),
+          key = _ref13[0],
+          value = _ref13[1];
+        return Object.assign(acc, _defineProperty({}, key, unwrapTrackedPromise(value)));
+      }, {});
+    }
+  }]);
+  return DeferredData;
+}();
+function isTrackedPromise(value) {
+  return value instanceof Promise && value._tracked === true;
+}
+function unwrapTrackedPromise(value) {
+  if (!isTrackedPromise(value)) {
+    return value;
+  }
+  if (value._error) {
+    throw value._error;
+  }
+  return value._data;
+}
+function defer(data) {
+  return new DeferredData(data);
+}
+/**
+ * A redirect response. Sets the status code and the `Location` header.
+ * Defaults to "302 Found".
+ */
+
+var redirect = function redirect(url, init) {
+  if (init === void 0) {
+    init = 302;
+  }
+  var responseInit = init;
+  if (typeof responseInit === "number") {
+    responseInit = {
+      status: responseInit
+    };
+  } else if (typeof responseInit.status === "undefined") {
+    responseInit.status = 302;
+  }
+  var headers = new Headers(responseInit.headers);
+  headers.set("Location", url);
+  return new Response(null, _extends({}, responseInit, {
+    headers: headers
+  }));
+};
+/**
+ * @private
+ * Utility class we use to hold auto-unwrapped 4xx/5xx Response bodies
+ */
+var ErrorResponse = /*#__PURE__*/_createClass(function ErrorResponse(status, statusText, data, internal) {
+  _classCallCheck(this, ErrorResponse);
+  if (internal === void 0) {
+    internal = false;
+  }
+  this.status = status;
+  this.statusText = statusText || "";
+  this.internal = internal;
+  if (data instanceof Error) {
+    this.data = data.toString();
+    this.error = data;
+  } else {
+    this.data = data;
+  }
+});
+/**
+ * Check if the given error is an ErrorResponse generated from a 4xx/5xx
+ * Response throw from an action/loader
+ */
+function isRouteErrorResponse(e) {
+  return e instanceof ErrorResponse;
+}
+var validMutationMethodsArr = ["post", "put", "patch", "delete"];
+var validMutationMethods = new Set(validMutationMethodsArr);
+var validRequestMethodsArr = ["get"].concat(validMutationMethodsArr);
+var validRequestMethods = new Set(validRequestMethodsArr);
+var redirectStatusCodes = new Set([301, 302, 303, 307, 308]);
+var redirectPreserveMethodStatusCodes = new Set([307, 308]);
+var IDLE_NAVIGATION = {
+  state: "idle",
+  location: undefined,
+  formMethod: undefined,
+  formAction: undefined,
+  formEncType: undefined,
+  formData: undefined
+};
+var IDLE_FETCHER = {
+  state: "idle",
+  data: undefined,
+  formMethod: undefined,
+  formAction: undefined,
+  formEncType: undefined,
+  formData: undefined
+};
+var isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
+var isServer = !isBrowser; //#endregion
+////////////////////////////////////////////////////////////////////////////////
+//#region createRouter
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Create a router and listen to history POP navigations
+ */
+
+function createRouter(init) {
+  invariant(init.routes.length > 0, "You must provide a non-empty routes array to createRouter");
+  var dataRoutes = convertRoutesToDataRoutes(init.routes); // Cleanup function for history
+
+  var unlistenHistory = null; // Externally-provided functions to call on all state changes
+
+  var subscribers = new Set(); // Externally-provided object to hold scroll restoration locations during routing
+
+  var savedScrollPositions = null; // Externally-provided function to get scroll restoration keys
+
+  var getScrollRestorationKey = null; // Externally-provided function to get current scroll position
+
+  var getScrollPosition = null; // One-time flag to control the initial hydration scroll restoration.  Because
+  // we don't get the saved positions from <ScrollRestoration /> until _after_
+  // the initial render, we need to manually trigger a separate updateState to
+  // send along the restoreScrollPosition
+  // Set to true if we have `hydrationData` since we assume we were SSR'd and that
+  // SSR did the initial scroll restoration.
+
+  var initialScrollRestored = init.hydrationData != null;
+  var initialMatches = matchRoutes(dataRoutes, init.history.location, init.basename);
+  var initialErrors = null;
+  if (initialMatches == null) {
+    // If we do not match a user-provided-route, fall back to the root
+    // to allow the error boundary to take over
+    var error = getInternalRouterError(404, {
+      pathname: init.history.location.pathname
+    });
+    var _getShortCircuitMatch = getShortCircuitMatches(dataRoutes),
+      matches = _getShortCircuitMatch.matches,
+      route = _getShortCircuitMatch.route;
+    initialMatches = matches;
+    initialErrors = _defineProperty({}, route.id, error);
+  }
+  var initialized = !initialMatches.some(function (m) {
+    return m.route.loader;
+  }) || init.hydrationData != null;
+  var router;
+  var state = {
+    historyAction: init.history.action,
+    location: init.history.location,
+    matches: initialMatches,
+    initialized: initialized,
+    navigation: IDLE_NAVIGATION,
+    // Don't restore on initial updateState() if we were SSR'd
+    restoreScrollPosition: init.hydrationData != null ? false : null,
+    preventScrollReset: false,
+    revalidation: "idle",
+    loaderData: init.hydrationData && init.hydrationData.loaderData || {},
+    actionData: init.hydrationData && init.hydrationData.actionData || null,
+    errors: init.hydrationData && init.hydrationData.errors || initialErrors,
+    fetchers: new Map()
+  }; // -- Stateful internal variables to manage navigations --
+  // Current navigation in progress (to be committed in completeNavigation)
+
+  var pendingAction = Action.Pop; // Should the current navigation prevent the scroll reset if scroll cannot
+  // be restored?
+
+  var pendingPreventScrollReset = false; // AbortController for the active navigation
+
+  var pendingNavigationController; // We use this to avoid touching history in completeNavigation if a
+  // revalidation is entirely uninterrupted
+
+  var isUninterruptedRevalidation = false; // Use this internal flag to force revalidation of all loaders:
+  //  - submissions (completed or interrupted)
+  //  - useRevalidate()
+  //  - X-Remix-Revalidate (from redirect)
+
+  var isRevalidationRequired = false; // Use this internal array to capture routes that require revalidation due
+  // to a cancelled deferred on action submission
+
+  var cancelledDeferredRoutes = []; // Use this internal array to capture fetcher loads that were cancelled by an
+  // action navigation and require revalidation
+
+  var cancelledFetcherLoads = []; // AbortControllers for any in-flight fetchers
+
+  var fetchControllers = new Map(); // Track loads based on the order in which they started
+
+  var incrementingLoadId = 0; // Track the outstanding pending navigation data load to be compared against
+  // the globally incrementing load when a fetcher load lands after a completed
+  // navigation
+
+  var pendingNavigationLoadId = -1; // Fetchers that triggered data reloads as a result of their actions
+
+  var fetchReloadIds = new Map(); // Fetchers that triggered redirect navigations from their actions
+
+  var fetchRedirectIds = new Set(); // Most recent href/match for fetcher.load calls for fetchers
+
+  var fetchLoadMatches = new Map(); // Store DeferredData instances for active route matches.  When a
+  // route loader returns defer() we stick one in here.  Then, when a nested
+  // promise resolves we update loaderData.  If a new navigation starts we
+  // cancel active deferreds for eliminated routes.
+
+  var activeDeferreds = new Map(); // Initialize the router, all side effects should be kicked off from here.
+  // Implemented as a Fluent API for ease of:
+  //   let router = createRouter(init).initialize();
+
+  function initialize() {
+    // If history informs us of a POP navigation, start the navigation but do not update
+    // state.  We'll update our own state once the navigation completes
+    unlistenHistory = init.history.listen(function (_ref) {
+      var historyAction = _ref.action,
+        location = _ref.location;
+      return startNavigation(historyAction, location);
+    }); // Kick off initial data load if needed.  Use Pop to avoid modifying history
+
+    if (!state.initialized) {
+      startNavigation(Action.Pop, state.location);
+    }
+    return router;
+  } // Clean up a router and it's side effects
+
+  function dispose() {
+    if (unlistenHistory) {
+      unlistenHistory();
+    }
+    subscribers.clear();
+    pendingNavigationController && pendingNavigationController.abort();
+    state.fetchers.forEach(function (_, key) {
+      return deleteFetcher(key);
+    });
+  } // Subscribe to state updates for the router
+
+  function subscribe(fn) {
+    subscribers.add(fn);
+    return function () {
+      return subscribers.delete(fn);
+    };
+  } // Update our state and notify the calling context of the change
+
+  function updateState(newState) {
+    state = _extends({}, state, newState);
+    subscribers.forEach(function (subscriber) {
+      return subscriber(state);
+    });
+  } // Complete a navigation returning the state.navigation back to the IDLE_NAVIGATION
+  // and setting state.[historyAction/location/matches] to the new route.
+  // - Location is a required param
+  // - Navigation will always be set to IDLE_NAVIGATION
+  // - Can pass any other state in newState
+
+  function completeNavigation(location, newState) {
+    var _location$state;
+
+    // Deduce if we're in a loading/actionReload state:
+    // - We have committed actionData in the store
+    // - The current navigation was a mutation submission
+    // - We're past the submitting state and into the loading state
+    // - The location being loaded is not the result of a redirect
+    var isActionReload = state.actionData != null && state.navigation.formMethod != null && isMutationMethod(state.navigation.formMethod) && state.navigation.state === "loading" && ((_location$state = location.state) == null ? void 0 : _location$state._isRedirect) !== true;
+    var actionData;
+    if (newState.actionData) {
+      if (Object.keys(newState.actionData).length > 0) {
+        actionData = newState.actionData;
+      } else {
+        // Empty actionData -> clear prior actionData due to an action error
+        actionData = null;
+      }
+    } else if (isActionReload) {
+      // Keep the current data if we're wrapping up the action reload
+      actionData = state.actionData;
+    } else {
+      // Clear actionData on any other completed navigations
+      actionData = null;
+    } // Always preserve any existing loaderData from re-used routes
+
+    var loaderData = newState.loaderData ? mergeLoaderData(state.loaderData, newState.loaderData, newState.matches || [], newState.errors) : state.loaderData;
+    updateState(_extends({}, newState, {
+      actionData: actionData,
+      loaderData: loaderData,
+      historyAction: pendingAction,
+      location: location,
+      initialized: true,
+      navigation: IDLE_NAVIGATION,
+      revalidation: "idle",
+      // Don't restore on submission navigations
+      restoreScrollPosition: state.navigation.formData ? false : getSavedScrollPosition(location, newState.matches || state.matches),
+      preventScrollReset: pendingPreventScrollReset
+    }));
+    if (isUninterruptedRevalidation) ;else if (pendingAction === Action.Pop) ;else if (pendingAction === Action.Push) {
+      init.history.push(location, location.state);
+    } else if (pendingAction === Action.Replace) {
+      init.history.replace(location, location.state);
+    } // Reset stateful navigation vars
+
+    pendingAction = Action.Pop;
+    pendingPreventScrollReset = false;
+    isUninterruptedRevalidation = false;
+    isRevalidationRequired = false;
+    cancelledDeferredRoutes = [];
+    cancelledFetcherLoads = [];
+  } // Trigger a navigation event, which can either be a numerical POP or a PUSH
+  // replace with an optional submission
+  function navigate(_x3, _x4) {
+    return _navigate.apply(this, arguments);
+  } // Revalidate all current loaders.  If a navigation is in progress or if this
+  // is interrupted by a navigation, allow this to "succeed" by calling all
+  // loaders during the next loader round
+  function _navigate() {
+    _navigate = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(to, opts) {
+      var _normalizeNavigateOpt2, path, submission, error, location, userReplace, historyAction, preventScrollReset;
+      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              if (!(typeof to === "number")) {
+                _context2.next = 3;
+                break;
+              }
+              init.history.go(to);
+              return _context2.abrupt("return");
+            case 3:
+              _normalizeNavigateOpt2 = normalizeNavigateOptions(to, opts), path = _normalizeNavigateOpt2.path, submission = _normalizeNavigateOpt2.submission, error = _normalizeNavigateOpt2.error;
+              location = createLocation(state.location, path, opts && opts.state); // When using navigate as a PUSH/REPLACE we aren't reading an already-encoded
+              // URL from window.location, so we need to encode it here so the behavior
+              // remains the same as POP and non-data-router usages.  new URL() does all
+              // the same encoding we'd get from a history.pushState/window.location read
+              // without having to touch history
+              location = _extends({}, location, init.history.encodeLocation(location));
+              userReplace = opts && opts.replace != null ? opts.replace : undefined;
+              historyAction = Action.Push;
+              if (userReplace === true) {
+                historyAction = Action.Replace;
+              } else if (userReplace === false) ;else if (submission != null && isMutationMethod(submission.formMethod) && submission.formAction === state.location.pathname + state.location.search) {
+                // By default on submissions to the current location we REPLACE so that
+                // users don't have to double-click the back button to get to the prior
+                // location.  If the user redirects to a different location from the
+                // action/loader this will be ignored and the redirect will be a PUSH
+                historyAction = Action.Replace;
+              }
+              preventScrollReset = opts && "preventScrollReset" in opts ? opts.preventScrollReset === true : undefined;
+              _context2.next = 12;
+              return startNavigation(historyAction, location, {
+                submission: submission,
+                // Send through the formData serialization error if we have one so we can
+                // render at the right error boundary after we match routes
+                pendingError: error,
+                preventScrollReset: preventScrollReset,
+                replace: opts && opts.replace
+              });
+            case 12:
+              return _context2.abrupt("return", _context2.sent);
+            case 13:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+    return _navigate.apply(this, arguments);
+  }
+  function revalidate() {
+    interruptActiveLoads();
+    updateState({
+      revalidation: "loading"
+    }); // If we're currently submitting an action, we don't need to start a new
+    // navigation, we'll just let the follow up loader execution call all loaders
+
+    if (state.navigation.state === "submitting") {
+      return;
+    } // If we're currently in an idle state, start a new navigation for the current
+    // action/location and mark it as uninterrupted, which will skip the history
+    // update in completeNavigation
+
+    if (state.navigation.state === "idle") {
+      startNavigation(state.historyAction, state.location, {
+        startUninterruptedRevalidation: true
+      });
+      return;
+    } // Otherwise, if we're currently in a loading state, just start a new
+    // navigation to the navigation.location but do not trigger an uninterrupted
+    // revalidation so that history correctly updates once the navigation completes
+
+    startNavigation(pendingAction || state.historyAction, state.navigation.location, {
+      overrideNavigation: state.navigation
+    });
+  } // Start a navigation to the given action/location.  Can optionally provide a
+  // overrideNavigation which will override the normalLoad in the case of a redirect
+  // navigation
+  function startNavigation(_x5, _x6, _x7) {
+    return _startNavigation.apply(this, arguments);
+  } // Call the action matched by the leaf route for this navigation and handle
+  // redirects/errors
+  function _startNavigation() {
+    _startNavigation = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(historyAction, location, opts) {
+      var loadingNavigation, matches, _error, _getShortCircuitMatch2, notFoundMatches, _route, request, pendingActionData, pendingError, actionOutput, navigation, _yield$handleLoaders, shortCircuited, loaderData, errors;
+      return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              // Abort any in-progress navigations and start a new one. Unset any ongoing
+              // uninterrupted revalidations unless told otherwise, since we want this
+              // new navigation to update history normally
+              pendingNavigationController && pendingNavigationController.abort();
+              pendingNavigationController = null;
+              pendingAction = historyAction;
+              isUninterruptedRevalidation = (opts && opts.startUninterruptedRevalidation) === true; // Save the current scroll position every time we start a new navigation,
+              // and track whether we should reset scroll on completion
+
+              saveScrollPosition(state.location, state.matches);
+              pendingPreventScrollReset = (opts && opts.preventScrollReset) === true;
+              loadingNavigation = opts && opts.overrideNavigation;
+              matches = matchRoutes(dataRoutes, location, init.basename); // Short circuit with a 404 on the root error boundary if we match nothing
+              if (matches) {
+                _context3.next = 14;
+                break;
+              }
+              _error = getInternalRouterError(404, {
+                pathname: location.pathname
+              });
+              _getShortCircuitMatch2 = getShortCircuitMatches(dataRoutes), notFoundMatches = _getShortCircuitMatch2.matches, _route = _getShortCircuitMatch2.route; // Cancel all pending deferred on 404s since we don't keep any routes
+              cancelActiveDeferreds();
+              completeNavigation(location, {
+                matches: notFoundMatches,
+                loaderData: {},
+                errors: _defineProperty({}, _route.id, _error)
+              });
+              return _context3.abrupt("return");
+            case 14:
+              if (!isHashChangeOnly(state.location, location)) {
+                _context3.next = 17;
+                break;
+              }
+              completeNavigation(location, {
+                matches: matches
+              });
+              return _context3.abrupt("return");
+            case 17:
+              // Create a controller/Request for this navigation
+
+              pendingNavigationController = new AbortController();
+              request = createClientSideRequest(location, pendingNavigationController.signal, opts && opts.submission);
+              if (!(opts && opts.pendingError)) {
+                _context3.next = 23;
+                break;
+              }
+              // If we have a pendingError, it means the user attempted a GET submission
+              // with binary FormData so assign here and skip to handleLoaders.  That
+              // way we handle calling loaders above the boundary etc.  It's not really
+              // different from an actionError in that sense.
+              pendingError = _defineProperty({}, findNearestBoundary(matches).route.id, opts.pendingError);
+              _context3.next = 34;
+              break;
+            case 23:
+              if (!(opts && opts.submission && isMutationMethod(opts.submission.formMethod))) {
+                _context3.next = 34;
+                break;
+              }
+              _context3.next = 26;
+              return handleAction(request, location, opts.submission, matches, {
+                replace: opts.replace
+              });
+            case 26:
+              actionOutput = _context3.sent;
+              if (!actionOutput.shortCircuited) {
+                _context3.next = 29;
+                break;
+              }
+              return _context3.abrupt("return");
+            case 29:
+              pendingActionData = actionOutput.pendingActionData;
+              pendingError = actionOutput.pendingActionError;
+              navigation = _extends({
+                state: "loading",
+                location: location
+              }, opts.submission);
+              loadingNavigation = navigation; // Create a GET request for the loaders
+
+              request = new Request(request.url, {
+                signal: request.signal
+              });
+            case 34:
+              _context3.next = 36;
+              return handleLoaders(request, location, matches, loadingNavigation, opts && opts.submission, opts && opts.replace, pendingActionData, pendingError);
+            case 36:
+              _yield$handleLoaders = _context3.sent;
+              shortCircuited = _yield$handleLoaders.shortCircuited;
+              loaderData = _yield$handleLoaders.loaderData;
+              errors = _yield$handleLoaders.errors;
+              if (!shortCircuited) {
+                _context3.next = 42;
+                break;
+              }
+              return _context3.abrupt("return");
+            case 42:
+              // Clean up now that the action/loaders have completed.  Don't clean up if
+              // we short circuited because pendingNavigationController will have already
+              // been assigned to a new controller for the next navigation
+
+              pendingNavigationController = null;
+              completeNavigation(location, _extends({
+                matches: matches
+              }, pendingActionData ? {
+                actionData: pendingActionData
+              } : {}, {
+                loaderData: loaderData,
+                errors: errors
+              }));
+            case 44:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+    return _startNavigation.apply(this, arguments);
+  }
+  function handleAction(_x8, _x9, _x10, _x11, _x12) {
+    return _handleAction.apply(this, arguments);
+  } // Call all applicable loaders for the given matches, handling redirects,
+  // errors, etc.
+  function _handleAction() {
+    _handleAction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(request, location, submission, matches, opts) {
+      var navigation, result, actionMatch, replace, boundaryMatch;
+      return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              interruptActiveLoads(); // Put us in a submitting state
+              navigation = _extends({
+                state: "submitting",
+                location: location
+              }, submission);
+              updateState({
+                navigation: navigation
+              }); // Call our action and get the result
+              actionMatch = getTargetMatch(matches, location);
+              if (actionMatch.route.action) {
+                _context4.next = 8;
+                break;
+              }
+              result = {
+                type: ResultType.error,
+                error: getInternalRouterError(405, {
+                  method: request.method,
+                  pathname: location.pathname,
+                  routeId: actionMatch.route.id
+                })
+              };
+              _context4.next = 13;
+              break;
+            case 8:
+              _context4.next = 10;
+              return callLoaderOrAction("action", request, actionMatch, matches, router.basename);
+            case 10:
+              result = _context4.sent;
+              if (!request.signal.aborted) {
+                _context4.next = 13;
+                break;
+              }
+              return _context4.abrupt("return", {
+                shortCircuited: true
+              });
+            case 13:
+              if (!isRedirectResult(result)) {
+                _context4.next = 18;
+                break;
+              }
+              if (opts && opts.replace != null) {
+                replace = opts.replace;
+              } else {
+                // If the user didn't explicity indicate replace behavior, replace if
+                // we redirected to the exact same location we're currently at to avoid
+                // double back-buttons
+                replace = result.location === state.location.pathname + state.location.search;
+              }
+              _context4.next = 17;
+              return startRedirectNavigation(state, result, {
+                submission: submission,
+                replace: replace
+              });
+            case 17:
+              return _context4.abrupt("return", {
+                shortCircuited: true
+              });
+            case 18:
+              if (!isErrorResult(result)) {
+                _context4.next = 22;
+                break;
+              }
+              // Store off the pending error - we use it to determine which loaders
+              // to call and will commit it when we complete the navigation
+              boundaryMatch = findNearestBoundary(matches, actionMatch.route.id); // By default, all submissions are REPLACE navigations, but if the
+              // action threw an error that'll be rendered in an errorElement, we fall
+              // back to PUSH so that the user can use the back button to get back to
+              // the pre-submission form location to try again
+              if ((opts && opts.replace) !== true) {
+                pendingAction = Action.Push;
+              }
+              return _context4.abrupt("return", {
+                // Send back an empty object we can use to clear out any prior actionData
+                pendingActionData: {},
+                pendingActionError: _defineProperty({}, boundaryMatch.route.id, result.error)
+              });
+            case 22:
+              if (!isDeferredResult(result)) {
+                _context4.next = 24;
+                break;
+              }
+              throw new Error("defer() is not supported in actions");
+            case 24:
+              return _context4.abrupt("return", {
+                pendingActionData: _defineProperty({}, actionMatch.route.id, result.data)
+              });
+            case 25:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    }));
+    return _handleAction.apply(this, arguments);
+  }
+  function handleLoaders(_x13, _x14, _x15, _x16, _x17, _x18, _x19, _x20) {
+    return _handleLoaders.apply(this, arguments);
+  }
+  function _handleLoaders() {
+    _handleLoaders = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(request, location, matches, overrideNavigation, submission, replace, pendingActionData, pendingError) {
+      var loadingNavigation, navigation, activeSubmission, _getMatchesToLoad, _getMatchesToLoad2, matchesToLoad, revalidatingFetchers, actionData, _yield$callLoadersAnd, results, loaderResults, fetcherResults, redirect, _processLoaderData, loaderData, errors, didAbortFetchLoads;
+      return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+        while (1) {
+          switch (_context5.prev = _context5.next) {
+            case 0:
+              // Figure out the right navigation we want to use for data loading
+              loadingNavigation = overrideNavigation;
+              if (!loadingNavigation) {
+                navigation = _extends({
+                  state: "loading",
+                  location: location,
+                  formMethod: undefined,
+                  formAction: undefined,
+                  formEncType: undefined,
+                  formData: undefined
+                }, submission);
+                loadingNavigation = navigation;
+              } // If this was a redirect from an action we don't have a "submission" but
+              // we have it on the loading navigation so use that if available
+              activeSubmission = submission ? submission : loadingNavigation.formMethod && loadingNavigation.formAction && loadingNavigation.formData && loadingNavigation.formEncType ? {
+                formMethod: loadingNavigation.formMethod,
+                formAction: loadingNavigation.formAction,
+                formData: loadingNavigation.formData,
+                formEncType: loadingNavigation.formEncType
+              } : undefined;
+              _getMatchesToLoad = getMatchesToLoad(state, matches, activeSubmission, location, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, pendingActionData, pendingError, fetchLoadMatches), _getMatchesToLoad2 = _slicedToArray(_getMatchesToLoad, 2), matchesToLoad = _getMatchesToLoad2[0], revalidatingFetchers = _getMatchesToLoad2[1]; // Cancel pending deferreds for no-longer-matched routes or routes we're
+              // about to reload.  Note that if this is an action reload we would have
+              // already cancelled all pending deferreds so this would be a no-op
+              cancelActiveDeferreds(function (routeId) {
+                return !(matches && matches.some(function (m) {
+                  return m.route.id === routeId;
+                })) || matchesToLoad && matchesToLoad.some(function (m) {
+                  return m.route.id === routeId;
+                });
+              }); // Short circuit if we have no loaders to run
+              if (!(matchesToLoad.length === 0 && revalidatingFetchers.length === 0)) {
+                _context5.next = 8;
+                break;
+              }
+              completeNavigation(location, _extends({
+                matches: matches,
+                loaderData: {},
+                // Commit pending error if we're short circuiting
+                errors: pendingError || null
+              }, pendingActionData ? {
+                actionData: pendingActionData
+              } : {}));
+              return _context5.abrupt("return", {
+                shortCircuited: true
+              });
+            case 8:
+              // If this is an uninterrupted revalidation, we remain in our current idle
+              // state.  If not, we need to switch to our loading state and load data,
+              // preserving any new action data or existing action data (in the case of
+              // a revalidation interrupting an actionReload)
+
+              if (!isUninterruptedRevalidation) {
+                revalidatingFetchers.forEach(function (_ref2) {
+                  var _ref14 = _slicedToArray(_ref2, 1),
+                    key = _ref14[0];
+                  var fetcher = state.fetchers.get(key);
+                  var revalidatingFetcher = {
+                    state: "loading",
+                    data: fetcher && fetcher.data,
+                    formMethod: undefined,
+                    formAction: undefined,
+                    formEncType: undefined,
+                    formData: undefined,
+                    " _hasFetcherDoneAnything ": true
+                  };
+                  state.fetchers.set(key, revalidatingFetcher);
+                });
+                actionData = pendingActionData || state.actionData;
+                updateState(_extends({
+                  navigation: loadingNavigation
+                }, actionData ? Object.keys(actionData).length === 0 ? {
+                  actionData: null
+                } : {
+                  actionData: actionData
+                } : {}, revalidatingFetchers.length > 0 ? {
+                  fetchers: new Map(state.fetchers)
+                } : {}));
+              }
+              pendingNavigationLoadId = ++incrementingLoadId;
+              revalidatingFetchers.forEach(function (_ref3) {
+                var _ref15 = _slicedToArray(_ref3, 1),
+                  key = _ref15[0];
+                return fetchControllers.set(key, pendingNavigationController);
+              });
+              _context5.next = 13;
+              return callLoadersAndMaybeResolveData(state.matches, matches, matchesToLoad, revalidatingFetchers, request);
+            case 13:
+              _yield$callLoadersAnd = _context5.sent;
+              results = _yield$callLoadersAnd.results;
+              loaderResults = _yield$callLoadersAnd.loaderResults;
+              fetcherResults = _yield$callLoadersAnd.fetcherResults;
+              if (!request.signal.aborted) {
+                _context5.next = 19;
+                break;
+              }
+              return _context5.abrupt("return", {
+                shortCircuited: true
+              });
+            case 19:
+              // Clean up _after_ loaders have completed.  Don't clean up if we short
+              // circuited because fetchControllers would have been aborted and
+              // reassigned to new controllers for the next navigation
+
+              revalidatingFetchers.forEach(function (_ref4) {
+                var _ref16 = _slicedToArray(_ref4, 1),
+                  key = _ref16[0];
+                return fetchControllers.delete(key);
+              }); // If any loaders returned a redirect Response, start a new REPLACE navigation
+              redirect = findRedirect(results);
+              if (!redirect) {
+                _context5.next = 25;
+                break;
+              }
+              _context5.next = 24;
+              return startRedirectNavigation(state, redirect, {
+                replace: replace
+              });
+            case 24:
+              return _context5.abrupt("return", {
+                shortCircuited: true
+              });
+            case 25:
+              // Process and commit output from loaders
+              _processLoaderData = processLoaderData(state, matches, matchesToLoad, loaderResults, pendingError, revalidatingFetchers, fetcherResults, activeDeferreds), loaderData = _processLoaderData.loaderData, errors = _processLoaderData.errors; // Wire up subscribers to update loaderData as promises settle
+              activeDeferreds.forEach(function (deferredData, routeId) {
+                deferredData.subscribe(function (aborted) {
+                  // Note: No need to updateState here since the TrackedPromise on
+                  // loaderData is stable across resolve/reject
+                  // Remove this instance if we were aborted or if promises have settled
+                  if (aborted || deferredData.done) {
+                    activeDeferreds.delete(routeId);
+                  }
+                });
+              });
+              markFetchRedirectsDone();
+              didAbortFetchLoads = abortStaleFetchLoads(pendingNavigationLoadId);
+              return _context5.abrupt("return", _extends({
+                loaderData: loaderData,
+                errors: errors
+              }, didAbortFetchLoads || revalidatingFetchers.length > 0 ? {
+                fetchers: new Map(state.fetchers)
+              } : {}));
+            case 30:
+            case "end":
+              return _context5.stop();
+          }
+        }
+      }, _callee5);
+    }));
+    return _handleLoaders.apply(this, arguments);
+  }
+  function getFetcher(key) {
+    return state.fetchers.get(key) || IDLE_FETCHER;
+  } // Trigger a fetcher load/submit for the given fetcher key
+
+  function fetch(key, routeId, href, opts) {
+    if (isServer) {
+      throw new Error("router.fetch() was called during the server render, but it shouldn't be. " + "You are likely calling a useFetcher() method in the body of your component. " + "Try moving it to a useEffect or a callback.");
+    }
+    if (fetchControllers.has(key)) abortFetcher(key);
+    var matches = matchRoutes(dataRoutes, href, init.basename);
+    if (!matches) {
+      setFetcherError(key, routeId, getInternalRouterError(404, {
+        pathname: href
+      }));
+      return;
+    }
+    var _normalizeNavigateOpt = normalizeNavigateOptions(href, opts, true),
+      path = _normalizeNavigateOpt.path,
+      submission = _normalizeNavigateOpt.submission;
+    var match = getTargetMatch(matches, path);
+    if (submission && isMutationMethod(submission.formMethod)) {
+      handleFetcherAction(key, routeId, path, match, matches, submission);
+      return;
+    } // Store off the match so we can call it's shouldRevalidate on subsequent
+    // revalidations
+
+    fetchLoadMatches.set(key, [path, match, matches]);
+    handleFetcherLoader(key, routeId, path, match, matches, submission);
+  } // Call the action for the matched fetcher.submit(), and then handle redirects,
+  // errors, and revalidation
+  function handleFetcherAction(_x21, _x22, _x23, _x24, _x25, _x26) {
+    return _handleFetcherAction.apply(this, arguments);
+  } // Call the matched loader for fetcher.load(), handling redirects, errors, etc.
+  function _handleFetcherAction() {
+    _handleFetcherAction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(key, routeId, path, match, requestMatches, submission) {
+      var _error2, existingFetcher, fetcher, abortController, fetchRequest, actionResult, loadingFetcher, nextLocation, revalidationRequest, matches, loadId, loadFetcher, _getMatchesToLoad3, _getMatchesToLoad4, matchesToLoad, revalidatingFetchers, _yield$callLoadersAnd2, results, loaderResults, fetcherResults, redirect, _processLoaderData2, loaderData, errors, doneFetcher, didAbortFetchLoads;
+      return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+        while (1) {
+          switch (_context6.prev = _context6.next) {
+            case 0:
+              interruptActiveLoads();
+              fetchLoadMatches.delete(key);
+              if (match.route.action) {
+                _context6.next = 6;
+                break;
+              }
+              _error2 = getInternalRouterError(405, {
+                method: submission.formMethod,
+                pathname: path,
+                routeId: routeId
+              });
+              setFetcherError(key, routeId, _error2);
+              return _context6.abrupt("return");
+            case 6:
+              // Put this fetcher into it's submitting state
+              existingFetcher = state.fetchers.get(key);
+              fetcher = _extends({
+                state: "submitting"
+              }, submission, {
+                data: existingFetcher && existingFetcher.data,
+                " _hasFetcherDoneAnything ": true
+              });
+              state.fetchers.set(key, fetcher);
+              updateState({
+                fetchers: new Map(state.fetchers)
+              }); // Call the action for the fetcher
+              abortController = new AbortController();
+              fetchRequest = createClientSideRequest(path, abortController.signal, submission);
+              fetchControllers.set(key, abortController);
+              _context6.next = 15;
+              return callLoaderOrAction("action", fetchRequest, match, requestMatches, router.basename);
+            case 15:
+              actionResult = _context6.sent;
+              if (!fetchRequest.signal.aborted) {
+                _context6.next = 19;
+                break;
+              }
+              // We can delete this so long as we weren't aborted by ou our own fetcher
+              // re-submit which would have put _new_ controller is in fetchControllers
+              if (fetchControllers.get(key) === abortController) {
+                fetchControllers.delete(key);
+              }
+              return _context6.abrupt("return");
+            case 19:
+              if (!isRedirectResult(actionResult)) {
+                _context6.next = 26;
+                break;
+              }
+              fetchControllers.delete(key);
+              fetchRedirectIds.add(key);
+              loadingFetcher = _extends({
+                state: "loading"
+              }, submission, {
+                data: undefined,
+                " _hasFetcherDoneAnything ": true
+              });
+              state.fetchers.set(key, loadingFetcher);
+              updateState({
+                fetchers: new Map(state.fetchers)
+              });
+              return _context6.abrupt("return", startRedirectNavigation(state, actionResult, {
+                isFetchActionRedirect: true
+              }));
+            case 26:
+              if (!isErrorResult(actionResult)) {
+                _context6.next = 29;
+                break;
+              }
+              setFetcherError(key, routeId, actionResult.error);
+              return _context6.abrupt("return");
+            case 29:
+              if (isDeferredResult(actionResult)) {
+                invariant(false, "defer() is not supported in actions");
+              } // Start the data load for current matches, or the next location if we're
+              // in the middle of a navigation
+              nextLocation = state.navigation.location || state.location;
+              revalidationRequest = createClientSideRequest(nextLocation, abortController.signal);
+              matches = state.navigation.state !== "idle" ? matchRoutes(dataRoutes, state.navigation.location, init.basename) : state.matches;
+              invariant(matches, "Didn't find any matches after fetcher action");
+              loadId = ++incrementingLoadId;
+              fetchReloadIds.set(key, loadId);
+              loadFetcher = _extends({
+                state: "loading",
+                data: actionResult.data
+              }, submission, {
+                " _hasFetcherDoneAnything ": true
+              });
+              state.fetchers.set(key, loadFetcher);
+              _getMatchesToLoad3 = getMatchesToLoad(state, matches, submission, nextLocation, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, _defineProperty({}, match.route.id, actionResult.data), undefined,
+              // No need to send through errors since we short circuit above
+              fetchLoadMatches), _getMatchesToLoad4 = _slicedToArray(_getMatchesToLoad3, 2), matchesToLoad = _getMatchesToLoad4[0], revalidatingFetchers = _getMatchesToLoad4[1]; // Put all revalidating fetchers into the loading state, except for the
+              // current fetcher which we want to keep in it's current loading state which
+              // contains it's action submission info + action data
+              revalidatingFetchers.filter(function (_ref5) {
+                var _ref17 = _slicedToArray(_ref5, 1),
+                  staleKey = _ref17[0];
+                return staleKey !== key;
+              }).forEach(function (_ref6) {
+                var _ref18 = _slicedToArray(_ref6, 1),
+                  staleKey = _ref18[0];
+                var existingFetcher = state.fetchers.get(staleKey);
+                var revalidatingFetcher = {
+                  state: "loading",
+                  data: existingFetcher && existingFetcher.data,
+                  formMethod: undefined,
+                  formAction: undefined,
+                  formEncType: undefined,
+                  formData: undefined,
+                  " _hasFetcherDoneAnything ": true
+                };
+                state.fetchers.set(staleKey, revalidatingFetcher);
+                fetchControllers.set(staleKey, abortController);
+              });
+              updateState({
+                fetchers: new Map(state.fetchers)
+              });
+              _context6.next = 43;
+              return callLoadersAndMaybeResolveData(state.matches, matches, matchesToLoad, revalidatingFetchers, revalidationRequest);
+            case 43:
+              _yield$callLoadersAnd2 = _context6.sent;
+              results = _yield$callLoadersAnd2.results;
+              loaderResults = _yield$callLoadersAnd2.loaderResults;
+              fetcherResults = _yield$callLoadersAnd2.fetcherResults;
+              if (!abortController.signal.aborted) {
+                _context6.next = 49;
+                break;
+              }
+              return _context6.abrupt("return");
+            case 49:
+              fetchReloadIds.delete(key);
+              fetchControllers.delete(key);
+              revalidatingFetchers.forEach(function (_ref7) {
+                var _ref19 = _slicedToArray(_ref7, 1),
+                  staleKey = _ref19[0];
+                return fetchControllers.delete(staleKey);
+              });
+              redirect = findRedirect(results);
+              if (!redirect) {
+                _context6.next = 55;
+                break;
+              }
+              return _context6.abrupt("return", startRedirectNavigation(state, redirect));
+            case 55:
+              // Process and commit output from loaders
+              _processLoaderData2 = processLoaderData(state, state.matches, matchesToLoad, loaderResults, undefined, revalidatingFetchers, fetcherResults, activeDeferreds), loaderData = _processLoaderData2.loaderData, errors = _processLoaderData2.errors;
+              doneFetcher = {
+                state: "idle",
+                data: actionResult.data,
+                formMethod: undefined,
+                formAction: undefined,
+                formEncType: undefined,
+                formData: undefined,
+                " _hasFetcherDoneAnything ": true
+              };
+              state.fetchers.set(key, doneFetcher);
+              didAbortFetchLoads = abortStaleFetchLoads(loadId); // If we are currently in a navigation loading state and this fetcher is
+              // more recent than the navigation, we want the newer data so abort the
+              // navigation and complete it with the fetcher data
+              if (state.navigation.state === "loading" && loadId > pendingNavigationLoadId) {
+                invariant(pendingAction, "Expected pending action");
+                pendingNavigationController && pendingNavigationController.abort();
+                completeNavigation(state.navigation.location, {
+                  matches: matches,
+                  loaderData: loaderData,
+                  errors: errors,
+                  fetchers: new Map(state.fetchers)
+                });
+              } else {
+                // otherwise just update with the fetcher data, preserving any existing
+                // loaderData for loaders that did not need to reload.  We have to
+                // manually merge here since we aren't going through completeNavigation
+                updateState(_extends({
+                  errors: errors,
+                  loaderData: mergeLoaderData(state.loaderData, loaderData, matches, errors)
+                }, didAbortFetchLoads ? {
+                  fetchers: new Map(state.fetchers)
+                } : {}));
+                isRevalidationRequired = false;
+              }
+            case 60:
+            case "end":
+              return _context6.stop();
+          }
+        }
+      }, _callee6);
+    }));
+    return _handleFetcherAction.apply(this, arguments);
+  }
+  function handleFetcherLoader(_x27, _x28, _x29, _x30, _x31, _x32) {
+    return _handleFetcherLoader.apply(this, arguments);
+  }
+  /**
+   * Utility function to handle redirects returned from an action or loader.
+   * Normally, a redirect "replaces" the navigation that triggered it.  So, for
+   * example:
+   *
+   *  - user is on /a
+   *  - user clicks a link to /b
+   *  - loader for /b redirects to /c
+   *
+   * In a non-JS app the browser would track the in-flight navigation to /b and
+   * then replace it with /c when it encountered the redirect response.  In
+   * the end it would only ever update the URL bar with /c.
+   *
+   * In client-side routing using pushState/replaceState, we aim to emulate
+   * this behavior and we also do not update history until the end of the
+   * navigation (including processed redirects).  This means that we never
+   * actually touch history until we've processed redirects, so we just use
+   * the history action from the original navigation (PUSH or REPLACE).
+   */
+  function _handleFetcherLoader() {
+    _handleFetcherLoader = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(key, routeId, path, match, matches, submission) {
+      var existingFetcher, loadingFetcher, abortController, fetchRequest, result, boundaryMatch, doneFetcher;
+      return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+        while (1) {
+          switch (_context7.prev = _context7.next) {
+            case 0:
+              existingFetcher = state.fetchers.get(key); // Put this fetcher into it's loading state
+              loadingFetcher = _extends({
+                state: "loading",
+                formMethod: undefined,
+                formAction: undefined,
+                formEncType: undefined,
+                formData: undefined
+              }, submission, {
+                data: existingFetcher && existingFetcher.data,
+                " _hasFetcherDoneAnything ": true
+              });
+              state.fetchers.set(key, loadingFetcher);
+              updateState({
+                fetchers: new Map(state.fetchers)
+              }); // Call the loader for this fetcher route match
+              abortController = new AbortController();
+              fetchRequest = createClientSideRequest(path, abortController.signal);
+              fetchControllers.set(key, abortController);
+              _context7.next = 9;
+              return callLoaderOrAction("loader", fetchRequest, match, matches, router.basename);
+            case 9:
+              result = _context7.sent;
+              if (!isDeferredResult(result)) {
+                _context7.next = 17;
+                break;
+              }
+              _context7.next = 13;
+              return resolveDeferredData(result, fetchRequest.signal, true);
+            case 13:
+              _context7.t0 = _context7.sent;
+              if (_context7.t0) {
+                _context7.next = 16;
+                break;
+              }
+              _context7.t0 = result;
+            case 16:
+              result = _context7.t0;
+            case 17:
+              // We can delete this so long as we weren't aborted by ou our own fetcher
+              // re-load which would have put _new_ controller is in fetchControllers
+
+              if (fetchControllers.get(key) === abortController) {
+                fetchControllers.delete(key);
+              }
+              if (!fetchRequest.signal.aborted) {
+                _context7.next = 20;
+                break;
+              }
+              return _context7.abrupt("return");
+            case 20:
+              if (!isRedirectResult(result)) {
+                _context7.next = 24;
+                break;
+              }
+              _context7.next = 23;
+              return startRedirectNavigation(state, result);
+            case 23:
+              return _context7.abrupt("return");
+            case 24:
+              if (!isErrorResult(result)) {
+                _context7.next = 29;
+                break;
+              }
+              boundaryMatch = findNearestBoundary(state.matches, routeId);
+              state.fetchers.delete(key); // TODO: In remix, this would reset to IDLE_NAVIGATION if it was a catch -
+              // do we need to behave any differently with our non-redirect errors?
+              // What if it was a non-redirect Response?
+
+              updateState({
+                fetchers: new Map(state.fetchers),
+                errors: _defineProperty({}, boundaryMatch.route.id, result.error)
+              });
+              return _context7.abrupt("return");
+            case 29:
+              invariant(!isDeferredResult(result), "Unhandled fetcher deferred data"); // Put the fetcher back into an idle state
+              doneFetcher = {
+                state: "idle",
+                data: result.data,
+                formMethod: undefined,
+                formAction: undefined,
+                formEncType: undefined,
+                formData: undefined,
+                " _hasFetcherDoneAnything ": true
+              };
+              state.fetchers.set(key, doneFetcher);
+              updateState({
+                fetchers: new Map(state.fetchers)
+              });
+            case 33:
+            case "end":
+              return _context7.stop();
+          }
+        }
+      }, _callee7);
+    }));
+    return _handleFetcherLoader.apply(this, arguments);
+  }
+  function startRedirectNavigation(_x33, _x34, _x35) {
+    return _startRedirectNavigation.apply(this, arguments);
+  }
+  function _startRedirectNavigation() {
+    _startRedirectNavigation = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(state, redirect, _temp) {
+      var _window, _ref20, submission, replace, isFetchActionRedirect, redirectLocation, newOrigin, redirectHistoryAction, _state$navigation, formMethod, formAction, formEncType, formData;
+      return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+        while (1) {
+          switch (_context8.prev = _context8.next) {
+            case 0:
+              _ref20 = _temp === void 0 ? {} : _temp, submission = _ref20.submission, replace = _ref20.replace, isFetchActionRedirect = _ref20.isFetchActionRedirect;
+              if (redirect.revalidate) {
+                isRevalidationRequired = true;
+              }
+              redirectLocation = createLocation(state.location, redirect.location,
+              // TODO: This can be removed once we get rid of useTransition in Remix v2
+              _extends({
+                _isRedirect: true
+              }, isFetchActionRedirect ? {
+                _isFetchActionRedirect: true
+              } : {}));
+              invariant(redirectLocation, "Expected a location on the redirect navigation"); // Check if this an external redirect that goes to a new origin
+              if (!(typeof ((_window = window) == null ? void 0 : _window.location) !== "undefined")) {
+                _context8.next = 9;
+                break;
+              }
+              newOrigin = createClientSideURL(redirect.location).origin;
+              if (!(window.location.origin !== newOrigin)) {
+                _context8.next = 9;
+                break;
+              }
+              if (replace) {
+                window.location.replace(redirect.location);
+              } else {
+                window.location.assign(redirect.location);
+              }
+              return _context8.abrupt("return");
+            case 9:
+              // There's no need to abort on redirects, since we don't detect the
+              // redirect until the action/loaders have settled
+
+              pendingNavigationController = null;
+              redirectHistoryAction = replace === true ? Action.Replace : Action.Push; // Use the incoming submission if provided, fallback on the active one in
+              // state.navigation
+              _state$navigation = state.navigation, formMethod = _state$navigation.formMethod, formAction = _state$navigation.formAction, formEncType = _state$navigation.formEncType, formData = _state$navigation.formData;
+              if (!submission && formMethod && formAction && formData && formEncType) {
+                submission = {
+                  formMethod: formMethod,
+                  formAction: formAction,
+                  formEncType: formEncType,
+                  formData: formData
+                };
+              } // If this was a 307/308 submission we want to preserve the HTTP method and
+              // re-submit the GET/POST/PUT/PATCH/DELETE as a submission navigation to the
+              // redirected location
+              if (!(redirectPreserveMethodStatusCodes.has(redirect.status) && submission && isMutationMethod(submission.formMethod))) {
+                _context8.next = 18;
+                break;
+              }
+              _context8.next = 16;
+              return startNavigation(redirectHistoryAction, redirectLocation, {
+                submission: _extends({}, submission, {
+                  formAction: redirect.location
+                })
+              });
+            case 16:
+              _context8.next = 20;
+              break;
+            case 18:
+              _context8.next = 20;
+              return startNavigation(redirectHistoryAction, redirectLocation, {
+                overrideNavigation: {
+                  state: "loading",
+                  location: redirectLocation,
+                  formMethod: submission ? submission.formMethod : undefined,
+                  formAction: submission ? submission.formAction : undefined,
+                  formEncType: submission ? submission.formEncType : undefined,
+                  formData: submission ? submission.formData : undefined
+                }
+              });
+            case 20:
+            case "end":
+              return _context8.stop();
+          }
+        }
+      }, _callee8);
+    }));
+    return _startRedirectNavigation.apply(this, arguments);
+  }
+  function callLoadersAndMaybeResolveData(_x36, _x37, _x38, _x39, _x40) {
+    return _callLoadersAndMaybeResolveData.apply(this, arguments);
+  }
+  function _callLoadersAndMaybeResolveData() {
+    _callLoadersAndMaybeResolveData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(currentMatches, matches, matchesToLoad, fetchersToLoad, request) {
+      var results, loaderResults, fetcherResults;
+      return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+        while (1) {
+          switch (_context9.prev = _context9.next) {
+            case 0:
+              _context9.next = 2;
+              return Promise.all([].concat(_toConsumableArray(matchesToLoad.map(function (match) {
+                return callLoaderOrAction("loader", request, match, matches, router.basename);
+              })), _toConsumableArray(fetchersToLoad.map(function (_ref8) {
+                var _ref21 = _slicedToArray(_ref8, 4),
+                  href = _ref21[1],
+                  match = _ref21[2],
+                  fetchMatches = _ref21[3];
+                return callLoaderOrAction("loader", createClientSideRequest(href, request.signal), match, fetchMatches, router.basename);
+              }))));
+            case 2:
+              results = _context9.sent;
+              loaderResults = results.slice(0, matchesToLoad.length);
+              fetcherResults = results.slice(matchesToLoad.length);
+              _context9.next = 7;
+              return Promise.all([resolveDeferredResults(currentMatches, matchesToLoad, loaderResults, request.signal, false, state.loaderData), resolveDeferredResults(currentMatches, fetchersToLoad.map(function (_ref9) {
+                var _ref22 = _slicedToArray(_ref9, 3),
+                  match = _ref22[2];
+                return match;
+              }), fetcherResults, request.signal, true)]);
+            case 7:
+              return _context9.abrupt("return", {
+                results: results,
+                loaderResults: loaderResults,
+                fetcherResults: fetcherResults
+              });
+            case 8:
+            case "end":
+              return _context9.stop();
+          }
+        }
+      }, _callee9);
+    }));
+    return _callLoadersAndMaybeResolveData.apply(this, arguments);
+  }
+  function interruptActiveLoads() {
+    var _cancelledDeferredRou;
+    // Every interruption triggers a revalidation
+    isRevalidationRequired = true; // Cancel pending route-level deferreds and mark cancelled routes for
+    // revalidation
+
+    (_cancelledDeferredRou = cancelledDeferredRoutes).push.apply(_cancelledDeferredRou, _toConsumableArray(cancelActiveDeferreds())); // Abort in-flight fetcher loads
+
+    fetchLoadMatches.forEach(function (_, key) {
+      if (fetchControllers.has(key)) {
+        cancelledFetcherLoads.push(key);
+        abortFetcher(key);
+      }
+    });
+  }
+  function setFetcherError(key, routeId, error) {
+    var boundaryMatch = findNearestBoundary(state.matches, routeId);
+    deleteFetcher(key);
+    updateState({
+      errors: _defineProperty({}, boundaryMatch.route.id, error),
+      fetchers: new Map(state.fetchers)
+    });
+  }
+  function deleteFetcher(key) {
+    if (fetchControllers.has(key)) abortFetcher(key);
+    fetchLoadMatches.delete(key);
+    fetchReloadIds.delete(key);
+    fetchRedirectIds.delete(key);
+    state.fetchers.delete(key);
+  }
+  function abortFetcher(key) {
+    var controller = fetchControllers.get(key);
+    invariant(controller, "Expected fetch controller: " + key);
+    controller.abort();
+    fetchControllers.delete(key);
+  }
+  function markFetchersDone(keys) {
+    var _iterator2 = _createForOfIteratorHelper(keys),
+      _step2;
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var key = _step2.value;
+        var fetcher = getFetcher(key);
+        var doneFetcher = {
+          state: "idle",
+          data: fetcher.data,
+          formMethod: undefined,
+          formAction: undefined,
+          formEncType: undefined,
+          formData: undefined,
+          " _hasFetcherDoneAnything ": true
+        };
+        state.fetchers.set(key, doneFetcher);
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+  }
+  function markFetchRedirectsDone() {
+    var doneKeys = [];
+    var _iterator3 = _createForOfIteratorHelper(fetchRedirectIds),
+      _step3;
+    try {
+      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+        var key = _step3.value;
+        var fetcher = state.fetchers.get(key);
+        invariant(fetcher, "Expected fetcher: " + key);
+        if (fetcher.state === "loading") {
+          fetchRedirectIds.delete(key);
+          doneKeys.push(key);
+        }
+      }
+    } catch (err) {
+      _iterator3.e(err);
+    } finally {
+      _iterator3.f();
+    }
+    markFetchersDone(doneKeys);
+  }
+  function abortStaleFetchLoads(landedId) {
+    var yeetedKeys = [];
+    var _iterator4 = _createForOfIteratorHelper(fetchReloadIds),
+      _step4;
+    try {
+      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+        var _step4$value = _slicedToArray(_step4.value, 2),
+          key = _step4$value[0],
+          id = _step4$value[1];
+        if (id < landedId) {
+          var fetcher = state.fetchers.get(key);
+          invariant(fetcher, "Expected fetcher: " + key);
+          if (fetcher.state === "loading") {
+            abortFetcher(key);
+            fetchReloadIds.delete(key);
+            yeetedKeys.push(key);
+          }
+        }
+      }
+    } catch (err) {
+      _iterator4.e(err);
+    } finally {
+      _iterator4.f();
+    }
+    markFetchersDone(yeetedKeys);
+    return yeetedKeys.length > 0;
+  }
+  function cancelActiveDeferreds(predicate) {
+    var cancelledRouteIds = [];
+    activeDeferreds.forEach(function (dfd, routeId) {
+      if (!predicate || predicate(routeId)) {
+        // Cancel the deferred - but do not remove from activeDeferreds here -
+        // we rely on the subscribers to do that so our tests can assert proper
+        // cleanup via _internalActiveDeferreds
+        dfd.cancel();
+        cancelledRouteIds.push(routeId);
+        activeDeferreds.delete(routeId);
+      }
+    });
+    return cancelledRouteIds;
+  } // Opt in to capturing and reporting scroll positions during navigations,
+  // used by the <ScrollRestoration> component
+
+  function enableScrollRestoration(positions, getPosition, getKey) {
+    savedScrollPositions = positions;
+    getScrollPosition = getPosition;
+    getScrollRestorationKey = getKey || function (location) {
+      return location.key;
+    }; // Perform initial hydration scroll restoration, since we miss the boat on
+    // the initial updateState() because we've not yet rendered <ScrollRestoration/>
+    // and therefore have no savedScrollPositions available
+
+    if (!initialScrollRestored && state.navigation === IDLE_NAVIGATION) {
+      initialScrollRestored = true;
+      var y = getSavedScrollPosition(state.location, state.matches);
+      if (y != null) {
+        updateState({
+          restoreScrollPosition: y
+        });
+      }
+    }
+    return function () {
+      savedScrollPositions = null;
+      getScrollPosition = null;
+      getScrollRestorationKey = null;
+    };
+  }
+  function saveScrollPosition(location, matches) {
+    if (savedScrollPositions && getScrollRestorationKey && getScrollPosition) {
+      var userMatches = matches.map(function (m) {
+        return createUseMatchesMatch(m, state.loaderData);
+      });
+      var key = getScrollRestorationKey(location, userMatches) || location.key;
+      savedScrollPositions[key] = getScrollPosition();
+    }
+  }
+  function getSavedScrollPosition(location, matches) {
+    if (savedScrollPositions && getScrollRestorationKey && getScrollPosition) {
+      var userMatches = matches.map(function (m) {
+        return createUseMatchesMatch(m, state.loaderData);
+      });
+      var key = getScrollRestorationKey(location, userMatches) || location.key;
+      var y = savedScrollPositions[key];
+      if (typeof y === "number") {
+        return y;
+      }
+    }
+    return null;
+  }
+  router = {
+    get basename() {
+      return init.basename;
+    },
+    get state() {
+      return state;
+    },
+    get routes() {
+      return dataRoutes;
+    },
+    initialize: initialize,
+    subscribe: subscribe,
+    enableScrollRestoration: enableScrollRestoration,
+    navigate: navigate,
+    fetch: fetch,
+    revalidate: revalidate,
+    // Passthrough to history-aware createHref used by useHref so we get proper
+    // hash-aware URLs in DOM paths
+    createHref: function createHref(to) {
+      return init.history.createHref(to);
+    },
+    encodeLocation: function encodeLocation(to) {
+      return init.history.encodeLocation(to);
+    },
+    getFetcher: getFetcher,
+    deleteFetcher: deleteFetcher,
+    dispose: dispose,
+    _internalFetchControllers: fetchControllers,
+    _internalActiveDeferreds: activeDeferreds
+  };
+  return router;
+} //#endregion
+////////////////////////////////////////////////////////////////////////////////
+//#region createStaticHandler
+////////////////////////////////////////////////////////////////////////////////
+
+function createStaticHandler(routes, opts) {
+  invariant(routes.length > 0, "You must provide a non-empty routes array to createStaticHandler");
+  var dataRoutes = convertRoutesToDataRoutes(routes);
+  var basename = (opts ? opts.basename : null) || "/";
+  /**
+   * The query() method is intended for document requests, in which we want to
+   * call an optional action and potentially multiple loaders for all nested
+   * routes.  It returns a StaticHandlerContext object, which is very similar
+   * to the router state (location, loaderData, actionData, errors, etc.) and
+   * also adds SSR-specific information such as the statusCode and headers
+   * from action/loaders Responses.
+   *
+   * It _should_ never throw and should report all errors through the
+   * returned context.errors object, properly associating errors to their error
+   * boundary.  Additionally, it tracks _deepestRenderedBoundaryId which can be
+   * used to emulate React error boundaries during SSr by performing a second
+   * pass only down to the boundaryId.
+   *
+   * The one exception where we do not return a StaticHandlerContext is when a
+   * redirect response is returned or thrown from any action/loader.  We
+   * propagate that out and return the raw Response so the HTTP server can
+   * return it directly.
+   */
+  function query(_x41, _x42) {
+    return _query.apply(this, arguments);
+  }
+  /**
+   * The queryRoute() method is intended for targeted route requests, either
+   * for fetch ?_data requests or resource route requests.  In this case, we
+   * are only ever calling a single action or loader, and we are returning the
+   * returned value directly.  In most cases, this will be a Response returned
+   * from the action/loader, but it may be a primitive or other value as well -
+   * and in such cases the calling context should handle that accordingly.
+   *
+   * We do respect the throw/return differentiation, so if an action/loader
+   * throws, then this method will throw the value.  This is important so we
+   * can do proper boundary identification in Remix where a thrown Response
+   * must go to the Catch Boundary but a returned Response is happy-path.
+   *
+   * One thing to note is that any Router-initiated Errors that make sense
+   * to associate with a status code will be thrown as an ErrorResponse
+   * instance which include the raw Error, such that the calling context can
+   * serialize the error as they see fit while including the proper response
+   * code.  Examples here are 404 and 405 errors that occur prior to reaching
+   * any user-defined loaders.
+   */
+  function _query() {
+    _query = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10(request, _temp2) {
+      var _ref23, requestContext, url, method, location, matches, error, _getShortCircuitMatch3, methodNotAllowedMatches, route, _error3, _getShortCircuitMatch4, notFoundMatches, _route2, result;
+      return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+        while (1) {
+          switch (_context10.prev = _context10.next) {
+            case 0:
+              _ref23 = _temp2 === void 0 ? {} : _temp2, requestContext = _ref23.requestContext;
+              url = new URL(request.url);
+              method = request.method.toLowerCase();
+              location = createLocation("", createPath(url), null, "default");
+              matches = matchRoutes(dataRoutes, location, basename); // SSR supports HEAD requests while SPA doesn't
+              if (!(!isValidMethod(method) && method !== "head")) {
+                _context10.next = 11;
+                break;
+              }
+              error = getInternalRouterError(405, {
+                method: method
+              });
+              _getShortCircuitMatch3 = getShortCircuitMatches(dataRoutes), methodNotAllowedMatches = _getShortCircuitMatch3.matches, route = _getShortCircuitMatch3.route;
+              return _context10.abrupt("return", {
+                basename: basename,
+                location: location,
+                matches: methodNotAllowedMatches,
+                loaderData: {},
+                actionData: null,
+                errors: _defineProperty({}, route.id, error),
+                statusCode: error.status,
+                loaderHeaders: {},
+                actionHeaders: {}
+              });
+            case 11:
+              if (matches) {
+                _context10.next = 15;
+                break;
+              }
+              _error3 = getInternalRouterError(404, {
+                pathname: location.pathname
+              });
+              _getShortCircuitMatch4 = getShortCircuitMatches(dataRoutes), notFoundMatches = _getShortCircuitMatch4.matches, _route2 = _getShortCircuitMatch4.route;
+              return _context10.abrupt("return", {
+                basename: basename,
+                location: location,
+                matches: notFoundMatches,
+                loaderData: {},
+                actionData: null,
+                errors: _defineProperty({}, _route2.id, _error3),
+                statusCode: _error3.status,
+                loaderHeaders: {},
+                actionHeaders: {}
+              });
+            case 15:
+              _context10.next = 17;
+              return queryImpl(request, location, matches, requestContext);
+            case 17:
+              result = _context10.sent;
+              if (!isResponse(result)) {
+                _context10.next = 20;
+                break;
+              }
+              return _context10.abrupt("return", result);
+            case 20:
+              return _context10.abrupt("return", _extends({
+                location: location,
+                basename: basename
+              }, result));
+            case 21:
+            case "end":
+              return _context10.stop();
+          }
+        }
+      }, _callee10);
+    }));
+    return _query.apply(this, arguments);
+  }
+  function queryRoute(_x43, _x44) {
+    return _queryRoute.apply(this, arguments);
+  }
+  function _queryRoute() {
+    _queryRoute = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11(request, _temp3) {
+      var _ref24, routeId, requestContext, url, method, location, matches, match, result, error, routeData;
+      return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+        while (1) {
+          switch (_context11.prev = _context11.next) {
+            case 0:
+              _ref24 = _temp3 === void 0 ? {} : _temp3, routeId = _ref24.routeId, requestContext = _ref24.requestContext;
+              url = new URL(request.url);
+              method = request.method.toLowerCase();
+              location = createLocation("", createPath(url), null, "default");
+              matches = matchRoutes(dataRoutes, location, basename); // SSR supports HEAD requests while SPA doesn't
+              if (!(!isValidMethod(method) && method !== "head")) {
+                _context11.next = 9;
+                break;
+              }
+              throw getInternalRouterError(405, {
+                method: method
+              });
+            case 9:
+              if (matches) {
+                _context11.next = 11;
+                break;
+              }
+              throw getInternalRouterError(404, {
+                pathname: location.pathname
+              });
+            case 11:
+              match = routeId ? matches.find(function (m) {
+                return m.route.id === routeId;
+              }) : getTargetMatch(matches, location);
+              if (!(routeId && !match)) {
+                _context11.next = 16;
+                break;
+              }
+              throw getInternalRouterError(403, {
+                pathname: location.pathname,
+                routeId: routeId
+              });
+            case 16:
+              if (match) {
+                _context11.next = 18;
+                break;
+              }
+              throw getInternalRouterError(404, {
+                pathname: location.pathname
+              });
+            case 18:
+              _context11.next = 20;
+              return queryImpl(request, location, matches, requestContext, match);
+            case 20:
+              result = _context11.sent;
+              if (!isResponse(result)) {
+                _context11.next = 23;
+                break;
+              }
+              return _context11.abrupt("return", result);
+            case 23:
+              error = result.errors ? Object.values(result.errors)[0] : undefined;
+              if (!(error !== undefined)) {
+                _context11.next = 26;
+                break;
+              }
+              throw error;
+            case 26:
+              // Pick off the right state value to return
+              routeData = [result.actionData, result.loaderData].find(function (v) {
+                return v;
+              });
+              return _context11.abrupt("return", Object.values(routeData || {})[0]);
+            case 28:
+            case "end":
+              return _context11.stop();
+          }
+        }
+      }, _callee11);
+    }));
+    return _queryRoute.apply(this, arguments);
+  }
+  function queryImpl(_x45, _x46, _x47, _x48, _x49) {
+    return _queryImpl.apply(this, arguments);
+  }
+  function _queryImpl() {
+    _queryImpl = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12(request, location, matches, requestContext, routeMatch) {
+      var _result, result;
+      return _regeneratorRuntime().wrap(function _callee12$(_context12) {
+        while (1) {
+          switch (_context12.prev = _context12.next) {
+            case 0:
+              invariant(request.signal, "query()/queryRoute() requests must contain an AbortController signal");
+              _context12.prev = 1;
+              if (!isMutationMethod(request.method.toLowerCase())) {
+                _context12.next = 7;
+                break;
+              }
+              _context12.next = 5;
+              return submit(request, matches, routeMatch || getTargetMatch(matches, location), requestContext, routeMatch != null);
+            case 5:
+              _result = _context12.sent;
+              return _context12.abrupt("return", _result);
+            case 7:
+              _context12.next = 9;
+              return loadRouteData(request, matches, requestContext, routeMatch);
+            case 9:
+              result = _context12.sent;
+              return _context12.abrupt("return", isResponse(result) ? result : _extends({}, result, {
+                actionData: null,
+                actionHeaders: {}
+              }));
+            case 13:
+              _context12.prev = 13;
+              _context12.t0 = _context12["catch"](1);
+              if (!isQueryRouteResponse(_context12.t0)) {
+                _context12.next = 19;
+                break;
+              }
+              if (!(_context12.t0.type === ResultType.error && !isRedirectResponse(_context12.t0.response))) {
+                _context12.next = 18;
+                break;
+              }
+              throw _context12.t0.response;
+            case 18:
+              return _context12.abrupt("return", _context12.t0.response);
+            case 19:
+              if (!isRedirectResponse(_context12.t0)) {
+                _context12.next = 21;
+                break;
+              }
+              return _context12.abrupt("return", _context12.t0);
+            case 21:
+              throw _context12.t0;
+            case 22:
+            case "end":
+              return _context12.stop();
+          }
+        }
+      }, _callee12, null, [[1, 13]]);
+    }));
+    return _queryImpl.apply(this, arguments);
+  }
+  function submit(_x50, _x51, _x52, _x53, _x54) {
+    return _submit.apply(this, arguments);
+  }
+  function _submit() {
+    _submit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13(request, matches, actionMatch, requestContext, isRouteRequest) {
+      var result, error, method, boundaryMatch, _context13, loaderRequest, context;
+      return _regeneratorRuntime().wrap(function _callee13$(_context14) {
+        while (1) {
+          switch (_context14.prev = _context14.next) {
+            case 0:
+              if (actionMatch.route.action) {
+                _context14.next = 7;
+                break;
+              }
+              error = getInternalRouterError(405, {
+                method: request.method,
+                pathname: new URL(request.url).pathname,
+                routeId: actionMatch.route.id
+              });
+              if (!isRouteRequest) {
+                _context14.next = 4;
+                break;
+              }
+              throw error;
+            case 4:
+              result = {
+                type: ResultType.error,
+                error: error
+              };
+              _context14.next = 13;
+              break;
+            case 7:
+              _context14.next = 9;
+              return callLoaderOrAction("action", request, actionMatch, matches, basename, true, isRouteRequest, requestContext);
+            case 9:
+              result = _context14.sent;
+              if (!request.signal.aborted) {
+                _context14.next = 13;
+                break;
+              }
+              method = isRouteRequest ? "queryRoute" : "query";
+              throw new Error(method + "() call aborted");
+            case 13:
+              if (!isRedirectResult(result)) {
+                _context14.next = 15;
+                break;
+              }
+              throw new Response(null, {
+                status: result.status,
+                headers: {
+                  Location: result.location
+                }
+              });
+            case 15:
+              if (!isDeferredResult(result)) {
+                _context14.next = 17;
+                break;
+              }
+              throw new Error("defer() is not supported in actions");
+            case 17:
+              if (!isRouteRequest) {
+                _context14.next = 21;
+                break;
+              }
+              if (!isErrorResult(result)) {
+                _context14.next = 20;
+                break;
+              }
+              throw result.error;
+            case 20:
+              return _context14.abrupt("return", {
+                matches: [actionMatch],
+                loaderData: {},
+                actionData: _defineProperty({}, actionMatch.route.id, result.data),
+                errors: null,
+                // Note: statusCode + headers are unused here since queryRoute will
+                // return the raw Response or value
+                statusCode: 200,
+                loaderHeaders: {},
+                actionHeaders: {}
+              });
+            case 21:
+              if (!isErrorResult(result)) {
+                _context14.next = 27;
+                break;
+              }
+              // Store off the pending error - we use it to determine which loaders
+              // to call and will commit it when we complete the navigation
+              boundaryMatch = findNearestBoundary(matches, actionMatch.route.id);
+              _context14.next = 25;
+              return loadRouteData(request, matches, requestContext, undefined, _defineProperty({}, boundaryMatch.route.id, result.error));
+            case 25:
+              _context13 = _context14.sent;
+              return _context14.abrupt("return", _extends({}, _context13, {
+                statusCode: isRouteErrorResponse(result.error) ? result.error.status : 500,
+                actionData: null,
+                actionHeaders: _extends({}, result.headers ? _defineProperty({}, actionMatch.route.id, result.headers) : {})
+              }));
+            case 27:
+              // Create a GET request for the loaders
+              loaderRequest = new Request(request.url, {
+                headers: request.headers,
+                redirect: request.redirect,
+                signal: request.signal
+              });
+              _context14.next = 30;
+              return loadRouteData(loaderRequest, matches, requestContext);
+            case 30:
+              context = _context14.sent;
+              return _context14.abrupt("return", _extends({}, context, result.statusCode ? {
+                statusCode: result.statusCode
+              } : {}, {
+                actionData: _defineProperty({}, actionMatch.route.id, result.data),
+                actionHeaders: _extends({}, result.headers ? _defineProperty({}, actionMatch.route.id, result.headers) : {})
+              }));
+            case 32:
+            case "end":
+              return _context14.stop();
+          }
+        }
+      }, _callee13);
+    }));
+    return _submit.apply(this, arguments);
+  }
+  function loadRouteData(_x55, _x56, _x57, _x58, _x59) {
+    return _loadRouteData.apply(this, arguments);
+  }
+  function _loadRouteData() {
+    _loadRouteData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14(request, matches, requestContext, routeMatch, pendingActionError) {
+      var isRouteRequest, requestMatches, matchesToLoad, results, method, executedLoaders, context;
+      return _regeneratorRuntime().wrap(function _callee14$(_context15) {
+        while (1) {
+          switch (_context15.prev = _context15.next) {
+            case 0:
+              isRouteRequest = routeMatch != null; // Short circuit if we have no loaders to run (queryRoute())
+              if (!(isRouteRequest && !(routeMatch != null && routeMatch.route.loader))) {
+                _context15.next = 3;
+                break;
+              }
+              throw getInternalRouterError(400, {
+                method: request.method,
+                pathname: new URL(request.url).pathname,
+                routeId: routeMatch == null ? void 0 : routeMatch.route.id
+              });
+            case 3:
+              requestMatches = routeMatch ? [routeMatch] : getLoaderMatchesUntilBoundary(matches, Object.keys(pendingActionError || {})[0]);
+              matchesToLoad = requestMatches.filter(function (m) {
+                return m.route.loader;
+              }); // Short circuit if we have no loaders to run (query())
+              if (!(matchesToLoad.length === 0)) {
+                _context15.next = 7;
+                break;
+              }
+              return _context15.abrupt("return", {
+                matches: matches,
+                // Add a null for all matched routes for proper revalidation on the client
+                loaderData: matches.reduce(function (acc, m) {
+                  return Object.assign(acc, _defineProperty({}, m.route.id, null));
+                }, {}),
+                errors: pendingActionError || null,
+                statusCode: 200,
+                loaderHeaders: {}
+              });
+            case 7:
+              _context15.next = 9;
+              return Promise.all(_toConsumableArray(matchesToLoad.map(function (match) {
+                return callLoaderOrAction("loader", request, match, matches, basename, true, isRouteRequest, requestContext);
+              })));
+            case 9:
+              results = _context15.sent;
+              if (!request.signal.aborted) {
+                _context15.next = 13;
+                break;
+              }
+              method = isRouteRequest ? "queryRoute" : "query";
+              throw new Error(method + "() call aborted");
+            case 13:
+              executedLoaders = new Set();
+              results.forEach(function (result, i) {
+                executedLoaders.add(matchesToLoad[i].route.id); // Can't do anything with these without the Remix side of things, so just
+                // cancel them for now
+
+                if (isDeferredResult(result)) {
+                  result.deferredData.cancel();
+                }
+              }); // Process and commit output from loaders
+              context = processRouteLoaderData(matches, matchesToLoad, results, pendingActionError); // Add a null for any non-loader matches for proper revalidation on the client
+              matches.forEach(function (match) {
+                if (!executedLoaders.has(match.route.id)) {
+                  context.loaderData[match.route.id] = null;
+                }
+              });
+              return _context15.abrupt("return", _extends({}, context, {
+                matches: matches
+              }));
+            case 18:
+            case "end":
+              return _context15.stop();
+          }
+        }
+      }, _callee14);
+    }));
+    return _loadRouteData.apply(this, arguments);
+  }
+  return {
+    dataRoutes: dataRoutes,
+    query: query,
+    queryRoute: queryRoute
+  };
+} //#endregion
+////////////////////////////////////////////////////////////////////////////////
+//#region Helpers
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Given an existing StaticHandlerContext and an error thrown at render time,
+ * provide an updated StaticHandlerContext suitable for a second SSR render
+ */
+
+function getStaticContextFromError(routes, context, error) {
+  var newContext = _extends({}, context, {
+    statusCode: 500,
+    errors: _defineProperty({}, context._deepestRenderedBoundaryId || routes[0].id, error)
+  });
+  return newContext;
+}
+function isSubmissionNavigation(opts) {
+  return opts != null && "formData" in opts;
+} // Normalize navigation options by converting formMethod=GET formData objects to
+// URLSearchParams so they behave identically to links with query params
+
+function normalizeNavigateOptions(to, opts, isFetcher) {
+  if (isFetcher === void 0) {
+    isFetcher = false;
+  }
+  var path = typeof to === "string" ? to : createPath(to); // Return location verbatim on non-submission navigations
+
+  if (!opts || !isSubmissionNavigation(opts)) {
+    return {
+      path: path
+    };
+  }
+  if (opts.formMethod && !isValidMethod(opts.formMethod)) {
+    return {
+      path: path,
+      error: getInternalRouterError(405, {
+        method: opts.formMethod
+      })
+    };
+  } // Create a Submission on non-GET navigations
+
+  var submission;
+  if (opts.formData) {
+    submission = {
+      formMethod: opts.formMethod || "get",
+      formAction: stripHashFromPath(path),
+      formEncType: opts && opts.formEncType || "application/x-www-form-urlencoded",
+      formData: opts.formData
+    };
+    if (isMutationMethod(submission.formMethod)) {
+      return {
+        path: path,
+        submission: submission
+      };
+    }
+  } // Flatten submission onto URLSearchParams for GET submissions
+
+  var parsedPath = parsePath(path);
+  try {
+    var searchParams = convertFormDataToSearchParams(opts.formData); // Since fetcher GET submissions only run a single loader (as opposed to
+    // navigation GET submissions which run all loaders), we need to preserve
+    // any incoming ?index params
+
+    if (isFetcher && parsedPath.search && hasNakedIndexQuery(parsedPath.search)) {
+      searchParams.append("index", "");
+    }
+    parsedPath.search = "?" + searchParams;
+  } catch (e) {
+    return {
+      path: path,
+      error: getInternalRouterError(400)
+    };
+  }
+  return {
+    path: createPath(parsedPath),
+    submission: submission
+  };
+} // Filter out all routes below any caught error as they aren't going to
+// render so we don't need to load them
+
+function getLoaderMatchesUntilBoundary(matches, boundaryId) {
+  var boundaryMatches = matches;
+  if (boundaryId) {
+    var index = matches.findIndex(function (m) {
+      return m.route.id === boundaryId;
+    });
+    if (index >= 0) {
+      boundaryMatches = matches.slice(0, index);
+    }
+  }
+  return boundaryMatches;
+}
+function getMatchesToLoad(state, matches, submission, location, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, pendingActionData, pendingError, fetchLoadMatches) {
+  var actionResult = pendingError ? Object.values(pendingError)[0] : pendingActionData ? Object.values(pendingActionData)[0] : undefined; // Pick navigation matches that are net-new or qualify for revalidation
+
+  var boundaryId = pendingError ? Object.keys(pendingError)[0] : undefined;
+  var boundaryMatches = getLoaderMatchesUntilBoundary(matches, boundaryId);
+  var navigationMatches = boundaryMatches.filter(function (match, index) {
+    return match.route.loader != null && (isNewLoader(state.loaderData, state.matches[index], match) ||
+    // If this route had a pending deferred cancelled it must be revalidated
+    cancelledDeferredRoutes.some(function (id) {
+      return id === match.route.id;
+    }) || shouldRevalidateLoader(state.location, state.matches[index], submission, location, match, isRevalidationRequired, actionResult));
+  }); // Pick fetcher.loads that need to be revalidated
+
+  var revalidatingFetchers = [];
+  fetchLoadMatches && fetchLoadMatches.forEach(function (_ref10, key) {
+    var _ref27 = _slicedToArray(_ref10, 3),
+      href = _ref27[0],
+      match = _ref27[1],
+      fetchMatches = _ref27[2];
+
+    // This fetcher was cancelled from a prior action submission - force reload
+    if (cancelledFetcherLoads.includes(key)) {
+      revalidatingFetchers.push([key, href, match, fetchMatches]);
+    } else if (isRevalidationRequired) {
+      var shouldRevalidate = shouldRevalidateLoader(href, match, submission, href, match, isRevalidationRequired, actionResult);
+      if (shouldRevalidate) {
+        revalidatingFetchers.push([key, href, match, fetchMatches]);
+      }
+    }
+  });
+  return [navigationMatches, revalidatingFetchers];
+}
+function isNewLoader(currentLoaderData, currentMatch, match) {
+  var isNew =
+  // [a] -> [a, b]
+  !currentMatch ||
+  // [a, b] -> [a, c]
+  match.route.id !== currentMatch.route.id; // Handle the case that we don't have data for a re-used route, potentially
+  // from a prior error or from a cancelled pending deferred
+
+  var isMissingData = currentLoaderData[match.route.id] === undefined; // Always load if this is a net-new route or we don't yet have data
+
+  return isNew || isMissingData;
+}
+function isNewRouteInstance(currentMatch, match) {
+  var currentPath = currentMatch.route.path;
+  return (
+    // param change for this match, /users/123 -> /users/456
+    currentMatch.pathname !== match.pathname ||
+    // splat param changed, which is not present in match.path
+    // e.g. /files/images/avatar.jpg -> files/finances.xls
+    currentPath && currentPath.endsWith("*") && currentMatch.params["*"] !== match.params["*"]
+  );
+}
+function shouldRevalidateLoader(currentLocation, currentMatch, submission, location, match, isRevalidationRequired, actionResult) {
+  var currentUrl = createClientSideURL(currentLocation);
+  var currentParams = currentMatch.params;
+  var nextUrl = createClientSideURL(location);
+  var nextParams = match.params; // This is the default implementation as to when we revalidate.  If the route
+  // provides it's own implementation, then we give them full control but
+  // provide this value so they can leverage it if needed after they check
+  // their own specific use cases
+  // Note that fetchers always provide the same current/next locations so the
+  // URL-based checks here don't apply to fetcher shouldRevalidate calls
+
+  var defaultShouldRevalidate = isNewRouteInstance(currentMatch, match) ||
+  // Clicked the same link, resubmitted a GET form
+  currentUrl.toString() === nextUrl.toString() ||
+  // Search params affect all loaders
+  currentUrl.search !== nextUrl.search ||
+  // Forced revalidation due to submission, useRevalidate, or X-Remix-Revalidate
+  isRevalidationRequired;
+  if (match.route.shouldRevalidate) {
+    var routeChoice = match.route.shouldRevalidate(_extends({
+      currentUrl: currentUrl,
+      currentParams: currentParams,
+      nextUrl: nextUrl,
+      nextParams: nextParams
+    }, submission, {
+      actionResult: actionResult,
+      defaultShouldRevalidate: defaultShouldRevalidate
+    }));
+    if (typeof routeChoice === "boolean") {
+      return routeChoice;
+    }
+  }
+  return defaultShouldRevalidate;
+}
+function callLoaderOrAction(_x60, _x61, _x62, _x63, _x64, _x65, _x66, _x67) {
+  return _callLoaderOrAction.apply(this, arguments);
+} // Utility method for creating the Request instances for loaders/actions during
+// client-side navigations and fetches.  During SSR we will always have a
+// Request instance from the static handler (query/queryRoute)
+function _callLoaderOrAction() {
+  _callLoaderOrAction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15(type, request, match, matches, basename, isStaticRequest, isRouteRequest, requestContext) {
+    var resultType, result, reject, abortPromise, onReject, handler, status, location, isAbsolute, activeMatches, routePathnames, resolvedLocation, path, data, contentType;
+    return _regeneratorRuntime().wrap(function _callee15$(_context16) {
+      while (1) {
+        switch (_context16.prev = _context16.next) {
+          case 0:
+            if (basename === void 0) {
+              basename = "/";
+            }
+            if (isStaticRequest === void 0) {
+              isStaticRequest = false;
+            }
+            if (isRouteRequest === void 0) {
+              isRouteRequest = false;
+            }
+            abortPromise = new Promise(function (_, r) {
+              return reject = r;
+            });
+            onReject = function onReject() {
+              return reject();
+            };
+            request.signal.addEventListener("abort", onReject);
+            _context16.prev = 6;
+            handler = match.route[type];
+            invariant(handler, "Could not find the " + type + " to run on the \"" + match.route.id + "\" route");
+            _context16.next = 11;
+            return Promise.race([handler({
+              request: request,
+              params: match.params,
+              context: requestContext
+            }), abortPromise]);
+          case 11:
+            result = _context16.sent;
+            invariant(result !== undefined, "You defined " + (type === "action" ? "an action" : "a loader") + " for route " + ("\"" + match.route.id + "\" but didn't return anything from your `" + type + "` ") + "function. Please return a value or `null`.");
+            _context16.next = 19;
+            break;
+          case 15:
+            _context16.prev = 15;
+            _context16.t0 = _context16["catch"](6);
+            resultType = ResultType.error;
+            result = _context16.t0;
+          case 19:
+            _context16.prev = 19;
+            request.signal.removeEventListener("abort", onReject);
+            return _context16.finish(19);
+          case 22:
+            if (!isResponse(result)) {
+              _context16.next = 48;
+              break;
+            }
+            status = result.status; // Process redirects
+            if (!redirectStatusCodes.has(status)) {
+              _context16.next = 33;
+              break;
+            }
+            location = result.headers.get("Location");
+            invariant(location, "Redirects returned/thrown from loaders/actions must have a Location header");
+            isAbsolute = /^[a-z+]+:\/\//i.test(location) || location.startsWith("//"); // Support relative routing in internal redirects
+            if (!isAbsolute) {
+              activeMatches = matches.slice(0, matches.indexOf(match) + 1);
+              routePathnames = getPathContributingMatches(activeMatches).map(function (match) {
+                return match.pathnameBase;
+              });
+              resolvedLocation = resolveTo(location, routePathnames, new URL(request.url).pathname);
+              invariant(createPath(resolvedLocation), "Unable to resolve redirect location: " + location); // Prepend the basename to the redirect location if we have one
+
+              if (basename) {
+                path = resolvedLocation.pathname;
+                resolvedLocation.pathname = path === "/" ? basename : joinPaths([basename, path]);
+              }
+              location = createPath(resolvedLocation);
+            } // Don't process redirects in the router during static requests requests.
+            // Instead, throw the Response and let the server handle it with an HTTP
+            // redirect.  We also update the Location header in place in this flow so
+            // basename and relative routing is taken into account
+            if (!isStaticRequest) {
+              _context16.next = 32;
+              break;
+            }
+            result.headers.set("Location", location);
+            throw result;
+          case 32:
+            return _context16.abrupt("return", {
+              type: ResultType.redirect,
+              status: status,
+              location: location,
+              revalidate: result.headers.get("X-Remix-Revalidate") !== null
+            });
+          case 33:
+            if (!isRouteRequest) {
+              _context16.next = 35;
+              break;
+            }
+            throw {
+              type: resultType || ResultType.data,
+              response: result
+            };
+          case 35:
+            contentType = result.headers.get("Content-Type"); // Check between word boundaries instead of startsWith() due to the last
+            // paragraph of https://httpwg.org/specs/rfc9110.html#field.content-type
+            if (!(contentType && /\bapplication\/json\b/.test(contentType))) {
+              _context16.next = 42;
+              break;
+            }
+            _context16.next = 39;
+            return result.json();
+          case 39:
+            data = _context16.sent;
+            _context16.next = 45;
+            break;
+          case 42:
+            _context16.next = 44;
+            return result.text();
+          case 44:
+            data = _context16.sent;
+          case 45:
+            if (!(resultType === ResultType.error)) {
+              _context16.next = 47;
+              break;
+            }
+            return _context16.abrupt("return", {
+              type: resultType,
+              error: new ErrorResponse(status, result.statusText, data),
+              headers: result.headers
+            });
+          case 47:
+            return _context16.abrupt("return", {
+              type: ResultType.data,
+              data: data,
+              statusCode: result.status,
+              headers: result.headers
+            });
+          case 48:
+            if (!(resultType === ResultType.error)) {
+              _context16.next = 50;
+              break;
+            }
+            return _context16.abrupt("return", {
+              type: resultType,
+              error: result
+            });
+          case 50:
+            if (!(result instanceof DeferredData)) {
+              _context16.next = 52;
+              break;
+            }
+            return _context16.abrupt("return", {
+              type: ResultType.deferred,
+              deferredData: result
+            });
+          case 52:
+            return _context16.abrupt("return", {
+              type: ResultType.data,
+              data: result
+            });
+          case 53:
+          case "end":
+            return _context16.stop();
+        }
+      }
+    }, _callee15, null, [[6, 15, 19, 22]]);
+  }));
+  return _callLoaderOrAction.apply(this, arguments);
+}
+function createClientSideRequest(location, signal, submission) {
+  var url = createClientSideURL(stripHashFromPath(location)).toString();
+  var init = {
+    signal: signal
+  };
+  if (submission && isMutationMethod(submission.formMethod)) {
+    var formMethod = submission.formMethod,
+      formEncType = submission.formEncType,
+      formData = submission.formData;
+    init.method = formMethod.toUpperCase();
+    init.body = formEncType === "application/x-www-form-urlencoded" ? convertFormDataToSearchParams(formData) : formData;
+  } // Content-Type is inferred (https://fetch.spec.whatwg.org/#dom-request)
+
+  return new Request(url, init);
+}
+function convertFormDataToSearchParams(formData) {
+  var searchParams = new URLSearchParams();
+  var _iterator5 = _createForOfIteratorHelper(formData.entries()),
+    _step5;
+  try {
+    for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+      var _step5$value = _slicedToArray(_step5.value, 2),
+        key = _step5$value[0],
+        value = _step5$value[1];
+      invariant(typeof value === "string", 'File inputs are not supported with encType "application/x-www-form-urlencoded", ' + 'please use "multipart/form-data" instead.');
+      searchParams.append(key, value);
+    }
+  } catch (err) {
+    _iterator5.e(err);
+  } finally {
+    _iterator5.f();
+  }
+  return searchParams;
+}
+function processRouteLoaderData(matches, matchesToLoad, results, pendingError, activeDeferreds) {
+  // Fill in loaderData/errors from our loaders
+  var loaderData = {};
+  var errors = null;
+  var statusCode;
+  var foundError = false;
+  var loaderHeaders = {}; // Process loader results into state.loaderData/state.errors
+
+  results.forEach(function (result, index) {
+    var id = matchesToLoad[index].route.id;
+    invariant(!isRedirectResult(result), "Cannot handle redirect results in processLoaderData");
+    if (isErrorResult(result)) {
+      // Look upwards from the matched route for the closest ancestor
+      // error boundary, defaulting to the root match
+      var boundaryMatch = findNearestBoundary(matches, id);
+      var error = result.error; // If we have a pending action error, we report it at the highest-route
+      // that throws a loader error, and then clear it out to indicate that
+      // it was consumed
+
+      if (pendingError) {
+        error = Object.values(pendingError)[0];
+        pendingError = undefined;
+      }
+      errors = errors || {}; // Prefer higher error values if lower errors bubble to the same boundary
+
+      if (errors[boundaryMatch.route.id] == null) {
+        errors[boundaryMatch.route.id] = error;
+      } // Clear our any prior loaderData for the throwing route
+
+      loaderData[id] = undefined; // Once we find our first (highest) error, we set the status code and
+      // prevent deeper status codes from overriding
+
+      if (!foundError) {
+        foundError = true;
+        statusCode = isRouteErrorResponse(result.error) ? result.error.status : 500;
+      }
+      if (result.headers) {
+        loaderHeaders[id] = result.headers;
+      }
+    } else if (isDeferredResult(result)) {
+      activeDeferreds && activeDeferreds.set(id, result.deferredData);
+      loaderData[id] = result.deferredData.data; // TODO: Add statusCode/headers once we wire up streaming in Remix
+    } else {
+      loaderData[id] = result.data; // Error status codes always override success status codes, but if all
+      // loaders are successful we take the deepest status code.
+
+      if (result.statusCode != null && result.statusCode !== 200 && !foundError) {
+        statusCode = result.statusCode;
+      }
+      if (result.headers) {
+        loaderHeaders[id] = result.headers;
+      }
+    }
+  }); // If we didn't consume the pending action error (i.e., all loaders
+  // resolved), then consume it here.  Also clear out any loaderData for the
+  // throwing route
+
+  if (pendingError) {
+    errors = pendingError;
+    loaderData[Object.keys(pendingError)[0]] = undefined;
+  }
+  return {
+    loaderData: loaderData,
+    errors: errors,
+    statusCode: statusCode || 200,
+    loaderHeaders: loaderHeaders
+  };
+}
+function processLoaderData(state, matches, matchesToLoad, results, pendingError, revalidatingFetchers, fetcherResults, activeDeferreds) {
+  var _processRouteLoaderDa = processRouteLoaderData(matches, matchesToLoad, results, pendingError, activeDeferreds),
+    loaderData = _processRouteLoaderDa.loaderData,
+    errors = _processRouteLoaderDa.errors; // Process results from our revalidating fetchers
+
+  for (var index = 0; index < revalidatingFetchers.length; index++) {
+    var _revalidatingFetchers = _slicedToArray(revalidatingFetchers[index], 3),
+      key = _revalidatingFetchers[0],
+      match = _revalidatingFetchers[2];
+    invariant(fetcherResults !== undefined && fetcherResults[index] !== undefined, "Did not find corresponding fetcher result");
+    var result = fetcherResults[index]; // Process fetcher non-redirect errors
+
+    if (isErrorResult(result)) {
+      var boundaryMatch = findNearestBoundary(state.matches, match.route.id);
+      if (!(errors && errors[boundaryMatch.route.id])) {
+        errors = _extends({}, errors, _defineProperty({}, boundaryMatch.route.id, result.error));
+      }
+      state.fetchers.delete(key);
+    } else if (isRedirectResult(result)) {
+      // Should never get here, redirects should get processed above, but we
+      // keep this to type narrow to a success result in the else
+      throw new Error("Unhandled fetcher revalidation redirect");
+    } else if (isDeferredResult(result)) {
+      // Should never get here, deferred data should be awaited for fetchers
+      // in resolveDeferredResults
+      throw new Error("Unhandled fetcher deferred data");
+    } else {
+      var doneFetcher = {
+        state: "idle",
+        data: result.data,
+        formMethod: undefined,
+        formAction: undefined,
+        formEncType: undefined,
+        formData: undefined,
+        " _hasFetcherDoneAnything ": true
+      };
+      state.fetchers.set(key, doneFetcher);
+    }
+  }
+  return {
+    loaderData: loaderData,
+    errors: errors
+  };
+}
+function mergeLoaderData(loaderData, newLoaderData, matches, errors) {
+  var mergedLoaderData = _extends({}, newLoaderData);
+  var _iterator6 = _createForOfIteratorHelper(matches),
+    _step6;
+  try {
+    for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+      var match = _step6.value;
+      var id = match.route.id;
+      if (newLoaderData.hasOwnProperty(id)) {
+        if (newLoaderData[id] !== undefined) {
+          mergedLoaderData[id] = newLoaderData[id];
+        }
+      } else if (loaderData[id] !== undefined) {
+        mergedLoaderData[id] = loaderData[id];
+      }
+      if (errors && errors.hasOwnProperty(id)) {
+        // Don't keep any loader data below the boundary
+        break;
+      }
+    }
+  } catch (err) {
+    _iterator6.e(err);
+  } finally {
+    _iterator6.f();
+  }
+  return mergedLoaderData;
+} // Find the nearest error boundary, looking upwards from the leaf route (or the
+// route specified by routeId) for the closest ancestor error boundary,
+// defaulting to the root match
+
+function findNearestBoundary(matches, routeId) {
+  var eligibleMatches = routeId ? matches.slice(0, matches.findIndex(function (m) {
+    return m.route.id === routeId;
+  }) + 1) : _toConsumableArray(matches);
+  return eligibleMatches.reverse().find(function (m) {
+    return m.route.hasErrorBoundary === true;
+  }) || matches[0];
+}
+function getShortCircuitMatches(routes) {
+  // Prefer a root layout route if present, otherwise shim in a route object
+  var route = routes.find(function (r) {
+    return r.index || !r.path || r.path === "/";
+  }) || {
+    id: "__shim-error-route__"
+  };
+  return {
+    matches: [{
+      params: {},
+      pathname: "",
+      pathnameBase: "",
+      route: route
+    }],
+    route: route
+  };
+}
+function getInternalRouterError(status, _temp4) {
+  var _ref28 = _temp4 === void 0 ? {} : _temp4,
+    pathname = _ref28.pathname,
+    routeId = _ref28.routeId,
+    method = _ref28.method;
+  var statusText = "Unknown Server Error";
+  var errorMessage = "Unknown @remix-run/router error";
+  if (status === 400) {
+    statusText = "Bad Request";
+    if (method && pathname && routeId) {
+      errorMessage = "You made a " + method + " request to \"" + pathname + "\" but " + ("did not provide a `loader` for route \"" + routeId + "\", ") + "so there is no way to handle the request.";
+    } else {
+      errorMessage = "Cannot submit binary form data using GET";
+    }
+  } else if (status === 403) {
+    statusText = "Forbidden";
+    errorMessage = "Route \"" + routeId + "\" does not match URL \"" + pathname + "\"";
+  } else if (status === 404) {
+    statusText = "Not Found";
+    errorMessage = "No route matches URL \"" + pathname + "\"";
+  } else if (status === 405) {
+    statusText = "Method Not Allowed";
+    if (method && pathname && routeId) {
+      errorMessage = "You made a " + method.toUpperCase() + " request to \"" + pathname + "\" but " + ("did not provide an `action` for route \"" + routeId + "\", ") + "so there is no way to handle the request.";
+    } else if (method) {
+      errorMessage = "Invalid request method \"" + method.toUpperCase() + "\"";
+    }
+  }
+  return new ErrorResponse(status || 500, statusText, new Error(errorMessage), true);
+} // Find any returned redirect errors, starting from the lowest match
+
+function findRedirect(results) {
+  for (var i = results.length - 1; i >= 0; i--) {
+    var result = results[i];
+    if (isRedirectResult(result)) {
+      return result;
+    }
+  }
+}
+function stripHashFromPath(path) {
+  var parsedPath = typeof path === "string" ? parsePath(path) : path;
+  return createPath(_extends({}, parsedPath, {
+    hash: ""
+  }));
+}
+function isHashChangeOnly(a, b) {
+  return a.pathname === b.pathname && a.search === b.search && a.hash !== b.hash;
+}
+function isDeferredResult(result) {
+  return result.type === ResultType.deferred;
+}
+function isErrorResult(result) {
+  return result.type === ResultType.error;
+}
+function isRedirectResult(result) {
+  return (result && result.type) === ResultType.redirect;
+}
+function isResponse(value) {
+  return value != null && typeof value.status === "number" && typeof value.statusText === "string" && _typeof(value.headers) === "object" && typeof value.body !== "undefined";
+}
+function isRedirectResponse(result) {
+  if (!isResponse(result)) {
+    return false;
+  }
+  var status = result.status;
+  var location = result.headers.get("Location");
+  return status >= 300 && status <= 399 && location != null;
+}
+function isQueryRouteResponse(obj) {
+  return obj && isResponse(obj.response) && (obj.type === ResultType.data || ResultType.error);
+}
+function isValidMethod(method) {
+  return validRequestMethods.has(method);
+}
+function isMutationMethod(method) {
+  return validMutationMethods.has(method);
+}
+function resolveDeferredResults(_x68, _x69, _x70, _x71, _x72, _x73) {
+  return _resolveDeferredResults.apply(this, arguments);
+}
+function _resolveDeferredResults() {
+  _resolveDeferredResults = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(currentMatches, matchesToLoad, results, signal, isFetcher, currentLoaderData) {
+    var _loop, index;
+    return _regeneratorRuntime().wrap(function _callee16$(_context18) {
+      while (1) {
+        switch (_context18.prev = _context18.next) {
+          case 0:
+            _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop(index) {
+              var result, match, currentMatch, isRevalidatingLoader;
+              return _regeneratorRuntime().wrap(function _loop$(_context17) {
+                while (1) {
+                  switch (_context17.prev = _context17.next) {
+                    case 0:
+                      result = results[index];
+                      match = matchesToLoad[index];
+                      currentMatch = currentMatches.find(function (m) {
+                        return m.route.id === match.route.id;
+                      });
+                      isRevalidatingLoader = currentMatch != null && !isNewRouteInstance(currentMatch, match) && (currentLoaderData && currentLoaderData[match.route.id]) !== undefined;
+                      if (!(isDeferredResult(result) && (isFetcher || isRevalidatingLoader))) {
+                        _context17.next = 7;
+                        break;
+                      }
+                      _context17.next = 7;
+                      return resolveDeferredData(result, signal, isFetcher).then(function (result) {
+                        if (result) {
+                          results[index] = result || results[index];
+                        }
+                      });
+                    case 7:
+                    case "end":
+                      return _context17.stop();
+                  }
+                }
+              }, _loop);
+            });
+            index = 0;
+          case 2:
+            if (!(index < results.length)) {
+              _context18.next = 7;
+              break;
+            }
+            return _context18.delegateYield(_loop(index), "t0", 4);
+          case 4:
+            index++;
+            _context18.next = 2;
+            break;
+          case 7:
+          case "end":
+            return _context18.stop();
+        }
+      }
+    }, _callee16);
+  }));
+  return _resolveDeferredResults.apply(this, arguments);
+}
+function resolveDeferredData(_x74, _x75, _x76) {
+  return _resolveDeferredData.apply(this, arguments);
+}
+function _resolveDeferredData() {
+  _resolveDeferredData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17(result, signal, unwrap) {
+    var aborted;
+    return _regeneratorRuntime().wrap(function _callee17$(_context19) {
+      while (1) {
+        switch (_context19.prev = _context19.next) {
+          case 0:
+            if (unwrap === void 0) {
+              unwrap = false;
+            }
+            _context19.next = 3;
+            return result.deferredData.resolveData(signal);
+          case 3:
+            aborted = _context19.sent;
+            if (!aborted) {
+              _context19.next = 6;
+              break;
+            }
+            return _context19.abrupt("return");
+          case 6:
+            if (!unwrap) {
+              _context19.next = 14;
+              break;
+            }
+            _context19.prev = 7;
+            return _context19.abrupt("return", {
+              type: ResultType.data,
+              data: result.deferredData.unwrappedData
+            });
+          case 11:
+            _context19.prev = 11;
+            _context19.t0 = _context19["catch"](7);
+            return _context19.abrupt("return", {
+              type: ResultType.error,
+              error: _context19.t0
+            });
+          case 14:
+            return _context19.abrupt("return", {
+              type: ResultType.data,
+              data: result.deferredData.data
+            });
+          case 15:
+          case "end":
+            return _context19.stop();
+        }
+      }
+    }, _callee17, null, [[7, 11]]);
+  }));
+  return _resolveDeferredData.apply(this, arguments);
+}
+function hasNakedIndexQuery(search) {
+  return new URLSearchParams(search).getAll("index").some(function (v) {
+    return v === "";
+  });
+} // Note: This should match the format exported by useMatches, so if you change
+// this please also change that :)  Eventually we'll DRY this up
+
+function createUseMatchesMatch(match, loaderData) {
+  var route = match.route,
+    pathname = match.pathname,
+    params = match.params;
+  return {
+    id: route.id,
+    pathname: pathname,
+    params: params,
+    data: loaderData[route.id],
+    handle: route.handle
+  };
+}
+function getTargetMatch(matches, location) {
+  var search = typeof location === "string" ? parsePath(location).search : location.search;
+  if (matches[matches.length - 1].route.index && hasNakedIndexQuery(search || "")) {
+    // Return the leaf index route when index is present
+    return matches[matches.length - 1];
+  } // Otherwise grab the deepest "path contributing" match (ignoring index and
+  // pathless layout routes)
+
+  var pathMatches = getPathContributingMatches(matches);
+  return pathMatches[pathMatches.length - 1];
+} //#endregion
+
+
+
+/***/ }),
+
 /***/ "./node_modules/clsx/dist/clsx.m.js":
 /*!******************************************!*\
   !*** ./node_modules/clsx/dist/clsx.m.js ***!
@@ -10498,6 +14604,2627 @@ var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - type
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 /* eslint-env browser */
 module.exports = (typeof self === "undefined" ? "undefined" : _typeof(self)) == 'object' ? self.FormData : window.FormData;
+
+/***/ }),
+
+/***/ "./node_modules/gapi-script/gapiScript.js":
+/*!************************************************!*\
+  !*** ./node_modules/gapi-script/gapiScript.js ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "gapi": function() { return /* binding */ gapi; },
+/* harmony export */   "gapiComplete": function() { return /* binding */ gapiComplete; }
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+var gapi = window.gapi = window.gapi || {};
+gapi._bs = new Date().getTime();
+(function () {
+  /*
+  Copyright The Closure Library Authors.
+  SPDX-License-Identifier: Apache-2.0
+  */
+  var aa = "function" == typeof Object.defineProperties ? Object.defineProperty : function (a, b, c) {
+      if (a == Array.prototype || a == Object.prototype) return a;
+      a[b] = c.value;
+      return a;
+    },
+    da = function da(a) {
+      a = ["object" == (typeof globalThis === "undefined" ? "undefined" : _typeof(globalThis)) && globalThis, a, "object" == (typeof window === "undefined" ? "undefined" : _typeof(window)) && window, "object" == (typeof self === "undefined" ? "undefined" : _typeof(self)) && self, "object" == (typeof __webpack_require__.g === "undefined" ? "undefined" : _typeof(__webpack_require__.g)) && __webpack_require__.g];
+      for (var b = 0; b < a.length; ++b) {
+        var c = a[b];
+        if (c && c.Math == Math) return c;
+      }
+      throw Error("Cannot find global object");
+    },
+    ea = da(this),
+    fa = function fa(a, b) {
+      if (b) a: {
+        var c = ea;
+        a = a.split(".");
+        for (var d = 0; d < a.length - 1; d++) {
+          var e = a[d];
+          if (!(e in c)) break a;
+          c = c[e];
+        }
+        a = a[a.length - 1];
+        d = c[a];
+        b = b(d);
+        b != d && null != b && aa(c, a, {
+          configurable: !0,
+          writable: !0,
+          value: b
+        });
+      }
+    },
+    ha = function ha(a) {
+      var b = 0;
+      return function () {
+        return b < a.length ? {
+          done: !1,
+          value: a[b++]
+        } : {
+          done: !0
+        };
+      };
+    };
+  fa("Symbol", function (a) {
+    if (a) return a;
+    var b = function b(e, f) {
+      this.ba = e;
+      aa(this, "description", {
+        configurable: !0,
+        writable: !0,
+        value: f
+      });
+    };
+    b.prototype.toString = function () {
+      return this.ba;
+    };
+    var c = 0,
+      d = function d(e) {
+        if (this instanceof d) throw new TypeError("Symbol is not a constructor");
+        return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
+      };
+    return d;
+  });
+  fa("Symbol.iterator", function (a) {
+    if (a) return a;
+    a = Symbol("Symbol.iterator");
+    for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), c = 0; c < b.length; c++) {
+      var d = ea[b[c]];
+      "function" === typeof d && "function" != typeof d.prototype[a] && aa(d.prototype, a, {
+        configurable: !0,
+        writable: !0,
+        value: function value() {
+          return ia(ha(this));
+        }
+      });
+    }
+    return a;
+  });
+  var ia = function ia(a) {
+      a = {
+        next: a
+      };
+      a[Symbol.iterator] = function () {
+        return this;
+      };
+      return a;
+    },
+    ja = function ja(a, b) {
+      a instanceof String && (a += "");
+      var c = 0,
+        d = !1,
+        e = {
+          next: function next() {
+            if (!d && c < a.length) {
+              var f = c++;
+              return {
+                value: b(f, a[f]),
+                done: !1
+              };
+            }
+            d = !0;
+            return {
+              done: !0,
+              value: void 0
+            };
+          }
+        };
+      e[Symbol.iterator] = function () {
+        return e;
+      };
+      return e;
+    };
+  fa("Array.prototype.keys", function (a) {
+    return a ? a : function () {
+      return ja(this, function (b) {
+        return b;
+      });
+    };
+  });
+  var m = this || self,
+    ka = function ka(a) {
+      var b = _typeof(a);
+      return "object" != b ? b : a ? Array.isArray(a) ? "array" : b : "null";
+    },
+    la = function la(a, b, c) {
+      return a.call.apply(a.bind, arguments);
+    },
+    ma = function ma(a, b, c) {
+      if (!a) throw Error();
+      if (2 < arguments.length) {
+        var d = Array.prototype.slice.call(arguments, 2);
+        return function () {
+          var e = Array.prototype.slice.call(arguments);
+          Array.prototype.unshift.apply(e, d);
+          return a.apply(b, e);
+        };
+      }
+      return function () {
+        return a.apply(b, arguments);
+      };
+    },
+    _na = function na(a, b, c) {
+      _na = Function.prototype.bind && -1 != Function.prototype.bind.toString().indexOf("native code") ? la : ma;
+      return _na.apply(null, arguments);
+    },
+    oa = function oa(a, b) {
+      function c() {}
+      c.prototype = b.prototype;
+      a.ma = b.prototype;
+      a.prototype = new c();
+      a.prototype.constructor = a;
+      a.A = function (d, e, f) {
+        for (var g = Array(arguments.length - 2), h = 2; h < arguments.length; h++) {
+          g[h - 2] = arguments[h];
+        }
+        return b.prototype[e].apply(d, g);
+      };
+    },
+    pa = function pa(a) {
+      return a;
+    },
+    qa = function qa(a) {
+      var b = null,
+        c = m.trustedTypes;
+      if (!c || !c.createPolicy) return b;
+      try {
+        b = c.createPolicy(a, {
+          createHTML: pa,
+          createScript: pa,
+          createScriptURL: pa
+        });
+      } catch (d) {
+        m.console && m.console.error(d.message);
+      }
+      return b;
+    };
+  function q(a) {
+    if (Error.captureStackTrace) Error.captureStackTrace(this, q);else {
+      var b = Error().stack;
+      b && (this.stack = b);
+    }
+    a && (this.message = String(a));
+  }
+  oa(q, Error);
+  q.prototype.name = "CustomError";
+  var ra = function ra(a, b) {
+    a = a.split("%s");
+    for (var c = "", d = a.length - 1, e = 0; e < d; e++) {
+      c += a[e] + (e < b.length ? b[e] : "%s");
+    }
+    q.call(this, c + a[d]);
+  };
+  oa(ra, q);
+  ra.prototype.name = "AssertionError";
+  var sa = function sa(a, b, c, d) {
+      var e = "Assertion failed";
+      if (c) {
+        e += ": " + c;
+        var f = d;
+      } else a && (e += ": " + a, f = b);
+      throw new ra("" + e, f || []);
+    },
+    ta = function ta(a, b, c) {
+      a || sa("", null, b, Array.prototype.slice.call(arguments, 2));
+      return a;
+    },
+    ua = function ua(a, b) {
+      throw new ra("Failure" + (a ? ": " + a : ""), Array.prototype.slice.call(arguments, 1));
+    },
+    va = function va(a, b, c) {
+      "string" !== typeof a && sa("Expected string but got %s: %s.", [ka(a), a], b, Array.prototype.slice.call(arguments, 2));
+    };
+  var xa = function xa(a, b) {
+    a: {
+      try {
+        var c = a && a.ownerDocument,
+          d = c && (c.defaultView || c.parentWindow);
+        d = d || m;
+        if (d.Element && d.Location) {
+          var e = d;
+          break a;
+        }
+      } catch (g) {}
+      e = null;
+    }
+    if (e && "undefined" != typeof e[b] && (!a || !(a instanceof e[b]) && (a instanceof e.Location || a instanceof e.Element))) {
+      e = _typeof(a);
+      if ("object" == e && null != a || "function" == e) try {
+        var f = a.constructor.displayName || a.constructor.name || Object.prototype.toString.call(a);
+      } catch (g) {
+        f = "<object could not be stringified>";
+      } else f = void 0 === a ? "undefined" : null === a ? "null" : _typeof(a);
+      ua("Argument is not a %s (or a non-Element, non-Location mock); got: %s", b, f);
+    }
+    return a;
+  };
+  var ya;
+  var t = function t(a, b) {
+    this.P = a === za && b || "";
+    this.ca = Aa;
+  };
+  t.prototype.J = !0;
+  t.prototype.H = function () {
+    return this.P;
+  };
+  t.prototype.toString = function () {
+    return "Const{" + this.P + "}";
+  };
+  var Ba = function Ba(a) {
+      if (a instanceof t && a.constructor === t && a.ca === Aa) return a.P;
+      ua("expected object of type Const, got '" + a + "'");
+      return "type_error:Const";
+    },
+    Aa = {},
+    za = {};
+  var v = function v(a, b) {
+    this.N = b === Ca ? a : "";
+  };
+  v.prototype.J = !0;
+  v.prototype.H = function () {
+    return this.N.toString();
+  };
+  v.prototype.toString = function () {
+    return "SafeUrl{" + this.N + "}";
+  };
+  var Da = function Da(a) {
+      if (a instanceof v && a.constructor === v) return a.N;
+      ua("expected object of type SafeUrl, got '" + a + "' of type " + ka(a));
+      return "type_error:SafeUrl";
+    },
+    Ea = /^(?:(?:https?|mailto|ftp):|[^:/?#]*(?:[/?#]|$))/i,
+    Fa = function Fa(a) {
+      if (a instanceof v) return a;
+      a = "object" == _typeof(a) && a.J ? a.H() : String(a);
+      ta(Ea.test(a), "%s does not match the safe URL pattern", a) || (a = "about:invalid#zClosurez");
+      return new v(a, Ca);
+    },
+    Ca = {};
+  var w = function w(a, b, c) {
+    this.M = c === Ga ? a : "";
+  };
+  w.prototype.J = !0;
+  w.prototype.H = function () {
+    return this.M.toString();
+  };
+  w.prototype.toString = function () {
+    return "SafeHtml{" + this.M + "}";
+  };
+  var Ha = function Ha(a) {
+      if (a instanceof w && a.constructor === w) return a.M;
+      ua("expected object of type SafeHtml, got '" + a + "' of type " + ka(a));
+      return "type_error:SafeHtml";
+    },
+    Ga = {},
+    Ia = new w(m.trustedTypes && m.trustedTypes.emptyHTML || "", 0, Ga);
+  var Ja = {
+      MATH: !0,
+      SCRIPT: !0,
+      STYLE: !0,
+      SVG: !0,
+      TEMPLATE: !0
+    },
+    Ka = function (a) {
+      var b = !1,
+        c;
+      return function () {
+        b || (c = a(), b = !0);
+        return c;
+      };
+    }(function () {
+      if ("undefined" === typeof document) return !1;
+      var a = document.createElement("div"),
+        b = document.createElement("div");
+      b.appendChild(document.createElement("div"));
+      a.appendChild(b);
+      if (!a.firstChild) return !1;
+      b = a.firstChild.firstChild;
+      a.innerHTML = Ha(Ia);
+      return !b.parentElement;
+    }); /*
+        gapi.loader.OBJECT_CREATE_TEST_OVERRIDE &&*/
+  var x = window,
+    z = document,
+    La = x.location,
+    Ma = function Ma() {},
+    Na = /\[native code\]/,
+    A = function A(a, b, c) {
+      return a[b] = a[b] || c;
+    },
+    Oa = function Oa(a) {
+      for (var b = 0; b < this.length; b++) {
+        if (this[b] === a) return b;
+      }
+      return -1;
+    },
+    Pa = function Pa(a) {
+      a = a.sort();
+      for (var b = [], c = void 0, d = 0; d < a.length; d++) {
+        var e = a[d];
+        e != c && b.push(e);
+        c = e;
+      }
+      return b;
+    },
+    Qa = /&/g,
+    Ra = /</g,
+    Sa = />/g,
+    Ua = /"/g,
+    Va = /'/g,
+    Wa = function Wa(a) {
+      return String(a).replace(Qa, "&amp;").replace(Ra, "&lt;").replace(Sa, "&gt;").replace(Ua, "&quot;").replace(Va, "&#39;");
+    },
+    B = function B() {
+      var a;
+      if ((a = Object.create) && Na.test(a)) a = a(null);else {
+        a = {};
+        for (var b in a) {
+          a[b] = void 0;
+        }
+      }
+      return a;
+    },
+    C = function C(a, b) {
+      return Object.prototype.hasOwnProperty.call(a, b);
+    },
+    Xa = function Xa(a) {
+      if (Na.test(Object.keys)) return Object.keys(a);
+      var b = [],
+        c;
+      for (c in a) {
+        C(a, c) && b.push(c);
+      }
+      return b;
+    },
+    D = function D(a, b) {
+      a = a || {};
+      for (var c in a) {
+        C(a, c) && (b[c] = a[c]);
+      }
+    },
+    Ya = function Ya(a) {
+      return function () {
+        x.setTimeout(a, 0);
+      };
+    },
+    E = function E(a, b) {
+      if (!a) throw Error(b || "");
+    },
+    F = A(x, "gapi", {});
+  var H = function H(a, b, c) {
+      var d = new RegExp("([#].*&|[#])" + b + "=([^&#]*)", "g");
+      b = new RegExp("([?#].*&|[?#])" + b + "=([^&#]*)", "g");
+      if (a = a && (d.exec(a) || b.exec(a))) try {
+        c = decodeURIComponent(a[2]);
+      } catch (e) {}
+      return c;
+    },
+    Za = new RegExp(/^/.source + /([a-zA-Z][-+.a-zA-Z0-9]*:)?/.source + /(\/\/[^\/?#]*)?/.source + /([^?#]*)?/.source + /(\?([^#]*))?/.source + /(#((#|[^#])*))?/.source + /$/.source),
+    $a = /[\ud800-\udbff][\udc00-\udfff]|[^!-~]/g,
+    ab = new RegExp(/(%([^0-9a-fA-F%]|[0-9a-fA-F]([^0-9a-fA-F%])?)?)*/.source + /%($|[^0-9a-fA-F]|[0-9a-fA-F]($|[^0-9a-fA-F]))/.source, "g"),
+    bb = /%([a-f]|[0-9a-fA-F][a-f])/g,
+    cb = /^(https?|ftp|file|chrome-extension):$/i,
+    I = function I(a) {
+      a = String(a);
+      a = a.replace($a, function (e) {
+        try {
+          return encodeURIComponent(e);
+        } catch (f) {
+          return encodeURIComponent(e.replace(/^[^%]+$/g, "\uFFFD"));
+        }
+      }).replace(ab, function (e) {
+        return e.replace(/%/g, "%25");
+      }).replace(bb, function (e) {
+        return e.toUpperCase();
+      });
+      a = a.match(Za) || [];
+      var b = B(),
+        c = function c(e) {
+          return e.replace(/\\/g, "%5C").replace(/\^/g, "%5E").replace(/`/g, "%60").replace(/\{/g, "%7B").replace(/\|/g, "%7C").replace(/\}/g, "%7D");
+        },
+        d = !!(a[1] || "").match(cb);
+      b.A = c((a[1] || "") + (a[2] || "") + (a[3] || (a[2] && d ? "/" : "")));
+      d = function d(e) {
+        return c(e.replace(/\?/g, "%3F").replace(/#/g, "%23"));
+      };
+      b.query = a[5] ? [d(a[5])] : [];
+      b.g = a[7] ? [d(a[7])] : [];
+      return b;
+    },
+    db = function db(a) {
+      return a.A + (0 < a.query.length ? "?" + a.query.join("&") : "") + (0 < a.g.length ? "#" + a.g.join("&") : "");
+    },
+    eb = function eb(a, b) {
+      var c = [];
+      if (a) for (var d in a) {
+        if (C(a, d) && null != a[d]) {
+          var e = b ? b(a[d]) : a[d];
+          c.push(encodeURIComponent(d) + "=" + encodeURIComponent(e));
+        }
+      }
+      return c;
+    },
+    fb = function fb(a, b, c, d) {
+      a = I(a);
+      a.query.push.apply(a.query, eb(b, d));
+      a.g.push.apply(a.g, eb(c, d));
+      return db(a);
+    },
+    gb = new RegExp(/\/?\??#?/.source + "(" + /[\/?#]/i.source + "|" + /[\uD800-\uDBFF]/i.source + "|" + /%[c-f][0-9a-f](%[89ab][0-9a-f]){0,2}(%[89ab]?)?/i.source + "|" + /%[0-9a-f]?/i.source + ")$", "i"),
+    hb = function hb(a, b) {
+      var c = I(b);
+      b = c.A;
+      c.query.length && (b += "?" + c.query.join(""));
+      c.g.length && (b += "#" + c.g.join(""));
+      var d = "";
+      2E3 < b.length && (d = b, b = b.substr(0, 2E3), b = b.replace(gb, ""), d = d.substr(b.length));
+      var e = a.createElement("div");
+      a = a.createElement("a");
+      c = I(b);
+      b = c.A;
+      c.query.length && (b += "?" + c.query.join(""));
+      c.g.length && (b += "#" + c.g.join(""));
+      b = new v(b, Ca);
+      xa(a, "HTMLAnchorElement");
+      b = b instanceof v ? b : Fa(b);
+      a.href = Da(b);
+      e.appendChild(a);
+      b = e.innerHTML;
+      c = new t(za, "Assignment to self.");
+      va(Ba(c), "must provide justification");
+      ta(!/^[\s\xa0]*$/.test(Ba(c)), "must provide non-empty justification");
+      void 0 === ya && (ya = qa("gapi#html"));
+      b = (c = ya) ? c.createHTML(b) : b;
+      b = new w(b, null, Ga);
+      if (e.tagName && Ja[e.tagName.toUpperCase()]) throw Error("goog.dom.safe.setInnerHtml cannot be used to set content of " + e.tagName + ".");
+      if (Ka()) for (; e.lastChild;) {
+        e.removeChild(e.lastChild);
+      }
+      e.innerHTML = Ha(b);
+      b = String(e.firstChild.href);
+      e.parentNode && e.parentNode.removeChild(e);
+      c = I(b + d);
+      d = c.A;
+      c.query.length && (d += "?" + c.query.join(""));
+      c.g.length && (d += "#" + c.g.join(""));
+      return d;
+    },
+    ib = /^https?:\/\/[^\/%\\?#\s]+\/[^\s]*$/i;
+  var jb = function jb(a, b, c, d) {
+      if (x[c + "EventListener"]) x[c + "EventListener"](a, b, !1);else if (x[d + "tachEvent"]) x[d + "tachEvent"]("on" + a, b);
+    },
+    kb = function kb() {
+      var a = z.readyState;
+      return "complete" === a || "interactive" === a && -1 == navigator.userAgent.indexOf("MSIE");
+    },
+    nb = function nb(a) {
+      var b = lb;
+      if (!kb()) try {
+        b();
+      } catch (c) {}
+      mb(a);
+    },
+    mb = function mb(a) {
+      if (kb()) a();else {
+        var b = !1,
+          c = function c() {
+            if (!b) return b = !0, a.apply(this, arguments);
+          };
+        x.addEventListener ? (x.addEventListener("load", c, !1), x.addEventListener("DOMContentLoaded", c, !1)) : x.attachEvent && (x.attachEvent("onreadystatechange", function () {
+          kb() && c.apply(this, arguments);
+        }), x.attachEvent("onload", c));
+      }
+    },
+    ob = function ob(a) {
+      for (; a.firstChild;) {
+        a.removeChild(a.firstChild);
+      }
+    },
+    pb = {
+      button: !0,
+      div: !0,
+      span: !0
+    };
+  var K;
+  K = A(x, "___jsl", B());
+  A(K, "I", 0);
+  A(K, "hel", 10);
+  var qb = function qb(a) {
+      return K.dpo ? K.h : H(a, "jsh", K.h);
+    },
+    rb = function rb(a) {
+      var b = A(K, "sws", []);
+      b.push.apply(b, a);
+    },
+    sb = function sb(a) {
+      return A(K, "watt", B())[a];
+    },
+    tb = function tb(a) {
+      var b = A(K, "PQ", []);
+      K.PQ = [];
+      var c = b.length;
+      if (0 === c) a();else for (var d = 0, e = function e() {
+          ++d === c && a();
+        }, f = 0; f < c; f++) {
+        b[f](e);
+      }
+    },
+    ub = function ub(a) {
+      return A(A(K, "H", B()), a, B());
+    };
+  var vb = A(K, "perf", B()),
+    wb = A(vb, "g", B()),
+    xb = A(vb, "i", B());
+  A(vb, "r", []);
+  B();
+  B();
+  var yb = function yb(a, b, c) {
+      var d = vb.r;
+      "function" === typeof d ? d(a, b, c) : d.push([a, b, c]);
+    },
+    L = function L(a, b, c) {
+      wb[a] = !b && wb[a] || c || new Date().getTime();
+      yb(a);
+    },
+    Ab = function Ab(a, b, c) {
+      b && 0 < b.length && (b = zb(b), c && 0 < c.length && (b += "___" + zb(c)), 28 < b.length && (b = b.substr(0, 28) + (b.length - 28)), c = b, b = A(xb, "_p", B()), A(b, c, B())[a] = new Date().getTime(), yb(a, "_p", c));
+    },
+    zb = function zb(a) {
+      return a.join("__").replace(/\./g, "_").replace(/\-/g, "_").replace(/,/g, "_");
+    };
+  var Bb = B(),
+    N = [],
+    O = function O(a) {
+      throw Error("Bad hint" + (a ? ": " + a : ""));
+    };
+  N.push(["jsl", function (a) {
+    for (var b in a) {
+      if (C(a, b)) {
+        var c = a[b];
+        "object" == _typeof(c) ? K[b] = A(K, b, []).concat(c) : A(K, b, c);
+      }
+    }
+    if (b = a.u) a = A(K, "us", []), a.push(b), (b = /^https:(.*)$/.exec(b)) && a.push("http:" + b[1]);
+  }]);
+  var Cb = /^(\/[a-zA-Z0-9_\-]+)+$/,
+    Db = [/\/amp\//, /\/amp$/, /^\/amp$/],
+    Eb = /^[a-zA-Z0-9\-_\.,!]+$/,
+    Fb = /^gapi\.loaded_[0-9]+$/,
+    Gb = /^[a-zA-Z0-9,._-]+$/,
+    Kb = function Kb(a, b, c, d) {
+      var e = a.split(";"),
+        f = e.shift(),
+        g = Bb[f],
+        h = null;
+      g ? h = g(e, b, c, d) : O("no hint processor for: " + f);
+      h || O("failed to generate load url");
+      b = h;
+      c = b.match(Hb);
+      (d = b.match(Ib)) && 1 === d.length && Jb.test(b) && c && 1 === c.length || O("failed sanity: " + a);
+      return h;
+    },
+    Nb = function Nb(a, b, c, d) {
+      a = Lb(a);
+      Fb.test(c) || O("invalid_callback");
+      b = Mb(b);
+      d = d && d.length ? Mb(d) : null;
+      var e = function e(f) {
+        return encodeURIComponent(f).replace(/%2C/g, ",");
+      };
+      return [encodeURIComponent(a.pathPrefix).replace(/%2C/g, ",").replace(/%2F/g, "/"), "/k=", e(a.version), "/m=", e(b), d ? "/exm=" + e(d) : "", "/rt=j/sv=1/d=1/ed=1", a.S ? "/am=" + e(a.S) : "", a.Z ? "/rs=" + e(a.Z) : "", a.aa ? "/t=" + e(a.aa) : "", "/cb=", e(c)].join("");
+    },
+    Lb = function Lb(a) {
+      "/" !== a.charAt(0) && O("relative path");
+      for (var b = a.substring(1).split("/"), c = []; b.length;) {
+        a = b.shift();
+        if (!a.length || 0 == a.indexOf(".")) O("empty/relative directory");else if (0 < a.indexOf("=")) {
+          b.unshift(a);
+          break;
+        }
+        c.push(a);
+      }
+      a = {};
+      for (var d = 0, e = b.length; d < e; ++d) {
+        var f = b[d].split("="),
+          g = decodeURIComponent(f[0]),
+          h = decodeURIComponent(f[1]);
+        2 == f.length && g && h && (a[g] = a[g] || h);
+      }
+      b = "/" + c.join("/");
+      Cb.test(b) || O("invalid_prefix");
+      c = 0;
+      for (d = Db.length; c < d; ++c) {
+        Db[c].test(b) && O("invalid_prefix");
+      }
+      c = Ob(a, "k", !0);
+      d = Ob(a, "am");
+      e = Ob(a, "rs");
+      a = Ob(a, "t");
+      return {
+        pathPrefix: b,
+        version: c,
+        S: d,
+        Z: e,
+        aa: a
+      };
+    },
+    Mb = function Mb(a) {
+      for (var b = [], c = 0, d = a.length; c < d; ++c) {
+        var e = a[c].replace(/\./g, "_").replace(/-/g, "_");
+        Gb.test(e) && b.push(e);
+      }
+      return b.join(",");
+    },
+    Ob = function Ob(a, b, c) {
+      a = a[b];
+      !a && c && O("missing: " + b);
+      if (a) {
+        if (Eb.test(a)) return a;
+        O("invalid: " + b);
+      }
+      return null;
+    },
+    Jb = /^https?:\/\/[a-z0-9_.-]+\.google(rs)?\.com(:\d+)?\/[a-zA-Z0-9_.,!=\-\/]+$/,
+    Ib = /\/cb=/g,
+    Hb = /\/\//g,
+    Pb = function Pb() {
+      var a = qb(La.href);
+      if (!a) throw Error("Bad hint");
+      return a;
+    };
+  Bb.m = function (a, b, c, d) {
+    (a = a[0]) || O("missing_hint");
+    return "https://apis.google.com" + Nb(a, b, c, d);
+  };
+  var Qb = decodeURI("%73cript"),
+    Rb = /^[-+_0-9\/A-Za-z]+={0,2}$/,
+    Sb = function Sb(a, b) {
+      for (var c = [], d = 0; d < a.length; ++d) {
+        var e = a[d];
+        e && 0 > Oa.call(b, e) && c.push(e);
+      }
+      return c;
+    },
+    Tb = function Tb() {
+      var a = K.nonce;
+      return void 0 !== a ? a && a === String(a) && a.match(Rb) ? a : K.nonce = null : z.querySelector ? (a = z.querySelector("script[nonce]")) ? (a = a.nonce || a.getAttribute("nonce") || "", a && a === String(a) && a.match(Rb) ? K.nonce = a : K.nonce = null) : null : null;
+    },
+    Wb = function Wb(a) {
+      if ("loading" != z.readyState) Ub(a);else {
+        var b = Tb(),
+          c = "";
+        null !== b && (c = ' nonce="' + b + '"');
+        a = "<" + Qb + ' src="' + encodeURI(a) + '"' + c + "></" + Qb + ">";
+        z.write(Vb ? Vb.createHTML(a) : a);
+      }
+    },
+    Ub = function Ub(a) {
+      var b = z.createElement(Qb);
+      b.setAttribute("src", Vb ? Vb.createScriptURL(a) : a);
+      a = Tb();
+      null !== a && b.setAttribute("nonce", a);
+      b.async = "true";
+      (a = z.getElementsByTagName(Qb)[0]) ? a.parentNode.insertBefore(b, a) : (z.head || z.body || z.documentElement).appendChild(b);
+    },
+    Xb = function Xb(a, b) {
+      var c = b && b._c;
+      if (c) for (var d = 0; d < N.length; d++) {
+        var e = N[d][0],
+          f = N[d][1];
+        f && C(c, e) && f(c[e], a, b);
+      }
+    },
+    Zb = function Zb(a, b, c) {
+      Yb(function () {
+        var d = b === qb(La.href) ? A(F, "_", B()) : B();
+        d = A(ub(b), "_", d);
+        a(d);
+      }, c);
+    },
+    ac = function ac(a, b) {
+      var c = b || {};
+      "function" == typeof b && (c = {}, c.callback = b);
+      Xb(a, c);
+      b = a ? a.split(":") : [];
+      var d = c.h || Pb(),
+        e = A(K, "ah", B());
+      if (e["::"] && b.length) {
+        a = [];
+        for (var f = null; f = b.shift();) {
+          var g = f.split(".");
+          g = e[f] || e[g[1] && "ns:" + g[0] || ""] || d;
+          var h = a.length && a[a.length - 1] || null,
+            k = h;
+          h && h.hint == g || (k = {
+            hint: g,
+            V: []
+          }, a.push(k));
+          k.V.push(f);
+        }
+        var l = a.length;
+        if (1 < l) {
+          var n = c.callback;
+          n && (c.callback = function () {
+            0 == --l && n();
+          });
+        }
+        for (; b = a.shift();) {
+          $b(b.V, c, b.hint);
+        }
+      } else $b(b || [], c, d);
+    },
+    $b = function $b(a, b, c) {
+      a = Pa(a) || [];
+      var d = b.callback,
+        e = b.config,
+        f = b.timeout,
+        g = b.ontimeout,
+        h = b.onerror,
+        k = void 0;
+      "function" == typeof h && (k = h);
+      var l = null,
+        n = !1;
+      if (f && !g || !f && g) throw "Timeout requires both the timeout parameter and ontimeout parameter to be set";
+      h = A(ub(c), "r", []).sort();
+      var p = A(ub(c), "L", []).sort(),
+        r = [].concat(h),
+        u = function u(M, ba) {
+          if (n) return 0;
+          x.clearTimeout(l);
+          p.push.apply(p, y);
+          var ca = ((F || {}).config || {}).update;
+          ca ? ca(e) : e && A(K, "cu", []).push(e);
+          if (ba) {
+            Ab("me0", M, r);
+            try {
+              Zb(ba, c, k);
+            } finally {
+              Ab("me1", M, r);
+            }
+          }
+          return 1;
+        };
+      0 < f && (l = x.setTimeout(function () {
+        n = !0;
+        g();
+      }, f));
+      var y = Sb(a, p);
+      if (y.length) {
+        y = Sb(a, h);
+        var G = A(K, "CP", []),
+          J = G.length;
+        G[J] = function (M) {
+          if (!M) return 0;
+          Ab("ml1", y, r);
+          var ba = function ba(wa) {
+              G[J] = null;
+              u(y, M) && tb(function () {
+                d && d();
+                wa();
+              });
+            },
+            ca = function ca() {
+              var wa = G[J + 1];
+              wa && wa();
+            };
+          0 < J && G[J - 1] ? G[J] = function () {
+            ba(ca);
+          } : ba(ca);
+        };
+        if (y.length) {
+          var Ta = "loaded_" + K.I++;
+          F[Ta] = function (M) {
+            G[J](M);
+            F[Ta] = null;
+          };
+          a = Kb(c, y, "gapi." + Ta, h);
+          h.push.apply(h, y);
+          Ab("ml0", y, r);
+          b.sync || x.___gapisync ? Wb(a) : Ub(a);
+        } else G[J](Ma);
+      } else u(y) && d && d();
+    },
+    Vb = qa("gapi#gapi");
+  var Yb = function Yb(a, b) {
+    if (K.hee && 0 < K.hel) try {
+      return a();
+    } catch (c) {
+      b && b(c), K.hel--, ac("debug_error", function () {
+        try {
+          window.___jsl.hefn(c);
+        } catch (d) {
+          throw c;
+        }
+      });
+    } else try {
+      return a();
+    } catch (c) {
+      throw b && b(c), c;
+    }
+  };
+  F.load = function (a, b) {
+    return Yb(function () {
+      return ac(a, b);
+    });
+  };
+  var bc = function bc(a) {
+      var b = window.___jsl = window.___jsl || {};
+      b[a] = b[a] || [];
+      return b[a];
+    },
+    cc = function cc(a) {
+      var b = window.___jsl = window.___jsl || {};
+      b.cfg = !a && b.cfg || {};
+      return b.cfg;
+    },
+    dc = function dc(a) {
+      return "object" === _typeof(a) && /\[native code\]/.test(a.push);
+    },
+    P = function P(a, b, c) {
+      if (b && "object" === _typeof(b)) for (var d in b) {
+        !Object.prototype.hasOwnProperty.call(b, d) || c && "___goc" === d && "undefined" === typeof b[d] || (a[d] && b[d] && "object" === _typeof(a[d]) && "object" === _typeof(b[d]) && !dc(a[d]) && !dc(b[d]) ? P(a[d], b[d]) : b[d] && "object" === _typeof(b[d]) ? (a[d] = dc(b[d]) ? [] : {}, P(a[d], b[d])) : a[d] = b[d]);
+      }
+    },
+    ec = function ec(a) {
+      if (a && !/^\s+$/.test(a)) {
+        for (; 0 == a.charCodeAt(a.length - 1);) {
+          a = a.substring(0, a.length - 1);
+        }
+        try {
+          var b = window.JSON.parse(a);
+        } catch (c) {}
+        if ("object" === _typeof(b)) return b;
+        try {
+          b = new Function("return (" + a + "\n)")();
+        } catch (c) {}
+        if ("object" === _typeof(b)) return b;
+        try {
+          b = new Function("return ({" + a + "\n})")();
+        } catch (c) {}
+        return "object" === _typeof(b) ? b : {};
+      }
+    },
+    fc = function fc(a, b) {
+      var c = {
+        ___goc: void 0
+      };
+      a.length && a[a.length - 1] && Object.hasOwnProperty.call(a[a.length - 1], "___goc") && "undefined" === typeof a[a.length - 1].___goc && (c = a.pop());
+      P(c, b);
+      a.push(c);
+    },
+    gc = function gc(a) {
+      cc(!0);
+      var b = window.___gcfg,
+        c = bc("cu"),
+        d = window.___gu;
+      b && b !== d && (fc(c, b), window.___gu = b);
+      b = bc("cu");
+      var e = document.scripts || document.getElementsByTagName("script") || [];
+      d = [];
+      var f = [];
+      f.push.apply(f, bc("us"));
+      for (var g = 0; g < e.length; ++g) {
+        for (var h = e[g], k = 0; k < f.length; ++k) {
+          h.src && 0 == h.src.indexOf(f[k]) && d.push(h);
+        }
+      }
+      0 == d.length && 0 < e.length && e[e.length - 1].src && d.push(e[e.length - 1]);
+      for (e = 0; e < d.length; ++e) {
+        d[e].getAttribute("gapi_processed") || (d[e].setAttribute("gapi_processed", !0), (f = d[e]) ? (g = f.nodeType, f = 3 == g || 4 == g ? f.nodeValue : f.textContent || f.innerText || f.innerHTML || "") : f = void 0, (f = ec(f)) && b.push(f));
+      }
+      a && fc(c, a);
+      d = bc("cd");
+      a = 0;
+      for (b = d.length; a < b; ++a) {
+        P(cc(), d[a], !0);
+      }
+      d = bc("ci");
+      a = 0;
+      for (b = d.length; a < b; ++a) {
+        P(cc(), d[a], !0);
+      }
+      a = 0;
+      for (b = c.length; a < b; ++a) {
+        P(cc(), c[a], !0);
+      }
+    },
+    Q = function Q(a) {
+      var b = cc();
+      if (!a) return b;
+      a = a.split("/");
+      for (var c = 0, d = a.length; b && "object" === _typeof(b) && c < d; ++c) {
+        b = b[a[c]];
+      }
+      return c === a.length && void 0 !== b ? b : void 0;
+    },
+    hc = function hc(a, b) {
+      var c;
+      if ("string" === typeof a) {
+        var d = c = {};
+        a = a.split("/");
+        for (var e = 0, f = a.length; e < f - 1; ++e) {
+          var g = {};
+          d = d[a[e]] = g;
+        }
+        d[a[e]] = b;
+      } else c = a;
+      gc(c);
+    };
+  var ic = function ic() {
+    var a = window.__GOOGLEAPIS;
+    a && (a.googleapis && !a["googleapis.config"] && (a["googleapis.config"] = a.googleapis), A(K, "ci", []).push(a), window.__GOOGLEAPIS = void 0);
+  };
+  var jc = {
+      callback: 1,
+      clientid: 1,
+      cookiepolicy: 1,
+      openidrealm: -1,
+      includegrantedscopes: -1,
+      requestvisibleactions: 1,
+      scope: 1
+    },
+    kc = !1,
+    lc = B(),
+    mc = function mc() {
+      if (!kc) {
+        for (var a = document.getElementsByTagName("meta"), b = 0; b < a.length; ++b) {
+          var c = a[b].name.toLowerCase();
+          if (0 == c.lastIndexOf("google-signin-", 0)) {
+            c = c.substring(14);
+            var d = a[b].content;
+            jc[c] && d && (lc[c] = d);
+          }
+        }
+        if (window.self !== window.top) {
+          a = document.location.toString();
+          for (var e in jc) {
+            0 < jc[e] && (b = H(a, e, "")) && (lc[e] = b);
+          }
+        }
+        kc = !0;
+      }
+      e = B();
+      D(lc, e);
+      return e;
+    },
+    nc = function nc(a) {
+      return !!(a.clientid && a.scope && a.callback);
+    };
+  var oc = window.console,
+    pc = function pc(a) {
+      oc && oc.log && oc.log(a);
+    };
+  var qc = function qc() {
+      return !!K.oa;
+    },
+    rc = function rc() {};
+  var R = A(K, "rw", B()),
+    sc = function sc(a) {
+      for (var b in R) {
+        a(R[b]);
+      }
+    },
+    tc = function tc(a, b) {
+      (a = R[a]) && a.state < b && (a.state = b);
+    };
+  var uc;
+  var vc = /^https?:\/\/(?:\w|[\-\.])+\.google\.(?:\w|[\-:\.])+(?:\/[^\?#]*)?\/u\/(\d)\//,
+    wc = /^https?:\/\/(?:\w|[\-\.])+\.google\.(?:\w|[\-:\.])+(?:\/[^\?#]*)?\/b\/(\d{10,21})\//,
+    xc = function xc(a) {
+      var b = Q("googleapis.config/sessionIndex");
+      "string" === typeof b && 254 < b.length && (b = null);
+      null == b && (b = window.__X_GOOG_AUTHUSER);
+      "string" === typeof b && 254 < b.length && (b = null);
+      if (null == b) {
+        var c = window.google;
+        c && (b = c.authuser);
+      }
+      "string" === typeof b && 254 < b.length && (b = null);
+      null == b && (a = a || window.location.href, b = H(a, "authuser") || null, null == b && (b = (b = a.match(vc)) ? b[1] : null));
+      if (null == b) return null;
+      b = String(b);
+      254 < b.length && (b = null);
+      return b;
+    },
+    yc = function yc(a) {
+      var b = Q("googleapis.config/sessionDelegate");
+      "string" === typeof b && 21 < b.length && (b = null);
+      null == b && (b = (a = (a || window.location.href).match(wc)) ? a[1] : null);
+      if (null == b) return null;
+      b = String(b);
+      21 < b.length && (b = null);
+      return b;
+    };
+  var zc,
+    S,
+    T = void 0,
+    U = function U(a) {
+      try {
+        return m.JSON.parse.call(m.JSON, a);
+      } catch (b) {
+        return !1;
+      }
+    },
+    V = function V(a) {
+      return Object.prototype.toString.call(a);
+    },
+    Ac = V(0),
+    Bc = V(new Date(0)),
+    Cc = V(!0),
+    Dc = V(""),
+    Ec = V({}),
+    Fc = V([]),
+    W = function W(a, b) {
+      if (b) for (var c = 0, d = b.length; c < d; ++c) {
+        if (a === b[c]) throw new TypeError("Converting circular structure to JSON");
+      }
+      d = _typeof(a);
+      if ("undefined" !== d) {
+        c = Array.prototype.slice.call(b || [], 0);
+        c[c.length] = a;
+        b = [];
+        var e = V(a);
+        if (null != a && "function" === typeof a.toJSON && (Object.prototype.hasOwnProperty.call(a, "toJSON") || (e !== Fc || a.constructor !== Array && a.constructor !== Object) && (e !== Ec || a.constructor !== Array && a.constructor !== Object) && e !== Dc && e !== Ac && e !== Cc && e !== Bc)) return W(a.toJSON.call(a), c);
+        if (null == a) b[b.length] = "null";else if (e === Ac) a = Number(a), isNaN(a) || isNaN(a - a) ? a = "null" : -0 === a && 0 > 1 / a && (a = "-0"), b[b.length] = String(a);else if (e === Cc) b[b.length] = String(!!Number(a));else {
+          if (e === Bc) return W(a.toISOString.call(a), c);
+          if (e === Fc && V(a.length) === Ac) {
+            b[b.length] = "[";
+            var f = 0;
+            for (d = Number(a.length) >> 0; f < d; ++f) {
+              f && (b[b.length] = ","), b[b.length] = W(a[f], c) || "null";
+            }
+            b[b.length] = "]";
+          } else if (e == Dc && V(a.length) === Ac) {
+            b[b.length] = '"';
+            f = 0;
+            for (c = Number(a.length) >> 0; f < c; ++f) {
+              d = String.prototype.charAt.call(a, f), e = String.prototype.charCodeAt.call(a, f), b[b.length] = "\b" === d ? "\\b" : "\f" === d ? "\\f" : "\n" === d ? "\\n" : "\r" === d ? "\\r" : "\t" === d ? "\\t" : "\\" === d || '"' === d ? "\\" + d : 31 >= e ? "\\u" + (e + 65536).toString(16).substr(1) : 32 <= e && 65535 >= e ? d : "\uFFFD";
+            }
+            b[b.length] = '"';
+          } else if ("object" === d) {
+            b[b.length] = "{";
+            d = 0;
+            for (f in a) {
+              Object.prototype.hasOwnProperty.call(a, f) && (e = W(a[f], c), void 0 !== e && (d++ && (b[b.length] = ","), b[b.length] = W(f), b[b.length] = ":", b[b.length] = e));
+            }
+            b[b.length] = "}";
+          } else return;
+        }
+        return b.join("");
+      }
+    },
+    Gc = /[\0-\x07\x0b\x0e-\x1f]/,
+    Hc = /^([^"]*"([^\\"]|\\.)*")*[^"]*"([^"\\]|\\.)*[\0-\x1f]/,
+    Ic = /^([^"]*"([^\\"]|\\.)*")*[^"]*"([^"\\]|\\.)*\\[^\\\/"bfnrtu]/,
+    Jc = /^([^"]*"([^\\"]|\\.)*")*[^"]*"([^"\\]|\\.)*\\u([0-9a-fA-F]{0,3}[^0-9a-fA-F])/,
+    Kc = /"([^\0-\x1f\\"]|\\[\\\/"bfnrt]|\\u[0-9a-fA-F]{4})*"/g,
+    Lc = /-?(0|[1-9][0-9]*)(\.[0-9]+)?([eE][-+]?[0-9]+)?/g,
+    Mc = /[ \t\n\r]+/g,
+    Nc = /[^"]:/,
+    Oc = /""/g,
+    Pc = /true|false|null/g,
+    Qc = /00/,
+    Rc = /[\{]([^0\}]|0[^:])/,
+    Sc = /(^|\[)[,:]|[,:](\]|\}|[,:]|$)/,
+    Tc = /[^\[,:][\[\{]/,
+    Uc = /^(\{|\}|\[|\]|,|:|0)+/,
+    Vc = /\u2028/g,
+    Wc = /\u2029/g,
+    Xc = function Xc(a) {
+      a = String(a);
+      if (Gc.test(a) || Hc.test(a) || Ic.test(a) || Jc.test(a)) return !1;
+      var b = a.replace(Kc, '""');
+      b = b.replace(Lc, "0");
+      b = b.replace(Mc, "");
+      if (Nc.test(b)) return !1;
+      b = b.replace(Oc, "0");
+      b = b.replace(Pc, "0");
+      if (Qc.test(b) || Rc.test(b) || Sc.test(b) || Tc.test(b) || !b || (b = b.replace(Uc, ""))) return !1;
+      a = a.replace(Vc, "\\u2028").replace(Wc, "\\u2029");
+      b = void 0;
+      try {
+        b = T ? [U(a)] : eval("(function (var_args) {\n  return Array.prototype.slice.call(arguments, 0);\n})(\n" + a + "\n)");
+      } catch (c) {
+        return !1;
+      }
+      return b && 1 === b.length ? b[0] : !1;
+    },
+    Yc = function Yc() {
+      var a = ((m.document || {}).scripts || []).length;
+      if ((void 0 === zc || void 0 === T || S !== a) && -1 !== S) {
+        zc = T = !1;
+        S = -1;
+        try {
+          try {
+            T = !!m.JSON && '{"a":[3,true,"1970-01-01T00:00:00.000Z"]}' === m.JSON.stringify.call(m.JSON, {
+              a: [3, !0, new Date(0)],
+              c: function c() {}
+            }) && !0 === U("true") && 3 === U('[{"a":3}]')[0].a;
+          } catch (b) {}
+          zc = T && !U("[00]") && !U("\"\x07\"") && !U('"\\0"') && !U('"\\v"');
+        } finally {
+          S = a;
+        }
+      }
+    },
+    Zc = function Zc(a) {
+      if (-1 === S) return !1;
+      Yc();
+      return (zc ? U : Xc)(a);
+    },
+    $c = function $c(a) {
+      if (-1 !== S) return Yc(), T ? m.JSON.stringify.call(m.JSON, a) : W(a);
+    },
+    ad = !Date.prototype.toISOString || "function" !== typeof Date.prototype.toISOString || "1970-01-01T00:00:00.000Z" !== new Date(0).toISOString(),
+    bd = function bd() {
+      var a = Date.prototype.getUTCFullYear.call(this);
+      return [0 > a ? "-" + String(1E6 - a).substr(1) : 9999 >= a ? String(1E4 + a).substr(1) : "+" + String(1E6 + a).substr(1), "-", String(101 + Date.prototype.getUTCMonth.call(this)).substr(1), "-", String(100 + Date.prototype.getUTCDate.call(this)).substr(1), "T", String(100 + Date.prototype.getUTCHours.call(this)).substr(1), ":", String(100 + Date.prototype.getUTCMinutes.call(this)).substr(1), ":", String(100 + Date.prototype.getUTCSeconds.call(this)).substr(1), ".", String(1E3 + Date.prototype.getUTCMilliseconds.call(this)).substr(1), "Z"].join("");
+    };
+  Date.prototype.toISOString = ad ? bd : Date.prototype.toISOString;
+  var cd = function cd() {
+    this.j = -1;
+  };
+  var dd = function dd() {
+    this.j = 64;
+    this.b = [];
+    this.G = [];
+    this.da = [];
+    this.C = [];
+    this.C[0] = 128;
+    for (var a = 1; a < this.j; ++a) {
+      this.C[a] = 0;
+    }
+    this.D = this.o = 0;
+    this.reset();
+  };
+  oa(dd, cd);
+  dd.prototype.reset = function () {
+    this.b[0] = 1732584193;
+    this.b[1] = 4023233417;
+    this.b[2] = 2562383102;
+    this.b[3] = 271733878;
+    this.b[4] = 3285377520;
+    this.D = this.o = 0;
+  };
+  var ed = function ed(a, b, c) {
+    c || (c = 0);
+    var d = a.da;
+    if ("string" === typeof b) for (var e = 0; 16 > e; e++) {
+      d[e] = b.charCodeAt(c) << 24 | b.charCodeAt(c + 1) << 16 | b.charCodeAt(c + 2) << 8 | b.charCodeAt(c + 3), c += 4;
+    } else for (e = 0; 16 > e; e++) {
+      d[e] = b[c] << 24 | b[c + 1] << 16 | b[c + 2] << 8 | b[c + 3], c += 4;
+    }
+    for (e = 16; 80 > e; e++) {
+      var f = d[e - 3] ^ d[e - 8] ^ d[e - 14] ^ d[e - 16];
+      d[e] = (f << 1 | f >>> 31) & 4294967295;
+    }
+    b = a.b[0];
+    c = a.b[1];
+    var g = a.b[2],
+      h = a.b[3],
+      k = a.b[4];
+    for (e = 0; 80 > e; e++) {
+      if (40 > e) {
+        if (20 > e) {
+          f = h ^ c & (g ^ h);
+          var l = 1518500249;
+        } else f = c ^ g ^ h, l = 1859775393;
+      } else 60 > e ? (f = c & g | h & (c | g), l = 2400959708) : (f = c ^ g ^ h, l = 3395469782);
+      f = (b << 5 | b >>> 27) + f + k + l + d[e] & 4294967295;
+      k = h;
+      h = g;
+      g = (c << 30 | c >>> 2) & 4294967295;
+      c = b;
+      b = f;
+    }
+    a.b[0] = a.b[0] + b & 4294967295;
+    a.b[1] = a.b[1] + c & 4294967295;
+    a.b[2] = a.b[2] + g & 4294967295;
+    a.b[3] = a.b[3] + h & 4294967295;
+    a.b[4] = a.b[4] + k & 4294967295;
+  };
+  dd.prototype.update = function (a, b) {
+    if (null != a) {
+      void 0 === b && (b = a.length);
+      for (var c = b - this.j, d = 0, e = this.G, f = this.o; d < b;) {
+        if (0 == f) for (; d <= c;) {
+          ed(this, a, d), d += this.j;
+        }
+        if ("string" === typeof a) for (; d < b;) {
+          if (e[f] = a.charCodeAt(d), ++f, ++d, f == this.j) {
+            ed(this, e);
+            f = 0;
+            break;
+          }
+        } else for (; d < b;) {
+          if (e[f] = a[d], ++f, ++d, f == this.j) {
+            ed(this, e);
+            f = 0;
+            break;
+          }
+        }
+      }
+      this.o = f;
+      this.D += b;
+    }
+  };
+  dd.prototype.digest = function () {
+    var a = [],
+      b = 8 * this.D;
+    56 > this.o ? this.update(this.C, 56 - this.o) : this.update(this.C, this.j - (this.o - 56));
+    for (var c = this.j - 1; 56 <= c; c--) {
+      this.G[c] = b & 255, b /= 256;
+    }
+    ed(this, this.G);
+    for (c = b = 0; 5 > c; c++) {
+      for (var d = 24; 0 <= d; d -= 8) {
+        a[b] = this.b[c] >> d & 255, ++b;
+      }
+    }
+    return a;
+  };
+  var fd = function fd() {
+    this.O = new dd();
+  };
+  fd.prototype.reset = function () {
+    this.O.reset();
+  };
+  var gd = x.crypto,
+    hd = !1,
+    id = 0,
+    jd = 0,
+    kd = 1,
+    ld = 0,
+    md = "",
+    nd = function nd(a) {
+      a = a || x.event;
+      var b = a.screenX + a.clientX << 16;
+      b += a.screenY + a.clientY;
+      b *= new Date().getTime() % 1E6;
+      kd = kd * b % ld;
+      0 < id && ++jd == id && jb("mousemove", nd, "remove", "de");
+    },
+    od = function od(a) {
+      var b = new fd();
+      a = unescape(encodeURIComponent(a));
+      for (var c = [], d = 0, e = a.length; d < e; ++d) {
+        c.push(a.charCodeAt(d));
+      }
+      b.O.update(c);
+      b = b.O.digest();
+      a = "";
+      for (c = 0; c < b.length; c++) {
+        a += "0123456789ABCDEF".charAt(Math.floor(b[c] / 16)) + "0123456789ABCDEF".charAt(b[c] % 16);
+      }
+      return a;
+    };
+  hd = !!gd && "function" == typeof gd.getRandomValues;
+  hd || (ld = 1E6 * (screen.width * screen.width + screen.height), md = od(z.cookie + "|" + z.location + "|" + new Date().getTime() + "|" + Math.random()), id = Q("random/maxObserveMousemove") || 0, 0 != id && jb("mousemove", nd, "add", "at"));
+  var pd = function pd() {
+      var a = kd;
+      a += parseInt(md.substr(0, 20), 16);
+      md = od(md);
+      return a / (ld + Math.pow(16, 20));
+    },
+    qd = function qd() {
+      var a = new x.Uint32Array(1);
+      gd.getRandomValues(a);
+      return Number("0." + a[0]);
+    };
+  var rd = function rd() {
+      var a = K.onl;
+      if (!a) {
+        a = B();
+        K.onl = a;
+        var b = B();
+        a.e = function (c) {
+          var d = b[c];
+          d && (delete b[c], d());
+        };
+        a.a = function (c, d) {
+          b[c] = d;
+        };
+        a.r = function (c) {
+          delete b[c];
+        };
+      }
+      return a;
+    },
+    sd = function sd(a, b) {
+      b = b.onload;
+      return "function" === typeof b ? (rd().a(a, b), b) : null;
+    },
+    td = function td(a) {
+      E(/^\w+$/.test(a), "Unsupported id - " + a);
+      rd();
+      return 'onload="window.___jsl.onl.e(&#34;' + a + '&#34;)"';
+    },
+    ud = function ud(a) {
+      rd().r(a);
+    };
+  var vd = {
+      allowtransparency: "true",
+      frameborder: "0",
+      hspace: "0",
+      marginheight: "0",
+      marginwidth: "0",
+      scrolling: "no",
+      style: "",
+      tabindex: "0",
+      vspace: "0",
+      width: "100%"
+    },
+    wd = {
+      allowtransparency: !0,
+      onload: !0
+    },
+    xd = 0,
+    yd = function yd(a) {
+      E(!a || ib.test(a), "Illegal url for new iframe - " + a);
+    },
+    zd = function zd(a, b, c, d, e) {
+      yd(c.src);
+      var f,
+        g = sd(d, c),
+        h = g ? td(d) : "";
+      try {
+        document.all && (f = a.createElement('<iframe frameborder="' + Wa(String(c.frameborder)) + '" scrolling="' + Wa(String(c.scrolling)) + '" ' + h + ' name="' + Wa(String(c.name)) + '"/>'));
+      } catch (l) {} finally {
+        f || (f = a.createElement("iframe"), g && (f.onload = function () {
+          f.onload = null;
+          g.call(this);
+        }, ud(d)));
+      }
+      f.setAttribute("ng-non-bindable", "");
+      for (var k in c) {
+        a = c[k], "style" === k && "object" === _typeof(a) ? D(a, f.style) : wd[k] || f.setAttribute(k, String(a));
+      }
+      (k = e && e.beforeNode || null) || e && e.dontclear || ob(b);
+      b.insertBefore(f, k);
+      f = k ? k.previousSibling : b.lastChild;
+      c.allowtransparency && (f.allowTransparency = !0);
+      return f;
+    };
+  var Ad = /^:[\w]+$/,
+    Bd = /:([a-zA-Z_]+):/g,
+    Cd = function Cd() {
+      var a = xc() || "0",
+        b = yc();
+      var c = xc(void 0) || a;
+      var d = yc(void 0),
+        e = "";
+      c && (e += "u/" + encodeURIComponent(String(c)) + "/");
+      d && (e += "b/" + encodeURIComponent(String(d)) + "/");
+      c = e || null;
+      (e = (d = !1 === Q("isLoggedIn")) ? "_/im/" : "") && (c = "");
+      var f = Q("iframes/:socialhost:"),
+        g = Q("iframes/:im_socialhost:");
+      return uc = {
+        socialhost: f,
+        ctx_socialhost: d ? g : f,
+        session_index: a,
+        session_delegate: b,
+        session_prefix: c,
+        im_prefix: e
+      };
+    },
+    Dd = function Dd(a, b) {
+      return Cd()[b] || "";
+    },
+    Ed = function Ed(a) {
+      return function (b, c) {
+        return a ? Cd()[c] || a[c] || "" : Cd()[c] || "";
+      };
+    };
+  var Fd = function Fd(a) {
+      var b;
+      a.match(/^https?%3A/i) && (b = decodeURIComponent(a));
+      return hb(document, b ? b : a);
+    },
+    Gd = function Gd(a) {
+      a = a || "canonical";
+      for (var b = document.getElementsByTagName("link"), c = 0, d = b.length; c < d; c++) {
+        var e = b[c],
+          f = e.getAttribute("rel");
+        if (f && f.toLowerCase() == a && (e = e.getAttribute("href")) && (e = Fd(e)) && null != e.match(/^https?:\/\/[\w\-_\.]+/i)) return e;
+      }
+      return window.location.href;
+    };
+  var Hd = {
+      se: "0"
+    },
+    Id = {
+      post: !0
+    },
+    Jd = {
+      style: "position:absolute;top:-10000px;width:450px;margin:0px;border-style:none"
+    },
+    Kd = "onPlusOne _ready _close _open _resizeMe _renderstart oncircled drefresh erefresh".split(" "),
+    Ld = A(K, "WI", B()),
+    Md = function Md(a, b, c) {
+      var d;
+      var e = {};
+      var f = d = a;
+      "plus" == a && b.action && (d = a + "_" + b.action, f = a + "/" + b.action);
+      (d = Q("iframes/" + d + "/url")) || (d = ":im_socialhost:/:session_prefix::im_prefix:_/widget/render/" + f + "?usegapi=1");
+      for (var g in Hd) {
+        e[g] = g + "/" + (b[g] || Hd[g]) + "/";
+      }
+      e = hb(z, d.replace(Bd, Ed(e)));
+      g = "iframes/" + a + "/params/";
+      f = {};
+      D(b, f);
+      (d = Q("lang") || Q("gwidget/lang")) && (f.hl = d);
+      Id[a] || (f.origin = window.location.origin || window.location.protocol + "//" + window.location.host);
+      f.exp = Q(g + "exp");
+      if (g = Q(g + "location")) for (d = 0; d < g.length; d++) {
+        var h = g[d];
+        f[h] = x.location[h];
+      }
+      switch (a) {
+        case "plus":
+        case "follow":
+          g = f.href;
+          d = b.action ? void 0 : "publisher";
+          g = (g = "string" == typeof g ? g : void 0) ? Fd(g) : Gd(d);
+          f.url = g;
+          delete f.href;
+          break;
+        case "plusone":
+          g = (g = b.href) ? Fd(g) : Gd();
+          f.url = g;
+          g = b.db;
+          d = Q();
+          null == g && d && (g = d.db, null == g && (g = d.gwidget && d.gwidget.db));
+          f.db = g || void 0;
+          g = b.ecp;
+          d = Q();
+          null == g && d && (g = d.ecp, null == g && (g = d.gwidget && d.gwidget.ecp));
+          f.ecp = g || void 0;
+          delete f.href;
+          break;
+        case "signin":
+          f.url = Gd();
+      }
+      K.ILI && (f.iloader = "1");
+      delete f["data-onload"];
+      delete f.rd;
+      for (var k in Hd) {
+        f[k] && delete f[k];
+      }
+      f.gsrc = Q("iframes/:source:");
+      k = Q("inline/css");
+      "undefined" !== typeof k && 0 < c && k >= c && (f.ic = "1");
+      k = /^#|^fr-/;
+      c = {};
+      for (var l in f) {
+        C(f, l) && k.test(l) && (c[l.replace(k, "")] = f[l], delete f[l]);
+      }
+      l = "q" == Q("iframes/" + a + "/params/si") ? f : c;
+      k = mc();
+      for (var n in k) {
+        !C(k, n) || C(f, n) || C(c, n) || (l[n] = k[n]);
+      }
+      n = [].concat(Kd);
+      (l = Q("iframes/" + a + "/methods")) && "object" === _typeof(l) && Na.test(l.push) && (n = n.concat(l));
+      for (var p in b) {
+        C(b, p) && /^on/.test(p) && ("plus" != a || "onconnect" != p) && (n.push(p), delete f[p]);
+      }
+      delete f.callback;
+      c._methods = n.join(",");
+      return fb(e, f, c);
+    },
+    Nd = ["style", "data-gapiscan"],
+    Pd = function Pd(a) {
+      for (var b = B(), c = 0 != a.nodeName.toLowerCase().indexOf("g:"), d = 0, e = a.attributes.length; d < e; d++) {
+        var f = a.attributes[d],
+          g = f.name,
+          h = f.value;
+        0 <= Oa.call(Nd, g) || c && 0 != g.indexOf("data-") || "null" === h || "specified" in f && !f.specified || (c && (g = g.substr(5)), b[g.toLowerCase()] = h);
+      }
+      a = a.style;
+      (c = Od(a && a.height)) && (b.height = String(c));
+      (a = Od(a && a.width)) && (b.width = String(a));
+      return b;
+    },
+    Od = function Od(a) {
+      var b = void 0;
+      "number" === typeof a ? b = a : "string" === typeof a && (b = parseInt(a, 10));
+      return b;
+    },
+    Rd = function Rd() {
+      var a = K.drw;
+      sc(function (b) {
+        if (a !== b.id && 4 != b.state && "share" != b.type) {
+          var c = b.id,
+            d = b.type,
+            e = b.url;
+          b = b.userParams;
+          var f = z.getElementById(c);
+          if (f) {
+            var g = Md(d, b, 0);
+            g ? (f = f.parentNode, e.replace(/#.*/, "").replace(/(\?|&)ic=1/, "") !== g.replace(/#.*/, "").replace(/(\?|&)ic=1/, "") && (b.dontclear = !0, b.rd = !0, b.ri = !0, b.type = d, Qd(f, b), (d = R[f.lastChild.id]) && (d.oid = c), tc(c, 4))) : delete R[c];
+          } else delete R[c];
+        }
+      });
+    };
+  var Sd,
+    Td,
+    X,
+    Ud,
+    Vd,
+    Wd = /(?:^|\s)g-((\S)*)(?:$|\s)/,
+    Xd = {
+      plusone: !0,
+      autocomplete: !0,
+      profile: !0,
+      signin: !0,
+      signin2: !0
+    };
+  Sd = A(K, "SW", B());
+  Td = A(K, "SA", B());
+  X = A(K, "SM", B());
+  Ud = A(K, "FW", []);
+  Vd = null;
+  var Zd = function Zd(a, b) {
+      Yd(void 0, !1, a, b);
+    },
+    Yd = function Yd(a, b, c, d) {
+      L("ps0", !0);
+      c = ("string" === typeof c ? document.getElementById(c) : c) || z;
+      var e = z.documentMode;
+      if (c.querySelectorAll && (!e || 8 < e)) {
+        e = d ? [d] : Xa(Sd).concat(Xa(Td)).concat(Xa(X));
+        for (var f = [], g = 0; g < e.length; g++) {
+          var h = e[g];
+          f.push(".g-" + h, "g\\:" + h);
+        }
+        e = c.querySelectorAll(f.join(","));
+      } else e = c.getElementsByTagName("*");
+      c = B();
+      for (f = 0; f < e.length; f++) {
+        g = e[f];
+        var k = g;
+        h = d;
+        var l = k.nodeName.toLowerCase(),
+          n = void 0;
+        if (k.getAttribute("data-gapiscan")) h = null;else {
+          var p = l.indexOf("g:");
+          0 == p ? n = l.substr(2) : (p = (p = String(k.className || k.getAttribute("class"))) && Wd.exec(p)) && (n = p[1]);
+          h = !n || !(Sd[n] || Td[n] || X[n]) || h && n !== h ? null : n;
+        }
+        h && (Xd[h] || 0 == g.nodeName.toLowerCase().indexOf("g:") || 0 != Xa(Pd(g)).length) && (g.setAttribute("data-gapiscan", !0), A(c, h, []).push(g));
+      }
+      if (b) for (var r in c) {
+        for (b = c[r], d = 0; d < b.length; d++) {
+          b[d].setAttribute("data-onload", !0);
+        }
+      }
+      for (var u in c) {
+        Ud.push(u);
+      }
+      L("ps1", !0);
+      if ((r = Ud.join(":")) || a) try {
+        F.load(r, a);
+      } catch (G) {
+        pc(G);
+        return;
+      }
+      if ($d(Vd || {})) for (var y in c) {
+        a = c[y];
+        u = 0;
+        for (b = a.length; u < b; u++) {
+          a[u].removeAttribute("data-gapiscan");
+        }
+        ae(y);
+      } else {
+        d = [];
+        for (y in c) {
+          for (a = c[y], u = 0, b = a.length; u < b; u++) {
+            e = a[u], be(y, e, Pd(e), d, b);
+          }
+        }
+        ce(r, d);
+      }
+    },
+    de = function de(a) {
+      var b = A(F, a, {});
+      b.go || (b.go = function (c) {
+        return Zd(c, a);
+      }, b.render = function (c, d) {
+        d = d || {};
+        d.type = a;
+        return Qd(c, d);
+      });
+    },
+    ee = function ee(a) {
+      Sd[a] = !0;
+    },
+    fe = function fe(a) {
+      Td[a] = !0;
+    },
+    ge = function ge(a) {
+      X[a] = !0;
+    };
+  var ae = function ae(a, b) {
+      var c = sb(a);
+      b && c ? (c(b), (c = b.iframeNode) && c.setAttribute("data-gapiattached", !0)) : F.load(a, function () {
+        var d = sb(a),
+          e = b && b.iframeNode,
+          f = b && b.userParams;
+        e && d ? (d(b), e.setAttribute("data-gapiattached", !0)) : (d = F[a].go, "signin2" == a ? d(e, f) : d(e && e.parentNode, f));
+      });
+    },
+    $d = function $d() {
+      return !1;
+    },
+    ce = function ce() {},
+    be = function be(a, b, c, d, e, f, g) {
+      switch (he(b, a, f)) {
+        case 0:
+          a = X[a] ? a + "_annotation" : a;
+          d = {};
+          d.iframeNode = b;
+          d.userParams = c;
+          ae(a, d);
+          break;
+        case 1:
+          if (b.parentNode) {
+            for (var h in c) {
+              if (f = C(c, h)) f = c[h], f = !!f && "object" === _typeof(f) && (!f.toString || f.toString === Object.prototype.toString || f.toString === Array.prototype.toString);
+              if (f) try {
+                c[h] = $c(c[h]);
+              } catch (y) {
+                delete c[h];
+              }
+            }
+            f = !0;
+            c.dontclear && (f = !1);
+            delete c.dontclear;
+            rc();
+            h = Md(a, c, e);
+            e = g || {};
+            e.allowPost = 1;
+            e.attributes = Jd;
+            e.dontclear = !f;
+            g = {};
+            g.userParams = c;
+            g.url = h;
+            g.type = a;
+            if (c.rd) var k = b;else k = document.createElement("div"), b.setAttribute("data-gapistub", !0), k.style.cssText = "position:absolute;width:450px;left:-10000px;", b.parentNode.insertBefore(k, b);
+            g.siteElement = k;
+            k.id || (b = k, A(Ld, a, 0), f = "___" + a + "_" + Ld[a]++, b.id = f);
+            b = B();
+            b[">type"] = a;
+            D(c, b);
+            f = h;
+            c = k;
+            h = e || {};
+            b = h.attributes || {};
+            E(!(h.allowPost || h.forcePost) || !b.onload, "onload is not supported by post iframe (allowPost or forcePost)");
+            e = b = f;
+            Ad.test(b) && (e = Q("iframes/" + e.substring(1) + "/url"), E(!!e, "Unknown iframe url config for - " + b));
+            f = hb(z, e.replace(Bd, Dd));
+            b = c.ownerDocument || z;
+            k = 0;
+            do {
+              e = h.id || ["I", xd++, "_", new Date().getTime()].join("");
+            } while (b.getElementById(e) && 5 > ++k);
+            E(5 > k, "Error creating iframe id");
+            k = {};
+            var l = {};
+            b.documentMode && 9 > b.documentMode && (k.hostiemode = b.documentMode);
+            D(h.queryParams || {}, k);
+            D(h.fragmentParams || {}, l);
+            var n = h.pfname;
+            var p = B();
+            Q("iframes/dropLegacyIdParam") || (p.id = e);
+            p._gfid = e;
+            p.parent = b.location.protocol + "//" + b.location.host;
+            var r = H(b.location.href, "parent");
+            n = n || "";
+            !n && r && (r = H(b.location.href, "_gfid", "") || H(b.location.href, "id", ""), n = H(b.location.href, "pfname", ""), n = r ? n + "/" + r : "");
+            n || (r = Zc(H(b.location.href, "jcp", ""))) && "object" == _typeof(r) && (n = (n = r.id) ? r.pfname + "/" + n : "");
+            p.pfname = n;
+            h.connectWithJsonParam && (r = {}, r.jcp = $c(p), p = r);
+            r = H(f, "rpctoken") || k.rpctoken || l.rpctoken;
+            r || (r = h.rpctoken || String(Math.round(1E8 * (hd ? qd() : pd()))), p.rpctoken = r);
+            h.rpctoken = r;
+            D(p, h.connectWithQueryParams ? k : l);
+            r = b.location.href;
+            p = B();
+            (n = H(r, "_bsh", K.bsh)) && (p._bsh = n);
+            (r = qb(r)) && (p.jsh = r);
+            h.hintInFragment ? D(p, l) : D(p, k);
+            f = fb(f, k, l, h.paramsSerializer);
+            l = B();
+            D(vd, l);
+            D(h.attributes, l);
+            l.name = l.id = e;
+            l.src = f;
+            h.eurl = f;
+            k = h || {};
+            p = !!k.allowPost;
+            if (k.forcePost || p && 2E3 < f.length) {
+              k = I(f);
+              l.src = "";
+              h.dropDataPostorigin || (l["data-postorigin"] = f);
+              f = zd(b, c, l, e);
+              if (-1 != navigator.userAgent.indexOf("WebKit")) {
+                var u = f.contentWindow.document;
+                u.open();
+                l = u.createElement("div");
+                p = {};
+                r = e + "_inner";
+                p.name = r;
+                p.src = "";
+                p.style = "display:none";
+                zd(b, l, p, r, h);
+              }
+              l = (h = k.query[0]) ? h.split("&") : [];
+              h = [];
+              for (p = 0; p < l.length; p++) {
+                r = l[p].split("=", 2), h.push([decodeURIComponent(r[0]), decodeURIComponent(r[1])]);
+              }
+              k.query = [];
+              l = db(k);
+              E(ib.test(l), "Invalid URL: " + l);
+              k = b.createElement("form");
+              k.method = "POST";
+              k.target = e;
+              k.style.display = "none";
+              e = l instanceof v ? l : Fa(l);
+              xa(k, "HTMLFormElement").action = Da(e);
+              for (e = 0; e < h.length; e++) {
+                l = b.createElement("input"), l.type = "hidden", l.name = h[e][0], l.value = h[e][1], k.appendChild(l);
+              }
+              c.appendChild(k);
+              k.submit();
+              k.parentNode.removeChild(k);
+              u && u.close();
+              u = f;
+            } else u = zd(b, c, l, e, h);
+            g.iframeNode = u;
+            g.id = u.getAttribute("id");
+            u = g.id;
+            c = B();
+            c.id = u;
+            c.userParams = g.userParams;
+            c.url = g.url;
+            c.type = g.type;
+            c.state = 1;
+            R[u] = c;
+            u = g;
+          } else u = null;
+          u && ((g = u.id) && d.push(g), ae(a, u));
+      }
+    },
+    he = function he(a, b, c) {
+      if (a && 1 === a.nodeType && b) {
+        if (c) return 1;
+        if (X[b]) {
+          if (pb[a.nodeName.toLowerCase()]) return (a = a.innerHTML) && a.replace(/^[\s\xa0]+|[\s\xa0]+$/g, "") ? 0 : 1;
+        } else {
+          if (Td[b]) return 0;
+          if (Sd[b]) return 1;
+        }
+      }
+      return null;
+    },
+    Qd = function Qd(a, b) {
+      var c = b.type;
+      delete b.type;
+      var d = ("string" === typeof a ? document.getElementById(a) : a) || void 0;
+      if (d) {
+        a = {};
+        for (var e in b) {
+          C(b, e) && (a[e.toLowerCase()] = b[e]);
+        }
+        a.rd = 1;
+        (b = !!a.ri) && delete a.ri;
+        e = [];
+        be(c, d, a, e, 0, b, void 0);
+        ce(c, e);
+      } else pc("string" === "gapi." + c + ".render: missing element " + _typeof(a) ? a : "");
+    };
+  A(F, "platform", {}).go = Zd;
+  $d = function $d(a) {
+    for (var b = ["_c", "jsl", "h"], c = 0; c < b.length && a; c++) {
+      a = a[b[c]];
+    }
+    b = qb(La.href);
+    return !a || 0 != a.indexOf("n;") && 0 != b.indexOf("n;") && a !== b;
+  };
+  ce = function ce(a, b) {
+    ie(a, b);
+  };
+  var lb = function lb(a) {
+      Yd(a, !0);
+    },
+    je = function je(a, b) {
+      b = b || [];
+      for (var c = 0; c < b.length; ++c) {
+        a(b[c]);
+      }
+      for (a = 0; a < b.length; a++) {
+        de(b[a]);
+      }
+    };
+  N.push(["platform", function (a, b, c) {
+    Vd = c;
+    b && Ud.push(b);
+    je(ee, a);
+    je(fe, c._c.annotation);
+    je(ge, c._c.bimodal);
+    ic();
+    gc();
+    if ("explicit" != Q("parsetags")) {
+      rb(a);
+      nc(mc()) && !Q("disableRealtimeCallback") && rc();
+      if (c && (a = c.callback)) {
+        var d = Ya(a);
+        delete c.callback;
+      }
+      nb(function () {
+        lb(d);
+      });
+    }
+  }]);
+  F._pl = !0;
+  var ke = function ke(a) {
+    a = (a = R[a]) ? a.oid : void 0;
+    if (a) {
+      var b = z.getElementById(a);
+      b && b.parentNode.removeChild(b);
+      delete R[a];
+      ke(a);
+    }
+  };
+  var le = /^\{h:'/,
+    me = /^!_/,
+    ne = "",
+    ie = function ie(a, b) {
+      function c() {
+        jb("message", d, "remove", "de");
+      }
+      function d(f) {
+        var g = f.data,
+          h = f.origin;
+        if (oe(g, b)) {
+          var k = e;
+          e = !1;
+          k && L("rqe");
+          pe(a, function () {
+            k && L("rqd");
+            c();
+            for (var l = A(K, "RPMQ", []), n = 0; n < l.length; n++) {
+              l[n]({
+                data: g,
+                origin: h
+              });
+            }
+          });
+        }
+      }
+      if (0 !== b.length) {
+        ne = H(La.href, "pfname", "");
+        var e = !0;
+        jb("message", d, "add", "at");
+        ac(a, c);
+      }
+    },
+    oe = function oe(a, b) {
+      a = String(a);
+      if (le.test(a)) return !0;
+      var c = !1;
+      me.test(a) && (c = !0, a = a.substr(2));
+      if (!/^\{/.test(a)) return !1;
+      var d = Zc(a);
+      if (!d) return !1;
+      a = d.f;
+      if (d.s && a && -1 != Oa.call(b, a)) {
+        if ("_renderstart" === d.s || d.s === ne + "/" + a + "::_renderstart") if (d = d.a && d.a[c ? 0 : 1], b = z.getElementById(a), tc(a, 2), d && b && d.width && d.height) {
+          a: {
+            c = b.parentNode;
+            a = d || {};
+            if (qc()) {
+              var e = b.id;
+              if (e) {
+                d = (d = R[e]) ? d.state : void 0;
+                if (1 === d || 4 === d) break a;
+                ke(e);
+              }
+            }
+            (d = c.nextSibling) && d.getAttribute && d.getAttribute("data-gapistub") && (c.parentNode.removeChild(d), c.style.cssText = "");
+            d = a.width;
+            var f = a.height,
+              g = c.style;
+            g.textIndent = "0";
+            g.margin = "0";
+            g.padding = "0";
+            g.background = "transparent";
+            g.borderStyle = "none";
+            g.cssFloat = "none";
+            g.styleFloat = "none";
+            g.lineHeight = "normal";
+            g.fontSize = "1px";
+            g.verticalAlign = "baseline";
+            c = c.style;
+            c.display = "inline-block";
+            g = b.style;
+            g.position = "static";
+            g.left = "0";
+            g.top = "0";
+            g.visibility = "visible";
+            d && (c.width = g.width = d + "px");
+            f && (c.height = g.height = f + "px");
+            a.verticalAlign && (c.verticalAlign = a.verticalAlign);
+            e && tc(e, 3);
+          }
+          b["data-csi-wdt"] = new Date().getTime();
+        }
+        return !0;
+      }
+      return !1;
+    },
+    pe = function pe(a, b) {
+      ac(a, b);
+    };
+  var qe = function qe(a, b) {
+    this.L = a;
+    a = b || {};
+    this.fa = Number(a.maxAge) || 0;
+    this.U = a.domain;
+    this.X = a.path;
+    this.ga = !!a.secure;
+  };
+  qe.prototype.read = function () {
+    for (var a = this.L + "=", b = document.cookie.split(/;\s*/), c = 0; c < b.length; ++c) {
+      var d = b[c];
+      if (0 == d.indexOf(a)) return d.substr(a.length);
+    }
+  };
+  qe.prototype.write = function (a, b) {
+    if (!re.test(this.L)) throw "Invalid cookie name";
+    if (!se.test(a)) throw "Invalid cookie value";
+    a = this.L + "=" + a;
+    this.U && (a += ";domain=" + this.U);
+    this.X && (a += ";path=" + this.X);
+    b = "number" === typeof b ? b : this.fa;
+    if (0 <= b) {
+      var c = new Date();
+      c.setSeconds(c.getSeconds() + b);
+      a += ";expires=" + c.toUTCString();
+    }
+    this.ga && (a += ";secure");
+    document.cookie = a;
+    return !0;
+  };
+  qe.prototype.clear = function () {
+    this.write("", 0);
+  };
+  var se = /^[-+/_=.:|%&a-zA-Z0-9@]*$/,
+    re = /^[A-Z_][A-Z0-9_]{0,63}$/;
+  qe.iterate = function (a) {
+    for (var b = document.cookie.split(/;\s*/), c = 0; c < b.length; ++c) {
+      var d = b[c].split("="),
+        e = d.shift();
+      a(e, d.join("="));
+    }
+  };
+  var te = function te(a) {
+    this.B = a;
+  };
+  te.prototype.read = function () {
+    if (Y.hasOwnProperty(this.B)) return Y[this.B];
+  };
+  te.prototype.write = function (a) {
+    Y[this.B] = a;
+    return !0;
+  };
+  te.prototype.clear = function () {
+    delete Y[this.B];
+  };
+  var Y = {};
+  te.iterate = function (a) {
+    for (var b in Y) {
+      Y.hasOwnProperty(b) && a(b, Y[b]);
+    }
+  };
+  var ue = "https:" === window.location.protocol,
+    ve = ue || "http:" === window.location.protocol ? qe : te,
+    we = function we(a) {
+      var b = a.substr(1),
+        c = "",
+        d = window.location.hostname;
+      if ("" !== b) {
+        c = parseInt(b, 10);
+        if (isNaN(c)) return null;
+        b = d.split(".");
+        if (b.length < c - 1) return null;
+        b.length == c - 1 && (d = "." + d);
+      } else d = "";
+      return {
+        i: "S" == a.charAt(0),
+        domain: d,
+        l: c
+      };
+    },
+    xe = function xe() {
+      var a,
+        b = null;
+      ve.iterate(function (c, d) {
+        0 === c.indexOf("G_AUTHUSER_") && (c = we(c.substring(11)), !a || c.i && !a.i || c.i == a.i && c.l > a.l) && (a = c, b = d);
+      });
+      return {
+        ea: a,
+        F: b
+      };
+    };
+  var ye = function ye(a) {
+      if (0 !== a.indexOf("GCSC")) return null;
+      var b = {
+        W: !1
+      };
+      a = a.substr(4);
+      if (!a) return b;
+      var c = a.charAt(0);
+      a = a.substr(1);
+      var d = a.lastIndexOf("_");
+      if (-1 == d) return b;
+      var e = we(a.substr(d + 1));
+      if (null == e) return b;
+      a = a.substring(0, d);
+      if ("_" !== a.charAt(0)) return b;
+      d = "E" === c && e.i;
+      return !d && ("U" !== c || e.i) || d && !ue ? b : {
+        W: !0,
+        i: d,
+        ja: a.substr(1),
+        domain: e.domain,
+        l: e.l
+      };
+    },
+    ze = function ze(a) {
+      if (!a) return [];
+      a = a.split("=");
+      return a[1] ? a[1].split("|") : [];
+    },
+    Ae = function Ae(a) {
+      a = a.split(":");
+      return {
+        clientId: a[0].split("=")[1],
+        ia: ze(a[1]),
+        la: ze(a[2]),
+        ka: ze(a[3])
+      };
+    },
+    Be = function Be() {
+      var a = xe(),
+        b = a.ea;
+      a = a.F;
+      if (null !== a) {
+        var c;
+        ve.iterate(function (f, g) {
+          (f = ye(f)) && f.W && f.i == b.i && f.l == b.l && (c = g);
+        });
+        if (c) {
+          var d = Ae(c),
+            e = d && d.ia[Number(a)];
+          d = d && d.clientId;
+          if (e) return {
+            F: a,
+            ha: e,
+            clientId: d
+          };
+        }
+      }
+      return null;
+    };
+  var Z = function Z() {
+    this.T = Ce;
+  };
+  Z.prototype.$ = function () {
+    this.K || (this.v = 0, this.K = !0, this.Y());
+  };
+  Z.prototype.Y = function () {
+    this.K && (this.T() ? this.v = this.R : this.v = Math.min(2 * (this.v || this.R), 120), window.setTimeout(_na(this.Y, this), 1E3 * this.v));
+  };
+  Z.prototype.v = 0;
+  Z.prototype.R = 2;
+  Z.prototype.T = null;
+  Z.prototype.K = !1;
+  for (var De = 0; 64 > De; ++De) {
+    ;
+  }
+  var Ee = null;
+  qc = function qc() {
+    return K.oa = !0;
+  };
+  rc = function rc() {
+    K.oa = !0;
+    var a = Be();
+    (a = a && a.F) && hc("googleapis.config/sessionIndex", a);
+    Ee || (Ee = A(K, "ss", new Z()));
+    a = Ee;
+    a.$ && a.$();
+  };
+  var Ce = function Ce() {
+    var a = Be(),
+      b = a && a.ha || null,
+      c = a && a.clientId;
+    ac("auth", {
+      callback: function callback() {
+        var d = x.gapi.auth,
+          e = {
+            client_id: c,
+            session_state: b
+          };
+        d.checkSessionState(e, function (f) {
+          var g = e.session_state,
+            h = Q("isLoggedIn");
+          f = Q("debug/forceIm") ? !1 : g && f || !g && !f;
+          if (h = h != f) hc("isLoggedIn", f), rc(), Rd(), f || ((f = d.signOut) ? f() : (f = d.setToken) && f(null));
+          f = mc();
+          var k = Q("savedUserState");
+          g = d._guss(f.cookiepolicy);
+          k = k != g && "undefined" != typeof k;
+          hc("savedUserState", g);
+          (h || k) && nc(f) && !Q("disableRealtimeCallback") && d._pimf(f, !0);
+        });
+      }
+    });
+    return !0;
+  };
+  L("bs0", !0, window.gapi._bs);
+  L("bs1", !0);
+  delete window.gapi._bs;
+}).call(undefined);
+var gapiComplete = gapi.load("", {
+  callback: window["gapi_onload"],
+  _c: {
+    "jsl": {
+      "ci": {
+        "deviceType": "desktop",
+        "oauth-flow": {
+          "authUrl": "https://accounts.google.com/o/oauth2/auth",
+          "proxyUrl": "https://accounts.google.com/o/oauth2/postmessageRelay",
+          "disableOpt": true,
+          "idpIframeUrl": "https://accounts.google.com/o/oauth2/iframe",
+          "usegapi": false
+        },
+        "debug": {
+          "reportExceptionRate": 0.05,
+          "forceIm": false,
+          "rethrowException": false,
+          "host": "https://apis.google.com"
+        },
+        "enableMultilogin": true,
+        "googleapis.config": {
+          "auth": {
+            "useFirstPartyAuthV2": true
+          }
+        },
+        "isPlusUser": false,
+        "inline": {
+          "css": 1
+        },
+        "disableRealtimeCallback": false,
+        "drive_share": {
+          "skipInitCommand": true
+        },
+        "csi": {
+          "rate": 0.01
+        },
+        "client": {
+          "cors": false
+        },
+        "isLoggedIn": true,
+        "signInDeprecation": {
+          "rate": 0.0
+        },
+        "include_granted_scopes": true,
+        "llang": "pt",
+        "iframes": {
+          "youtube": {
+            "params": {
+              "location": ["search", "hash"]
+            },
+            "url": ":socialhost:/:session_prefix:_/widget/render/youtube?usegapi=1",
+            "methods": ["scroll", "openwindow"]
+          },
+          "ytsubscribe": {
+            "url": "https://www.youtube.com/subscribe_embed?usegapi=1"
+          },
+          "plus_circle": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix::se:_/widget/plus/circle?usegapi=1"
+          },
+          "plus_share": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix::se:_/+1/sharebutton?plusShare=true&usegapi=1"
+          },
+          "rbr_s": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix::se:_/widget/render/recobarsimplescroller"
+          },
+          ":source:": "3p",
+          "playemm": {
+            "url": "https://play.google.com/work/embedded/search?usegapi=1&usegapi=1"
+          },
+          "savetoandroidpay": {
+            "url": "https://pay.google.com/gp/v/widget/save"
+          },
+          "blogger": {
+            "params": {
+              "location": ["search", "hash"]
+            },
+            "url": ":socialhost:/:session_prefix:_/widget/render/blogger?usegapi=1",
+            "methods": ["scroll", "openwindow"]
+          },
+          "evwidget": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix:_/events/widget?usegapi=1"
+          },
+          "partnersbadge": {
+            "url": "https://www.gstatic.com/partners/badge/templates/badge.html?usegapi=1"
+          },
+          "dataconnector": {
+            "url": "https://dataconnector.corp.google.com/:session_prefix:ui/widgetview?usegapi=1"
+          },
+          "surveyoptin": {
+            "url": "https://www.google.com/shopping/customerreviews/optin?usegapi=1"
+          },
+          ":socialhost:": "https://apis.google.com",
+          "shortlists": {
+            "url": ""
+          },
+          "hangout": {
+            "url": "https://talkgadget.google.com/:session_prefix:talkgadget/_/widget"
+          },
+          "plus_followers": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/_/im/_/widget/render/plus/followers?usegapi=1"
+          },
+          "post": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix::im_prefix:_/widget/render/post?usegapi=1"
+          },
+          ":gplus_url:": "https://plus.google.com",
+          "signin": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix:_/widget/render/signin?usegapi=1",
+            "methods": ["onauth"]
+          },
+          "rbr_i": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix::se:_/widget/render/recobarinvitation"
+          },
+          "share": {
+            "url": ":socialhost:/:session_prefix::im_prefix:_/widget/render/share?usegapi=1"
+          },
+          "plusone": {
+            "params": {
+              "count": "",
+              "size": "",
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix::se:_/+1/fastbutton?usegapi=1"
+          },
+          "comments": {
+            "params": {
+              "location": ["search", "hash"]
+            },
+            "url": ":socialhost:/:session_prefix:_/widget/render/comments?usegapi=1",
+            "methods": ["scroll", "openwindow"]
+          },
+          ":im_socialhost:": "https://plus.googleapis.com",
+          "backdrop": {
+            "url": "https://clients3.google.com/cast/chromecast/home/widget/backdrop?usegapi=1"
+          },
+          "visibility": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix:_/widget/render/visibility?usegapi=1"
+          },
+          "autocomplete": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix:_/widget/render/autocomplete"
+          },
+          "additnow": {
+            "url": "https://apis.google.com/marketplace/button?usegapi=1",
+            "methods": ["launchurl"]
+          },
+          ":signuphost:": "https://plus.google.com",
+          "ratingbadge": {
+            "url": "https://www.google.com/shopping/customerreviews/badge?usegapi=1"
+          },
+          "appcirclepicker": {
+            "url": ":socialhost:/:session_prefix:_/widget/render/appcirclepicker"
+          },
+          "follow": {
+            "url": ":socialhost:/:session_prefix:_/widget/render/follow?usegapi=1"
+          },
+          "community": {
+            "url": ":ctx_socialhost:/:session_prefix::im_prefix:_/widget/render/community?usegapi=1"
+          },
+          "sharetoclassroom": {
+            "url": "https://classroom.google.com/sharewidget?usegapi=1"
+          },
+          "ytshare": {
+            "params": {
+              "url": ""
+            },
+            "url": ":socialhost:/:session_prefix:_/widget/render/ytshare?usegapi=1"
+          },
+          "plus": {
+            "url": ":socialhost:/:session_prefix:_/widget/render/badge?usegapi=1"
+          },
+          "family_creation": {
+            "params": {
+              "url": ""
+            },
+            "url": "https://families.google.com/webcreation?usegapi=1&usegapi=1"
+          },
+          "commentcount": {
+            "url": ":socialhost:/:session_prefix:_/widget/render/commentcount?usegapi=1"
+          },
+          "configurator": {
+            "url": ":socialhost:/:session_prefix:_/plusbuttonconfigurator?usegapi=1"
+          },
+          "zoomableimage": {
+            "url": "https://ssl.gstatic.com/microscope/embed/"
+          },
+          "appfinder": {
+            "url": "https://workspace.google.com/:session_prefix:marketplace/appfinder?usegapi=1"
+          },
+          "savetowallet": {
+            "url": "https://pay.google.com/gp/v/widget/save"
+          },
+          "person": {
+            "url": ":socialhost:/:session_prefix:_/widget/render/person?usegapi=1"
+          },
+          "savetodrive": {
+            "url": "https://drive.google.com/savetodrivebutton?usegapi=1",
+            "methods": ["save"]
+          },
+          "page": {
+            "url": ":socialhost:/:session_prefix:_/widget/render/page?usegapi=1"
+          },
+          "card": {
+            "url": ":socialhost:/:session_prefix:_/hovercard/card"
+          }
+        }
+      },
+      "h": "m;/_/scs/apps-static/_/js/k=oz.gapi.pt_BR.l4Bv_WkVC6g.O/am=wQE/d=1/ct=zgms/rs=AGLTcCOuH5S2uqmF6E8zOW7n3yiqiwhzNQ/m=__features__",
+      "u": "https://apis.google.com/js/platform.js",
+      "hee": true,
+      "fp": "821a251b140e4add32f87f4a7a08f044a59aa0e9",
+      "dpo": false
+    },
+    "platform": ["additnow", "backdrop", "blogger", "comments", "commentcount", "community", "donation", "family_creation", "follow", "hangout", "health", "page", "partnersbadge", "person", "playemm", "playreview", "plus", "plusone", "post", "ratingbadge", "savetoandroidpay", "savetodrive", "savetowallet", "sharetoclassroom", "shortlists", "signin2", "surveyoptin", "visibility", "youtube", "ytsubscribe", "zoomableimage"],
+    "fp": "821a251b140e4add32f87f4a7a08f044a59aa0e9",
+    "annotation": ["interactivepost", "recobar", "signin2", "autocomplete", "profile"],
+    "bimodal": ["signin", "share"]
+  }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/gapi-script/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/gapi-script/index.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "gapi": function() { return /* reexport safe */ _gapiScript__WEBPACK_IMPORTED_MODULE_0__.gapi; },
+/* harmony export */   "gapiComplete": function() { return /* reexport safe */ _gapiScript__WEBPACK_IMPORTED_MODULE_0__.gapiComplete; },
+/* harmony export */   "loadAuth2": function() { return /* binding */ loadAuth2; },
+/* harmony export */   "loadAuth2WithProps": function() { return /* binding */ loadAuth2WithProps; },
+/* harmony export */   "loadClientAuth2": function() { return /* binding */ loadClientAuth2; },
+/* harmony export */   "loadGapiInsideDOM": function() { return /* binding */ loadGapiInsideDOM; }
+/* harmony export */ });
+/* harmony import */ var _gapiScript__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gapiScript */ "./node_modules/gapi-script/gapiScript.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+/**
+ * Function to load gapi auth2 from a gapi that you provied
+ * Check full docs here: https://developers.google.com/identity/sign-in/web/reference#auth_setup
+ * @param {Object} gapiScript gapi script object
+ * @param {string} clientId Your google clientID string
+ * @param {Array.<string[]>} scopes The scopes to request, as a space-delimited string. Optional if fetch_basic_profile is not set to false. Check possible scopes on google docs: https://developers.google.com/identity/protocols/oauth2/scopes
+ */
+var loadAuth2 = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(gapiScript, clientId, scopes) {
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            return _context.abrupt("return", new Promise(function (resolve) {
+              gapiScript.load('auth2', function () {
+                resolve(gapiScript.auth2.init({
+                  client_id: clientId,
+                  scope: scopes
+                }));
+              });
+            }));
+          case 1:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return function loadAuth2(_x, _x2, _x3) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/**
+ * Function to init gapi auth2 with props
+ * @param {Object} gapiScript gapi script object
+ * @param {*} props Possible props to init gapi auth2, check the options on google docs: https://developers.google.com/identity/sign-in/web/reference#gapiauth2clientconfig
+ */
+var loadAuth2WithProps = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(gapiScript, props) {
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            return _context2.abrupt("return", new Promise(function (resolve) {
+              gapiScript.load('auth2', function () {
+                resolve(gapiScript.auth2.init(props));
+              });
+            }));
+          case 1:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return function loadAuth2WithProps(_x4, _x5) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+/**
+ *
+ * @param {Object} gapiScript gapi script object
+ * @param {string} clientId Your google clientID string
+ * @param {Array.<string[]>} scopes The scopes to request, as a space-delimited string. Optional if fetch_basic_profile is not set to false. Check possible scopes on google docs: https://developers.google.com/identity/protocols/oauth2/scopes
+ */
+var loadClientAuth2 = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(gapiScript, clientId, scopes) {
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            return _context3.abrupt("return", new Promise(function (resolve) {
+              gapiScript.load('client', function () {
+                resolve(gapiScript.client.init({
+                  client_id: clientId,
+                  scope: scopes
+                }));
+              });
+              gapiScript.load('auth2', function () {
+                resolve(gapiScript.client.init({
+                  client_id: clientId,
+                  scope: scopes
+                }));
+              });
+            }));
+          case 1:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return function loadClientAuth2(_x6, _x7, _x8) {
+    return _ref3.apply(this, arguments);
+  };
+}();
+
+/**
+ * A very special function to load the gapi inside the DOM, directly.
+ * So it'll load the real and most recent gapi-scrip from google and attach to DOM:
+ * let gapi = loadGapiInsideDOM();
+ * Now you can use it anywhere.
+ */
+var loadGapiInsideDOM = /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+    return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            return _context5.abrupt("return", new Promise(function (resolve) {
+              var element = document.getElementsByTagName('script')[0];
+              var js = document.createElement('script');
+              js.id = 'google-platform';
+              js.src = '//apis.google.com/js/platform.js';
+              js.async = true;
+              js.defer = true;
+              element.parentNode.insertBefore(js, element);
+              js.onload = /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+                return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+                  while (1) {
+                    switch (_context4.prev = _context4.next) {
+                      case 0:
+                        resolve(window.gapi);
+                      case 1:
+                      case "end":
+                        return _context4.stop();
+                    }
+                  }
+                }, _callee4);
+              }));
+            }));
+          case 1:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5);
+  }));
+  return function loadGapiInsideDOM() {
+    return _ref4.apply(this, arguments);
+  };
+}();
+
 
 /***/ }),
 
@@ -24283,6 +31010,727 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-google-login/dist/google-login.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-google-login/dist/google-login.js ***!
+  \**************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+/* module decorator */ module = __webpack_require__.nmd(module);
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+!function (e, t) {
+  "object" == ( false ? 0 : _typeof(exports)) && "object" == ( false ? 0 : _typeof(module)) ? module.exports = t(__webpack_require__(/*! react */ "./node_modules/react/index.js")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! react */ "./node_modules/react/index.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (t),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : 0;
+}("undefined" != typeof self ? self : this, function (e) {
+  return o = {}, t.m = n = [function (t) {
+    t.exports = e;
+  }, function (e, t, n) {
+    e.exports = n(2)();
+  }, function (e, t, n) {
+    "use strict";
+
+    function o() {}
+    function r() {}
+    var i = n(3);
+    r.resetWarningCache = o, e.exports = function () {
+      function e(e, t, n, o, r, a) {
+        if (a !== i) {
+          var c = Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw c.name = "Invariant Violation", c;
+        }
+      }
+      function t() {
+        return e;
+      }
+      var n = {
+        array: e.isRequired = e,
+        bool: e,
+        func: e,
+        number: e,
+        object: e,
+        string: e,
+        symbol: e,
+        any: e,
+        arrayOf: t,
+        element: e,
+        elementType: e,
+        instanceOf: t,
+        node: e,
+        objectOf: t,
+        oneOf: t,
+        oneOfType: t,
+        shape: t,
+        exact: t,
+        checkPropTypes: r,
+        resetWarningCache: o
+      };
+      return n.PropTypes = n;
+    };
+  }, function (e) {
+    "use strict";
+
+    e.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+  }, function (e, t, n) {
+    "use strict";
+
+    function o(e, t) {
+      return function (e) {
+        if (Array.isArray(e)) return e;
+      }(e) || function (e, t) {
+        if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
+          var n = [],
+            o = !0,
+            r = !1,
+            i = void 0;
+          try {
+            for (var a, c = e[Symbol.iterator](); !(o = (a = c.next()).done) && (n.push(a.value), !t || n.length !== t); o = !0) {
+              ;
+            }
+          } catch (e) {
+            r = !0, i = e;
+          } finally {
+            try {
+              o || null == c.return || c.return();
+            } finally {
+              if (r) throw i;
+            }
+          }
+          return n;
+        }
+      }(e, t) || function (e, t) {
+        if (e) {
+          if ("string" == typeof e) return r(e, t);
+          var n = Object.prototype.toString.call(e).slice(8, -1);
+          return "Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? r(e, t) : void 0;
+        }
+      }(e, t) || function () {
+        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+      }();
+    }
+    function r(e, t) {
+      null != t && t <= e.length || (t = e.length);
+      for (var n = 0, o = Array(t); n < t; n++) {
+        o[n] = e[n];
+      }
+      return o;
+    }
+    function i(e, t) {
+      return function (e) {
+        if (Array.isArray(e)) return e;
+      }(e) || function (e, t) {
+        if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
+          var n = [],
+            o = !0,
+            r = !1,
+            i = void 0;
+          try {
+            for (var a, c = e[Symbol.iterator](); !(o = (a = c.next()).done) && (n.push(a.value), !t || n.length !== t); o = !0) {
+              ;
+            }
+          } catch (e) {
+            r = !0, i = e;
+          } finally {
+            try {
+              o || null == c.return || c.return();
+            } finally {
+              if (r) throw i;
+            }
+          }
+          return n;
+        }
+      }(e, t) || function (e, t) {
+        if (e) {
+          if ("string" == typeof e) return a(e, t);
+          var n = Object.prototype.toString.call(e).slice(8, -1);
+          return "Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? a(e, t) : void 0;
+        }
+      }(e, t) || function () {
+        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+      }();
+    }
+    function a(e, t) {
+      null != t && t <= e.length || (t = e.length);
+      for (var n = 0, o = Array(t); n < t; n++) {
+        o[n] = e[n];
+      }
+      return o;
+    }
+    function c(e, t) {
+      return function (e) {
+        if (Array.isArray(e)) return e;
+      }(e) || function (e, t) {
+        if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
+          var n = [],
+            o = !0,
+            r = !1,
+            i = void 0;
+          try {
+            for (var a, c = e[Symbol.iterator](); !(o = (a = c.next()).done) && (n.push(a.value), !t || n.length !== t); o = !0) {
+              ;
+            }
+          } catch (e) {
+            r = !0, i = e;
+          } finally {
+            try {
+              o || null == c.return || c.return();
+            } finally {
+              if (r) throw i;
+            }
+          }
+          return n;
+        }
+      }(e, t) || function (e, t) {
+        if (e) {
+          if ("string" == typeof e) return u(e, t);
+          var n = Object.prototype.toString.call(e).slice(8, -1);
+          return "Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? u(e, t) : void 0;
+        }
+      }(e, t) || function () {
+        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+      }();
+    }
+    function u(e, t) {
+      null != t && t <= e.length || (t = e.length);
+      for (var n = 0, o = Array(t); n < t; n++) {
+        o[n] = e[n];
+      }
+      return o;
+    }
+    function l(e, t) {
+      return function (e) {
+        if (Array.isArray(e)) return e;
+      }(e) || function (e, t) {
+        if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
+          var n = [],
+            o = !0,
+            r = !1,
+            i = void 0;
+          try {
+            for (var a, c = e[Symbol.iterator](); !(o = (a = c.next()).done) && (n.push(a.value), !t || n.length !== t); o = !0) {
+              ;
+            }
+          } catch (e) {
+            r = !0, i = e;
+          } finally {
+            try {
+              o || null == c.return || c.return();
+            } finally {
+              if (r) throw i;
+            }
+          }
+          return n;
+        }
+      }(e, t) || function (e, t) {
+        if (e) {
+          if ("string" == typeof e) return s(e, t);
+          var n = Object.prototype.toString.call(e).slice(8, -1);
+          return "Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? s(e, t) : void 0;
+        }
+      }(e, t) || function () {
+        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+      }();
+    }
+    function s(e, t) {
+      null != t && t <= e.length || (t = e.length);
+      for (var n = 0, o = Array(t); n < t; n++) {
+        o[n] = e[n];
+      }
+      return o;
+    }
+    function f(e, t, n, o, r, i) {
+      var a = e.getElementsByTagName(t)[0],
+        c = a,
+        u = a;
+      (u = e.createElement(t)).id = n, u.src = o, c && c.parentNode ? c.parentNode.insertBefore(u, c) : e.head.appendChild(u), u.onerror = i, u.onload = r;
+    }
+    function d(e, t) {
+      var n = e.getElementById(t);
+      n && n.parentNode.removeChild(n);
+    }
+    function p(e) {
+      return b.a.createElement("span", {
+        style: {
+          paddingRight: 10,
+          fontWeight: 500,
+          paddingLeft: e.icon ? 0 : 10,
+          paddingTop: 10,
+          paddingBottom: 10
+        }
+      }, e.children);
+    }
+    function g(e) {
+      return b.a.createElement("div", {
+        style: {
+          marginRight: 10,
+          background: e.active ? "#eee" : "#fff",
+          padding: 10,
+          borderRadius: 2
+        }
+      }, b.a.createElement("svg", {
+        width: "18",
+        height: "18",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, b.a.createElement("g", {
+        fill: "#000",
+        fillRule: "evenodd"
+      }, b.a.createElement("path", {
+        d: "M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z",
+        fill: "#EA4335"
+      }), b.a.createElement("path", {
+        d: "M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z",
+        fill: "#4285F4"
+      }), b.a.createElement("path", {
+        d: "M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z",
+        fill: "#FBBC05"
+      }), b.a.createElement("path", {
+        d: "M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z",
+        fill: "#34A853"
+      }), b.a.createElement("path", {
+        fill: "none",
+        d: "M0 0h18v18H0z"
+      }))));
+    }
+    function y(e) {
+      var t = i(Object(m.useState)(!1), 2),
+        n = t[0],
+        o = t[1],
+        r = i(Object(m.useState)(!1), 2),
+        a = r[0],
+        c = r[1],
+        u = e.tag,
+        l = e.type,
+        s = e.className,
+        f = e.disabledStyle,
+        d = e.buttonText,
+        y = e.children,
+        v = e.render,
+        S = e.theme,
+        j = e.icon,
+        O = e.disabled,
+        x = h({
+          onSuccess: e.onSuccess,
+          onAutoLoadFinished: e.onAutoLoadFinished,
+          onRequest: e.onRequest,
+          onFailure: e.onFailure,
+          onScriptLoadFailure: e.onScriptLoadFailure,
+          clientId: e.clientId,
+          cookiePolicy: e.cookiePolicy,
+          loginHint: e.loginHint,
+          hostedDomain: e.hostedDomain,
+          autoLoad: e.autoLoad,
+          isSignedIn: e.isSignedIn,
+          fetchBasicProfile: e.fetchBasicProfile,
+          redirectUri: e.redirectUri,
+          discoveryDocs: e.discoveryDocs,
+          uxMode: e.uxMode,
+          scope: e.scope,
+          accessType: e.accessType,
+          responseType: e.responseType,
+          jsSrc: e.jsSrc,
+          prompt: e.prompt
+        }),
+        I = x.signIn,
+        w = O || !x.loaded;
+      if (v) return v({
+        onClick: I,
+        disabled: w
+      });
+      var k = {
+          backgroundColor: "dark" === S ? "rgb(66, 133, 244)" : "#fff",
+          display: "inline-flex",
+          alignItems: "center",
+          color: "dark" === S ? "#fff" : "rgba(0, 0, 0, .54)",
+          boxShadow: "0 2px 2px 0 rgba(0, 0, 0, .24), 0 0 1px 0 rgba(0, 0, 0, .24)",
+          padding: 0,
+          borderRadius: 2,
+          border: "1px solid transparent",
+          fontSize: 14,
+          fontWeight: "500",
+          fontFamily: "Roboto, sans-serif"
+        },
+        A = {
+          cursor: "pointer",
+          backgroundColor: "dark" === S ? "#3367D6" : "#eee",
+          color: "dark" === S ? "#fff" : "rgba(0, 0, 0, .54)",
+          opacity: 1
+        },
+        _ = w ? Object.assign({}, k, f) : a ? Object.assign({}, k, A) : n ? Object.assign({}, k, {
+          cursor: "pointer",
+          opacity: .9
+        }) : k;
+      return b.a.createElement(u, {
+        onMouseEnter: function onMouseEnter() {
+          return o(!0);
+        },
+        onMouseLeave: function onMouseLeave() {
+          o(!1), c(!1);
+        },
+        onMouseDown: function onMouseDown() {
+          return c(!0);
+        },
+        onMouseUp: function onMouseUp() {
+          return c(!1);
+        },
+        onClick: I,
+        style: _,
+        type: l,
+        disabled: w,
+        className: s
+      }, [j && b.a.createElement(g, {
+        key: 1,
+        active: a
+      }), b.a.createElement(p, {
+        icon: j,
+        key: 2
+      }, y || d)]);
+    }
+    n.r(t), n.d(t, "default", function () {
+      return S;
+    }), n.d(t, "GoogleLogin", function () {
+      return S;
+    }), n.d(t, "GoogleLogout", function () {
+      return O;
+    }), n.d(t, "useGoogleLogin", function () {
+      return h;
+    }), n.d(t, "useGoogleLogout", function () {
+      return j;
+    });
+    var m = n(0),
+      b = n.n(m),
+      h = (n(1), function (e) {
+        function t(e) {
+          var t = e.getBasicProfile(),
+            n = e.getAuthResponse(!0);
+          e.googleId = t.getId(), e.tokenObj = n, e.tokenId = n.id_token, e.accessToken = n.access_token, e.profileObj = {
+            googleId: t.getId(),
+            imageUrl: t.getImageUrl(),
+            email: t.getEmail(),
+            name: t.getName(),
+            givenName: t.getGivenName(),
+            familyName: t.getFamilyName()
+          }, i(e);
+        }
+        function n(e) {
+          if (e && e.preventDefault(), P) {
+            var n = window.gapi.auth2.getAuthInstance(),
+              o = {
+                prompt: L
+              };
+            p(), "code" === _ ? n.grantOfflineAccess(o).then(function (e) {
+              return i(e);
+            }, function (e) {
+              return l(e);
+            }) : n.signIn(o).then(function (e) {
+              return t(e);
+            }, function (e) {
+              return l(e);
+            });
+          }
+        }
+        var r = e.onSuccess,
+          i = void 0 === r ? function () {} : r,
+          a = e.onAutoLoadFinished,
+          c = void 0 === a ? function () {} : a,
+          u = e.onFailure,
+          l = void 0 === u ? function () {} : u,
+          s = e.onRequest,
+          p = void 0 === s ? function () {} : s,
+          g = e.onScriptLoadFailure,
+          y = e.clientId,
+          b = e.cookiePolicy,
+          h = e.loginHint,
+          v = e.hostedDomain,
+          S = e.autoLoad,
+          j = e.isSignedIn,
+          O = e.fetchBasicProfile,
+          x = e.redirectUri,
+          I = e.discoveryDocs,
+          w = e.uxMode,
+          k = e.scope,
+          A = e.accessType,
+          _ = e.responseType,
+          E = e.jsSrc,
+          T = void 0 === E ? "https://apis.google.com/js/api.js" : E,
+          L = e.prompt,
+          M = o(Object(m.useState)(!1), 2),
+          P = M[0],
+          C = M[1];
+        return Object(m.useEffect)(function () {
+          var e = !1,
+            n = g || l;
+          return f(document, "script", "google-login", T, function () {
+            var o = {
+              client_id: y,
+              cookie_policy: b,
+              login_hint: h,
+              hosted_domain: v,
+              fetch_basic_profile: O,
+              discoveryDocs: I,
+              ux_mode: w,
+              redirect_uri: x,
+              scope: k,
+              access_type: A
+            };
+            "code" === _ && (o.access_type = "offline"), window.gapi.load("auth2", function () {
+              var r = window.gapi.auth2.getAuthInstance();
+              r ? r.then(function () {
+                e || (j && r.isSignedIn.get() ? (C(!0), c(!0), t(r.currentUser.get())) : (C(!0), c(!1)));
+              }, function (e) {
+                l(e);
+              }) : window.gapi.auth2.init(o).then(function (n) {
+                if (!e) {
+                  C(!0);
+                  var o = j && n.isSignedIn.get();
+                  c(o), o && t(n.currentUser.get());
+                }
+              }, function (e) {
+                C(!0), c(!1), n(e);
+              });
+            });
+          }, function (e) {
+            n(e);
+          }), function () {
+            e = !0, d(document, "google-login");
+          };
+        }, []), Object(m.useEffect)(function () {
+          S && n();
+        }, [P]), {
+          signIn: n,
+          loaded: P
+        };
+      });
+    function v(e) {
+      var t = l(Object(m.useState)(!1), 2),
+        n = t[0],
+        o = t[1],
+        r = l(Object(m.useState)(!1), 2),
+        i = r[0],
+        a = r[1],
+        c = e.tag,
+        u = e.type,
+        s = e.className,
+        f = e.disabledStyle,
+        d = e.buttonText,
+        y = e.children,
+        h = e.render,
+        v = e.theme,
+        S = e.icon,
+        O = e.disabled,
+        x = j({
+          jsSrc: e.jsSrc,
+          onFailure: e.onFailure,
+          onScriptLoadFailure: e.onScriptLoadFailure,
+          clientId: e.clientId,
+          cookiePolicy: e.cookiePolicy,
+          loginHint: e.loginHint,
+          hostedDomain: e.hostedDomain,
+          fetchBasicProfile: e.fetchBasicProfile,
+          discoveryDocs: e.discoveryDocs,
+          uxMode: e.uxMode,
+          redirectUri: e.redirectUri,
+          scope: e.scope,
+          accessType: e.accessType,
+          onLogoutSuccess: e.onLogoutSuccess
+        }),
+        I = x.signOut,
+        w = O || !x.loaded;
+      if (h) return h({
+        onClick: I,
+        disabled: w
+      });
+      var k = {
+          backgroundColor: "dark" === v ? "rgb(66, 133, 244)" : "#fff",
+          display: "inline-flex",
+          alignItems: "center",
+          color: "dark" === v ? "#fff" : "rgba(0, 0, 0, .54)",
+          boxShadow: "0 2px 2px 0 rgba(0, 0, 0, .24), 0 0 1px 0 rgba(0, 0, 0, .24)",
+          padding: 0,
+          borderRadius: 2,
+          border: "1px solid transparent",
+          fontSize: 14,
+          fontWeight: "500",
+          fontFamily: "Roboto, sans-serif"
+        },
+        A = {
+          cursor: "pointer",
+          backgroundColor: "dark" === v ? "#3367D6" : "#eee",
+          color: "dark" === v ? "#fff" : "rgba(0, 0, 0, .54)",
+          opacity: 1
+        },
+        _ = w ? Object.assign({}, k, f) : i ? Object.assign({}, k, A) : n ? Object.assign({}, k, {
+          cursor: "pointer",
+          opacity: .9
+        }) : k;
+      return b.a.createElement(c, {
+        onMouseEnter: function onMouseEnter() {
+          return o(!0);
+        },
+        onMouseLeave: function onMouseLeave() {
+          o(!1), a(!1);
+        },
+        onMouseDown: function onMouseDown() {
+          return a(!0);
+        },
+        onMouseUp: function onMouseUp() {
+          return a(!1);
+        },
+        onClick: I,
+        style: _,
+        type: u,
+        disabled: w,
+        className: s
+      }, [S && b.a.createElement(g, {
+        key: 1,
+        active: i
+      }), b.a.createElement(p, {
+        icon: S,
+        key: 2
+      }, y || d)]);
+    }
+    y.defaultProps = {
+      type: "button",
+      tag: "button",
+      buttonText: "Sign in with Google",
+      scope: "profile email",
+      accessType: "online",
+      prompt: "",
+      cookiePolicy: "single_host_origin",
+      fetchBasicProfile: !0,
+      isSignedIn: !1,
+      uxMode: "popup",
+      disabledStyle: {
+        opacity: .6
+      },
+      icon: !0,
+      theme: "light",
+      onRequest: function onRequest() {}
+    };
+    var S = y,
+      j = function j(e) {
+        var t = e.jsSrc,
+          n = void 0 === t ? "https://apis.google.com/js/api.js" : t,
+          o = e.onFailure,
+          r = e.onScriptLoadFailure,
+          i = e.clientId,
+          a = e.cookiePolicy,
+          u = e.loginHint,
+          l = e.hostedDomain,
+          s = e.fetchBasicProfile,
+          p = e.discoveryDocs,
+          g = e.uxMode,
+          y = e.redirectUri,
+          b = e.scope,
+          h = e.accessType,
+          v = e.onLogoutSuccess,
+          S = c(Object(m.useState)(!1), 2),
+          j = S[0],
+          O = S[1],
+          x = Object(m.useCallback)(function () {
+            if (window.gapi) {
+              var e = window.gapi.auth2.getAuthInstance();
+              null != e && e.then(function () {
+                e.signOut().then(function () {
+                  e.disconnect(), v();
+                });
+              }, function (e) {
+                return o(e);
+              });
+            }
+          }, [v]);
+        return Object(m.useEffect)(function () {
+          var e = r || o;
+          return f(document, "script", "google-login", n, function () {
+            var t = {
+              client_id: i,
+              cookie_policy: a,
+              login_hint: u,
+              hosted_domain: l,
+              fetch_basic_profile: s,
+              discoveryDocs: p,
+              ux_mode: g,
+              redirect_uri: y,
+              scope: b,
+              access_type: h
+            };
+            window.gapi.load("auth2", function () {
+              window.gapi.auth2.getAuthInstance() ? O(!0) : window.gapi.auth2.init(t).then(function () {
+                return O(!0);
+              }, function (t) {
+                return e(t);
+              });
+            });
+          }, function (t) {
+            e(t);
+          }), function () {
+            d(document, "google-login");
+          };
+        }, []), {
+          signOut: x,
+          loaded: j
+        };
+      };
+    v.defaultProps = {
+      type: "button",
+      tag: "button",
+      buttonText: "Logout of Google",
+      disabledStyle: {
+        opacity: .6
+      },
+      icon: !0,
+      theme: "light",
+      jsSrc: "https://apis.google.com/js/api.js"
+    };
+    var O = v;
+  }], t.c = o, t.d = function (e, n, o) {
+    t.o(e, n) || Object.defineProperty(e, n, {
+      enumerable: !0,
+      get: o
+    });
+  }, t.r = function (e) {
+    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+      value: "Module"
+    }), Object.defineProperty(e, "__esModule", {
+      value: !0
+    });
+  }, t.t = function (e, n) {
+    if (1 & n && (e = t(e)), 8 & n) return e;
+    if (4 & n && "object" == _typeof(e) && e && e.__esModule) return e;
+    var o = Object.create(null);
+    if (t.r(o), Object.defineProperty(o, "default", {
+      enumerable: !0,
+      value: e
+    }), 2 & n && "string" != typeof e) for (var r in e) {
+      t.d(o, r, function (t) {
+        return e[t];
+      }.bind(null, r));
+    }
+    return o;
+  }, t.n = function (e) {
+    var n = e && e.__esModule ? function () {
+      return e.default;
+    } : function () {
+      return e;
+    };
+    return t.d(n, "a", n), n;
+  }, t.o = function (e, t) {
+    return Object.prototype.hasOwnProperty.call(e, t);
+  }, t.p = "", t(t.s = 4);
+  function t(e) {
+    if (o[e]) return o[e].exports;
+    var r = o[e] = {
+      i: e,
+      l: !1,
+      exports: {}
+    };
+    return n[e].call(r.exports, r, r.exports, t), r.l = !0, r.exports;
+  }
+  var n, o;
+});
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -28090,6 +35538,2424 @@ if (true) {
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-redux/node_modules/react-is/cjs/react-is.development.js");
 }
+
+/***/ }),
+
+/***/ "./node_modules/react-router-dom/dist/index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-router-dom/dist/index.js ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AbortedDeferredError": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.AbortedDeferredError; },
+/* harmony export */   "Await": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.Await; },
+/* harmony export */   "BrowserRouter": function() { return /* binding */ BrowserRouter; },
+/* harmony export */   "Form": function() { return /* binding */ Form; },
+/* harmony export */   "HashRouter": function() { return /* binding */ HashRouter; },
+/* harmony export */   "Link": function() { return /* binding */ Link; },
+/* harmony export */   "MemoryRouter": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.MemoryRouter; },
+/* harmony export */   "NavLink": function() { return /* binding */ NavLink; },
+/* harmony export */   "Navigate": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.Navigate; },
+/* harmony export */   "NavigationType": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.Action; },
+/* harmony export */   "Outlet": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.Outlet; },
+/* harmony export */   "Route": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.Route; },
+/* harmony export */   "Router": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.Router; },
+/* harmony export */   "RouterProvider": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.RouterProvider; },
+/* harmony export */   "Routes": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.Routes; },
+/* harmony export */   "ScrollRestoration": function() { return /* binding */ ScrollRestoration; },
+/* harmony export */   "UNSAFE_DataRouterContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataRouterContext; },
+/* harmony export */   "UNSAFE_DataRouterStateContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataRouterStateContext; },
+/* harmony export */   "UNSAFE_DataStaticRouterContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataStaticRouterContext; },
+/* harmony export */   "UNSAFE_LocationContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_LocationContext; },
+/* harmony export */   "UNSAFE_NavigationContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_NavigationContext; },
+/* harmony export */   "UNSAFE_RouteContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_RouteContext; },
+/* harmony export */   "UNSAFE_enhanceManualRouteObjects": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_enhanceManualRouteObjects; },
+/* harmony export */   "UNSAFE_useScrollRestoration": function() { return /* binding */ useScrollRestoration; },
+/* harmony export */   "createBrowserRouter": function() { return /* binding */ createBrowserRouter; },
+/* harmony export */   "createHashRouter": function() { return /* binding */ createHashRouter; },
+/* harmony export */   "createMemoryRouter": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.createMemoryRouter; },
+/* harmony export */   "createPath": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.createPath; },
+/* harmony export */   "createRoutesFromChildren": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.createRoutesFromChildren; },
+/* harmony export */   "createRoutesFromElements": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.createRoutesFromElements; },
+/* harmony export */   "createSearchParams": function() { return /* binding */ createSearchParams; },
+/* harmony export */   "defer": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.defer; },
+/* harmony export */   "generatePath": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.generatePath; },
+/* harmony export */   "isRouteErrorResponse": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.isRouteErrorResponse; },
+/* harmony export */   "json": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.json; },
+/* harmony export */   "matchPath": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.matchPath; },
+/* harmony export */   "matchRoutes": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.matchRoutes; },
+/* harmony export */   "parsePath": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.parsePath; },
+/* harmony export */   "redirect": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.redirect; },
+/* harmony export */   "renderMatches": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.renderMatches; },
+/* harmony export */   "resolvePath": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.resolvePath; },
+/* harmony export */   "unstable_HistoryRouter": function() { return /* binding */ HistoryRouter; },
+/* harmony export */   "useActionData": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useActionData; },
+/* harmony export */   "useAsyncError": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useAsyncError; },
+/* harmony export */   "useAsyncValue": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useAsyncValue; },
+/* harmony export */   "useBeforeUnload": function() { return /* binding */ useBeforeUnload; },
+/* harmony export */   "useFetcher": function() { return /* binding */ useFetcher; },
+/* harmony export */   "useFetchers": function() { return /* binding */ useFetchers; },
+/* harmony export */   "useFormAction": function() { return /* binding */ useFormAction; },
+/* harmony export */   "useHref": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useHref; },
+/* harmony export */   "useInRouterContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useInRouterContext; },
+/* harmony export */   "useLinkClickHandler": function() { return /* binding */ useLinkClickHandler; },
+/* harmony export */   "useLoaderData": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useLoaderData; },
+/* harmony export */   "useLocation": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation; },
+/* harmony export */   "useMatch": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useMatch; },
+/* harmony export */   "useMatches": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useMatches; },
+/* harmony export */   "useNavigate": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigate; },
+/* harmony export */   "useNavigation": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigation; },
+/* harmony export */   "useNavigationType": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigationType; },
+/* harmony export */   "useOutlet": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useOutlet; },
+/* harmony export */   "useOutletContext": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useOutletContext; },
+/* harmony export */   "useParams": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useParams; },
+/* harmony export */   "useResolvedPath": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useResolvedPath; },
+/* harmony export */   "useRevalidator": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useRevalidator; },
+/* harmony export */   "useRouteError": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useRouteError; },
+/* harmony export */   "useRouteLoaderData": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useRouteLoaderData; },
+/* harmony export */   "useRoutes": function() { return /* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_2__.useRoutes; },
+/* harmony export */   "useSearchParams": function() { return /* binding */ useSearchParams; },
+/* harmony export */   "useSubmit": function() { return /* binding */ useSubmit; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @remix-run/router */ "./node_modules/@remix-run/router/dist/router.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+/**
+ * React Router DOM v6.6.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+
+
+
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+var defaultMethod = "get";
+var defaultEncType = "application/x-www-form-urlencoded";
+function isHtmlElement(object) {
+  return object != null && typeof object.tagName === "string";
+}
+function isButtonElement(object) {
+  return isHtmlElement(object) && object.tagName.toLowerCase() === "button";
+}
+function isFormElement(object) {
+  return isHtmlElement(object) && object.tagName.toLowerCase() === "form";
+}
+function isInputElement(object) {
+  return isHtmlElement(object) && object.tagName.toLowerCase() === "input";
+}
+function isModifiedEvent(event) {
+  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+}
+function shouldProcessLinkClick(event, target) {
+  return event.button === 0 && (
+  // Ignore everything but left clicks
+  !target || target === "_self") &&
+  // Let browser handle "target=_blank" etc.
+  !isModifiedEvent(event) // Ignore clicks with modifier keys
+  ;
+}
+/**
+ * Creates a URLSearchParams object using the given initializer.
+ *
+ * This is identical to `new URLSearchParams(init)` except it also
+ * supports arrays as values in the object form of the initializer
+ * instead of just strings. This is convenient when you need multiple
+ * values for a given key, but don't want to use an array initializer.
+ *
+ * For example, instead of:
+ *
+ *   let searchParams = new URLSearchParams([
+ *     ['sort', 'name'],
+ *     ['sort', 'price']
+ *   ]);
+ *
+ * you can do:
+ *
+ *   let searchParams = createSearchParams({
+ *     sort: ['name', 'price']
+ *   });
+ */
+
+function createSearchParams(init) {
+  if (init === void 0) {
+    init = "";
+  }
+  return new URLSearchParams(typeof init === "string" || Array.isArray(init) || init instanceof URLSearchParams ? init : Object.keys(init).reduce(function (memo, key) {
+    var value = init[key];
+    return memo.concat(Array.isArray(value) ? value.map(function (v) {
+      return [key, v];
+    }) : [[key, value]]);
+  }, []));
+}
+function getSearchParamsForLocation(locationSearch, defaultSearchParams) {
+  var searchParams = createSearchParams(locationSearch);
+  var _iterator = _createForOfIteratorHelper(defaultSearchParams.keys()),
+    _step;
+  try {
+    var _loop = function _loop() {
+      var key = _step.value;
+      if (!searchParams.has(key)) {
+        defaultSearchParams.getAll(key).forEach(function (value) {
+          searchParams.append(key, value);
+        });
+      }
+    };
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      _loop();
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+  return searchParams;
+}
+function getFormSubmissionInfo(target, defaultAction, options) {
+  var method;
+  var action;
+  var encType;
+  var formData;
+  if (isFormElement(target)) {
+    var submissionTrigger = options.submissionTrigger;
+    method = options.method || target.getAttribute("method") || defaultMethod;
+    action = options.action || target.getAttribute("action") || defaultAction;
+    encType = options.encType || target.getAttribute("enctype") || defaultEncType;
+    formData = new FormData(target);
+    if (submissionTrigger && submissionTrigger.name) {
+      formData.append(submissionTrigger.name, submissionTrigger.value);
+    }
+  } else if (isButtonElement(target) || isInputElement(target) && (target.type === "submit" || target.type === "image")) {
+    var form = target.form;
+    if (form == null) {
+      throw new Error("Cannot submit a <button> or <input type=\"submit\"> without a <form>");
+    } // <button>/<input type="submit"> may override attributes of <form>
+
+    method = options.method || target.getAttribute("formmethod") || form.getAttribute("method") || defaultMethod;
+    action = options.action || target.getAttribute("formaction") || form.getAttribute("action") || defaultAction;
+    encType = options.encType || target.getAttribute("formenctype") || form.getAttribute("enctype") || defaultEncType;
+    formData = new FormData(form); // Include name + value from a <button>, appending in case the button name
+    // matches an existing input name
+
+    if (target.name) {
+      formData.append(target.name, target.value);
+    }
+  } else if (isHtmlElement(target)) {
+    throw new Error("Cannot submit element that is not <form>, <button>, or " + "<input type=\"submit|image\">");
+  } else {
+    method = options.method || defaultMethod;
+    action = options.action || defaultAction;
+    encType = options.encType || defaultEncType;
+    if (target instanceof FormData) {
+      formData = target;
+    } else {
+      formData = new FormData();
+      if (target instanceof URLSearchParams) {
+        var _iterator2 = _createForOfIteratorHelper(target),
+          _step2;
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var _step2$value = _slicedToArray(_step2.value, 2),
+              name = _step2$value[0],
+              value = _step2$value[1];
+            formData.append(name, value);
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
+      } else if (target != null) {
+        for (var _i2 = 0, _Object$keys = Object.keys(target); _i2 < _Object$keys.length; _i2++) {
+          var _name = _Object$keys[_i2];
+          formData.append(_name, target[_name]);
+        }
+      }
+    }
+  }
+  var _window$location = window.location,
+    protocol = _window$location.protocol,
+    host = _window$location.host;
+  var url = new URL(action, protocol + "//" + host);
+  return {
+    url: url,
+    method: method.toLowerCase(),
+    encType: encType,
+    formData: formData
+  };
+}
+var _excluded = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset"],
+  _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"],
+  _excluded3 = ["reloadDocument", "replace", "method", "action", "onSubmit", "fetcherKey", "routeId", "relative"];
+//#region Routers
+////////////////////////////////////////////////////////////////////////////////
+
+function createBrowserRouter(routes, opts) {
+  return (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createRouter)({
+    basename: opts == null ? void 0 : opts.basename,
+    history: (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createBrowserHistory)({
+      window: opts == null ? void 0 : opts.window
+    }),
+    hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
+    routes: (0,react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_enhanceManualRouteObjects)(routes)
+  }).initialize();
+}
+function createHashRouter(routes, opts) {
+  return (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createRouter)({
+    basename: opts == null ? void 0 : opts.basename,
+    history: (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createHashHistory)({
+      window: opts == null ? void 0 : opts.window
+    }),
+    hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
+    routes: (0,react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_enhanceManualRouteObjects)(routes)
+  }).initialize();
+}
+function parseHydrationData() {
+  var _window;
+  var state = (_window = window) == null ? void 0 : _window.__staticRouterHydrationData;
+  if (state && state.errors) {
+    state = _extends({}, state, {
+      errors: deserializeErrors(state.errors)
+    });
+  }
+  return state;
+}
+function deserializeErrors(errors) {
+  if (!errors) return null;
+  var entries = Object.entries(errors);
+  var serialized = {};
+  for (var _i3 = 0, _entries = entries; _i3 < _entries.length; _i3++) {
+    var _entries$_i = _slicedToArray(_entries[_i3], 2),
+      key = _entries$_i[0],
+      val = _entries$_i[1];
+    // Hey you!  If you change this, please change the corresponding logic in
+    // serializeErrors in react-router-dom/server.tsx :)
+    if (val && val.__type === "RouteErrorResponse") {
+      serialized[key] = new react_router__WEBPACK_IMPORTED_MODULE_1__.ErrorResponse(val.status, val.statusText, val.data, val.internal === true);
+    } else if (val && val.__type === "Error") {
+      var error = new Error(val.message); // Wipe away the client-side stack trace.  Nothing to fill it in with
+      // because we don't serialize SSR stack traces for security reasons
+
+      error.stack = "";
+      serialized[key] = error;
+    } else {
+      serialized[key] = val;
+    }
+  }
+  return serialized;
+}
+/**
+ * A `<Router>` for use in web browsers. Provides the cleanest URLs.
+ */
+
+function BrowserRouter(_ref) {
+  var basename = _ref.basename,
+    children = _ref.children,
+    window = _ref.window;
+  var historyRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
+  if (historyRef.current == null) {
+    historyRef.current = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createBrowserHistory)({
+      window: window,
+      v5Compat: true
+    });
+  }
+  var history = historyRef.current;
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+      action: history.action,
+      location: history.location
+    }),
+    _React$useState2 = _slicedToArray(_React$useState, 2),
+    state = _React$useState2[0],
+    setState = _React$useState2[1];
+  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(function () {
+    return history.listen(setState);
+  }, [history]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Router, {
+    basename: basename,
+    children: children,
+    location: state.location,
+    navigationType: state.action,
+    navigator: history
+  });
+}
+/**
+ * A `<Router>` for use in web browsers. Stores the location in the hash
+ * portion of the URL so it is not sent to the server.
+ */
+
+function HashRouter(_ref2) {
+  var basename = _ref2.basename,
+    children = _ref2.children,
+    window = _ref2.window;
+  var historyRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
+  if (historyRef.current == null) {
+    historyRef.current = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createHashHistory)({
+      window: window,
+      v5Compat: true
+    });
+  }
+  var history = historyRef.current;
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+      action: history.action,
+      location: history.location
+    }),
+    _React$useState4 = _slicedToArray(_React$useState3, 2),
+    state = _React$useState4[0],
+    setState = _React$useState4[1];
+  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(function () {
+    return history.listen(setState);
+  }, [history]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Router, {
+    basename: basename,
+    children: children,
+    location: state.location,
+    navigationType: state.action,
+    navigator: history
+  });
+}
+/**
+ * A `<Router>` that accepts a pre-instantiated history object. It's important
+ * to note that using your own history object is highly discouraged and may add
+ * two versions of the history library to your bundles unless you use the same
+ * version of the history library that React Router uses internally.
+ */
+
+function HistoryRouter(_ref3) {
+  var basename = _ref3.basename,
+    children = _ref3.children,
+    history = _ref3.history;
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+      action: history.action,
+      location: history.location
+    }),
+    _React$useState6 = _slicedToArray(_React$useState5, 2),
+    state = _React$useState6[0],
+    setState = _React$useState6[1];
+  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(function () {
+    return history.listen(setState);
+  }, [history]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Router, {
+    basename: basename,
+    children: children,
+    location: state.location,
+    navigationType: state.action,
+    navigator: history
+  });
+}
+if (true) {
+  HistoryRouter.displayName = "unstable_HistoryRouter";
+}
+/**
+ * The public API for rendering a history-aware <a>.
+ */
+
+var Link = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function LinkWithRef(_ref4, ref) {
+  var onClick = _ref4.onClick,
+    relative = _ref4.relative,
+    reloadDocument = _ref4.reloadDocument,
+    replace = _ref4.replace,
+    state = _ref4.state,
+    target = _ref4.target,
+    to = _ref4.to,
+    preventScrollReset = _ref4.preventScrollReset,
+    rest = _objectWithoutPropertiesLoose(_ref4, _excluded);
+  var href = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useHref)(to, {
+    relative: relative
+  });
+  var internalOnClick = useLinkClickHandler(to, {
+    replace: replace,
+    state: state,
+    target: target,
+    preventScrollReset: preventScrollReset,
+    relative: relative
+  });
+  function handleClick(event) {
+    if (onClick) onClick(event);
+    if (!event.defaultPrevented) {
+      internalOnClick(event);
+    }
+  }
+  return /*#__PURE__*/(
+    // eslint-disable-next-line jsx-a11y/anchor-has-content
+    react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", _extends({}, rest, {
+      href: href,
+      onClick: reloadDocument ? onClick : handleClick,
+      ref: ref,
+      target: target
+    }))
+  );
+});
+if (true) {
+  Link.displayName = "Link";
+}
+/**
+ * A <Link> wrapper that knows if it's "active" or not.
+ */
+
+var NavLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function NavLinkWithRef(_ref5, ref) {
+  var _ref5$ariaCurrent = _ref5["aria-current"],
+    ariaCurrentProp = _ref5$ariaCurrent === void 0 ? "page" : _ref5$ariaCurrent,
+    _ref5$caseSensitive = _ref5.caseSensitive,
+    caseSensitive = _ref5$caseSensitive === void 0 ? false : _ref5$caseSensitive,
+    _ref5$className = _ref5.className,
+    classNameProp = _ref5$className === void 0 ? "" : _ref5$className,
+    _ref5$end = _ref5.end,
+    end = _ref5$end === void 0 ? false : _ref5$end,
+    styleProp = _ref5.style,
+    to = _ref5.to,
+    children = _ref5.children,
+    rest = _objectWithoutPropertiesLoose(_ref5, _excluded2);
+  var path = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useResolvedPath)(to, {
+    relative: rest.relative
+  });
+  var location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
+  var routerState = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataRouterStateContext);
+  var _React$useContext = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_NavigationContext),
+    navigator = _React$useContext.navigator;
+  var toPathname = navigator.encodeLocation ? navigator.encodeLocation(path).pathname : path.pathname;
+  var locationPathname = location.pathname;
+  var nextLocationPathname = routerState && routerState.navigation && routerState.navigation.location ? routerState.navigation.location.pathname : null;
+  if (!caseSensitive) {
+    locationPathname = locationPathname.toLowerCase();
+    nextLocationPathname = nextLocationPathname ? nextLocationPathname.toLowerCase() : null;
+    toPathname = toPathname.toLowerCase();
+  }
+  var isActive = locationPathname === toPathname || !end && locationPathname.startsWith(toPathname) && locationPathname.charAt(toPathname.length) === "/";
+  var isPending = nextLocationPathname != null && (nextLocationPathname === toPathname || !end && nextLocationPathname.startsWith(toPathname) && nextLocationPathname.charAt(toPathname.length) === "/");
+  var ariaCurrent = isActive ? ariaCurrentProp : undefined;
+  var className;
+  if (typeof classNameProp === "function") {
+    className = classNameProp({
+      isActive: isActive,
+      isPending: isPending
+    });
+  } else {
+    // If the className prop is not a function, we use a default `active`
+    // class for <NavLink />s that are active. In v5 `active` was the default
+    // value for `activeClassName`, but we are removing that API and can still
+    // use the old default behavior for a cleaner upgrade path and keep the
+    // simple styling rules working as they currently do.
+    className = [classNameProp, isActive ? "active" : null, isPending ? "pending" : null].filter(Boolean).join(" ");
+  }
+  var style = typeof styleProp === "function" ? styleProp({
+    isActive: isActive,
+    isPending: isPending
+  }) : styleProp;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Link, _extends({}, rest, {
+    "aria-current": ariaCurrent,
+    className: className,
+    ref: ref,
+    style: style,
+    to: to
+  }), typeof children === "function" ? children({
+    isActive: isActive,
+    isPending: isPending
+  }) : children);
+});
+if (true) {
+  NavLink.displayName = "NavLink";
+}
+/**
+ * A `@remix-run/router`-aware `<form>`. It behaves like a normal form except
+ * that the interaction with the server is with `fetch` instead of new document
+ * requests, allowing components to add nicer UX to the page as the form is
+ * submitted and returns with data.
+ */
+
+var Form = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function (props, ref) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(FormImpl, _extends({}, props, {
+    ref: ref
+  }));
+});
+if (true) {
+  Form.displayName = "Form";
+}
+var FormImpl = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function (_ref6, forwardedRef) {
+  var reloadDocument = _ref6.reloadDocument,
+    replace = _ref6.replace,
+    _ref6$method = _ref6.method,
+    method = _ref6$method === void 0 ? defaultMethod : _ref6$method,
+    action = _ref6.action,
+    onSubmit = _ref6.onSubmit,
+    fetcherKey = _ref6.fetcherKey,
+    routeId = _ref6.routeId,
+    relative = _ref6.relative,
+    props = _objectWithoutPropertiesLoose(_ref6, _excluded3);
+  var submit = useSubmitImpl(fetcherKey, routeId);
+  var formMethod = method.toLowerCase() === "get" ? "get" : "post";
+  var formAction = useFormAction(action, {
+    relative: relative
+  });
+  var submitHandler = function submitHandler(event) {
+    onSubmit && onSubmit(event);
+    if (event.defaultPrevented) return;
+    event.preventDefault();
+    var submitter = event.nativeEvent.submitter;
+    var submitMethod = (submitter == null ? void 0 : submitter.getAttribute("formmethod")) || method;
+    submit(submitter || event.currentTarget, {
+      method: submitMethod,
+      replace: replace,
+      relative: relative
+    });
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", _extends({
+    ref: forwardedRef,
+    method: formMethod,
+    action: formAction,
+    onSubmit: reloadDocument ? onSubmit : submitHandler
+  }, props));
+});
+if (true) {
+  FormImpl.displayName = "FormImpl";
+}
+/**
+ * This component will emulate the browser's scroll restoration on location
+ * changes.
+ */
+
+function ScrollRestoration(_ref7) {
+  var getKey = _ref7.getKey,
+    storageKey = _ref7.storageKey;
+  useScrollRestoration({
+    getKey: getKey,
+    storageKey: storageKey
+  });
+  return null;
+}
+if (true) {
+  ScrollRestoration.displayName = "ScrollRestoration";
+} //#endregion
+////////////////////////////////////////////////////////////////////////////////
+//#region Hooks
+////////////////////////////////////////////////////////////////////////////////
+
+var DataRouterHook;
+(function (DataRouterHook) {
+  DataRouterHook["UseScrollRestoration"] = "useScrollRestoration";
+  DataRouterHook["UseSubmitImpl"] = "useSubmitImpl";
+  DataRouterHook["UseFetcher"] = "useFetcher";
+})(DataRouterHook || (DataRouterHook = {}));
+var DataRouterStateHook;
+(function (DataRouterStateHook) {
+  DataRouterStateHook["UseFetchers"] = "useFetchers";
+  DataRouterStateHook["UseScrollRestoration"] = "useScrollRestoration";
+})(DataRouterStateHook || (DataRouterStateHook = {}));
+function getDataRouterConsoleError(hookName) {
+  return hookName + " must be used within a data router.  See https://reactrouter.com/routers/picking-a-router.";
+}
+function useDataRouterContext(hookName) {
+  var ctx = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataRouterContext);
+  !ctx ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, getDataRouterConsoleError(hookName)) : 0 : void 0;
+  return ctx;
+}
+function useDataRouterState(hookName) {
+  var state = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataRouterStateContext);
+  !state ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, getDataRouterConsoleError(hookName)) : 0 : void 0;
+  return state;
+}
+/**
+ * Handles the click behavior for router `<Link>` components. This is useful if
+ * you need to create custom `<Link>` components with the same click behavior we
+ * use in our exported `<Link>`.
+ */
+
+function useLinkClickHandler(to, _temp) {
+  var _ref8 = _temp === void 0 ? {} : _temp,
+    target = _ref8.target,
+    replaceProp = _ref8.replace,
+    state = _ref8.state,
+    preventScrollReset = _ref8.preventScrollReset,
+    relative = _ref8.relative;
+  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigate)();
+  var location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
+  var path = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useResolvedPath)(to, {
+    relative: relative
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0__.useCallback(function (event) {
+    if (shouldProcessLinkClick(event, target)) {
+      event.preventDefault(); // If the URL hasn't changed, a regular <a> will do a replace instead of
+      // a push, so do the same here unless the replace prop is explicitly set
+
+      var replace = replaceProp !== undefined ? replaceProp : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createPath)(location) === (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createPath)(path);
+      navigate(to, {
+        replace: replace,
+        state: state,
+        preventScrollReset: preventScrollReset,
+        relative: relative
+      });
+    }
+  }, [location, navigate, path, replaceProp, state, target, to, preventScrollReset, relative]);
+}
+/**
+ * A convenient wrapper for reading and writing search parameters via the
+ * URLSearchParams interface.
+ */
+
+function useSearchParams(defaultInit) {
+   true ? warning(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not " + "support the URLSearchParams API. If you need to support Internet " + "Explorer 11, we recommend you load a polyfill such as " + "https://github.com/ungap/url-search-params\n\n" + "If you're unsure how to load polyfills, we recommend you check out " + "https://polyfill.io/v3/ which provides some recommendations about how " + "to load polyfills only for users that need them, instead of for every " + "user.") : 0;
+  var defaultSearchParamsRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(createSearchParams(defaultInit));
+  var location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
+  var searchParams = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(function () {
+    return getSearchParamsForLocation(location.search, defaultSearchParamsRef.current);
+  }, [location.search]);
+  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigate)();
+  var setSearchParams = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(function (nextInit, navigateOptions) {
+    var newSearchParams = createSearchParams(typeof nextInit === "function" ? nextInit(searchParams) : nextInit);
+    navigate("?" + newSearchParams, navigateOptions);
+  }, [navigate, searchParams]);
+  return [searchParams, setSearchParams];
+}
+/**
+ * Returns a function that may be used to programmatically submit a form (or
+ * some arbitrary data) to the server.
+ */
+
+function useSubmit() {
+  return useSubmitImpl();
+}
+function useSubmitImpl(fetcherKey, routeId) {
+  var _useDataRouterContext = useDataRouterContext(DataRouterHook.UseSubmitImpl),
+    router = _useDataRouterContext.router;
+  var defaultAction = useFormAction();
+  return react__WEBPACK_IMPORTED_MODULE_0__.useCallback(function (target, options) {
+    if (options === void 0) {
+      options = {};
+    }
+    if (typeof document === "undefined") {
+      throw new Error("You are calling submit during the server render. " + "Try calling submit within a `useEffect` or callback instead.");
+    }
+    var _getFormSubmissionInf = getFormSubmissionInfo(target, defaultAction, options),
+      method = _getFormSubmissionInf.method,
+      encType = _getFormSubmissionInf.encType,
+      formData = _getFormSubmissionInf.formData,
+      url = _getFormSubmissionInf.url;
+    var href = url.pathname + url.search;
+    var opts = {
+      replace: options.replace,
+      formData: formData,
+      formMethod: method,
+      formEncType: encType
+    };
+    if (fetcherKey) {
+      !(routeId != null) ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, "No routeId available for useFetcher()") : 0 : void 0;
+      router.fetch(fetcherKey, routeId, href, opts);
+    } else {
+      router.navigate(href, opts);
+    }
+  }, [defaultAction, router, fetcherKey, routeId]);
+}
+function useFormAction(action, _temp2) {
+  var _ref9 = _temp2 === void 0 ? {} : _temp2,
+    relative = _ref9.relative;
+  var _React$useContext2 = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_NavigationContext),
+    basename = _React$useContext2.basename;
+  var routeContext = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_RouteContext);
+  !routeContext ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, "useFormAction must be used inside a RouteContext") : 0 : void 0;
+  var _routeContext$matches = routeContext.matches.slice(-1),
+    _routeContext$matches2 = _slicedToArray(_routeContext$matches, 1),
+    match = _routeContext$matches2[0]; // Shallow clone path so we can modify it below, otherwise we modify the
+  // object referenced by useMemo inside useResolvedPath
+
+  var path = _extends({}, (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useResolvedPath)(action ? action : ".", {
+    relative: relative
+  })); // Previously we set the default action to ".". The problem with this is that
+  // `useResolvedPath(".")` excludes search params and the hash of the resolved
+  // URL. This is the intended behavior of when "." is specifically provided as
+  // the form action, but inconsistent w/ browsers when the action is omitted.
+  // https://github.com/remix-run/remix/issues/927
+
+  var location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
+  if (action == null) {
+    // Safe to write to these directly here since if action was undefined, we
+    // would have called useResolvedPath(".") which will never include a search
+    // or hash
+    path.search = location.search;
+    path.hash = location.hash; // When grabbing search params from the URL, remove the automatically
+    // inserted ?index param so we match the useResolvedPath search behavior
+    // which would not include ?index
+
+    if (match.route.index) {
+      var params = new URLSearchParams(path.search);
+      params.delete("index");
+      path.search = params.toString() ? "?" + params.toString() : "";
+    }
+  }
+  if ((!action || action === ".") && match.route.index) {
+    path.search = path.search ? path.search.replace(/^\?/, "?index&") : "?index";
+  } // If we're operating within a basename, prepend it to the pathname prior
+  // to creating the form action.  If this is a root navigation, then just use
+  // the raw basename which allows the basename to have full control over the
+  // presence of a trailing slash on root actions
+
+  if (basename !== "/") {
+    path.pathname = path.pathname === "/" ? basename : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([basename, path.pathname]);
+  }
+  return (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createPath)(path);
+}
+function createFetcherForm(fetcherKey, routeId) {
+  var FetcherForm = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function (props, ref) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(FormImpl, _extends({}, props, {
+      ref: ref,
+      fetcherKey: fetcherKey,
+      routeId: routeId
+    }));
+  });
+  if (true) {
+    FetcherForm.displayName = "fetcher.Form";
+  }
+  return FetcherForm;
+}
+var fetcherId = 0;
+/**
+ * Interacts with route loaders and actions without causing a navigation. Great
+ * for any interaction that stays on the same page.
+ */
+
+function useFetcher() {
+  var _route$matches;
+  var _useDataRouterContext2 = useDataRouterContext(DataRouterHook.UseFetcher),
+    router = _useDataRouterContext2.router;
+  var route = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_RouteContext);
+  !route ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, "useFetcher must be used inside a RouteContext") : 0 : void 0;
+  var routeId = (_route$matches = route.matches[route.matches.length - 1]) == null ? void 0 : _route$matches.route.id;
+  !(routeId != null) ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, "useFetcher can only be used on routes that contain a unique \"id\"") : 0 : void 0;
+  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_0__.useState(function () {
+      return String(++fetcherId);
+    }),
+    _React$useState8 = _slicedToArray(_React$useState7, 1),
+    fetcherKey = _React$useState8[0];
+  var _React$useState9 = react__WEBPACK_IMPORTED_MODULE_0__.useState(function () {
+      !routeId ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, "No routeId available for fetcher.Form()") : 0 : void 0;
+      return createFetcherForm(fetcherKey, routeId);
+    }),
+    _React$useState10 = _slicedToArray(_React$useState9, 1),
+    Form = _React$useState10[0];
+  var _React$useState11 = react__WEBPACK_IMPORTED_MODULE_0__.useState(function () {
+      return function (href) {
+        !router ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, "No router available for fetcher.load()") : 0 : void 0;
+        !routeId ?  true ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.invariant)(false, "No routeId available for fetcher.load()") : 0 : void 0;
+        router.fetch(fetcherKey, routeId, href);
+      };
+    }),
+    _React$useState12 = _slicedToArray(_React$useState11, 1),
+    load = _React$useState12[0];
+  var submit = useSubmitImpl(fetcherKey, routeId);
+  var fetcher = router.getFetcher(fetcherKey);
+  var fetcherWithComponents = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(function () {
+    return _extends({
+      Form: Form,
+      submit: submit,
+      load: load
+    }, fetcher);
+  }, [fetcher, Form, submit, load]);
+  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {
+    // Is this busted when the React team gets real weird and calls effects
+    // twice on mount?  We really just need to garbage collect here when this
+    // fetcher is no longer around.
+    return function () {
+      if (!router) {
+        console.warn("No fetcher available to clean up from useFetcher()");
+        return;
+      }
+      router.deleteFetcher(fetcherKey);
+    };
+  }, [router, fetcherKey]);
+  return fetcherWithComponents;
+}
+/**
+ * Provides all fetchers currently on the page. Useful for layouts and parent
+ * routes that need to provide pending/optimistic UI regarding the fetch.
+ */
+
+function useFetchers() {
+  var state = useDataRouterState(DataRouterStateHook.UseFetchers);
+  return _toConsumableArray(state.fetchers.values());
+}
+var SCROLL_RESTORATION_STORAGE_KEY = "react-router-scroll-positions";
+var savedScrollPositions = {};
+/**
+ * When rendered inside a RouterProvider, will restore scroll positions on navigations
+ */
+
+function useScrollRestoration(_temp3) {
+  var _ref10 = _temp3 === void 0 ? {} : _temp3,
+    getKey = _ref10.getKey,
+    storageKey = _ref10.storageKey;
+  var _useDataRouterContext3 = useDataRouterContext(DataRouterHook.UseScrollRestoration),
+    router = _useDataRouterContext3.router;
+  var _useDataRouterState = useDataRouterState(DataRouterStateHook.UseScrollRestoration),
+    restoreScrollPosition = _useDataRouterState.restoreScrollPosition,
+    preventScrollReset = _useDataRouterState.preventScrollReset;
+  var location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
+  var matches = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useMatches)();
+  var navigation = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigation)(); // Trigger manual scroll restoration while we're active
+
+  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {
+    window.history.scrollRestoration = "manual";
+    return function () {
+      window.history.scrollRestoration = "auto";
+    };
+  }, []); // Save positions on unload
+
+  useBeforeUnload(react__WEBPACK_IMPORTED_MODULE_0__.useCallback(function () {
+    if (navigation.state === "idle") {
+      var key = (getKey ? getKey(location, matches) : null) || location.key;
+      savedScrollPositions[key] = window.scrollY;
+    }
+    sessionStorage.setItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY, JSON.stringify(savedScrollPositions));
+    window.history.scrollRestoration = "auto";
+  }, [storageKey, getKey, navigation.state, location, matches])); // Read in any saved scroll locations
+
+  if (typeof document !== "undefined") {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(function () {
+      try {
+        var sessionPositions = sessionStorage.getItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY);
+        if (sessionPositions) {
+          savedScrollPositions = JSON.parse(sessionPositions);
+        }
+      } catch (e) {// no-op, use default empty object
+      }
+    }, [storageKey]); // Enable scroll restoration in the router
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+
+    react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(function () {
+      var disableScrollRestoration = router == null ? void 0 : router.enableScrollRestoration(savedScrollPositions, function () {
+        return window.scrollY;
+      }, getKey);
+      return function () {
+        return disableScrollRestoration && disableScrollRestoration();
+      };
+    }, [router, getKey]); // Restore scrolling when state.restoreScrollPosition changes
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+
+    react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(function () {
+      // Explicit false means don't do anything (used for submissions)
+      if (restoreScrollPosition === false) {
+        return;
+      } // been here before, scroll to it
+
+      if (typeof restoreScrollPosition === "number") {
+        window.scrollTo(0, restoreScrollPosition);
+        return;
+      } // try to scroll to the hash
+
+      if (location.hash) {
+        var el = document.getElementById(location.hash.slice(1));
+        if (el) {
+          el.scrollIntoView();
+          return;
+        }
+      } // Opt out of scroll reset if this link requested it
+
+      if (preventScrollReset === true) {
+        return;
+      } // otherwise go to the top on new locations
+
+      window.scrollTo(0, 0);
+    }, [location, restoreScrollPosition, preventScrollReset]);
+  }
+}
+/**
+ * Setup a callback to be fired on the window's `beforeunload` event. This is
+ * useful for saving some data to `window.localStorage` just before the page
+ * refreshes.
+ *
+ * Note: The `callback` argument should be a function created with
+ * `React.useCallback()`.
+ */
+
+function useBeforeUnload(callback) {
+  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {
+    window.addEventListener("beforeunload", callback);
+    return function () {
+      window.removeEventListener("beforeunload", callback);
+    };
+  }, [callback]);
+} //#endregion
+////////////////////////////////////////////////////////////////////////////////
+//#region Utils
+////////////////////////////////////////////////////////////////////////////////
+
+function warning(cond, message) {
+  if (!cond) {
+    // eslint-disable-next-line no-console
+    if (typeof console !== "undefined") console.warn(message);
+    try {
+      // Welcome to debugging React Router!
+      //
+      // This error is thrown as a convenience so you can more easily
+      // find the source for a warning that appears in the console by
+      // enabling "pause on exceptions" in your JavaScript debugger.
+      throw new Error(message); // eslint-disable-next-line no-empty
+    } catch (e) {}
+  }
+} //#endregion
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-router/dist/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-router/dist/index.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AbortedDeferredError": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.AbortedDeferredError; },
+/* harmony export */   "Await": function() { return /* binding */ Await; },
+/* harmony export */   "MemoryRouter": function() { return /* binding */ MemoryRouter; },
+/* harmony export */   "Navigate": function() { return /* binding */ Navigate; },
+/* harmony export */   "NavigationType": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.Action; },
+/* harmony export */   "Outlet": function() { return /* binding */ Outlet; },
+/* harmony export */   "Route": function() { return /* binding */ Route; },
+/* harmony export */   "Router": function() { return /* binding */ Router; },
+/* harmony export */   "RouterProvider": function() { return /* binding */ RouterProvider; },
+/* harmony export */   "Routes": function() { return /* binding */ Routes; },
+/* harmony export */   "UNSAFE_DataRouterContext": function() { return /* binding */ DataRouterContext; },
+/* harmony export */   "UNSAFE_DataRouterStateContext": function() { return /* binding */ DataRouterStateContext; },
+/* harmony export */   "UNSAFE_DataStaticRouterContext": function() { return /* binding */ DataStaticRouterContext; },
+/* harmony export */   "UNSAFE_LocationContext": function() { return /* binding */ LocationContext; },
+/* harmony export */   "UNSAFE_NavigationContext": function() { return /* binding */ NavigationContext; },
+/* harmony export */   "UNSAFE_RouteContext": function() { return /* binding */ RouteContext; },
+/* harmony export */   "UNSAFE_enhanceManualRouteObjects": function() { return /* binding */ enhanceManualRouteObjects; },
+/* harmony export */   "createMemoryRouter": function() { return /* binding */ createMemoryRouter; },
+/* harmony export */   "createPath": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.createPath; },
+/* harmony export */   "createRoutesFromChildren": function() { return /* binding */ createRoutesFromChildren; },
+/* harmony export */   "createRoutesFromElements": function() { return /* binding */ createRoutesFromChildren; },
+/* harmony export */   "defer": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.defer; },
+/* harmony export */   "generatePath": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.generatePath; },
+/* harmony export */   "isRouteErrorResponse": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.isRouteErrorResponse; },
+/* harmony export */   "json": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.json; },
+/* harmony export */   "matchPath": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.matchPath; },
+/* harmony export */   "matchRoutes": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.matchRoutes; },
+/* harmony export */   "parsePath": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.parsePath; },
+/* harmony export */   "redirect": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.redirect; },
+/* harmony export */   "renderMatches": function() { return /* binding */ renderMatches; },
+/* harmony export */   "resolvePath": function() { return /* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.resolvePath; },
+/* harmony export */   "useActionData": function() { return /* binding */ useActionData; },
+/* harmony export */   "useAsyncError": function() { return /* binding */ useAsyncError; },
+/* harmony export */   "useAsyncValue": function() { return /* binding */ useAsyncValue; },
+/* harmony export */   "useHref": function() { return /* binding */ useHref; },
+/* harmony export */   "useInRouterContext": function() { return /* binding */ useInRouterContext; },
+/* harmony export */   "useLoaderData": function() { return /* binding */ useLoaderData; },
+/* harmony export */   "useLocation": function() { return /* binding */ useLocation; },
+/* harmony export */   "useMatch": function() { return /* binding */ useMatch; },
+/* harmony export */   "useMatches": function() { return /* binding */ useMatches; },
+/* harmony export */   "useNavigate": function() { return /* binding */ useNavigate; },
+/* harmony export */   "useNavigation": function() { return /* binding */ useNavigation; },
+/* harmony export */   "useNavigationType": function() { return /* binding */ useNavigationType; },
+/* harmony export */   "useOutlet": function() { return /* binding */ useOutlet; },
+/* harmony export */   "useOutletContext": function() { return /* binding */ useOutletContext; },
+/* harmony export */   "useParams": function() { return /* binding */ useParams; },
+/* harmony export */   "useResolvedPath": function() { return /* binding */ useResolvedPath; },
+/* harmony export */   "useRevalidator": function() { return /* binding */ useRevalidator; },
+/* harmony export */   "useRouteError": function() { return /* binding */ useRouteError; },
+/* harmony export */   "useRouteLoaderData": function() { return /* binding */ useRouteLoaderData; },
+/* harmony export */   "useRoutes": function() { return /* binding */ useRoutes; }
+/* harmony export */ });
+/* harmony import */ var _remix_run_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @remix-run/router */ "./node_modules/@remix-run/router/dist/router.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/**
+ * React Router v6.6.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+
+
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+
+function isPolyfill(x, y) {
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
+}
+
+var is = typeof Object.is === "function" ? Object.is : isPolyfill; // Intentionally not using named imports because Rollup uses dynamic
+// dispatch for CommonJS interop named imports.
+
+var useState = react__WEBPACK_IMPORTED_MODULE_1__.useState,
+  useEffect = react__WEBPACK_IMPORTED_MODULE_1__.useEffect,
+  useLayoutEffect = react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect,
+  useDebugValue = react__WEBPACK_IMPORTED_MODULE_1__.useDebugValue;
+var didWarnOld18Alpha = false;
+var didWarnUncachedGetSnapshot = false; // Disclaimer: This shim breaks many of the rules of React, and only works
+// because of a very particular set of implementation details and assumptions
+// -- change any one of them and it will break. The most important assumption
+// is that updates are always synchronous, because concurrent rendering is
+// only available in versions of React that also have a built-in
+// useSyncExternalStore API. And we only use this shim when the built-in API
+// does not exist.
+//
+// Do not assume that the clever hacks used by this hook also work in general.
+// The point of this shim is to replace the need for hacks by other libraries.
+
+function useSyncExternalStore$2(subscribe, getSnapshot,
+// Note: The shim does not use getServerSnapshot, because pre-18 versions of
+// React do not expose a way to check if we're hydrating. So users of the shim
+// will need to track that themselves and return the correct value
+// from `getSnapshot`.
+getServerSnapshot) {
+  if (true) {
+    if (!didWarnOld18Alpha) {
+      if ("startTransition" in react__WEBPACK_IMPORTED_MODULE_1__) {
+        didWarnOld18Alpha = true;
+        console.error("You are using an outdated, pre-release alpha of React 18 that " + "does not support useSyncExternalStore. The " + "use-sync-external-store shim will not work correctly. Upgrade " + "to a newer pre-release.");
+      }
+    }
+  } // Read the current snapshot from the store on every render. Again, this
+  // breaks the rules of React, and only works here because of specific
+  // implementation details, most importantly that updates are
+  // always synchronous.
+
+  var value = getSnapshot();
+  if (true) {
+    if (!didWarnUncachedGetSnapshot) {
+      var cachedValue = getSnapshot();
+      if (!is(value, cachedValue)) {
+        console.error("The result of getSnapshot should be cached to avoid an infinite loop");
+        didWarnUncachedGetSnapshot = true;
+      }
+    }
+  } // Because updates are synchronous, we don't queue them. Instead we force a
+  // re-render whenever the subscribed state changes by updating an some
+  // arbitrary useState hook. Then, during render, we call getSnapshot to read
+  // the current value.
+  //
+  // Because we don't actually use the state returned by the useState hook, we
+  // can save a bit of memory by storing other stuff in that slot.
+  //
+  // To implement the early bailout, we need to track some things on a mutable
+  // object. Usually, we would put that in a useRef hook, but we can stash it in
+  // our useState hook instead.
+  //
+  // To force a re-render, we call forceUpdate({inst}). That works because the
+  // new object always fails an equality check.
+
+  var _useState = useState({
+      inst: {
+        value: value,
+        getSnapshot: getSnapshot
+      }
+    }),
+    _useState2 = _slicedToArray(_useState, 2),
+    inst = _useState2[0].inst,
+    forceUpdate = _useState2[1]; // Track the latest getSnapshot function with a ref. This needs to be updated
+  // in the layout phase so we can access it during the tearing check that
+  // happens on subscribe.
+
+  useLayoutEffect(function () {
+    inst.value = value;
+    inst.getSnapshot = getSnapshot; // Whenever getSnapshot or subscribe changes, we need to check in the
+    // commit phase if there was an interleaved mutation. In concurrent mode
+    // this can happen all the time, but even in synchronous mode, an earlier
+    // effect may have mutated the store.
+
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [subscribe, value, getSnapshot]);
+  useEffect(function () {
+    // Check for changes right before subscribing. Subsequent changes will be
+    // detected in the subscription handler.
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    }
+    var handleStoreChange = function handleStoreChange() {
+      // TODO: Because there is no cross-renderer API for batching updates, it's
+      // up to the consumer of this library to wrap their subscription event
+      // with unstable_batchedUpdates. Should we try to detect when this isn't
+      // the case and print a warning in development?
+      // The store changed. Check if the snapshot changed since the last time we
+      // read from the store.
+      if (checkIfSnapshotChanged(inst)) {
+        // Force a re-render.
+        forceUpdate({
+          inst: inst
+        });
+      }
+    }; // Subscribe to the store and return a clean-up function.
+
+    return subscribe(handleStoreChange); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [subscribe]);
+  useDebugValue(value);
+  return value;
+}
+function checkIfSnapshotChanged(inst) {
+  var latestGetSnapshot = inst.getSnapshot;
+  var prevValue = inst.value;
+  try {
+    var nextValue = latestGetSnapshot();
+    return !is(prevValue, nextValue);
+  } catch (error) {
+    return true;
+  }
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @flow
+ */
+function useSyncExternalStore$1(subscribe, getSnapshot, getServerSnapshot) {
+  // Note: The shim does not use getServerSnapshot, because pre-18 versions of
+  // React do not expose a way to check if we're hydrating. So users of the shim
+  // will need to track that themselves and return the correct value
+  // from `getSnapshot`.
+  return getSnapshot();
+}
+
+/**
+ * Inlined into the react-router repo since use-sync-external-store does not
+ * provide a UMD-compatible package, so we need this to be able to distribute
+ * UMD react-router bundles
+ */
+var canUseDOM = !!(typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined");
+var isServerEnvironment = !canUseDOM;
+var shim = isServerEnvironment ? useSyncExternalStore$1 : useSyncExternalStore$2;
+var useSyncExternalStore = "useSyncExternalStore" in react__WEBPACK_IMPORTED_MODULE_1__ ? function (module) {
+  return module.useSyncExternalStore;
+}(react__WEBPACK_IMPORTED_MODULE_1__) : shim;
+
+// Contexts for data routers
+var DataStaticRouterContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+if (true) {
+  DataStaticRouterContext.displayName = "DataStaticRouterContext";
+}
+var DataRouterContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+if (true) {
+  DataRouterContext.displayName = "DataRouter";
+}
+var DataRouterStateContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+if (true) {
+  DataRouterStateContext.displayName = "DataRouterState";
+}
+var AwaitContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+if (true) {
+  AwaitContext.displayName = "Await";
+}
+var NavigationContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+if (true) {
+  NavigationContext.displayName = "Navigation";
+}
+var LocationContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+if (true) {
+  LocationContext.displayName = "Location";
+}
+var RouteContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext({
+  outlet: null,
+  matches: []
+});
+if (true) {
+  RouteContext.displayName = "Route";
+}
+var RouteErrorContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+if (true) {
+  RouteErrorContext.displayName = "RouteError";
+}
+
+/**
+ * Returns the full href for the given "to" value. This is useful for building
+ * custom links that are also accessible and preserve right-click behavior.
+ *
+ * @see https://reactrouter.com/hooks/use-href
+ */
+
+function useHref(to, _temp) {
+  var _ref8 = _temp === void 0 ? {} : _temp,
+    relative = _ref8.relative;
+  !useInRouterContext() ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false,
+  // TODO: This error is probably because they somehow have 2 versions of the
+  // router loaded. We can help them understand how to avoid that.
+  "useHref() may be used only in the context of a <Router> component.") : 0 : void 0;
+  var _React$useContext = react__WEBPACK_IMPORTED_MODULE_1__.useContext(NavigationContext),
+    basename = _React$useContext.basename,
+    navigator = _React$useContext.navigator;
+  var _useResolvedPath = useResolvedPath(to, {
+      relative: relative
+    }),
+    hash = _useResolvedPath.hash,
+    pathname = _useResolvedPath.pathname,
+    search = _useResolvedPath.search;
+  var joinedPathname = pathname; // If we're operating within a basename, prepend it to the pathname prior
+  // to creating the href.  If this is a root navigation, then just use the raw
+  // basename which allows the basename to have full control over the presence
+  // of a trailing slash on root links
+
+  if (basename !== "/") {
+    joinedPathname = pathname === "/" ? basename : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.joinPaths)([basename, pathname]);
+  }
+  return navigator.createHref({
+    pathname: joinedPathname,
+    search: search,
+    hash: hash
+  });
+}
+/**
+ * Returns true if this component is a descendant of a <Router>.
+ *
+ * @see https://reactrouter.com/hooks/use-in-router-context
+ */
+
+function useInRouterContext() {
+  return react__WEBPACK_IMPORTED_MODULE_1__.useContext(LocationContext) != null;
+}
+/**
+ * Returns the current location object, which represents the current URL in web
+ * browsers.
+ *
+ * Note: If you're using this it may mean you're doing some of your own
+ * "routing" in your app, and we'd like to know what your use case is. We may
+ * be able to provide something higher-level to better suit your needs.
+ *
+ * @see https://reactrouter.com/hooks/use-location
+ */
+
+function useLocation() {
+  !useInRouterContext() ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false,
+  // TODO: This error is probably because they somehow have 2 versions of the
+  // router loaded. We can help them understand how to avoid that.
+  "useLocation() may be used only in the context of a <Router> component.") : 0 : void 0;
+  return react__WEBPACK_IMPORTED_MODULE_1__.useContext(LocationContext).location;
+}
+/**
+ * Returns the current navigation action which describes how the router came to
+ * the current location, either by a pop, push, or replace on the history stack.
+ *
+ * @see https://reactrouter.com/hooks/use-navigation-type
+ */
+
+function useNavigationType() {
+  return react__WEBPACK_IMPORTED_MODULE_1__.useContext(LocationContext).navigationType;
+}
+/**
+ * Returns a PathMatch object if the given pattern matches the current URL.
+ * This is useful for components that need to know "active" state, e.g.
+ * <NavLink>.
+ *
+ * @see https://reactrouter.com/hooks/use-match
+ */
+
+function useMatch(pattern) {
+  !useInRouterContext() ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false,
+  // TODO: This error is probably because they somehow have 2 versions of the
+  // router loaded. We can help them understand how to avoid that.
+  "useMatch() may be used only in the context of a <Router> component.") : 0 : void 0;
+  var _useLocation = useLocation(),
+    pathname = _useLocation.pathname;
+  return react__WEBPACK_IMPORTED_MODULE_1__.useMemo(function () {
+    return (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.matchPath)(pattern, pathname);
+  }, [pathname, pattern]);
+}
+/**
+ * The interface for the navigate() function returned from useNavigate().
+ */
+
+/**
+ * Returns an imperative method for changing the location. Used by <Link>s, but
+ * may also be used by other elements to change the location.
+ *
+ * @see https://reactrouter.com/hooks/use-navigate
+ */
+function useNavigate() {
+  !useInRouterContext() ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false,
+  // TODO: This error is probably because they somehow have 2 versions of the
+  // router loaded. We can help them understand how to avoid that.
+  "useNavigate() may be used only in the context of a <Router> component.") : 0 : void 0;
+  var _React$useContext2 = react__WEBPACK_IMPORTED_MODULE_1__.useContext(NavigationContext),
+    basename = _React$useContext2.basename,
+    navigator = _React$useContext2.navigator;
+  var _React$useContext3 = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteContext),
+    matches = _React$useContext3.matches;
+  var _useLocation2 = useLocation(),
+    locationPathname = _useLocation2.pathname;
+  var routePathnamesJson = JSON.stringify((0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.UNSAFE_getPathContributingMatches)(matches).map(function (match) {
+    return match.pathnameBase;
+  }));
+  var activeRef = react__WEBPACK_IMPORTED_MODULE_1__.useRef(false);
+  react__WEBPACK_IMPORTED_MODULE_1__.useEffect(function () {
+    activeRef.current = true;
+  });
+  var navigate = react__WEBPACK_IMPORTED_MODULE_1__.useCallback(function (to, options) {
+    if (options === void 0) {
+      options = {};
+    }
+     true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.warning)(activeRef.current, "You should call navigate() in a React.useEffect(), not when " + "your component is first rendered.") : 0;
+    if (!activeRef.current) return;
+    if (typeof to === "number") {
+      navigator.go(to);
+      return;
+    }
+    var path = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.resolveTo)(to, JSON.parse(routePathnamesJson), locationPathname, options.relative === "path"); // If we're operating within a basename, prepend it to the pathname prior
+    // to handing off to history.  If this is a root navigation, then we
+    // navigate to the raw basename which allows the basename to have full
+    // control over the presence of a trailing slash on root links
+
+    if (basename !== "/") {
+      path.pathname = path.pathname === "/" ? basename : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.joinPaths)([basename, path.pathname]);
+    }
+    (!!options.replace ? navigator.replace : navigator.push)(path, options.state, options);
+  }, [basename, navigator, routePathnamesJson, locationPathname]);
+  return navigate;
+}
+var OutletContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);
+/**
+ * Returns the context (if provided) for the child route at this level of the route
+ * hierarchy.
+ * @see https://reactrouter.com/hooks/use-outlet-context
+ */
+
+function useOutletContext() {
+  return react__WEBPACK_IMPORTED_MODULE_1__.useContext(OutletContext);
+}
+/**
+ * Returns the element for the child route at this level of the route
+ * hierarchy. Used internally by <Outlet> to render child routes.
+ *
+ * @see https://reactrouter.com/hooks/use-outlet
+ */
+
+function useOutlet(context) {
+  var outlet = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteContext).outlet;
+  if (outlet) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(OutletContext.Provider, {
+      value: context
+    }, outlet);
+  }
+  return outlet;
+}
+/**
+ * Returns an object of key/value pairs of the dynamic params from the current
+ * URL that were matched by the route path.
+ *
+ * @see https://reactrouter.com/hooks/use-params
+ */
+
+function useParams() {
+  var _React$useContext4 = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteContext),
+    matches = _React$useContext4.matches;
+  var routeMatch = matches[matches.length - 1];
+  return routeMatch ? routeMatch.params : {};
+}
+/**
+ * Resolves the pathname of the given `to` value against the current location.
+ *
+ * @see https://reactrouter.com/hooks/use-resolved-path
+ */
+
+function useResolvedPath(to, _temp2) {
+  var _ref9 = _temp2 === void 0 ? {} : _temp2,
+    relative = _ref9.relative;
+  var _React$useContext5 = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteContext),
+    matches = _React$useContext5.matches;
+  var _useLocation3 = useLocation(),
+    locationPathname = _useLocation3.pathname;
+  var routePathnamesJson = JSON.stringify((0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.UNSAFE_getPathContributingMatches)(matches).map(function (match) {
+    return match.pathnameBase;
+  }));
+  return react__WEBPACK_IMPORTED_MODULE_1__.useMemo(function () {
+    return (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.resolveTo)(to, JSON.parse(routePathnamesJson), locationPathname, relative === "path");
+  }, [to, routePathnamesJson, locationPathname, relative]);
+}
+/**
+ * Returns the element of the route that matched the current location, prepared
+ * with the correct context to render the remainder of the route tree. Route
+ * elements in the tree must render an <Outlet> to render their child route's
+ * element.
+ *
+ * @see https://reactrouter.com/hooks/use-routes
+ */
+
+function useRoutes(routes, locationArg) {
+  !useInRouterContext() ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false,
+  // TODO: This error is probably because they somehow have 2 versions of the
+  // router loaded. We can help them understand how to avoid that.
+  "useRoutes() may be used only in the context of a <Router> component.") : 0 : void 0;
+  var _React$useContext6 = react__WEBPACK_IMPORTED_MODULE_1__.useContext(NavigationContext),
+    navigator = _React$useContext6.navigator;
+  var dataRouterStateContext = react__WEBPACK_IMPORTED_MODULE_1__.useContext(DataRouterStateContext);
+  var _React$useContext7 = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteContext),
+    parentMatches = _React$useContext7.matches;
+  var routeMatch = parentMatches[parentMatches.length - 1];
+  var parentParams = routeMatch ? routeMatch.params : {};
+  var parentPathname = routeMatch ? routeMatch.pathname : "/";
+  var parentPathnameBase = routeMatch ? routeMatch.pathnameBase : "/";
+  var parentRoute = routeMatch && routeMatch.route;
+  if (true) {
+    // You won't get a warning about 2 different <Routes> under a <Route>
+    // without a trailing *, but this is a best-effort warning anyway since we
+    // cannot even give the warning unless they land at the parent route.
+    //
+    // Example:
+    //
+    // <Routes>
+    //   {/* This route path MUST end with /* because otherwise
+    //       it will never match /blog/post/123 */}
+    //   <Route path="blog" element={<Blog />} />
+    //   <Route path="blog/feed" element={<BlogFeed />} />
+    // </Routes>
+    //
+    // function Blog() {
+    //   return (
+    //     <Routes>
+    //       <Route path="post/:id" element={<Post />} />
+    //     </Routes>
+    //   );
+    // }
+    var parentPath = parentRoute && parentRoute.path || "";
+    warningOnce(parentPathname, !parentRoute || parentPath.endsWith("*"), "You rendered descendant <Routes> (or called `useRoutes()`) at " + ("\"" + parentPathname + "\" (under <Route path=\"" + parentPath + "\">) but the ") + "parent route path has no trailing \"*\". This means if you navigate " + "deeper, the parent won't match anymore and therefore the child " + "routes will never render.\n\n" + ("Please change the parent <Route path=\"" + parentPath + "\"> to <Route ") + ("path=\"" + (parentPath === "/" ? "*" : parentPath + "/*") + "\">."));
+  }
+  var locationFromContext = useLocation();
+  var location;
+  if (locationArg) {
+    var _parsedLocationArg$pa;
+    var parsedLocationArg = typeof locationArg === "string" ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.parsePath)(locationArg) : locationArg;
+    !(parentPathnameBase === "/" || ((_parsedLocationArg$pa = parsedLocationArg.pathname) == null ? void 0 : _parsedLocationArg$pa.startsWith(parentPathnameBase))) ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, "When overriding the location using `<Routes location>` or `useRoutes(routes, location)`, " + "the location pathname must begin with the portion of the URL pathname that was " + ("matched by all parent routes. The current pathname base is \"" + parentPathnameBase + "\" ") + ("but pathname \"" + parsedLocationArg.pathname + "\" was given in the `location` prop.")) : 0 : void 0;
+    location = parsedLocationArg;
+  } else {
+    location = locationFromContext;
+  }
+  var pathname = location.pathname || "/";
+  var remainingPathname = parentPathnameBase === "/" ? pathname : pathname.slice(parentPathnameBase.length) || "/";
+  var matches = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.matchRoutes)(routes, {
+    pathname: remainingPathname
+  });
+  if (true) {
+     true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.warning)(parentRoute || matches != null, "No routes matched location \"" + location.pathname + location.search + location.hash + "\" ") : 0;
+     true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.warning)(matches == null || matches[matches.length - 1].route.element !== undefined, "Matched leaf route at location \"" + location.pathname + location.search + location.hash + "\" does not have an element. " + "This means it will render an <Outlet /> with a null value by default resulting in an \"empty\" page.") : 0;
+  }
+  var renderedMatches = _renderMatches(matches && matches.map(function (match) {
+    return Object.assign({}, match, {
+      params: Object.assign({}, parentParams, match.params),
+      pathname: (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.joinPaths)([parentPathnameBase,
+      // Re-encode pathnames that were decoded inside matchRoutes
+      navigator.encodeLocation ? navigator.encodeLocation(match.pathname).pathname : match.pathname]),
+      pathnameBase: match.pathnameBase === "/" ? parentPathnameBase : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.joinPaths)([parentPathnameBase,
+      // Re-encode pathnames that were decoded inside matchRoutes
+      navigator.encodeLocation ? navigator.encodeLocation(match.pathnameBase).pathname : match.pathnameBase])
+    });
+  }), parentMatches, dataRouterStateContext || undefined); // When a user passes in a `locationArg`, the associated routes need to
+  // be wrapped in a new `LocationContext.Provider` in order for `useLocation`
+  // to use the scoped location instead of the global location.
+
+  if (locationArg && renderedMatches) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(LocationContext.Provider, {
+      value: {
+        location: _extends({
+          pathname: "/",
+          search: "",
+          hash: "",
+          state: null,
+          key: "default"
+        }, location),
+        navigationType: _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.Action.Pop
+      }
+    }, renderedMatches);
+  }
+  return renderedMatches;
+}
+function DefaultErrorElement() {
+  var error = useRouteError();
+  var message = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.isRouteErrorResponse)(error) ? error.status + " " + error.statusText : error instanceof Error ? error.message : JSON.stringify(error);
+  var stack = error instanceof Error ? error.stack : null;
+  var lightgrey = "rgba(200,200,200, 0.5)";
+  var preStyles = {
+    padding: "0.5rem",
+    backgroundColor: lightgrey
+  };
+  var codeStyles = {
+    padding: "2px 4px",
+    backgroundColor: lightgrey
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h2", null, "Unhandled Thrown Error!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h3", {
+    style: {
+      fontStyle: "italic"
+    }
+  }, message), stack ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pre", {
+    style: preStyles
+  }, stack) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, "\uD83D\uDCBF Hey developer \uD83D\uDC4B"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, "You can provide a way better UX than this when your app throws errors by providing your own\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("code", {
+    style: codeStyles
+  }, "errorElement"), " props on\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("code", {
+    style: codeStyles
+  }, "<Route>")));
+}
+var RenderErrorBoundary = /*#__PURE__*/function (_React$Component) {
+  _inherits(RenderErrorBoundary, _React$Component);
+  var _super = _createSuper(RenderErrorBoundary);
+  function RenderErrorBoundary(props) {
+    var _this;
+    _classCallCheck(this, RenderErrorBoundary);
+    _this = _super.call(this, props);
+    _this.state = {
+      location: props.location,
+      error: props.error
+    };
+    return _this;
+  }
+  _createClass(RenderErrorBoundary, [{
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, errorInfo) {
+      console.error("React Router caught the following error during render", error, errorInfo);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return this.state.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(RouteContext.Provider, {
+        value: this.props.routeContext
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(RouteErrorContext.Provider, {
+        value: this.state.error,
+        children: this.props.component
+      })) : this.props.children;
+    }
+  }], [{
+    key: "getDerivedStateFromError",
+    value: function getDerivedStateFromError(error) {
+      return {
+        error: error
+      };
+    }
+  }, {
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(props, state) {
+      // When we get into an error state, the user will likely click "back" to the
+      // previous page that didn't have an error. Because this wraps the entire
+      // application, that will have no effect--the error page continues to display.
+      // This gives us a mechanism to recover from the error when the location changes.
+      //
+      // Whether we're in an error state or not, we update the location in state
+      // so that when we are in an error state, it gets reset when a new location
+      // comes in and the user recovers from the error.
+      if (state.location !== props.location) {
+        return {
+          error: props.error,
+          location: props.location
+        };
+      } // If we're not changing locations, preserve the location but still surface
+      // any new errors that may come through. We retain the existing error, we do
+      // this because the error provided from the app state may be cleared without
+      // the location changing.
+
+      return {
+        error: props.error || state.error,
+        location: state.location
+      };
+    }
+  }]);
+  return RenderErrorBoundary;
+}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
+function RenderedRoute(_ref) {
+  var routeContext = _ref.routeContext,
+    match = _ref.match,
+    children = _ref.children;
+  var dataStaticRouterContext = react__WEBPACK_IMPORTED_MODULE_1__.useContext(DataStaticRouterContext); // Track how deep we got in our render pass to emulate SSR componentDidCatch
+  // in a DataStaticRouter
+
+  if (dataStaticRouterContext && match.route.errorElement) {
+    dataStaticRouterContext._deepestRenderedBoundaryId = match.route.id;
+  }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(RouteContext.Provider, {
+    value: routeContext
+  }, children);
+}
+function _renderMatches(matches, parentMatches, dataRouterState) {
+  if (parentMatches === void 0) {
+    parentMatches = [];
+  }
+  if (matches == null) {
+    if (dataRouterState != null && dataRouterState.errors) {
+      // Don't bail if we have data router errors so we can render them in the
+      // boundary.  Use the pre-matched (or shimmed) matches
+      matches = dataRouterState.matches;
+    } else {
+      return null;
+    }
+  }
+  var renderedMatches = matches; // If we have data errors, trim matches to the highest error boundary
+
+  var errors = dataRouterState == null ? void 0 : dataRouterState.errors;
+  if (errors != null) {
+    var errorIndex = renderedMatches.findIndex(function (m) {
+      return m.route.id && (errors == null ? void 0 : errors[m.route.id]);
+    });
+    !(errorIndex >= 0) ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, "Could not find a matching route for the current errors: " + errors) : 0 : void 0;
+    renderedMatches = renderedMatches.slice(0, Math.min(renderedMatches.length, errorIndex + 1));
+  }
+  return renderedMatches.reduceRight(function (outlet, match, index) {
+    var error = match.route.id ? errors == null ? void 0 : errors[match.route.id] : null; // Only data routers handle errors
+
+    var errorElement = dataRouterState ? match.route.errorElement || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(DefaultErrorElement, null) : null;
+    var matches = parentMatches.concat(renderedMatches.slice(0, index + 1));
+    var getChildren = function getChildren() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(RenderedRoute, {
+        match: match,
+        routeContext: {
+          outlet: outlet,
+          matches: matches
+        }
+      }, error ? errorElement : match.route.element !== undefined ? match.route.element : outlet);
+    }; // Only wrap in an error boundary within data router usages when we have an
+    // errorElement on this route.  Otherwise let it bubble up to an ancestor
+    // errorElement
+
+    return dataRouterState && (match.route.errorElement || index === 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(RenderErrorBoundary, {
+      location: dataRouterState.location,
+      component: errorElement,
+      error: error,
+      children: getChildren(),
+      routeContext: {
+        outlet: null,
+        matches: matches
+      }
+    }) : getChildren();
+  }, null);
+}
+var DataRouterHook;
+(function (DataRouterHook) {
+  DataRouterHook["UseRevalidator"] = "useRevalidator";
+})(DataRouterHook || (DataRouterHook = {}));
+var DataRouterStateHook;
+(function (DataRouterStateHook) {
+  DataRouterStateHook["UseLoaderData"] = "useLoaderData";
+  DataRouterStateHook["UseActionData"] = "useActionData";
+  DataRouterStateHook["UseRouteError"] = "useRouteError";
+  DataRouterStateHook["UseNavigation"] = "useNavigation";
+  DataRouterStateHook["UseRouteLoaderData"] = "useRouteLoaderData";
+  DataRouterStateHook["UseMatches"] = "useMatches";
+  DataRouterStateHook["UseRevalidator"] = "useRevalidator";
+})(DataRouterStateHook || (DataRouterStateHook = {}));
+function getDataRouterConsoleError(hookName) {
+  return hookName + " must be used within a data router.  See https://reactrouter.com/routers/picking-a-router.";
+}
+function useDataRouterContext(hookName) {
+  var ctx = react__WEBPACK_IMPORTED_MODULE_1__.useContext(DataRouterContext);
+  !ctx ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, getDataRouterConsoleError(hookName)) : 0 : void 0;
+  return ctx;
+}
+function useDataRouterState(hookName) {
+  var state = react__WEBPACK_IMPORTED_MODULE_1__.useContext(DataRouterStateContext);
+  !state ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, getDataRouterConsoleError(hookName)) : 0 : void 0;
+  return state;
+}
+function useRouteContext(hookName) {
+  var route = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteContext);
+  !route ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, getDataRouterConsoleError(hookName)) : 0 : void 0;
+  return route;
+}
+function useCurrentRouteId(hookName) {
+  var route = useRouteContext(hookName);
+  var thisRoute = route.matches[route.matches.length - 1];
+  !thisRoute.route.id ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, hookName + " can only be used on routes that contain a unique \"id\"") : 0 : void 0;
+  return thisRoute.route.id;
+}
+/**
+ * Returns the current navigation, defaulting to an "idle" navigation when
+ * no navigation is in progress
+ */
+
+function useNavigation() {
+  var state = useDataRouterState(DataRouterStateHook.UseNavigation);
+  return state.navigation;
+}
+/**
+ * Returns a revalidate function for manually triggering revalidation, as well
+ * as the current state of any manual revalidations
+ */
+
+function useRevalidator() {
+  var dataRouterContext = useDataRouterContext(DataRouterHook.UseRevalidator);
+  var state = useDataRouterState(DataRouterStateHook.UseRevalidator);
+  return {
+    revalidate: dataRouterContext.router.revalidate,
+    state: state.revalidation
+  };
+}
+/**
+ * Returns the active route matches, useful for accessing loaderData for
+ * parent/child routes or the route "handle" property
+ */
+
+function useMatches() {
+  var _useDataRouterState = useDataRouterState(DataRouterStateHook.UseMatches),
+    matches = _useDataRouterState.matches,
+    loaderData = _useDataRouterState.loaderData;
+  return react__WEBPACK_IMPORTED_MODULE_1__.useMemo(function () {
+    return matches.map(function (match) {
+      var pathname = match.pathname,
+        params = match.params; // Note: This structure matches that created by createUseMatchesMatch
+      // in the @remix-run/router , so if you change this please also change
+      // that :)  Eventually we'll DRY this up
+
+      return {
+        id: match.route.id,
+        pathname: pathname,
+        params: params,
+        data: loaderData[match.route.id],
+        handle: match.route.handle
+      };
+    });
+  }, [matches, loaderData]);
+}
+/**
+ * Returns the loader data for the nearest ancestor Route loader
+ */
+
+function useLoaderData() {
+  var state = useDataRouterState(DataRouterStateHook.UseLoaderData);
+  var routeId = useCurrentRouteId(DataRouterStateHook.UseLoaderData);
+  if (state.errors && state.errors[routeId] != null) {
+    console.error("You cannot `useLoaderData` in an errorElement (routeId: " + routeId + ")");
+    return undefined;
+  }
+  return state.loaderData[routeId];
+}
+/**
+ * Returns the loaderData for the given routeId
+ */
+
+function useRouteLoaderData(routeId) {
+  var state = useDataRouterState(DataRouterStateHook.UseRouteLoaderData);
+  return state.loaderData[routeId];
+}
+/**
+ * Returns the action data for the nearest ancestor Route action
+ */
+
+function useActionData() {
+  var state = useDataRouterState(DataRouterStateHook.UseActionData);
+  var route = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteContext);
+  !route ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, "useActionData must be used inside a RouteContext") : 0 : void 0;
+  return Object.values((state == null ? void 0 : state.actionData) || {})[0];
+}
+/**
+ * Returns the nearest ancestor Route error, which could be a loader/action
+ * error or a render error.  This is intended to be called from your
+ * errorElement to display a proper error message.
+ */
+
+function useRouteError() {
+  var _state$errors;
+  var error = react__WEBPACK_IMPORTED_MODULE_1__.useContext(RouteErrorContext);
+  var state = useDataRouterState(DataRouterStateHook.UseRouteError);
+  var routeId = useCurrentRouteId(DataRouterStateHook.UseRouteError); // If this was a render error, we put it in a RouteError context inside
+  // of RenderErrorBoundary
+
+  if (error) {
+    return error;
+  } // Otherwise look for errors from our data router state
+
+  return (_state$errors = state.errors) == null ? void 0 : _state$errors[routeId];
+}
+/**
+ * Returns the happy-path data from the nearest ancestor <Await /> value
+ */
+
+function useAsyncValue() {
+  var value = react__WEBPACK_IMPORTED_MODULE_1__.useContext(AwaitContext);
+  return value == null ? void 0 : value._data;
+}
+/**
+ * Returns the error from the nearest ancestor <Await /> value
+ */
+
+function useAsyncError() {
+  var value = react__WEBPACK_IMPORTED_MODULE_1__.useContext(AwaitContext);
+  return value == null ? void 0 : value._error;
+}
+var alreadyWarned = {};
+function warningOnce(key, cond, message) {
+  if (!cond && !alreadyWarned[key]) {
+    alreadyWarned[key] = true;
+     true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.warning)(false, message) : 0;
+  }
+}
+
+/**
+ * Given a Remix Router instance, render the appropriate UI
+ */
+function RouterProvider(_ref) {
+  var fallbackElement = _ref.fallbackElement,
+    router = _ref.router;
+  // Sync router state to our component state to force re-renders
+  var state = useSyncExternalStore(router.subscribe, function () {
+    return router.state;
+  },
+  // We have to provide this so React@18 doesn't complain during hydration,
+  // but we pass our serialized hydration data into the router so state here
+  // is already synced with what the server saw
+  function () {
+    return router.state;
+  });
+  var navigator = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(function () {
+    return {
+      createHref: router.createHref,
+      encodeLocation: router.encodeLocation,
+      go: function go(n) {
+        return router.navigate(n);
+      },
+      push: function push(to, state, opts) {
+        return router.navigate(to, {
+          state: state,
+          preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
+        });
+      },
+      replace: function replace(to, state, opts) {
+        return router.navigate(to, {
+          replace: true,
+          state: state,
+          preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
+        });
+      }
+    };
+  }, [router]);
+  var basename = router.basename || "/";
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(DataRouterContext.Provider, {
+    value: {
+      router: router,
+      navigator: navigator,
+      static: false,
+      // Do we need this?
+      basename: basename
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(DataRouterStateContext.Provider, {
+    value: state
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, {
+    basename: router.basename,
+    location: router.state.location,
+    navigationType: router.state.historyAction,
+    navigator: navigator
+  }, router.state.initialized ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Routes, null) : fallbackElement)));
+}
+
+/**
+ * A <Router> that stores all entries in memory.
+ *
+ * @see https://reactrouter.com/router-components/memory-router
+ */
+function MemoryRouter(_ref2) {
+  var basename = _ref2.basename,
+    children = _ref2.children,
+    initialEntries = _ref2.initialEntries,
+    initialIndex = _ref2.initialIndex;
+  var historyRef = react__WEBPACK_IMPORTED_MODULE_1__.useRef();
+  if (historyRef.current == null) {
+    historyRef.current = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.createMemoryHistory)({
+      initialEntries: initialEntries,
+      initialIndex: initialIndex,
+      v5Compat: true
+    });
+  }
+  var history = historyRef.current;
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1__.useState({
+      action: history.action,
+      location: history.location
+    }),
+    _React$useState2 = _slicedToArray(_React$useState, 2),
+    state = _React$useState2[0],
+    setState = _React$useState2[1];
+  react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect(function () {
+    return history.listen(setState);
+  }, [history]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, {
+    basename: basename,
+    children: children,
+    location: state.location,
+    navigationType: state.action,
+    navigator: history
+  });
+}
+
+/**
+ * Changes the current location.
+ *
+ * Note: This API is mostly useful in React.Component subclasses that are not
+ * able to use hooks. In functional components, we recommend you use the
+ * `useNavigate` hook instead.
+ *
+ * @see https://reactrouter.com/components/navigate
+ */
+function Navigate(_ref3) {
+  var to = _ref3.to,
+    replace = _ref3.replace,
+    state = _ref3.state,
+    relative = _ref3.relative;
+  !useInRouterContext() ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false,
+  // TODO: This error is probably because they somehow have 2 versions of
+  // the router loaded. We can help them understand how to avoid that.
+  "<Navigate> may be used only in the context of a <Router> component.") : 0 : void 0;
+   true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.warning)(!react__WEBPACK_IMPORTED_MODULE_1__.useContext(NavigationContext).static, "<Navigate> must not be used on the initial render in a <StaticRouter>. " + "This is a no-op, but you should modify your code so the <Navigate> is " + "only ever rendered in response to some user interaction or state change.") : 0;
+  var dataRouterState = react__WEBPACK_IMPORTED_MODULE_1__.useContext(DataRouterStateContext);
+  var navigate = useNavigate();
+  react__WEBPACK_IMPORTED_MODULE_1__.useEffect(function () {
+    // Avoid kicking off multiple navigations if we're in the middle of a
+    // data-router navigation, since components get re-rendered when we enter
+    // a submitting/loading state
+    if (dataRouterState && dataRouterState.navigation.state !== "idle") {
+      return;
+    }
+    navigate(to, {
+      replace: replace,
+      state: state,
+      relative: relative
+    });
+  });
+  return null;
+}
+
+/**
+ * Renders the child route's element, if there is one.
+ *
+ * @see https://reactrouter.com/components/outlet
+ */
+function Outlet(props) {
+  return useOutlet(props.context);
+}
+
+/**
+ * Declares an element that should be rendered at a certain URL path.
+ *
+ * @see https://reactrouter.com/components/route
+ */
+function Route(_props) {
+   true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, "A <Route> is only ever to be used as the child of <Routes> element, " + "never rendered directly. Please wrap your <Route> in a <Routes>.") : 0;
+}
+
+/**
+ * Provides location context for the rest of the app.
+ *
+ * Note: You usually won't render a <Router> directly. Instead, you'll render a
+ * router that is more specific to your environment such as a <BrowserRouter>
+ * in web browsers or a <StaticRouter> for server rendering.
+ *
+ * @see https://reactrouter.com/router-components/router
+ */
+function Router(_ref4) {
+  var _ref4$basename = _ref4.basename,
+    basenameProp = _ref4$basename === void 0 ? "/" : _ref4$basename,
+    _ref4$children = _ref4.children,
+    children = _ref4$children === void 0 ? null : _ref4$children,
+    locationProp = _ref4.location,
+    _ref4$navigationType = _ref4.navigationType,
+    navigationType = _ref4$navigationType === void 0 ? _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.Action.Pop : _ref4$navigationType,
+    navigator = _ref4.navigator,
+    _ref4$static = _ref4.static,
+    staticProp = _ref4$static === void 0 ? false : _ref4$static;
+  !!useInRouterContext() ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, "You cannot render a <Router> inside another <Router>." + " You should never have more than one in your app.") : 0 : void 0; // Preserve trailing slashes on basename, so we can let the user control
+  // the enforcement of trailing slashes throughout the app
+
+  var basename = basenameProp.replace(/^\/*/, "/");
+  var navigationContext = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(function () {
+    return {
+      basename: basename,
+      navigator: navigator,
+      static: staticProp
+    };
+  }, [basename, navigator, staticProp]);
+  if (typeof locationProp === "string") {
+    locationProp = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.parsePath)(locationProp);
+  }
+  var _locationProp = locationProp,
+    _locationProp$pathnam = _locationProp.pathname,
+    pathname = _locationProp$pathnam === void 0 ? "/" : _locationProp$pathnam,
+    _locationProp$search = _locationProp.search,
+    search = _locationProp$search === void 0 ? "" : _locationProp$search,
+    _locationProp$hash = _locationProp.hash,
+    hash = _locationProp$hash === void 0 ? "" : _locationProp$hash,
+    _locationProp$state = _locationProp.state,
+    state = _locationProp$state === void 0 ? null : _locationProp$state,
+    _locationProp$key = _locationProp.key,
+    key = _locationProp$key === void 0 ? "default" : _locationProp$key;
+  var location = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(function () {
+    var trailingPathname = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.stripBasename)(pathname, basename);
+    if (trailingPathname == null) {
+      return null;
+    }
+    return {
+      pathname: trailingPathname,
+      search: search,
+      hash: hash,
+      state: state,
+      key: key
+    };
+  }, [basename, pathname, search, hash, state, key]);
+   true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.warning)(location != null, "<Router basename=\"" + basename + "\"> is not able to match the URL " + ("\"" + pathname + search + hash + "\" because it does not start with the ") + "basename, so the <Router> won't render anything.") : 0;
+  if (location == null) {
+    return null;
+  }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(NavigationContext.Provider, {
+    value: navigationContext
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(LocationContext.Provider, {
+    children: children,
+    value: {
+      location: location,
+      navigationType: navigationType
+    }
+  }));
+}
+
+/**
+ * A container for a nested tree of <Route> elements that renders the branch
+ * that best matches the current location.
+ *
+ * @see https://reactrouter.com/components/routes
+ */
+function Routes(_ref5) {
+  var children = _ref5.children,
+    location = _ref5.location;
+  var dataRouterContext = react__WEBPACK_IMPORTED_MODULE_1__.useContext(DataRouterContext); // When in a DataRouterContext _without_ children, we use the router routes
+  // directly.  If we have children, then we're in a descendant tree and we
+  // need to use child routes.
+
+  var routes = dataRouterContext && !children ? dataRouterContext.router.routes : createRoutesFromChildren(children);
+  return useRoutes(routes, location);
+}
+
+/**
+ * Component to use for rendering lazily loaded data from returning defer()
+ * in a loader function
+ */
+function Await(_ref6) {
+  var children = _ref6.children,
+    errorElement = _ref6.errorElement,
+    resolve = _ref6.resolve;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(AwaitErrorBoundary, {
+    resolve: resolve,
+    errorElement: errorElement
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(ResolveAwait, null, children));
+}
+var AwaitRenderStatus;
+(function (AwaitRenderStatus) {
+  AwaitRenderStatus[AwaitRenderStatus["pending"] = 0] = "pending";
+  AwaitRenderStatus[AwaitRenderStatus["success"] = 1] = "success";
+  AwaitRenderStatus[AwaitRenderStatus["error"] = 2] = "error";
+})(AwaitRenderStatus || (AwaitRenderStatus = {}));
+var neverSettledPromise = new Promise(function () {});
+var AwaitErrorBoundary = /*#__PURE__*/function (_React$Component2) {
+  _inherits(AwaitErrorBoundary, _React$Component2);
+  var _super2 = _createSuper(AwaitErrorBoundary);
+  function AwaitErrorBoundary(props) {
+    var _this2;
+    _classCallCheck(this, AwaitErrorBoundary);
+    _this2 = _super2.call(this, props);
+    _this2.state = {
+      error: null
+    };
+    return _this2;
+  }
+  _createClass(AwaitErrorBoundary, [{
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, errorInfo) {
+      console.error("<Await> caught the following error during render", error, errorInfo);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+        children = _this$props.children,
+        errorElement = _this$props.errorElement,
+        resolve = _this$props.resolve;
+      var promise = null;
+      var status = AwaitRenderStatus.pending;
+      if (!(resolve instanceof Promise)) {
+        // Didn't get a promise - provide as a resolved promise
+        status = AwaitRenderStatus.success;
+        promise = Promise.resolve();
+        Object.defineProperty(promise, "_tracked", {
+          get: function get() {
+            return true;
+          }
+        });
+        Object.defineProperty(promise, "_data", {
+          get: function get() {
+            return resolve;
+          }
+        });
+      } else if (this.state.error) {
+        // Caught a render error, provide it as a rejected promise
+        status = AwaitRenderStatus.error;
+        var renderError = this.state.error;
+        promise = Promise.reject().catch(function () {}); // Avoid unhandled rejection warnings
+
+        Object.defineProperty(promise, "_tracked", {
+          get: function get() {
+            return true;
+          }
+        });
+        Object.defineProperty(promise, "_error", {
+          get: function get() {
+            return renderError;
+          }
+        });
+      } else if (resolve._tracked) {
+        // Already tracked promise - check contents
+        promise = resolve;
+        status = promise._error !== undefined ? AwaitRenderStatus.error : promise._data !== undefined ? AwaitRenderStatus.success : AwaitRenderStatus.pending;
+      } else {
+        // Raw (untracked) promise - track it
+        status = AwaitRenderStatus.pending;
+        Object.defineProperty(resolve, "_tracked", {
+          get: function get() {
+            return true;
+          }
+        });
+        promise = resolve.then(function (data) {
+          return Object.defineProperty(resolve, "_data", {
+            get: function get() {
+              return data;
+            }
+          });
+        }, function (error) {
+          return Object.defineProperty(resolve, "_error", {
+            get: function get() {
+              return error;
+            }
+          });
+        });
+      }
+      if (status === AwaitRenderStatus.error && promise._error instanceof _remix_run_router__WEBPACK_IMPORTED_MODULE_0__.AbortedDeferredError) {
+        // Freeze the UI by throwing a never resolved promise
+        throw neverSettledPromise;
+      }
+      if (status === AwaitRenderStatus.error && !errorElement) {
+        // No errorElement, throw to the nearest route-level error boundary
+        throw promise._error;
+      }
+      if (status === AwaitRenderStatus.error) {
+        // Render via our errorElement
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(AwaitContext.Provider, {
+          value: promise,
+          children: errorElement
+        });
+      }
+      if (status === AwaitRenderStatus.success) {
+        // Render children with resolved value
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(AwaitContext.Provider, {
+          value: promise,
+          children: children
+        });
+      } // Throw to the suspense boundary
+
+      throw promise;
+    }
+  }], [{
+    key: "getDerivedStateFromError",
+    value: function getDerivedStateFromError(error) {
+      return {
+        error: error
+      };
+    }
+  }]);
+  return AwaitErrorBoundary;
+}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
+/**
+ * @private
+ * Indirection to leverage useAsyncValue for a render-prop API on <Await>
+ */
+function ResolveAwait(_ref7) {
+  var children = _ref7.children;
+  var data = useAsyncValue();
+  if (typeof children === "function") {
+    return children(data);
+  }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, children);
+} ///////////////////////////////////////////////////////////////////////////////
+// UTILS
+///////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Creates a route config from a React "children" object, which is usually
+ * either a `<Route>` element or an array of them. Used internally by
+ * `<Routes>` to create a route config from its children.
+ *
+ * @see https://reactrouter.com/utils/create-routes-from-children
+ */
+
+function createRoutesFromChildren(children, parentPath) {
+  if (parentPath === void 0) {
+    parentPath = [];
+  }
+  var routes = [];
+  react__WEBPACK_IMPORTED_MODULE_1__.Children.forEach(children, function (element, index) {
+    if (! /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(element)) {
+      // Ignore non-elements. This allows people to more easily inline
+      // conditionals in their route config.
+      return;
+    }
+    if (element.type === react__WEBPACK_IMPORTED_MODULE_1__.Fragment) {
+      // Transparently support React.Fragment and its children.
+      routes.push.apply(routes, createRoutesFromChildren(element.props.children, parentPath));
+      return;
+    }
+    !(element.type === Route) ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, "[" + (typeof element.type === "string" ? element.type : element.type.name) + "] is not a <Route> component. All component children of <Routes> must be a <Route> or <React.Fragment>") : 0 : void 0;
+    !(!element.props.index || !element.props.children) ?  true ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.invariant)(false, "An index route cannot have child routes.") : 0 : void 0;
+    var treePath = [].concat(_toConsumableArray(parentPath), [index]);
+    var route = {
+      id: element.props.id || treePath.join("-"),
+      caseSensitive: element.props.caseSensitive,
+      element: element.props.element,
+      index: element.props.index,
+      path: element.props.path,
+      loader: element.props.loader,
+      action: element.props.action,
+      errorElement: element.props.errorElement,
+      hasErrorBoundary: element.props.errorElement != null,
+      shouldRevalidate: element.props.shouldRevalidate,
+      handle: element.props.handle
+    };
+    if (element.props.children) {
+      route.children = createRoutesFromChildren(element.props.children, treePath);
+    }
+    routes.push(route);
+  });
+  return routes;
+}
+/**
+ * Renders the result of `matchRoutes()` into a React element.
+ */
+
+function renderMatches(matches) {
+  return _renderMatches(matches);
+}
+/**
+ * @private
+ * Walk the route tree and add hasErrorBoundary if it's not provided, so that
+ * users providing manual route arrays can just specify errorElement
+ */
+
+function enhanceManualRouteObjects(routes) {
+  return routes.map(function (route) {
+    var routeClone = _extends({}, route);
+    if (routeClone.hasErrorBoundary == null) {
+      routeClone.hasErrorBoundary = routeClone.errorElement != null;
+    }
+    if (routeClone.children) {
+      routeClone.children = enhanceManualRouteObjects(routeClone.children);
+    }
+    return routeClone;
+  });
+}
+function createMemoryRouter(routes, opts) {
+  return (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
+    basename: opts == null ? void 0 : opts.basename,
+    history: (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_0__.createMemoryHistory)({
+      initialEntries: opts == null ? void 0 : opts.initialEntries,
+      initialIndex: opts == null ? void 0 : opts.initialIndex
+    }),
+    hydrationData: opts == null ? void 0 : opts.hydrationData,
+    routes: enhanceManualRouteObjects(routes)
+  }).initialize();
+} ///////////////////////////////////////////////////////////////////////////////
+
+
 
 /***/ }),
 
@@ -39575,7 +49441,7 @@ function invariant(condition, message) {
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
