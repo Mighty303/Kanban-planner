@@ -5,8 +5,13 @@
     
 }
 
-.task {
+.tasks-container:not(:first-of-type) {
     margin-top: 30px;
+
+}
+
+.task {
+    margin-top: 0;
     border-radius: 5px;
     padding: 20px;
     background-color: #8899A6;
@@ -46,5 +51,12 @@
 .task-container {
     min-height: 60vh;
     overflow-y: auto;
-    max-height: 77vh;
+    max-height: 80vh;
+}
+
+aside div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

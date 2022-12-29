@@ -31,19 +31,18 @@ main p {
 }
 
 .columns {
-    margin-top: 3em;
+    margin-top: 2.75em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .column {
-    min-height: 77vh;
+    min-height: 80vh;
     width: 22%;;
     background-color: #22303C;
     border-radius: 15px;
     padding: 15px;
-    
 }
 
 

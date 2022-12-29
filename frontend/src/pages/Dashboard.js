@@ -15,10 +15,7 @@ const Dashboard = props => {
     return (
         <main>
             <div id="wrapper">
-                <Header 
-                        newTask={newTask} 
-                        setNewTask={setNewTask} 
-                />
+                <Header />
                 <section className="tasks-section">
                     <Tasks 
                         columns={columns} 

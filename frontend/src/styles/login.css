@@ -1,0 +1,23 @@
+#login-text {
+    color: black;
+    padding-bottom: 4rem;
+}
+
+.login-background {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgrey;
+}
+
+.login-box {
+    padding: 5rem 5rem 5rem 5rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

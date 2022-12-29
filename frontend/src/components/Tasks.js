@@ -1,14 +1,27 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Task from './Task.js';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
+import '../styles/header.css';
+import Modal from './Modal';
+
+
+
 const Tasks = props => {
+
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [name, setName] = useState('To Do');
 
     useEffect(function loadNewTask() {
         loadTasks();
     },[props.newTask, props.movedTask]);
+
+    const handleClick = column => {
+        setName(column);
+        setIsOpen(true);
+    }
 
     const loadTasks = () => {
         axios.get('/api/v1/tasks')
@@ -74,6 +87,15 @@ const Tasks = props => {
 
     return (
         <DragDropContext onDragEnd={handleOnDragEnd}>
+            <aside>
+                <Modal 
+                    open={modalIsOpen} 
+                    onClose={()=> setIsOpen(false)}
+                    column={name}
+                    newTask={props.newTask} 
+                    setNewTask={props.setNewTask} 
+                />
+            </aside>
             <div className="columns">
                 {
                     props.columns.map((column, index) => // Loop thru the columns
@@ -85,8 +107,8 @@ const Tasks = props => {
                                     ref={provided.innerRef}
                                 >
                                     {<h2 className="column-headers">{column.column}</h2>} {/*Column Title*/}
+                                    <button className="add-task-btn" onClick={()=> handleClick(column.column)}>+</button>
                                         <div className="task-container">
-
                                             {
                                                 column.tasks && column.tasks.map((task, index) => // Loop thru the tasks
                                                     <Draggable 
@@ -99,6 +121,7 @@ const Tasks = props => {
                                                                 ref={provided.innerRef}
                                                                 {...provided.draggableProps}
                                                                 {...provided.dragHandleProps}
+                                                                className="tasks-container"
                                                             >
                                                                 <Task 
                                                                     name={task.name} 
