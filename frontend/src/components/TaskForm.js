@@ -38,7 +38,7 @@ const TaskForm = props => {
         let taskDate = document.getElementById('dateRequired').value;
 
         let task = {
-            column: 'To Do',
+            column: props.column,
             name: taskName,
             description: taskDescription,
             date: taskDate

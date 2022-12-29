@@ -37,7 +37,7 @@ const Modal = props => {
             <div style={OVERLAY_STYLES} />
             <div style={MODAL_STYLES}>
                 <input type="image" src={closeButton} onClick={props.onClose}  width="25" height="25" style={BUTTON_STYLES}/>
-                <TaskForm onClose={props.onClose} newTask={props.newTask} setNewTask={props.setNewTask} />
+                <TaskForm onClose={props.onClose} column={props.column} newTask={props.newTask} setNewTask={props.setNewTask} />
             </div>
         </>
     );
