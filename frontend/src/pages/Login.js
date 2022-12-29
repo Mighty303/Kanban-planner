@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin } from '@react-oauth/google';
 import { gapi } from 'gapi-script';
 import '../styles/login.css';
 import HomeHeader from '../components/HomeHeader';
