@@ -1,5 +1,5 @@
 # Kanban Planner App
-Deployed at: <a href="kanban-planner.herokuapp.com/">kanban-planner.herokuapp.com/</a>
+Deployed at: [https://kanban-planner.herokuapp.com/](https://kanban-planner.herokuapp.com/)
 Built with the MERN stack (MongoDB, Express, React and NodeJS)
 
 
