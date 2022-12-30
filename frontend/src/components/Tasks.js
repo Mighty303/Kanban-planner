@@ -13,12 +13,14 @@ const Tasks = props => {
 
     const [modalIsOpen, setIsOpen] = useState(false);
     const [name, setName] = useState('To Do');
+    const [columnIndex, setColumnIndex] = useState(0);
 
     useEffect(function loadNewTask() {
         loadTasks();
-    },[props.newTask, props.movedTask]);
+    },[]);
 
-    const handleClick = column => {
+    const handleClick = (column, index) => {
+        setColumnIndex(index);
         setName(column);
         setIsOpen(true);
     }
@@ -62,7 +64,7 @@ const Tasks = props => {
         // Add the task to the right column to avoid flickering UI on that column
         props.columns.forEach(column => {
             if (column.column === targetColumn) {
-                column.tasks.push(targetTask);
+                column.tasks.splice(targetIndex, 0, targetTask);
                 props.setColumns(props.columns);
             }
         });
@@ -93,7 +95,10 @@ const Tasks = props => {
                     onClose={()=> setIsOpen(false)}
                     column={name}
                     newTask={props.newTask} 
-                    setNewTask={props.setNewTask} 
+                    setNewTask={props.setNewTask}
+                    columns={props.columns} 
+                    setColumns={props.setColumns}
+                    index={columnIndex}
                 />
             </aside>
             <div className="columns">
@@ -107,7 +112,7 @@ const Tasks = props => {
                                     ref={provided.innerRef}
                                 >
                                     {<h2 className="column-headers">{column.column}</h2>} {/*Column Title*/}
-                                    <button className="add-task-btn" onClick={()=> handleClick(column.column)}>+</button>
+                                    <button className="add-task-btn" onClick={()=> handleClick(column.column, index)}>+</button>
                                         <div className="task-container">
                                             {
                                                 column.tasks && column.tasks.map((task, index) => // Loop thru the tasks

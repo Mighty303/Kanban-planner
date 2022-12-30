@@ -45,7 +45,9 @@ const TaskForm = props => {
         }
 
         axios.post(`/api/v1/tasks`, task)
-        .then(result=> { 
+        .then(result=> {
+            props.columns[props.index].tasks.push(result.data);
+            props.setColumns(props.columns);
             props.setNewTask(!props.newTask); // rerender our page with the new task
         })
         .catch(err=> console.log(err));
