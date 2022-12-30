@@ -4,14 +4,10 @@
 }
 
 html {
+    background-color: #000814;
     text-align: center;
     color: white;
     font-family: Roboto, sans-serif, Helvetica;
-}
-
-main {
-    background-color: #000814;
-    
 }
 
 main h1 {
@@ -28,10 +24,11 @@ main p {
     margin-right: auto;
     background-color: #000814;
     padding-bottom: 10px;
+    background-size: auto;
 }
 
 .columns {
-    margin-top: 2.75em;
+    /* margin-top: 1.25em; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
