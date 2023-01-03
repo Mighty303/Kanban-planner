@@ -1,6 +1,5 @@
 .tasks-section {
     margin-top: 0;
-    /* padding: 2em 2em; */
     background-color: #000814;
     
 }
@@ -15,6 +14,7 @@
     border-radius: 5px;
     padding: 10px;
     background-color: #8899A6;
+    background: linear-gradient(109.8deg, #7B8C99 0.01%, #A0BBCF 100.02%);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -38,11 +38,12 @@
     margin-bottom: 5px;
     font-size: 20px;
     padding: 20px;
-    color: #3700B3;
+    color: #6F3AB0;
 }
 
 .task-title {
     font-size: 30px;
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
     color: black;
@@ -53,6 +54,29 @@
     overflow-y: auto;
     max-height: 68vh;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #BB86FC #22303C;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #22303C;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #BB86FC;
+    border-radius: 10px;
+    border: 3px solid #22303C;
+  }
+
 
 aside div {
     position: relative;

@@ -48,20 +48,6 @@ main p {
     flex-wrap: wrap;
 }
 
-.delete-btn {
-    margin-left: 10px;
-    padding: 8px;
-    border: 1px solid #e63946;
-    border-radius: 10px;
-    background-color: #e63946;
-    color: white;
-}
-
-.delete-btn:hover {
-    background-color: #CD202D;
-    color: white;
-    cursor: pointer;
-}
 
 #alert {
     position: fixed;

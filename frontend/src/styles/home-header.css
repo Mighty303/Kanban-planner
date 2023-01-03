@@ -45,6 +45,7 @@ header p {
 }
 
 .add-task-btn {
+    font-size: 1.25rem;
     background-color: #BB86FC;
     border: none;
     border-radius: 5px;
