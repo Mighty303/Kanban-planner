@@ -10,11 +10,9 @@ const Task = props => {
         <div key={props.index} className="task noselect">
             <h2 className="task-title">
                 {props.name}
-                <span id="del">
-                    <IconButton aria-label="delete" color="error" id={props.id} onClick={props.handleDelete}>
-                        <DeleteIcon />
-                    </IconButton>
-                </span>
+                <IconButton aria-label="delete" color="error" id={props.id} onClick={props.handleDelete}>
+                    <DeleteIcon />
+                </IconButton>
             </h2>
 
             <p className="task-item">{props.description}</p>
