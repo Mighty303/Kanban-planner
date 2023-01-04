@@ -50,9 +50,9 @@
 }
 
 .task-container {
-    min-height: 68vh;
+    min-height: 65vh;
     overflow-y: auto;
-    max-height: 68vh;
+    max-height: 65vh;
 }
 
 /* ===== Scrollbar CSS ===== */
