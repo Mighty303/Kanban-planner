@@ -1,7 +1,10 @@
-# Kanban Planner App
+<h1><img src="./frontend/public/images/kanban.png" alt="logo" height="50px" width="50px" /> Kanban Planner App</h1>
 Deployed at: [https://kanban-planner.herokuapp.com/](https://kanban-planner.herokuapp.com/)
 Built with the MERN stack (MongoDB, Express, React and NodeJS)
 
+<p align: "centre">
+    <img src="./frontend/public/images/UI.PNG" alt="logo" height="550px" width="850px"/>
+</p>
 
 <h2>Introduction</h2>
 <p>
