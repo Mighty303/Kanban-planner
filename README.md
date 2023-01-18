@@ -3,7 +3,7 @@ Deployed at: [https://kanban-planner.herokuapp.com/](https://kanban-planner.hero
 Built with the MERN stack (MongoDB, Express, React and NodeJS)
 
 <p align: "centre">
-    <img src="./frontend/public/images/UI.PNG" alt="logo" height="550px" width="850px"/>
+    <img src="./frontend/public/images/UI.PNG" alt="logo" height="550px" width="1050px"/>
 </p>
 
 <h2>Introduction</h2>
